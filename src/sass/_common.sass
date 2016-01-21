@@ -28,9 +28,124 @@
 // =book
 // 	font-family: "book", Arial, sans-serif
 
+// roboto-font
+=roboto
+	font-family: 'Roboto', Arial, sans-serif
+	
+// lora-font
+=lora
+	font-family: 'Lora', serif
+	font-weight: 400  
+=lorai
+	font-family: 'Lora', serif
+	font-weight: 400 
+	font-style: italic
+=lorab
+	font-family: 'Lora', serif
+	font-weight: 700 
+=lorabi
+	font-family: 'Lora', serif
+	font-weight: 700
+	font-style: italic
+	 
+// 'Fira Sans' font
+=reg
+	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
+	font-weight: 400
+=regi
+	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
+	font-weight: 400
+	font-style: italic
+	
+=light
+	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
+	font-weight: 300
+	
+=med
+	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
+	font-weight: 500
+	
+=medi
+	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
+	font-weight: 500
+	font-style: italic
+	
+=bold
+	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
+	font-weight: 700
+=boldi
+	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
+	font-weight: 700
+	font-style: italic
+
 body
-	font-family: Arial, sans-serif
-	font-size: 12px
+	+reg
+	font-size: 14px
 	line-height: 1.4
 	
 // common blocks
+
+strong, b
+	font-weight: 400
+
+i, em
+	font-style: normal
+	
+h1, .h1
+	font-size: 60px
+	+bold
+
+h2, .h2
+	font-size: 56px 
+	+bold
+
+a
+	color: #000
+	text-decoration: none
+
+.container
+	width: 1300px
+	margin: 0 auto
+
+.tech-row
+	margin: 20px 0 
+
+.btn
+	display: inline-block
+	text-transform: uppercase
+	color: #282828
+	position: relative
+	padding: 7px 18px 6px
+	font-size: 11px
+	+tr(color .3s)
+	z-index: 1 
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		top: -1px
+		bottom: -1px
+		width: 5px
+		background: #333 
+		+tr(width .3s)
+		z-index: -1 
+	&:hover
+		color: #fff
+		&:before
+			width: 100%  
+	&_gold
+		// border-color: #f2c05e
+		&:before
+			background-color: #f2c05e
+	&_orange
+		// border-color: #ff8c61 
+		&:before
+			background-color: #ff8c61
+	&_red
+		// border-color: #d27857 
+		&:before
+			background-color: #d27857
+	&_violet
+		// border-color: #c0a6cd 
+		&:before
+			background-color: #c0a6cd
