@@ -29,6 +29,15 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-skrill:before { content: ""; }
 
+.icon-vk:before { content: ""; }
+
+.article { font-size: 18px; }
+.article a { font-size: 18px; }
+.article p { margin-bottom: 25px; }
+.article ul { margin-bottom: 25px; }
+.article ul li { position: relative; color: #9bc1bc; list-style-type: disc; font-size: 16px; margin-left: 30px; }
+.article ul li span { color: #000; font-size: 1.125em; padding-left: 7px; }
+
 body { font-family: "Fira Sans", Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 1.4; min-width: 320px; }
 
 strong, b { font-weight: 400; }
@@ -82,6 +91,34 @@ a { color: #000; text-decoration: none; }
 .textbl__ttl span { color: #9BC1BC; }
 .textbl__img { float: right; width: 190px; padding-top: 35px; }
 .textbl__img img { width: 100%; }
+
+.square { width: 13px; height: 13px; background: #9bc1bc; display: inline-block; }
+
+.text-big { font-size: 20px; font-family: "Fira Sans", Helvetica, Arial, sans-serif; font-weight: 500; }
+
+.divider { height: 1px; margin: 20px 0; background: #9bc1bc; }
+
+.l-news { *zoom: 1; }
+.l-news:after { content: " "; display: table; clear: both; }
+.l-news .l-col1 { padding-right: 15px; float: left; width: 66.77%; width: -webkit-calc(100% - (100% / 3)); width: calc(100% - (100% / 3)); }
+.l-news .l-col2 { float: right; padding-left: 15px; padding-right: 110px; width: 33.33%; width: -webkit-calc(100% / 3); width: calc(100% / 3); }
+
+.soc-v > li { text-align: center; margin-bottom: 1px; display: block; }
+.soc-v > li a { font-size: 29px; color: #fff; padding: 12px 10px; background: #9bc1bc; width: 50px; height: 50px; -webkit-transition: background 0.3s; transition: background 0.3s; }
+.soc-v > li a.fa-envelope { font-size: 24px; }
+.soc-v > li a.icon-vk { font-size: 24px; }
+.soc-v > li a:hover { background: #7cada7; }
+
+.news-body { position: relative; padding-left: 110px; }
+.news-body .soc-v { position: absolute; left: 0; top: 0; }
+
+.news-header h1, .news-header .h1 { margin-bottom: 20px; }
+.news-header .text-big { margin-bottom: 40px; }
+
+.news-line { margin-bottom: 40px; }
+.news-line .btn { display: inline-block; vertical-align: middle; margin-right: 20px; margin-left: -5px; }
+.news-line__info { display: inline-block; vertical-align: middle; color: #757575; }
+.news-line__info span { font-family: "Fira Sans", Helvetica, Arial, sans-serif; font-weight: 300; padding-left: 10px; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1320px){

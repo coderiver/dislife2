@@ -1,0 +1,78 @@
+$green: #9bc1bc
+
+.square
+	width: 13px
+	height: 13px
+	background: $green
+	display: inline-block   
+.text-big
+	font-size: 20px
+	+med 
+
+.divider
+	height: 1px
+	margin: 20px 0
+	background: $green   
+// news
+.l-news
+	+clr
+	.l-col1
+		padding-right: 15px 
+		float: left 
+		width: 66.77%
+		width: calc(100% - (100% / 3))
+	.l-col2
+		float: right
+		padding-left: 15px 
+		padding-right: 110px 
+		width: 33.33% 
+		width: calc(100% / 3)
+		
+// soc-v
+.soc-v
+	> li
+		text-align: center
+		margin-bottom: 1px 
+		display: block
+		a
+			font-size: 29px
+			color: #fff
+			padding: 12px 10px
+			background: #9bc1bc
+			width: 50px
+			height: 50px  
+			+tr(background .3s)
+			&.fa-envelope
+				font-size: 24px 
+			&.icon-vk
+				font-size: 24px
+			&:hover
+				background: darken(#9bc1bc, 10)
+
+.news-body
+	position: relative
+	padding-left: 110px 
+	.soc-v
+		position: absolute
+		left: 0
+		top: 0
+.news-header
+	h1, .h1
+		margin-bottom: 20px
+	.text-big
+		margin-bottom: 40px 
+.news-line
+	margin-bottom: 40px
+	.btn
+		display: inline-block
+		vertical-align: middle
+		margin-right: 20px
+		margin-left: -5px  
+	&__info
+		display: inline-block
+		vertical-align: middle
+		color: #757575
+		span
+			+light
+			padding-left: 10px 
+
