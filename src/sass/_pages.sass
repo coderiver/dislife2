@@ -94,19 +94,60 @@
 
 // search results
 .textbl
+	display: block
+	padding: 21px 0
 	border-bottom: 1px solid #e4eae9
 	+clr
-	&:last-child
+	&:hover
+		.textbl__ttl
+			text-decoration: underline
+	&_no-border
 		border-color: transparent
+	&__inner
+		max-width: 80%
 	&__ttl
-		padding-top: 21px
+		margin-bottom: 7px
 		font-size: 21px
 		+bold
 		span
-			color: #9BC1BC
+			color: $mint
+	&__txt
+		font-size: 18px
+		color: #353535
+		line-height: 1.5
+		+lora
 	&__img
 		float: right
 		width: 190px
-		padding-top: 35px
+		margin: 15px 0
 		img
 			width: 100%
+	&__tags
+		font-size: 0
+		margin-top: 20px
+	&__name
+		margin-right: 20px
+		text-transform: uppercase
+		font-size: 14px
+		&.textbl_violet
+			color: $violet
+		&.textbl_red
+			color: $red
+		&.textbl_mint
+			color: $mint
+	&__author
+		margin-right: 20px
+		font-size: 14px
+		color: #293949
+		+bold
+	&__date
+		font-size: 14px
+		color: #AEB0B2
+	&__highlight
+		color: $mint
+
+// more
+.more
+	padding: 35px 0
+	background: #e4eae9
+
