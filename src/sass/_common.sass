@@ -115,10 +115,23 @@ $mint: #9bc1bc
 
 .row
 	font-size: 0
+	margin: 0 -15px 
 
 .col-s
 	display: inline-block
 	width: 33.33%
+	padding: 0 15px
+				
+.col-big
+	padding: 0 15px
+	display: inline-block
+	vertical-align: top
+	width: 75%
+	 
+.col-sm
+	width: 25%
+	display: inline-block
+	vertical-align: top
 	padding: 0 15px
 
 strong, b
@@ -136,7 +149,8 @@ h1, .h1
 	color: #0e0e0e
 	line-height: 1.5
 	+light
-
+	&_mb
+		margin-bottom: 20px
 a
 	color: #000
 	text-decoration: none
@@ -155,6 +169,7 @@ a
 .tech-row
 	padding: 10px 0
 
+// buttons 
 .btn
 	display: inline-block
 	text-transform: uppercase
@@ -164,6 +179,8 @@ a
 	font-size: 11px
 	+tr(color .3s)
 	z-index: 1
+	&_bd
+		border: 1px solid #333
 	&:before
 		content: ''
 		position: absolute
@@ -179,21 +196,36 @@ a
 		&:before
 			width: 100%
 	&_gold
-		// border-color: #f2c05e
+		&.btn_bd
+			border-color: #f2c05e
 		&:before
 			background-color: #f2c05e
 	&_orange
-		// border-color: #ff8c61
+		&.btn_bd
+			border-color: #ff8c61
 		&:before
 			background-color: #ff8c61
 	&_red
-		// border-color: #d27857
+		&.btn_bd
+			border-color: #d27857
 		&:before
 			background-color: #d27857
 	&_violet
-		// border-color: #c0a6cd
+		&.btn_bd
+			border-color: #c0a6cd
 		&:before
 			background-color: #c0a6cd
+
+.button
+	font-size: 18px
+	color: #fff
+	width: 210px
+	background-color: #f7b153  
+	padding: 10px 10px 9px
+	cursor: pointer
+	+tr(background .3s)
+	&:hover
+		background: darken(#f7b153, 10) 
 
 // item
 .item
@@ -213,10 +245,19 @@ a
 		.item__txt
 			font-size: 22px
 			+lora
+	&_big
+		.item__txt
+			padding-top: 10px 
+		.item__img
+			height: 507px
+		.item__name
+			font-size: 56px
+	 
 	&__img
 		position: relative
 		display: block
 		height: 300px
+		background: #FFF 
 		+cover
 		&:before
 			display: none
@@ -264,3 +305,58 @@ a
 		top: 10px
 		left: -5px
 		background: #FFF
+	.man
+		margin: 15px auto
+		max-width: 460px 
+.man
+	text-align: left
+	display: table
+	&__text
+		display: table-cell
+		vertical-align: middle
+		+light
+		font-size: 16px
+		line-height: 1.125
+		text-align: left
+		padding-left: 20px  
+	&__img
+		display: table-cell
+		vertical-align: middle
+		width: 60px
+		height: 60px
+		border-radius: 50%
+		overflow: hidden
+		img
+			max-width: 100% 
+.subscribe
+	> .text-big
+		margin-bottom: 20px 
+	&__field
+		border: 1px solid #9bc1bc
+		padding: 4px 4px 4px 20px
+		+clr
+		.button 
+			float: right
+	&__input
+		overflow: hidden
+		color: #282828 
+		position: relative
+		input
+			+regi
+			padding: 12px 10px 9px 35px
+			font-size: 17px
+			width: 100% 
+			line-height: 40px
+			height: 40px 
+			+placeholder
+				color: inherit
+		.fa
+			color: #9bc1bc
+			font-size: 24px
+			display: inline-block
+			vertical-align: middle
+			position: absolute
+			left: 0
+			top: 50%
+			margin-top: -12px 
+			

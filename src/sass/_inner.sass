@@ -4,22 +4,37 @@ $green: #9bc1bc
 	width: 13px
 	height: 13px
 	background: $green
-	display: inline-block   
-.text-big
-	font-size: 20px
-	+med 
+	display: inline-block 
 
+.text-big
+	font-size: 24px
+	+med 
+	&_md
+		font-size: 20px
+
+.section-title
+	font-size: 18px
+	letter-spacing: 2.6px
+	color: $green
+	margin-bottom: 20px
+
+.meta
+	+reg
+	font-size: 11px
+	color: #b7b7b7
+	
 .divider
 	height: 1px
 	margin: 20px 0
-	background: $green   
+	background: $green 
+	  
 // news
 .l-news
 	+clr
 	.l-col1
 		padding-right: 15px 
 		float: left 
-		width: 66.77%
+		width: 66.67%
 		width: calc(100% - (100% / 3))
 	.l-col2
 		float: right
@@ -29,6 +44,13 @@ $green: #9bc1bc
 		width: calc(100% / 3)
 		
 // soc-v
+.soc-wrapper
+	padding-left: 110px 
+	position: relative
+	.soc-v
+		position: absolute
+		left: 0
+		top: 0
 .soc-v
 	> li
 		text-align: center
@@ -49,13 +71,7 @@ $green: #9bc1bc
 			&:hover
 				background: darken(#9bc1bc, 10)
 
-.news-body
-	position: relative
-	padding-left: 110px 
-	.soc-v
-		position: absolute
-		left: 0
-		top: 0
+// news
 .news-header
 	h1, .h1
 		margin-bottom: 20px
@@ -75,4 +91,36 @@ $green: #9bc1bc
 		span
 			+light
 			padding-left: 10px 
+			
+// sidebar 
+.banner-img
+	padding: 45px 25px
+	border: 1px solid #e6e6e6 
+	text-align: center
+	margin-bottom: 20px
+	background: #fff 
+	a
+		line-height: 0
+	img
+		max-width: 100% 
+		
+.item-sm
+	font-size: 16px
+	padding-bottom: 15px
+	margin-bottom: 15px
+	border-bottom: 1px solid #e6e6e6
+	&:last-child
+		border: 0
+	+light
+	p
+		line-height: 1.2 
+	.text-big
+		margin-bottom: 10px 
+		line-height: 1
+	&:hover
+		.text-big
+			text-decoration: underline
+	
+		
+
 
