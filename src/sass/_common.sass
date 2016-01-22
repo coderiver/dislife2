@@ -3,9 +3,9 @@
 //     .whatever
 // 			+s(codedby)
 // ## gradient example
-//     	+g(#232323, #5c5c5c);
+//     	+g(#232323, #5c5c5c)
 //	   horizontal
-//     	+gh(#232323, #5c5c5c);
+//     	+gh(#232323, #5c5c5c)
 // ## making bw-images
 //     img
 //			@extend %gray
@@ -17,7 +17,7 @@
 // ## use cycles
 //     @for $i from 1 through 3
 //       .item-#{$i}
-//			width: 2em * $i;
+//			width: 2em * $i
 //     @each $s in a,b,c
 // 	    	#{$s}
 //				display: none
@@ -101,7 +101,25 @@ body
 	line-height: 1.4
 	min-width: 320px
 
+// colors
+$violet: #ff8c61
+$gold: #f2c05e
+$red: #d27857
+$orange: #ff8c61
+$mint: #9bc1bc
+
 // common blocks
+.l-center
+	max-width: 1070px
+	margin: 0 auto
+
+.row
+	font-size: 0
+
+.col-s
+	display: inline-block
+	width: 33.33%
+	padding: 0 15px
 
 strong, b
 	font-weight: 400
@@ -112,6 +130,12 @@ i, em
 h1, .h1
 	font-size: 60px
 	+bold
+
+.h2
+	font-size: 45px
+	color: #0e0e0e
+	line-height: 1.5
+	+light
 
 a
 	color: #000
@@ -170,3 +194,73 @@ a
 		// border-color: #c0a6cd
 		&:before
 			background-color: #c0a6cd
+
+// item
+.item
+	position: relative
+	margin-bottom: 30px
+	border: 1px solid #c0a6cd
+	&_gold
+		border-color: $gold
+		.item__link
+			color: $gold
+	&_violet
+		border-color: $violet
+	&_mod
+		// .item__img
+		// 	&:before
+		// 		display: block
+		.item__txt
+			font-size: 22px
+			+lora
+	&__img
+		position: relative
+		display: block
+		height: 300px
+		+cover
+		&:before
+			display: none
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			//+g(rgba(47, 28, 42, 0.5), rgba(45, 26, 40, 0.76))
+			//+g(#998694, #766372)
+	&__txt
+		padding: 17px 30px
+		height: 160px
+		text-align: center
+		font-size: 28px
+		background: #FFF
+		color: #282828
+		overflow: hidden
+		line-height: 28px
+		+med
+	&__author
+		font-size: 14px
+		color: #909090
+		+light
+	&__link
+		display: inline-block
+		text-decoration: underline
+		font-size: 14px
+		+regi
+		&:hover
+			text-decoration: none
+	&__title
+		position: absolute
+		bottom: 10px
+		left: 0
+		right: 0
+		text-align: center
+	&__name
+		font-size: 28px
+		color: #FFF
+		+bold
+	.btn
+		position: absolute
+		top: 10px
+		left: -5px
+		background: #FFF
