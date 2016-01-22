@@ -1,7 +1,7 @@
 // # SHORT HOWTO
 // ## Sprites
 //     .whatever
-// 			+s(codedby) 
+// 			+s(codedby)
 // ## gradient example
 //     	+g(#232323, #5c5c5c);
 //	   horizontal
@@ -48,23 +48,23 @@
 // roboto-font
 =roboto
 	font-family: 'Roboto', Arial, sans-serif
-	
+
 // lora-font
 =lora
 	font-family: 'Lora', serif
-	font-weight: 400  
+	font-weight: 400
 =lorai
 	font-family: 'Lora', serif
-	font-weight: 400 
+	font-weight: 400
 	font-style: italic
 =lorab
 	font-family: 'Lora', serif
-	font-weight: 700 
+	font-weight: 700
 =lorabi
 	font-family: 'Lora', serif
 	font-weight: 700
 	font-style: italic
-	 
+
 // 'Fira Sans' font
 =reg
 	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
@@ -73,20 +73,20 @@
 	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
 	font-weight: 400
 	font-style: italic
-	
+
 =light
 	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
 	font-weight: 300
-	
+
 =med
 	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
 	font-weight: 500
-	
+
 =medi
 	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
 	font-weight: 500
 	font-style: italic
-	
+
 =bold
 	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
 	font-weight: 700
@@ -94,13 +94,13 @@
 	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
 	font-weight: 700
 	font-style: italic
-	
+
 body
 	+reg
 	font-size: 14px
 	line-height: 1.4
-	min-width: 320px 
-	
+	min-width: 320px
+
 // common blocks
 
 strong, b
@@ -108,7 +108,7 @@ strong, b
 
 i, em
 	font-style: normal
-	
+
 h1, .h1
 	font-size: 60px
 	+bold
@@ -118,18 +118,18 @@ a
 	text-decoration: none
 
 .container
-	width: 1320px  
-	padding: 0 15px 
+	max-width: 1320px
+	padding: 0 15px
 	margin: 0 auto
 	+r1
-		width: 990px
+		max-width: 990px
 	+r2
-		width: 660px
+		max-width: 660px
 	+r3
-		width: 100% 
+		width: 100%
 
 .tech-row
-	padding: 10px 0 
+	padding: 10px 0
 
 .btn
 	display: inline-block
@@ -139,7 +139,7 @@ a
 	padding: 7px 18px 6px
 	font-size: 11px
 	+tr(color .3s)
-	z-index: 1 
+	z-index: 1
 	&:before
 		content: ''
 		position: absolute
@@ -147,26 +147,26 @@ a
 		top: -1px
 		bottom: -1px
 		width: 5px
-		background: #333 
+		background: #333
 		+tr(width .3s)
-		z-index: -1 
+		z-index: -1
 	&:hover
 		color: #fff
 		&:before
-			width: 100%  
+			width: 100%
 	&_gold
 		// border-color: #f2c05e
 		&:before
 			background-color: #f2c05e
 	&_orange
-		// border-color: #ff8c61 
+		// border-color: #ff8c61
 		&:before
 			background-color: #ff8c61
 	&_red
-		// border-color: #d27857 
+		// border-color: #d27857
 		&:before
 			background-color: #d27857
 	&_violet
-		// border-color: #c0a6cd 
+		// border-color: #c0a6cd
 		&:before
 			background-color: #c0a6cd

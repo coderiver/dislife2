@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
-	// go js
+	$('.js-tab').click(function() {
+		$(this).addClass('is-active');
+		$(this).siblings().removeClass('is-active');
+	});
 
 });

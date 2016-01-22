@@ -1,0 +1,112 @@
+// search
+.search
+	position: relative
+	display: block
+	margin: 5px 0
+	input
+		display: block
+		width: 100%
+		padding: 18.5px 18px 18.5px 108px
+		font-size: 42px
+		background: #f4f5f1
+		+bold
+	&__btn
+		position: absolute
+		top: 50%
+		left: 17px
+		margin-top: -30.5px
+		font-size: 61px
+		background: none
+		color: #9bc1bc
+		line-height: 1
+		cursor: pointer
+
+// filter
+.filter
+	&__bl
+		padding: 20px 0
+		font-size: 16px
+		border-bottom: 1px solid #e4eae9
+		+light
+		+clr
+	&__el
+		margin-top: 5px
+		+clr
+	&__name
+		float: left
+		min-width: 88px
+		margin-right: 20px
+		color: #282828
+	&__info
+		font-size: 0
+		overflow: hidden
+		p
+			font-size: 16px
+	&__tag
+		display: inline-block
+		margin-right: 10px
+		text-transform: uppercase
+		font-size: 16px
+		color: #9bc1bc
+		letter-spacing: 1.2px
+		+bold
+		&:hover
+			text-decoration: underline
+	&__num
+		white-space: nowrap
+	.sort
+		float: right
+		margin-left: 20px
+	+r2
+		.sort
+			float: none
+			margin: 0 0 20px 0
+	+r4
+		.sort__tag,
+		.sort__bl
+			display: block
+		.sort__tag
+			margin-bottom: 10px
+
+// sort
+.sort
+	font-size: 0
+	&__tag,
+	&__bl
+		display: inline-block
+		vertical-align: middle
+	&__tag
+		margin-right: 10px
+		font-size: 16px
+	&__bl
+		margin: 0 -5px
+		font-size: 0
+	&__tab
+		display: inline-block
+		margin: 0 5px
+		padding: 7px 15px
+		font-size: 14px
+		vertical-align: middle
+		+roboto
+		&.is-active
+			background: #9bc1bc
+			color: #FFF
+
+// search results
+.textbl
+	border-bottom: 1px solid #e4eae9
+	+clr
+	&:last-child
+		border-color: transparent
+	&__ttl
+		padding-top: 21px
+		font-size: 21px
+		+bold
+		span
+			color: #9BC1BC
+	&__img
+		float: right
+		width: 190px
+		padding-top: 35px
+		img
+			width: 100%
