@@ -31,13 +31,6 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-vk:before { content: ""; }
 
-.article { font-size: 18px; line-height: 1.6; }
-.article a { font-size: 18px; }
-.article p { margin-bottom: 30px; }
-.article ul { margin-bottom: 30px; }
-.article ul li { position: relative; color: #9bc1bc; list-style-type: disc; font-size: 16px; margin-left: 30px; }
-.article ul li span { color: #000; font-size: 1.125em; padding-left: 7px; }
-
 body { font-family: "Fira Sans", Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 1.4; min-width: 320px; }
 
 .l-center { max-width: 1070px; margin: 0 auto; }
@@ -117,6 +110,33 @@ a { color: #000; text-decoration: none; }
 .subscribe__input input:-ms-input-placeholder { color: inherit; }
 .subscribe__input input::placeholder { color: inherit; }
 .subscribe__input .fa { color: #9bc1bc; font-size: 24px; display: inline-block; vertical-align: middle; position: absolute; left: 0; top: 50%; margin-top: -12px; }
+
+.article { font-size: 18px; line-height: 1.6; }
+.article_serif { font-family: "Lora", serif; font-weight: 400; margin-bottom: 7px; }
+.article h2 { font-family: "Fira Sans", Helvetica, Arial, sans-serif; font-weight: 500; }
+.article a { font-size: 18px; }
+.article p { margin-bottom: 30px; }
+.article ul { margin-bottom: 30px; }
+.article ul li { position: relative; color: #9bc1bc; list-style-type: disc; font-size: 16px; margin-left: 30px; }
+.article ul li span { color: #000; font-size: 1.125em; padding-left: 7px; }
+.article figure { border-bottom: 1px solid #9bc1bc; padding-bottom: 20px; margin-bottom: 20px; }
+.article figure > img { max-width: 100%; }
+.article figure .iframe-wrap { position: relative; padding-bottom: 55.25%; height: 0; overflow: hidden; }
+.article figure .iframe-wrap iframe { position: absolute; top: 0; left: 0; height: 100%; width: 100%; }
+.article figure figcaption { margin-top: 10px; font-family: "Fira Sans", Helvetica, Arial, sans-serif; font-weight: 300; }
+.article figure figcaption > .square { float: left; margin-top: 3px; }
+.article figure figcaption > p { overflow: hidden; padding-left: 15px; line-height: 1.25; font-size: 16px; margin-bottom: 0; }
+.article figure figcaption > p + p { margin-bottom: 15px; }
+.article figure figcaption > p .meta { display: block; font-size: 14px; font-family: "Fira Sans", Helvetica, Arial, sans-serif; font-weight: 300; line-height: 1.25; padding-top: 3px; margin-top: 5px; }
+.article figure figcaption > p .meta:only-child { margin-top: 0; }
+.article blockquote { margin-bottom: 30px; text-align: center; font-size: 28px; line-height: 1.42; padding: 55px 0; position: relative; font-family: "Lora", serif; font-weight: 400; font-style: italic; display: block; quotes: "“" "”" "‘" "’"; }
+.article blockquote:before, .article blockquote:after { position: absolute; font-size: 96px; line-height: 0.9; color: #9bc1bc; left: 50%; margin-left: -40px; background: #fff; padding: 0 15px; z-index: 2; height: 40px; font-family: "Lora", serif; font-weight: 700; font-style: italic; }
+.article blockquote:before { content: open-quote; top: 0; margin-top: -7px; }
+.article blockquote:after { content: close-quote; bottom: 0; }
+.article blockquote p { margin-bottom: 0; }
+.article blockquote p:before, .article blockquote p:after { content: ""; width: 300px; height: 1px; background: #9bc1bc; position: absolute; left: 50%; margin-left: -150px; z-index: 1; }
+.article blockquote p:before { top: 16px; }
+.article blockquote p:after { bottom: 19px; }
 
 .search { position: relative; display: block; margin: 5px 0; }
 .search input { display: block; width: 100%; padding: 18.5px 18px 18.5px 108px; font-size: 42px; background: #f4f5f1; font-family: "Fira Sans", Helvetica, Arial, sans-serif; font-weight: 700; }
