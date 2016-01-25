@@ -102,7 +102,7 @@ body
 	min-width: 320px
 
 // colors
-$violet: #ff8c61
+$violet: #c0a6cd
 $gold: #f2c05e
 $red: #d27857
 $orange: #ff8c61
@@ -115,19 +115,19 @@ $mint: #9bc1bc
 
 .row
 	font-size: 0
-	margin: 0 -15px 
+	margin: 0 -15px
 
 .col-s
 	display: inline-block
 	width: 33.33%
 	padding: 0 15px
-				
+
 .col-big
 	padding: 0 15px
 	display: inline-block
 	vertical-align: top
 	width: 75%
-	 
+
 .col-sm
 	width: 25%
 	display: inline-block
@@ -170,7 +170,7 @@ a
 .tech-row
 	padding: 10px 0
 
-// buttons 
+// buttons
 .btn
 	display: inline-block
 	text-transform: uppercase
@@ -198,67 +198,97 @@ a
 			width: 100%
 	&_gold
 		&.btn_bd
-			border-color: #f2c05e
+			border-color: $gold
 		&:before
-			background-color: #f2c05e
+			background-color: $gold
 	&_orange
 		&.btn_bd
-			border-color: #ff8c61
+			border-color: $orange
 		&:before
-			background-color: #ff8c61
+			background-color: $orange
 	&_red
 		&.btn_bd
-			border-color: #d27857
+			border-color: $red
 		&:before
-			background-color: #d27857
+			background-color: $red
 	&_violet
 		&.btn_bd
-			border-color: #c0a6cd
+			border-color: $violet
 		&:before
-			background-color: #c0a6cd
+			background-color: $violet
 
 .button
 	font-size: 18px
 	color: #fff
 	width: 210px
-	background-color: #f7b153  
+	background-color: #f7b153
 	padding: 10px 10px 9px
 	cursor: pointer
 	+tr(background .3s)
 	&:hover
-		background: darken(#f7b153, 10) 
+		background: darken(#f7b153, 10)
 
 // item
 .item
 	position: relative
 	margin-bottom: 30px
-	border: 1px solid #c0a6cd
+	height: 462px
+	background: #FFF
+	border: 1px solid #000
+	&:hover
+		.item__link
+			text-decoration: none
+		.item__txt
+			height: 235px
+		.item__info
+			opacity: 1
 	&_gold
 		border-color: $gold
+		&:hover
+			.item__author,
+			.item__txt
+				color: $gold
 		.item__link
 			color: $gold
 	&_violet
 		border-color: $violet
+		&:hover
+			.item__author,
+			.item__txt
+				color: $violet
+		.item__link
+			color: $violet
 	&_mod
-		// .item__img
-		// 	&:before
-		// 		display: block
+		&:hover
+			.item__txt
+				height: 150px
+			.item__author
+				color: #ccc
 		.item__txt
+			height: 150px
 			font-size: 22px
 			+lora
-	&_big
-		.item__txt
-			padding-top: 10px 
 		.item__img
-			height: 507px
+			height: 310px
+			&:before
+				display: block
+		.item__author
+			color: #ccc
+	&_big
+		height: 672px
+		.item__txt
+			padding-top: 10px
+		.item__img
+			height: 510px
 		.item__name
 			font-size: 56px
-	 
+	&__in
+		display: block
 	&__img
 		position: relative
 		display: block
 		height: 300px
-		background: #FFF 
+		background: #FFF
 		+cover
 		&:before
 			display: none
@@ -268,39 +298,71 @@ a
 			left: 0
 			right: 0
 			bottom: 0
-			//+g(rgba(47, 28, 42, 0.5), rgba(45, 26, 40, 0.76))
-			//+g(#998694, #766372)
+			opacity: 0.8
+			+g(rgba(47, 28, 42, 0.5), rgba(45, 26, 40, 0.76))
 	&__txt
-		padding: 17px 30px
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
 		height: 160px
+		padding: 17px 30px
 		text-align: center
-		font-size: 28px
+		font-size: 18px
 		background: #FFF
 		color: #282828
 		overflow: hidden
-		line-height: 28px
-		+med
+		line-height: 24px
+		+light
+		+tr(0.2s)
+	&__info
+		opacity: 0
+		+tr(opacity 0.2s)
 	&__author
 		font-size: 14px
 		color: #909090
+		+tr(color 0.2s)
 		+light
 	&__link
 		display: inline-block
 		text-decoration: underline
 		font-size: 14px
 		+regi
-		&:hover
-			text-decoration: none
 	&__title
 		position: absolute
-		bottom: 10px
+		bottom: 20px
 		left: 0
 		right: 0
 		text-align: center
+	&__subtitle
+		margin-bottom: 5px
+		font-size: 28px
+		line-height: 28px
+		+med
 	&__name
 		font-size: 28px
 		color: #FFF
 		+bold
+	&__arr
+		position: absolute
+		height: 20px
+		bottom: -1px
+		left: 0
+		right: 0
+		overflow: hidden
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			border-width: 10px
+			border-color: transparent transparent #fff
+			border-style: solid
+		&:before
+			left: -20px
+			right: 50%
+		&:after
+			right: -20px
+			left: 50%
 	.btn
 		position: absolute
 		top: 10px
@@ -308,7 +370,7 @@ a
 		background: #FFF
 	.man
 		margin: 15px auto
-		max-width: 460px 
+		max-width: 460px
 .man
 	text-align: left
 	display: table
@@ -319,7 +381,7 @@ a
 		font-size: 16px
 		line-height: 1.125
 		text-align: left
-		padding-left: 20px  
+		padding-left: 20px
 	&__img
 		display: table-cell
 		vertical-align: middle
@@ -328,27 +390,27 @@ a
 		border-radius: 50%
 		overflow: hidden
 		img
-			max-width: 100% 
+			max-width: 100%
 .subscribe
 	> .text-big
-		margin-bottom: 20px 
+		margin-bottom: 20px
 	&__field
 		border: 1px solid #9bc1bc
 		padding: 4px 4px 4px 20px
 		+clr
-		.button 
+		.button
 			float: right
 	&__input
 		overflow: hidden
-		color: #282828 
+		color: #282828
 		position: relative
 		input
 			+regi
 			padding: 12px 10px 9px 35px
 			font-size: 17px
-			width: 100% 
+			width: 100%
 			line-height: 40px
-			height: 40px 
+			height: 40px
 			+placeholder
 				color: inherit
 		.fa
@@ -359,5 +421,5 @@ a
 			position: absolute
 			left: 0
 			top: 50%
-			margin-top: -12px 
-			
+			margin-top: -12px
+
