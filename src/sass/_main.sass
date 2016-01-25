@@ -1,1 +1,51 @@
-// Normally mainpage styles
+.main
+	padding: 30px 0 
+	&__row
+		margin: 0 -15px
+		+clr
+	&__content, &__sidebar
+		padding: 0 15px 
+		float: left
+	&__sidebar
+		width: 25%
+	&__content
+		width: 75%
+
+.social
+	border: 1px solid #e6e6e6
+	padding: 19px 15px 15px
+	text-align: center
+	&__title
+		font-size: 22px
+		line-height: 1.18
+		color: #282828
+		+medi
+		&:after
+			width: 38px
+			border-bottom: 3px solid #e6e6e6
+			margin: 11px auto 15px
+			display: block
+			content: ""  
+	&__list
+		font-size: 0
+		li
+			display: inline-block
+			vertical-align: top
+			padding: 5px 
+		a
+			display: block
+			color: #fff
+			width: 40px
+			height: 40px
+			padding: 9px 0 7px
+			text-align: center  
+			&.is-fb
+				background-color: #3b5998
+			&.is-tw
+				background-color: #55acee
+			&.is-vk
+				background-color: #45668e
+			&.is-od
+				background-color: #ed812b
+		i
+			font-size: 24px 
