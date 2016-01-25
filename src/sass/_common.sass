@@ -160,6 +160,8 @@ a
 	max-width: 1320px
 	padding: 0 15px
 	margin: 0 auto
+	&_search
+		padding-top: 40px
 	+r1
 		max-width: 990px
 	+r2
@@ -248,15 +250,23 @@ a
 			.item__author,
 			.item__txt
 				color: $gold
-		.item__link
+		.item__instruction
 			color: $gold
+	&_red
+		border-color: $red
+		&:hover
+			.item__author,
+			.item__txt
+				color: $red
+		.item__instruction
+			color: $red
 	&_violet
 		border-color: $violet
 		&:hover
 			.item__author,
 			.item__txt
 				color: $violet
-		.item__link
+		.item__instruction
 			color: $violet
 	&_mod
 		&:hover
@@ -306,7 +316,7 @@ a
 		right: 0
 		bottom: 0
 		height: 160px
-		padding: 17px 30px
+		padding: 12px 35px
 		text-align: center
 		font-size: 18px
 		background: #FFF
@@ -315,15 +325,22 @@ a
 		line-height: 24px
 		+light
 		+tr(0.2s)
+		&-in
+			height: 100%
+			overflow: hidden
 	&__info
 		opacity: 0
 		+tr(opacity 0.2s)
 	&__author
+		max-width: 100%
 		font-size: 14px
 		color: #909090
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
 		+tr(color 0.2s)
 		+light
-	&__link
+	&__instruction
 		display: inline-block
 		text-decoration: underline
 		font-size: 14px
@@ -335,7 +352,7 @@ a
 		right: 0
 		text-align: center
 	&__subtitle
-		margin-bottom: 5px
+		margin: 5px 0
 		font-size: 28px
 		line-height: 28px
 		+med

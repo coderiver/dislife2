@@ -44,7 +44,7 @@
 			<i class="fa fa-search js-mini-search-btn"></i>
 		</div>
 	</header>
-	<div class="container">
+	<div class="container container_search">
 		<div class="l-center">
 			<!-- begin search  -->
 			<form>
@@ -155,9 +155,11 @@
 						<a href="#" class="item__in">
 							<div class="item__img" style="background-image: url(img/item.jpg)"></div>
 							<div class="item__txt">
-								<p class="item__author">Ира Соломонова</p>
-								<p class="item__subtitle">Подготовить особенных детей к жизни в обычном мире</p>
-								<p class="item__info">Почему воспитанникам детских домов не могут помочь ни взрослые, ни закон, и за что здоровых детей отправляют в психиатрические больницы</p>
+								<div class="item__txt-in">
+									<p class="item__author">Ира Соломонова</p>
+									<p class="item__subtitle">Подготовить особенных детей к жизни в обычном мире</p>
+									<p class="item__info">Почему воспитанникам детских домов не могут помочь ни взрослые, ни закон, и за что здоровых детей отправляют в психиатрические больницы</p>
+								</div>
 							</div>
 						</a>
 					</div>
@@ -170,9 +172,11 @@
 						<a href="#" class="item__in">
 							<div class="item__img" style="background-image: url(img/item2.jpg)"></div>
 							<div class="item__txt">
-								<p class="item__author">Ира Соломонова</p>
-								<p class="item__subtitle">В этой школе учатся все</p>
-								<p class="item__info">Почему воспитанникам детских домов не могут помочь ни взрослые, ни закон, и за что здоровых детей отправляют в психиатрические больницы</p>
+								<div class="item__txt-in">
+									<p class="item__author">Ира Соломонова</p>
+									<p class="item__subtitle">В этой школе учатся все</p>
+									<p class="item__info">Почему воспитанникам детских домов не могут помочь ни взрослые, ни закон, и за что здоровых детей отправляют в психиатрические больницы</p>
+								</div>
 							</div>
 						</a>
 					</div>
@@ -191,8 +195,10 @@
 								<span class="item__arr"></span>
 							</div>
 							<div class="item__txt">
-								<p class="item__link">Инструкция</p>
-								<p>Как правильно экономить на авиабилетах? Руководство к действию</p>
+								<div class="item__txt-in">
+									<p class="item__instruction">Инструкция</p>
+									<p>Как правильно экономить на авиабилетах? Руководство к действию</p>
+								</div>
 							</div>
 						</a>
 					</div>
@@ -205,23 +211,27 @@
 					<!-- begin item  -->
 					<div class="item item_gold item_mod item_big">
 						<a href="#" class="btn btn_gold">Маленькая политика</a>
-						<a href="#" class="item__img" style="background-image: url(img/item-big.jpg)">
-							<div class="item__title">
-								<p class="item__author">Ира Соломонова</p>
-								<p class="item__name">Дети Гольяново</p>
-							</div>
-							<span class="item__arr"></span>
-						</a>
-						<div class="item__txt">
-							<a href="#" class="item__link">Инструкция</a>
-							<p>Как правильно экономить на авиабилетах? Руководство к действию</p>
-							<div class="man">
-								<div class="man__img">
-									<img src="img/man-o.png" alt="">
+						<a href="#" class="item__in">
+							<div class="item__img" style="background-image: url(img/item-big.jpg)">
+								<div class="item__title">
+									<p class="item__author">Ира Соломонова</p>
+									<p class="item__name">Дети Гольяново</p>
 								</div>
-								<div class="man__text">Объясняет заслуженный учитель России, автор учебников по литературе Татьяна Иванцова</div>
+								<span class="item__arr"></span>
 							</div>
-						</div>
+							<div class="item__txt">
+								<div class="item__txt-in">
+									<p class="item__instruction">Инструкция</p>
+									<p>Как правильно экономить на авиабилетах? Руководство к действию</p>
+									<div class="man">
+										<div class="man__img">
+											<img src="img/man-o.png" alt="">
+										</div>
+										<div class="man__text">Объясняет заслуженный учитель России, автор учебников по литературе Татьяна Иванцова</div>
+									</div>
+								</div>
+							</div>
+						</a>
 					</div>
 					<!-- end item -->
 				</div>
@@ -240,6 +250,41 @@
 		</div>
 	</div>
 	<!-- end more -->
+	<footer class="footer">
+		<div class="footer__top">
+			<div class="container">
+				<div class="footer__text">
+					<a href="#" class="footer__logo">
+						<span class="footer__gray">Dis</span>
+						<span>LIFE</span>
+					</a>
+					<div class="footer__question">КАК ЖИТЬ В РОССИИ И НЕ УМЕРЕТЬ</div>
+				</div>
+				<div class="footer__box">
+					<div class="footer__label">Подпишитесь на еженедельную рассылку:</div>
+					<form action="" class="footer__form">
+						<input type="text" class="footer__input" placeholder="Ваш e-mail">
+						<i class="fa fa-envelope-o"></i>
+						<button class="footer__btn">Подписаться</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="container">
+				<ul class="footer__social">
+					<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+					<li><a href="#"><i class="fa fa-vk"></i></a></li>
+					<li><a href="#"><i class="fa fa-odnoklassniki-square"></i></a></li>
+				</ul>
+				<div class="footer__copy">
+					<p>© Dislife.ru 2015</p>
+					<div class="footer__age">18+</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 </div>
 <!-- END out-->
 </body>
