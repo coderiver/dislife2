@@ -161,6 +161,25 @@ a { color: #000; text-decoration: none; }
 .article blockquote p:before { top: 16px; }
 .article blockquote p:after { bottom: 19px; }
 
+.main { padding: 30px 0; }
+.main__row { margin: 0 -15px; *zoom: 1; }
+.main__row:after { content: " "; display: table; clear: both; }
+.main__content, .main__sidebar { padding: 0 15px; float: left; }
+.main__sidebar { width: 25%; }
+.main__content { width: 75%; }
+
+.social { border: 1px solid #e6e6e6; padding: 19px 15px 15px; text-align: center; }
+.social__title { font-size: 22px; line-height: 1.18; color: #282828; font-family: "Fira Sans", Helvetica, Arial, sans-serif; font-weight: 500; font-style: italic; }
+.social__title:after { width: 38px; border-bottom: 3px solid #e6e6e6; margin: 11px auto 15px; display: block; content: ""; }
+.social__list { font-size: 0; }
+.social__list li { display: inline-block; vertical-align: top; padding: 5px; }
+.social__list a { display: block; color: #fff; width: 40px; height: 40px; padding: 9px 0 7px; text-align: center; }
+.social__list a.is-fb { background-color: #3b5998; }
+.social__list a.is-tw { background-color: #55acee; }
+.social__list a.is-vk { background-color: #45668e; }
+.social__list a.is-od { background-color: #ed812b; }
+.social__list i { font-size: 24px; }
+
 .search { position: relative; display: block; margin: 5px 0; }
 .search input { display: block; width: 100%; padding: 18.5px 18px 18.5px 108px; font-size: 42px; background: #f4f5f1; font-family: "Fira Sans", Helvetica, Arial, sans-serif; font-weight: 700; }
 .search__btn { position: absolute; top: 50%; left: 17px; margin-top: -30.5px; font-size: 61px; background: none; color: #9bc1bc; line-height: 1; cursor: pointer; }
@@ -209,7 +228,7 @@ body.overflow-hidden { position: fixed; width: 100%; }
 
 .top-banner { width: 100%; height: 149px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; display: block; }
 
-.header { position: relative; background-color: #fff; -webkit-box-shadow: 0 2px 6px rgba(159, 159, 159, 0.5); box-shadow: 0 2px 6px rgba(159, 159, 159, 0.5); margin-bottom: 30px; padding: 0 200px; min-height: 80px; z-index: 10; }
+.header { position: relative; background-color: #fff; -webkit-box-shadow: 0 2px 6px rgba(159, 159, 159, 0.5); box-shadow: 0 2px 6px rgba(159, 159, 159, 0.5); padding: 0 200px; min-height: 80px; z-index: 10; }
 .header__inner { margin: 0 auto; max-width: 1290px; *zoom: 1; }
 .header__inner:after { content: " "; display: table; clear: both; }
 
