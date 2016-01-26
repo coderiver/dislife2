@@ -47,14 +47,56 @@
 	&__text
 		padding-bottom: 8px
 		+clr
-	&__box
-		+clr
-		padding: 25px 18px 21px
-		border: 2px solid #fff 
-		+r1
-			padding: 25px 12px 21px
-		+r2
-			padding: 15px 
+	&__social
+		font-size: 0
+		float: left
+		+r3
+			float: none
+			text-align: center
+			margin-bottom: 20px
+		li
+			display: inline-block
+			vertical-align: top
+			padding: 0 26px 0 12px 
+			+r3
+				padding: 0 12px 
+		a
+			color: #fff 
+			display: block
+			i
+				font-size: 36px
+	&__copy
+		float: right
+		+light
+		line-height: 1
+		font-size: 0
+		padding: 2px 0 0 
+		+r3
+			float: none
+			text-align: center
+		p
+			color: #fff
+			padding: 10px 30px 8px 0
+	&__copy p, &__age
+		vertical-align: top
+		display: inline-block
+		font-size: 22px
+	&__age
+		color: #857e7b
+		padding: 11px 0 7px
+		text-align: center
+		width: 40px
+		background: #fff
+		border-radius: 4px
+
+.subscribe
+	+clr
+	padding: 25px 18px 21px
+	border: 2px solid #fff 
+	+r1
+		padding: 25px 12px 21px
+	+r2
+		padding: 15px 
 	&__label, &__form
 		float: left
 	&__label
@@ -101,6 +143,7 @@
 		+reg
 		padding: 12px 10px 10px 
 		display: inline-block
+		cursor: pointer
 		+r1
 			width: 150px
 		+r2
@@ -131,44 +174,3 @@
 		&::placeholder
 			color: #282828
 			opacity: 1
-	&__social
-		font-size: 0
-		float: left
-		+r3
-			float: none
-			text-align: center
-			margin-bottom: 20px
-		li
-			display: inline-block
-			vertical-align: top
-			padding: 0 26px 0 12px 
-			+r3
-				padding: 0 12px 
-		a
-			color: #fff 
-			display: block
-			i
-				font-size: 36px
-	&__copy
-		float: right
-		+light
-		line-height: 1
-		font-size: 0
-		padding: 2px 0 0 
-		+r3
-			float: none
-			text-align: center
-		p
-			color: #fff
-			padding: 10px 30px 8px 0
-	&__copy p, &__age
-		vertical-align: top
-		display: inline-block
-		font-size: 22px
-	&__age
-		color: #857e7b
-		padding: 11px 0 7px
-		text-align: center
-		width: 40px
-		background: #fff
-		border-radius: 4px
