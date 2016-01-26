@@ -115,6 +115,8 @@
 	padding: 60px 30px 37px
 	position: relative
 	+cover
+	+r3
+		padding: 60px 15px 30px 
 	&:before
 		content: "" 
 		position: absolute
@@ -137,41 +139,70 @@
 		+clr
 	&__box, &__slider
 		float: left
+		+r2
+			float: none
 	&__box
 		background-color: rgba(255, 255, 255, 0.9)
 		width: 31%
 		padding: 25px 20px 32px 28px 
+		+r1
+			padding: 21px 17px 32px 
+			width: 30%
+		+r2
+			width: auto
+			margin: 0 20px 20px
+		+r3
+			margin: 0 0 20px
 		p
 			font-size: 18px
 			+light
 			line-height: 24px
+			+r1
+				font-size: 16px
+				line-height: 20px
 	&__slider
 		width: 69%
 		padding: 0 20px 0 71px
+		+r1
+			width: 70%
+			padding: 0 15px 0 54px 
+		+r2
+			width: auto
+			padding: 0 20px 
+		+r3
+			padding: 0 
 	&__title
 		font-size: 52px
 		line-height: 1
 		+bold
 		margin-bottom: 22px
+		+r1
+			font-size: 38px
 
 .slider
 	max-width: 100% 
 	width: 760px
-	height: 350px
+	min-height: 350px
 	position: relative
 	&:before, &:after
 		content: "" 
 		position: absolute
 		left: 0
 		right: 0
-		height: 151px
+		height: calc(50% - 25px)
 		border: 1px solid #fff
+		+r3
+			height: 50%
 	&:before
 		top: 0
 		border-bottom: none
 	&:after
 		bottom: 0
 		border-top: none
+	&__in
+		min-height: 350px
+		position: relative
+		z-index: 2
 	&__prev, &__next
 		position: absolute
 		top: 50%
@@ -184,6 +215,13 @@
 		color: #fff
 		background: none  
 		cursor: pointer
+		z-index: 10
+		transition: all 0.2s
+		+r3
+			display: none !important
+		&:hover
+			background-color: #f2c05e
+			border-color: #f2c05e
 	&__prev
 		left: -24px
 		i
@@ -192,18 +230,49 @@
 		right: -24px
 		i
 			margin-left: 4px
+	.slick-dots
+		z-index: 10
+		bottom: 40px
+		font-size: 0
+		li
+			padding: 0
+			margin: 0 5px  
+			&.slick-active
+				button
+					background: #fff 
+			button
+				width: 12px
+				height: 12px
+				border: 1px solid #fff
+				background: none
 
 .slide
 	color: #fff
-	padding: 53px 110px
+	padding: 53px 110px 72px
 	position: relative
 	z-index: 3
+	+r1
+		padding: 45px 45px 70px 
+	+r3
+		padding: 20px 15px 70px 
 	&__title
 		font-size: 36px
 		line-height: 1
 		+lorai
+		margin-bottom: 55px
+		+r1
+			font-size: 32px
+			line-height: 36px
+		+r3
+			font-size: 24px
+			line-height: 26px
+			margin-bottom: 30px
+		+r4
+			font-size: 20px
+			line-height: 24px
 	&__author
 		font-size: 0
+		+clr
 	&__img, &__name
 		display: inline-block
 		vertical-align: middle
@@ -213,6 +282,11 @@
 		border-radius: 50%
 		overflow: hidden
 		margin-right: 20px
+		+r3
+			width: 60px
+			height: 60px
+			margin-right: 15px
+			float: left
 		img
 			width: 100%
 			height: 100%
@@ -221,10 +295,17 @@
 		font-size: 18px
 		line-height: 21px
 		+med
+		+r3
+			display: block
+			padding: 20px 0 20px 75px
+		+r3
+			font-size: 16px
+			+reg
 	&__line
 		overflow: hidden
 		position: relative
 		height: 14px
+		margin-bottom: 15px
 		&:before, &:after
 			content: "" 
 			position: absolute
@@ -233,11 +314,28 @@
 			width: 300px
 		&:before
 			left: -115px
+			+r3
+				width: 200px
 		&:after
 			left: 240px
+			+r3
+				left: 140px
+				width: 500px
 		span
 			height: 14px
 			margin-left: 185px
 			width: 55px
-			border-top: 1px solid red 
+			border-left: 2px solid #fff
 			display: block 
+			position: relative
+			+r3
+				margin-left: 85px
+			&:before
+				content: "" 
+				position: absolute
+				bottom: 0
+				left: 0
+				border-bottom: 2px solid #fff
+				width: 100px 
+				transform-origin: bottom left
+				transform: rotate(-13deg)
