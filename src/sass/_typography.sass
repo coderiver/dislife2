@@ -5,7 +5,7 @@ $indent: 30px
 	line-height: 1.6
 	&_serif
 		+lora
-		margin-bottom: 7px 
+		margin-bottom: 7px
 	h2
 		+med
 	a
@@ -17,21 +17,21 @@ $indent: 30px
 		li
 			position: relative
 			color: #9bc1bc
-			list-style-type: disc 
-			font-size: 16px 
-			margin-left: 30px 
+			list-style-type: disc
+			font-size: 16px
+			margin-left: 30px
 			span
 				color: #000
 				font-size: 1.125em
 				padding-left: 7px
 	figure
 		border-bottom: 1px solid #9bc1bc
-		padding-bottom: 20px 
+		padding-bottom: 20px
 		margin-bottom: 20px
 		> img
 			max-width: 100%
 		.iframe-wrap
-			position: relative 
+			position: relative
 			padding-bottom: 55.25%
 			height: 0
 			overflow: hidden
@@ -40,30 +40,30 @@ $indent: 30px
 				top: 0
 				left: 0
 				height: 100%
-				width: 100%  
+				width: 100%
 		figcaption
-			margin-top: 10px 
+			margin-top: 10px
 			+light
 			> .square
 				float: left
-				margin-top: 3px 
+				margin-top: 3px
 			> p
 				overflow: hidden
 				padding-left: 15px
 				line-height: 1.25
-				font-size: 16px 
+				font-size: 16px
 				margin-bottom: 0
 				+ p
-					margin-bottom: 15px 
+					margin-bottom: 15px
 				.meta
 					display: block
 					font-size: 14px
 					+light
-					line-height: 1.25 
+					line-height: 1.25
 					padding-top: 3px
 					margin-top: 5px
 					&:only-child
-						margin-top: 0 
+						margin-top: 0
 	blockquote
 		margin-bottom: $indent
 		text-align: center
@@ -71,9 +71,9 @@ $indent: 30px
 		line-height: 1.42
 		padding: 55px 0
 		position: relative
-		+lorai  
 		display: block
 		quotes: "\201C""\201D""\2018""\2019"
+		+lorai
 		&:before,
 		&:after
 			position: absolute
@@ -81,16 +81,16 @@ $indent: 30px
 			line-height: 0.9
 			color: #9bc1bc
 			left: 50%
-			margin-left: -40px 
+			margin-left: -40px
 			background: #fff
 			padding: 0 15px
 			z-index: 2
 			height: 40px
-			+lorabi  
+			+lorabi
 		&:before
 			content: open-quote
 			top: 0
-			margin-top: -7px 
+			margin-top: -7px
 		&:after
 			content: close-quote
 			bottom: 0
@@ -101,12 +101,15 @@ $indent: 30px
 				content: ''
 				width: 300px
 				height: 1px
-				background: #9bc1bc 
-				position: absolute 
+				background: #9bc1bc
+				position: absolute
 				left: 50%
-				margin-left: -150px 
+				margin-left: -150px
 				z-index: 1
-			&:before  
+			&:before
 				top: 16px
 			&:after
-				bottom: 19px 
+				bottom: 19px
+	+r3
+		blockquote
+			font-size: 20px

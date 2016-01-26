@@ -111,11 +111,14 @@ $mint: #9bc1bc
 	padding: 0 15px
 	margin: 0 auto
 	&_search
-		padding-top: 40px
+		padding: 40px 0
+	&_news
+		padding: 90px 15px 20px
 	+r1
 		max-width: 990px
 	+r2
 		max-width: 660px
+		padding-top: 20px
 	+r3
 		width: 100%
 
@@ -166,6 +169,8 @@ h1, .h1
 	font-size: 60px
 	+bold
 	line-height: 1.06
+	+r3
+		font-size: 32px
 
 .h2
 	font-size: 45px
@@ -245,7 +250,6 @@ a
 	height: 462px
 	background: #FFF
 	border: 1px solid #000
-	overflow: hidden
 	&:hover
 		&:not(.item_mod)
 			.item__txt
@@ -438,6 +442,7 @@ a
 		left: 0
 		right: 0
 		overflow: hidden
+		transform: translate3d(0,0,0)
 		&:before,
 		&:after
 			content: ""
@@ -512,35 +517,35 @@ a
 		img
 			max-width: 100%
 
-.subscribe
-	> .text-big
-		margin-bottom: 20px
-	&__field
-		border: 1px solid #9bc1bc
-		padding: 4px 4px 4px 20px
-		+clr
-		.button
-			float: right
-	&__input
-		overflow: hidden
-		color: #282828
-		position: relative
-		input
-			+regi
-			padding: 12px 10px 9px 35px
-			font-size: 17px
-			width: 100%
-			line-height: 40px
-			height: 40px
-			+placeholder
-				color: inherit
-		.fa
-			color: #9bc1bc
-			font-size: 24px
-			display: inline-block
-			vertical-align: middle
-			position: absolute
-			left: 0
-			top: 50%
-			margin-top: -12px
+// .subscribe
+// 	> .text-big
+// 		margin-bottom: 20px
+// 	&__field
+// 		border: 1px solid #9bc1bc
+// 		padding: 4px 4px 4px 20px
+// 		+clr
+// 		.button
+// 			float: right
+// 	&__input
+// 		overflow: hidden
+// 		color: #282828
+// 		position: relative
+// 		input
+// 			+regi
+// 			padding: 12px 10px 9px 35px
+// 			font-size: 17px
+// 			width: 100%
+// 			line-height: 40px
+// 			height: 40px
+// 			+placeholder
+// 				color: inherit
+// 		.fa
+// 			color: #9bc1bc
+// 			font-size: 24px
+// 			display: inline-block
+// 			vertical-align: middle
+// 			position: absolute
+// 			left: 0
+// 			top: 50%
+// 			margin-top: -12px
 

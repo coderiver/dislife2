@@ -11,6 +11,10 @@ $green: #9bc1bc
 	+med
 	&_md
 		font-size: 20px
+	+r3
+		font-size: 20px
+		&_md
+			font-size: 18px
 
 .section-title
 	font-size: 18px
@@ -30,28 +34,34 @@ $green: #9bc1bc
 
 // news
 .l-news
+	position: relative
+	padding: 0 110px
 	+clr
 	.l-col1
-		padding-right: 15px
 		float: left
-		width: 66.67%
-		width: calc(100% - (100% / 3))
+		width: 70%
 	.l-col2
 		float: right
-		padding-left: 15px
-		padding-right: 110px
-		width: 33.33%
-		width: calc(100% / 3)
+		padding-left: 30px
+		width: 30%
+	+r1
+		padding-right: 0
+		.l-col1,
+		.l-col2
+			width: 100%
+			float: none
+		.l-col2
+			padding-left: 0
+		.banner-img
+			display: none
+	+r2
+		padding-left: 0
 
 // soc-v
-.soc-wrapper
-	padding-left: 110px
-	position: relative
-	.soc-v
-		position: absolute
-		left: 0
-		top: 0
 .soc-v
+	position: absolute
+	left: 0
+	top: 0
 	> li
 		text-align: center
 		margin-bottom: 1px
@@ -70,6 +80,12 @@ $green: #9bc1bc
 				font-size: 24px
 			&:hover
 				background: darken(#9bc1bc, 10)
+	+r2
+		position: static
+		+clr
+		> li
+			float: left
+			margin-right: 1px
 
 // news
 .news-header
@@ -77,8 +93,9 @@ $green: #9bc1bc
 		margin-bottom: 20px
 	.text-big
 		margin-bottom: 40px
+
 .news-line
-	margin-bottom: 40px
+	margin: 0 -5px 40px
 	.btn
 		display: inline-block
 		vertical-align: middle
@@ -86,11 +103,19 @@ $green: #9bc1bc
 		margin-left: -5px
 	&__info
 		display: inline-block
+		max-width: 80%
 		vertical-align: middle
 		color: #757575
 		span
+			display: inline-block
+			padding: 0 5px
 			+light
-			padding-left: 10px
+	+r3
+		&__info
+			display: block
+			margin-top: 10px
+		.btn
+			margin-left: 0
 
 // sidebar
 .banner-img
@@ -123,6 +148,6 @@ $green: #9bc1bc
 		.text-big
 			text-decoration: underline
 
-
-
-
+.disqus
+	display: block
+	max-width: 100%
