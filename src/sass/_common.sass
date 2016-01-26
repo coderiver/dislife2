@@ -69,37 +69,34 @@
 =reg
 	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
 	font-weight: 400
+
 =regi
-	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
 	font-weight: 400
 	font-style: italic
 
 =light
-	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
 	font-weight: 300
 
 =med
-	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
 	font-weight: 500
 
 =medi
-	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
 	font-weight: 500
 	font-style: italic
 
 =bold
-	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
 	font-weight: 700
+
 =boldi
-	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
 	font-weight: 700
 	font-style: italic
 
 body
-	+reg
-	font-size: 14px
-	line-height: 1.4
 	min-width: 320px
+	font-size: 14px
+	color: #282828
+	line-height: 1.4
+	+reg
 
 // colors
 $violet: #c0a6cd
@@ -109,30 +106,55 @@ $orange: #ff8c61
 $mint: #9bc1bc
 
 // common blocks
+.container
+	max-width: 1320px
+	padding: 0 15px
+	margin: 0 auto
+	&_search
+		padding-top: 40px
+	+r1
+		max-width: 990px
+	+r2
+		max-width: 660px
+	+r3
+		width: 100%
+
 .l-center
 	max-width: 1070px
 	margin: 0 auto
+
+.tech-row
+	padding: 10px 0
 
 .row
 	font-size: 0
 	margin: 0 -15px
 
-.col-s
+.col-lg, .col-sm, .col-xs
 	display: inline-block
-	width: 33.33%
 	padding: 0 15px
-
-.col-big
-	padding: 0 15px
-	display: inline-block
 	vertical-align: top
+
+.col-lg
 	width: 75%
+	+r1
+		width: 66.66%
+	+r2
+		width: 100%
 
 .col-sm
+	width: 33.33%
+	+r2
+		width: 50%
+	+r3
+		width: 100%
+
+.col-xs
 	width: 25%
-	display: inline-block
-	vertical-align: top
-	padding: 0 15px
+	+r1
+		width: 33.33%
+	+r2
+		width: 50%
 
 strong, b
 	font-weight: 400
@@ -152,25 +174,11 @@ h1, .h1
 	+light
 	&_mb
 		margin-bottom: 20px
+	+r3
+		font-size: 40px
 a
 	color: #000
 	text-decoration: none
-
-.container
-	max-width: 1320px
-	padding: 0 15px
-	margin: 0 auto
-	&_search
-		padding-top: 40px
-	+r1
-		max-width: 990px
-	+r2
-		max-width: 660px
-	+r3
-		width: 100%
-
-.tech-row
-	padding: 10px 0
 
 // buttons
 .btn
@@ -237,53 +245,107 @@ a
 	height: 462px
 	background: #FFF
 	border: 1px solid #000
+	overflow: hidden
 	&:hover
-		.item__link
-			text-decoration: none
-		.item__txt
-			height: 235px
-		.item__info
-			opacity: 1
+		&:not(.item_mod)
+			.item__txt
+				height: 235px
+			.item__info
+				opacity: 1
+			.item__img
+				&:before
+					opacity: 1
+					visibility: visible
 	&_gold
 		border-color: $gold
 		&:hover
-			.item__author,
-			.item__txt
-				color: $gold
+			&:not(.item_mod)
+				.item__author,
+				.item__txt
+					color: $gold
 		.item__instruction
 			color: $gold
+		.item__img
+			&:before
+				background: rgba(242,192,94,0.80)
+		.item__txt
+			&:hover
+				color: $gold
 	&_red
 		border-color: $red
 		&:hover
-			.item__author,
-			.item__txt
-				color: $red
+			&:not(.item_mod)
+				.item__author,
+				.item__txt
+					color: $red
 		.item__instruction
 			color: $red
+		.item__img
+			&:before
+				background: rgba(210,120,87,0.80)
+		.item__txt
+			&:hover
+				color: $red
 	&_violet
 		border-color: $violet
 		&:hover
-			.item__author,
-			.item__txt
-				color: $violet
+			&:not(.item_mod)
+				.item__author,
+				.item__txt
+					color: $violet
 		.item__instruction
 			color: $violet
-	&_mod
-		&:hover
-			.item__txt
-				height: 150px
-			.item__author
-				color: #ccc
+		.item__img
+			&:before
+				background: rgba(142, 119, 154, 0.5)
 		.item__txt
-			height: 150px
-			font-size: 22px
-			+lora
+			&:hover
+				color: $violet
+	&_mod
 		.item__img
 			height: 310px
 			&:before
-				display: block
+				opacity: 0
+			&:after
+				opacity: 0.8
+				visibility: visible
+			&:hover
+				&:before
+					opacity: 1
+					visibility: visible
+				&:after
+					opacity: 0
+					visibility: hidden
+				.item__author
+					color: #fff
+				.item__info
+					max-height: 120px
+					opacity: 1
+		.item__txt
+			height: 160px
+			font-size: 22px
+			+lora
+			&:hover
+				.item__instruction
+					text-decoration: none
 		.item__author
 			color: #ccc
+		.item__info
+			max-height: 0
+			padding: 0 15px
+			color: #FFF
+		&.item_gold
+			.item__img:hover
+				&:before
+					background: rgba(242,192,94,0.80)
+		&.item_red
+			.item__img:hover
+				&:before
+					background: rgba(210,120,87,0.80)
+		&.item_violet
+			.item__img:hover
+				&:before
+					background: rgba(142, 119, 154, 0.6)
 	&_big
 		height: 672px
 		.item__txt
@@ -299,19 +361,26 @@ a
 		display: block
 		height: 300px
 		background: #FFF
+		z-index: 0
 		+cover
-		&:before
-			display: none
+		&:before,
+		&:after
 			content: ""
 			position: absolute
 			top: 0
 			left: 0
 			right: 0
 			bottom: 0
-			opacity: 0.8
+			opacity: 0
+			visibility: hidden
+			+tr(0.25s)
+		&:after
+			background: rgba(89,52,79,0.50)
+			z-index: -1
 			+g(rgba(47, 28, 42, 0.5), rgba(45, 26, 40, 0.76))
 	&__txt
 		position: absolute
+		display: block
 		left: 0
 		right: 0
 		bottom: 0
@@ -320,17 +389,16 @@ a
 		text-align: center
 		font-size: 18px
 		background: #FFF
-		color: #282828
 		overflow: hidden
 		line-height: 24px
+		transition: color 0.2s ease, height 0.3s ease
 		+light
-		+tr(0.2s)
 		&-in
 			height: 100%
 			overflow: hidden
 	&__info
 		opacity: 0
-		+tr(opacity 0.2s)
+		transition: opacity 0.2s ease, max-height 0.3s ease
 	&__author
 		max-width: 100%
 		font-size: 14px
@@ -351,15 +419,18 @@ a
 		left: 0
 		right: 0
 		text-align: center
+		font-size: 18px
+		.item__subtitle
+			font-size: 28px
+			color: #FFF
+			+bold
 	&__subtitle
+		max-height: 84px
 		margin: 5px 0
 		font-size: 28px
 		line-height: 28px
+		overflow: hidden
 		+med
-	&__name
-		font-size: 28px
-		color: #FFF
-		+bold
 	&__arr
 		position: absolute
 		height: 20px
@@ -388,6 +459,38 @@ a
 	.man
 		margin: 15px auto
 		max-width: 460px
+	+r1
+		height: 402px
+		.item__img
+			height: 232px
+		.item__subtitle
+			font-size: 24px
+			line-height: 27px
+		.item__txt
+			padding: 12px
+		.item__txt,
+		.item__title
+			font-size: 15px
+			line-height: 20px
+		&.item_big
+			height: 672px
+			.item__img
+				height: 460px
+			.item__txt
+				height: 210px
+		&.item_mod
+			.item__txt
+				font-size: 20px
+				line-height: 23px
+	+r3
+		&.item_big
+			height: auto
+			.item__img
+				height: 232px
+			.item__txt
+				position: static
+				height: auto
+
 .man
 	text-align: left
 	display: table
@@ -408,6 +511,7 @@ a
 		overflow: hidden
 		img
 			max-width: 100%
+
 .subscribe
 	> .text-big
 		margin-bottom: 20px
