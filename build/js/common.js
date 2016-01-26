@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
-	$('.js-tab').click(function() {
+	$('.js-tab').click(function(event) {
+		event.preventDefault();
 		$(this).addClass('is-active');
 		$(this).siblings().removeClass('is-active');
 	});
@@ -25,8 +26,8 @@ $(document).ready(function() {
 		});
 		$('body').on('click', function() {
 			$('.js-nav-btn').removeClass('is-active');
-			$('.js-nav').removeClass('is-active');	
-			$('body').removeClass('overflow-hidden');		
+			$('.js-nav').removeClass('is-active');
+			$('body').removeClass('overflow-hidden');
 		});
 		$(this).on('click', function(event) {
 			event.stopPropagation();
