@@ -75,4 +75,15 @@ $(document).ready(function() {
 		adaptiveHeight: true
 	});
 
+	//select
+	$('.js-select').each(function() {
+		var select = $(this).find('select'),
+			selectText = $(this).find('.js-select-text');
+
+		select.change(function() {
+			selectText.text($(this).find('option:selected').text());
+		});
+
+	});
+
 });

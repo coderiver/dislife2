@@ -376,8 +376,30 @@
 	background-color: #e4eae9
 	.btn-load
 		margin-top: -25px
-		margin-bottom: 45px
-
+		margin-bottom: 15px
+	&__section
+		+r3
+			max-width: 320px
+			margin: 0 auto 
+		&:last-child
+			&:after
+				display: none
+		&:after
+			content: "" 
+			display: block
+			width: 100%
+			max-width: 300px
+			margin: 0 auto 30px
+			border-bottom: 2px solid #9bc1bc 
+	&__title
+		font-size: 14px
+		letter-spacing: 0.2em
+		line-height: 15px 
+		+med
+		text-transform: uppercase
+		padding: 0 15px 15px 
+	.main
+		padding-bottom: 0
 .btn-load
 	max-width: 410px
 	width: 100%
@@ -511,3 +533,235 @@
 				max-height: 200px 
 			+r3
 				font-size: 16px
+
+.item-banner
+	background-position: right center
+	background-repeat: no-repeat
+	padding: 0 30px 
+	color: #fff 
+	position: relative
+	margin-bottom: 20px
+	+r1
+		background-size: cover  
+	+r2
+		background-position: center
+	+r3
+		max-width: 320px
+		margin: 0 auto 20px
+		background-size: contain 
+		background-position: top center 
+		padding: 150px 20px 30px
+	&_blue
+		background-color: #051431 
+		.item-banner
+			&__left
+				&:before
+					background-image: linear-gradient(to right, #051431 0%, rgba(5, 20, 49, 0) 100%)
+	&_yellow
+		background-color: #f2cd42
+		&:before
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: rgba(58, 34, 48, 0.44)
+			border: 1px solid #979797
+			content: "" 
+	.btn
+		position: absolute
+		top: 10px
+		left: -5px
+		z-index: 10
+		background: #fff 
+	&__left
+		position: relative
+		max-width: 380px 
+		padding: 70px 0 30px
+		+r1
+			position: static
+			max-width: 270px
+			padding: 60px 0 30px 
+		+r3
+			padding: 0 
+		&:before
+			content: "" 
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 100%
+			margin-left: -70px
+			width: 230px
+			+r1
+				left: 0
+				right: 0
+				margin: 0
+				width: auto
+			+r3
+				display: none
+		&-in
+			position: relative
+			z-index: 2
+	&__title, &__subtitle, &__title_mod
+		+bold
+	&__title
+		font-size: 52px
+		line-height: 1
+		letter-spacing: 5px
+		+r1
+			font-size: 38px
+			line-height: 1.2
+			margin-bottom: 5px
+	&__subtitle
+		font-size: 22px
+		line-height: 31px
+		margin-bottom: 20px
+		+r1
+			font-size: 18px
+			line-height: 26px
+			margin-bottom: 5px
+	&__title_mod
+		font-size: 48px
+		line-height: 1
+		margin-bottom: 10px
+		+r1
+			font-size: 38px
+			line-height: 42px
+		+r3
+			font-size: 30px
+			line-height: 35px
+	p
+		font-size: 18px
+		line-height: 24px
+		+light
+		margin-bottom: 35px
+		+r1
+			font-size: 16px
+			line-height: 20px
+			margin-bottom: 23px 
+	&__btn
+		display: block
+		width: 100%
+		border: 3px solid #ff8c61
+		color: #ff8c61
+		font-size: 22px
+		line-height: 1
+		text-align: center
+		padding: 16px 
+		+r3
+			font-size: 20px
+			padding: 17px  
+		&_full
+			background-color: #ff8c61
+			color: #fff 
+
+.item-image
+	+cover
+	position: relative
+	padding: 117px 30px 83px 
+	margin-bottom: 20px
+	+r3
+		padding: 170px 0 0
+		background-size: contain 
+		background-position: top center 
+		max-width: 320px 
+		margin: 0 auto 20px 
+	+r4
+		padding-top: 150px
+	&:before
+		content: "" 
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: rgba(58, 34, 48, 0.44)
+		border: 1px solid #979797
+	.btn
+		position: absolute
+		top: 10px
+		left: -5px
+		background: #fff
+		z-index: 2 
+
+.box-form
+	position: relative
+	z-index: 2
+	background-color: rgba(255, 255, 255, 0.9)
+	border-radius: 6px
+	padding: 20px 40px 33px 
+	max-width: 380px 
+	+r1
+		max-width: 270px
+		padding: 20px 20px 30px 
+	+r3
+		max-width: 100%
+		background: #fff 
+		padding: 20px 25px 25px
+		border-radius: 0 
+	&__title, &__subtitle
+		+bold
+	&__title
+		font-size: 52px
+		line-height: 1.2
+		+r1
+			font-size: 38px
+			line-height: 42px 
+	&__subtitle
+		font-size: 22px
+		line-height: 1
+		max-width: 240px
+		margin-bottom: 35px
+		+r1
+			font-size: 18px
+			line-height: 26px
+			margin-bottom: 15px
+	&__field
+		margin-bottom: 19px
+	&__btn
+		background-color: #ff8c61
+		display: inline-block
+		vertical-align: top
+		text-align: center
+		width: 100%
+		+med
+		color: #fff
+		font-size: 17px
+		line-height: 21px
+		padding: 13px 12px 12px 
+	p
+		font-size: 16px
+		line-height: 18px
+		+light
+		padding: 5px 0 0 
+		a			
+			color: #ff8c61
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+
+.select
+	color: #282828
+	font-size: 18px
+	line-height: 21px
+	position: relative
+	select
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+	&__text
+		+regi
+		padding: 12px 14px 11px
+		border: 1px solid #ff8c61
+	i
+		position: absolute
+		top: 50%
+		right: 22px
+		font-size: 14px
+		margin-top: -7px
+		color: #ff8c61 
