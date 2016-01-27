@@ -401,7 +401,6 @@ body.overflow-hidden { position: fixed; width: 100%; }
 .footer__copy p { color: #fff; padding: 10px 30px 8px 0; }
 .footer__copy p, .footer__age { vertical-align: top; display: inline-block; font-size: 22px; }
 .footer__age { color: #857e7b; padding: 11px 0 7px; text-align: center; width: 40px; background: #fff; -webkit-border-radius: 4px; border-radius: 4px; }
-.footer .subscribe { border: none; border-top: 2px solid #fff; }
 
 .subscribe { *zoom: 1; padding: 25px 18px 21px; border: 2px solid #fff; text-align: left; }
 .subscribe:after { content: " "; display: table; clear: both; }
@@ -533,7 +532,6 @@ body.overflow-hidden { position: fixed; width: 100%; }
  .nav__link span{ padding: 10px 15px; }
  .nav__link span:before{ display: none; }
  .footer__question{ font-size: 22px; padding: 5px 0; }
- .footer .subscribe{ padding: 15px 0 0; }
  .subscribe{ padding: 15px; }
  .subscribe_mod .subscribe__label{ font-size: 22px; }
  .subscribe_mod{ padding: 0; }
@@ -590,6 +588,7 @@ body.overflow-hidden { position: fixed; width: 100%; }
  .footer__social{ float: none; text-align: center; margin-bottom: 20px; }
  .footer__social li{ padding: 0 18px; }
  .footer__copy{ float: none; text-align: center; }
+ .footer .subscribe{ padding: 15px 0 0; border: none; border-top: 2px solid #fff; }
  .subscribe_mod .subscribe__label{ font-size: 20px; }
  .subscribe__label{ font-size: 20px; }
  .subscribe__form{ text-align: center; }
