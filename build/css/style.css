@@ -134,11 +134,11 @@ a { color: #000; text-decoration: none; }
 .item_violet .item__instruction { color: #c0a6cd; }
 .item_violet .item__img:before { background: rgba(142, 119, 154, 0.5); }
 .item_violet .item__txt:hover { color: #c0a6cd; }
-.item_violet { border-color: #ff8c61; }
-.item_violet:hover:not(.item_mod) .item__author, .item_violet:hover:not(.item_mod) .item__txt { color: #ff8c61; }
-.item_violet .item__instruction { color: #ff8c61; }
-.item_violet .item__img:before { background: rgba(255, 140, 97, 0.5); }
-.item_violet .item__txt:hover { color: #ff8c61; }
+.item_orange { border-color: #ff8c61; }
+.item_orange:hover:not(.item_mod) .item__author, .item_orange:hover:not(.item_mod) .item__txt { color: #ff8c61; }
+.item_orange .item__instruction { color: #ff8c61; }
+.item_orange .item__img:before { background: rgba(255, 140, 97, 0.5); }
+.item_orange .item__txt:hover { color: #ff8c61; }
 .item_mod .item__img { height: 310px; }
 .item_mod .item__img:before { opacity: 0; }
 .item_mod .item__img:after { opacity: 0.8; visibility: visible; }
