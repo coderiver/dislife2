@@ -6,6 +6,23 @@ $indent: 30px
 	&_serif
 		+lora
 		margin-bottom: 7px
+	&__list
+		&-num
+			display: table-cell
+			min-width: 108px
+			text-align: center
+			font-size: 68px
+			color: #9bc1bc
+			vertical-align: top
+			letter-spacing: 7.25px
+			line-height: 1
+			+bold
+		li
+			display: table
+			width: 100%
+	&__option
+		display: table-cell
+		vertical-align: top
 	h2
 		+med
 	a
@@ -110,6 +127,16 @@ $indent: 30px
 				top: 16px
 			&:after
 				bottom: 19px
+	+r2
+		.article__list-num
+			font-size: 50px
+			min-width: 80px
 	+r3
 		blockquote
 			font-size: 20px
+		.article__list-num
+			min-width: 50px
+			text-align: left
+			font-size: 35px
+			letter-spacing: 3.25px
+

@@ -97,6 +97,8 @@ body
 	color: #282828
 	line-height: 1.4
 	+reg
+	&.body_bg-grey
+		background: #f4f5f1
 
 // colors
 $violet: #c0a6cd
@@ -307,6 +309,21 @@ a
 		.item__txt
 			&:hover
 				color: $violet
+	&_violet
+		border-color: $orange
+		&:hover
+			&:not(.item_mod)
+				.item__author,
+				.item__txt
+					color: $orange
+		.item__instruction
+			color: $orange
+		.item__img
+			&:before
+				background: rgba(#ff8c61, 0.5)
+		.item__txt
+			&:hover
+				color: $orange
 	&_mod
 		.item__img
 			height: 310px
