@@ -42,6 +42,9 @@
 =r4
 	@media only screen and (max-width: 480px)
 		@content
+=r5
+	@media only screen and (max-width: 1150px)
+		@content
 
 // fonts
 
@@ -118,6 +121,8 @@ $mint: #9bc1bc
 		padding: 90px 15px 20px
 	+r1
 		max-width: 990px
+		&_news
+			max-width: 1130px
 	+r2
 		max-width: 660px
 		padding-top: 20px
@@ -185,6 +190,13 @@ h1, .h1
 		margin-bottom: 20px
 	+r3
 		font-size: 40px
+
+.h3
+	margin-bottom: 10px
+	font-size: 28px
+	line-height: 1
+	+med
+
 a
 	color: #000
 	text-decoration: none
@@ -541,20 +553,37 @@ a
 .man
 	text-align: left
 	display: table
+	&_big-img
+		.man__img
+			width: 80px
+			height: 80px
+			border-radius: 0
+		.man__text
+			font-weight: 400
+			color: #757575
+			line-height: 1.45
 	&__text
 		display: table-cell
-		vertical-align: middle
-		+light
+		padding-left: 20px
+		text-align: left
 		font-size: 16px
 		line-height: 1.125
-		text-align: left
-		padding-left: 20px
+		vertical-align: middle
+		+light
 	&__img
 		display: table-cell
-		vertical-align: middle
 		width: 60px
 		height: 60px
 		border-radius: 50%
 		overflow: hidden
+		vertical-align: middle
 		img
 			max-width: 100%
+	+r3
+		&_big-img
+			.man__img
+				width: 60px
+				height: 60px
+				vertical-align: top
+			.man__text
+				vertical-align: top

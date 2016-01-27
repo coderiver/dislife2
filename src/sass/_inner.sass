@@ -40,6 +40,11 @@ $green: #9bc1bc
 	position: relative
 	padding: 0 110px
 	+clr
+	&_border
+		margin: 20px 0
+		padding: 20px 0
+		border-top: 1px solid $green
+		border-bottom: 1px solid $green
 	.l-col1
 		float: left
 		width: 70%
@@ -47,8 +52,24 @@ $green: #9bc1bc
 		float: right
 		padding-left: 30px
 		width: 30%
+	.l-col3
+		padding: 10px 0
+		clear: both
 	+r1
-		padding-right: 0
+		padding: 0 70px
+		&_border
+			margin: 20px 70px
+			padding: 20px 0
+		.l-col1
+			width: 65.5%
+		.l-col2
+			width: 34.5%
+	+r5
+		padding: 0
+		&_border
+			margin: 20px 0
+			padding: 20px 0
+	+r2
 		.l-col1,
 		.l-col2
 			width: 100%
@@ -57,8 +78,6 @@ $green: #9bc1bc
 			padding-left: 0
 		.banner-img
 			display: none
-	+r2
-		padding-left: 0
 
 // soc-v
 .soc-v
@@ -83,8 +102,9 @@ $green: #9bc1bc
 				font-size: 24px
 			&:hover
 				background: darken(#9bc1bc, 10)
-	+r2
+	+r5
 		position: static
+		clear: both
 		+clr
 		> li
 			float: left
@@ -108,7 +128,6 @@ $green: #9bc1bc
 		display: inline-block
 		vertical-align: middle
 		margin-right: 20px
-		margin-left: -5px
 	&__info
 		display: inline-block
 		max-width: 80%
@@ -160,7 +179,7 @@ $green: #9bc1bc
 	display: block
 	max-width: 100%
 
-.footnote
+.note
 	padding-top: 20px
 	text-align: center
 	border-top: 4px solid #9bc1bc
@@ -169,7 +188,8 @@ $green: #9bc1bc
 	span
 		color: #9BC1BC
 	+r2
-		margin-left: 80px
+		&_mod
+			margin-left: 80px
 	+r3
 		margin-left: 0
 
@@ -197,3 +217,16 @@ $green: #9bc1bc
 		text-align: center
 		span
 			display: block
+
+.fullheight
+	position: relative
+	height: 100vh
+	+cover
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		+g(rgba(30, 18, 27, 0.3), rgba(27, 16, 24, 0.66))

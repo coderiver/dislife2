@@ -47,6 +47,7 @@ $indent: 30px
 		margin-bottom: 20px
 		> img
 			max-width: 100%
+			margin-bottom: 10px
 		.iframe-wrap
 			position: relative
 			padding-bottom: 55.25%
@@ -58,29 +59,28 @@ $indent: 30px
 				left: 0
 				height: 100%
 				width: 100%
-		figcaption
-			margin-top: 10px
-			+light
-			> .square
-				float: left
-				margin-top: 3px
-			> p
-				overflow: hidden
-				padding-left: 15px
+	figcaption
+		+light
+		> .square
+			float: left
+			margin-top: 3px
+		> p
+			overflow: hidden
+			padding-left: 15px
+			line-height: 1.25
+			font-size: 16px
+			margin-bottom: 0
+			+ p
+				margin-bottom: 15px
+			.meta
+				display: block
+				font-size: 14px
+				+light
 				line-height: 1.25
-				font-size: 16px
-				margin-bottom: 0
-				+ p
-					margin-bottom: 15px
-				.meta
-					display: block
-					font-size: 14px
-					+light
-					line-height: 1.25
-					padding-top: 3px
-					margin-top: 5px
-					&:only-child
-						margin-top: 0
+				padding-top: 3px
+				margin-top: 5px
+				&:only-child
+					margin-top: 0
 	blockquote
 		margin-bottom: $indent
 		text-align: center
@@ -127,7 +127,9 @@ $indent: 30px
 				top: 16px
 			&:after
 				bottom: 19px
-	+r2
+	.man
+		margin: 37px 0 10px
+	+r5
 		.article__list-num
 			font-size: 50px
 			min-width: 80px
@@ -139,4 +141,3 @@ $indent: 30px
 			text-align: left
 			font-size: 35px
 			letter-spacing: 3.25px
-
