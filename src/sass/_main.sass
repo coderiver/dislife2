@@ -16,6 +16,9 @@
 	padding: 19px 15px 15px
 	text-align: center
 	margin-bottom: 30px
+	+r3
+		max-width: 320px
+		margin: 0 auto 30px  
 	&__title
 		font-size: 22px
 		line-height: 1.18
@@ -82,6 +85,8 @@
 		overflow: hidden
 		position: relative
 		margin-bottom: 15px
+		+r1
+			max-height: 1210px 
 		&:before
 			content: "" 
 			position: absolute
@@ -396,3 +401,113 @@
 	i
 		font-size: 20px
 		margin-right: 17px
+
+.blockquote
+	height: 462px
+	border: 1px solid
+	position: relative
+	text-align: center 
+	margin-bottom: 30px
+	+r1
+		height: 402px
+	+r3
+		max-width: 320px 
+		margin: 0 auto 30px 
+		height: 370px
+	&_red
+		border-color: #d27857
+		&:hover
+			.blockquote__text
+				p
+					color: #d27857
+		.blockquote
+			&__info
+				color: #d27857
+			&__text
+				&:before, &:after
+					color: #d27857
+	&_yellow
+		border-color: #f2c05e
+		&:hover
+			.blockquote__text
+				p
+					color: #f2c05e
+		.blockquote
+			&__info
+				color: #f2c05e
+			&__text
+				&:before, &:after
+					color: #f2c05e
+	&_violet
+		border-color: #c0a6cd
+		&:hover
+			.blockquote__text
+				p
+					color: #c0a6cd
+		.blockquote
+			&__info
+				color: #c0a6cd
+			&__text
+				&:before, &:after
+					color: #c0a6cd
+	.btn
+		position: absolute
+		top: 10px
+		left: -5px
+	&__link
+		display: block
+		height: 100%
+		padding: 57px 20px 17px
+		overflow: hidden
+		+r1
+			padding: 43px 20px 15px 
+	&__info
+		font-size: 16px
+		line-height: 18px
+		+med
+		+r1
+			font-size: 14px
+	&__text
+		max-width: 340px 
+		quotes: "\201C""\201D"
+		margin: 0 auto
+		position: relative 
+		padding: 50px 0 
+		+r3
+			padding: 45px 0 40px
+		&:before, &:after
+			font-size: 72px
+			+lorab
+			line-height: 40px
+			position: absolute
+			left: 0
+			right: 0
+			text-align: center
+			+r1
+				font-size: 54px
+		&:before
+			content: open-quote
+			top: 25px
+			+r1
+				top: 15px
+		&:after
+			content: close-quote
+			bottom: -15px
+			+r1
+				bottom: -5px
+			+r3
+				bottom: -15px
+		p
+			+lorai
+			font-size: 20px
+			line-height: 28px
+			color: #282828 
+			max-height: 252px 
+			overflow: hidden
+			transition: color 0.25s
+			+r1
+				font-size: 17px
+				line-height: 20px
+				max-height: 200px 
+			+r3
+				font-size: 16px
