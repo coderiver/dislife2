@@ -328,7 +328,7 @@ a
 					max-height: 120px
 					opacity: 1
 		.item__txt
-			height: 160px
+			height: 150px
 			font-size: 22px
 			+lora
 			&:hover
@@ -356,7 +356,7 @@ a
 	&_big
 		height: 672px
 		.item__txt
-			padding-top: 10px
+			padding-top: 0
 		.item__img
 			height: 510px
 		.item__name
@@ -480,16 +480,18 @@ a
 		.item__title
 			font-size: 15px
 			line-height: 20px
+		&.item_mod
+			.item__img
+				height: 242px
+			.item__txt
+				font-size: 20px
+				line-height: 23px
 		&.item_big
 			height: 672px
 			.item__img
 				height: 460px
 			.item__txt
 				height: 210px
-		&.item_mod
-			.item__txt
-				font-size: 20px
-				line-height: 23px
 	+r2
 		&.item_mod
 			.item__img:hover
