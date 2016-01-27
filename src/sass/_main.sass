@@ -51,6 +51,7 @@
 			font-size: 24px 
 
 .news-main
+	margin-bottom: 30px
 	&__title
 		font-size: 14px
 		line-height: 20px
@@ -98,16 +99,25 @@
 		padding-top: 22px
 	&:last-child
 		border: none
+	&__link
+		display: block
+		&:hover
+			.news-item__title
+				text-decoration: underline
 	&__title
 		font-size: 20px
 		line-height: 22px
 		+med
 		margin-bottom: 10px
+		+r3
+			font-size: 18px
 	p
 		font-size: 16px
 		line-height: 20px
 		+light
 		margin-bottom: 10px
+		+r3
+			font-size: 15px
 	time
 		display: block
 
@@ -116,7 +126,8 @@
 	position: relative
 	+cover
 	+r3
-		padding: 60px 15px 30px 
+		padding: 60px 20px 30px 
+		margin: 0 -15px 
 	&:before
 		content: "" 
 		position: absolute
@@ -133,6 +144,8 @@
 		left: -5px
 		z-index: 2
 		background: #fff 
+		+r3
+			left: 15px
 	&__in
 		position: relative
 		z-index: 1
@@ -150,9 +163,9 @@
 			width: 30%
 		+r2
 			width: auto
-			margin: 0 20px 20px
+			margin: 0 20px
 		+r3
-			margin: 0 0 20px
+			margin: 0
 		p
 			font-size: 18px
 			+light
@@ -184,6 +197,8 @@
 	width: 760px
 	min-height: 350px
 	position: relative
+	+r2
+		min-height: 1px 
 	&:before, &:after
 		content: "" 
 		position: absolute
@@ -192,7 +207,7 @@
 		height: calc(50% - 25px)
 		border: 1px solid #fff
 		+r3
-			height: 50%
+			height: calc(50% - 20px)
 	&:before
 		top: 0
 		border-bottom: none
@@ -203,6 +218,8 @@
 		min-height: 350px
 		position: relative
 		z-index: 2
+		+r2
+			min-height: 1px 
 	&__prev, &__next
 		position: absolute
 		top: 50%
@@ -218,16 +235,23 @@
 		z-index: 10
 		transition: all 0.2s
 		+r3
-			display: none !important
+			width: 40px
+			height: 40px
+			margin: -20px 0 0
+			font-size: 25px
 		&:hover
 			background-color: #f2c05e
 			border-color: #f2c05e
 	&__prev
 		left: -24px
+		+r3
+			left: -19px
 		i
 			margin-right: 4px
 	&__next
 		right: -24px
+		+r3
+			right: -19px
 		i
 			margin-left: 4px
 	.slick-dots
@@ -254,7 +278,7 @@
 	+r1
 		padding: 45px 45px 70px 
 	+r3
-		padding: 20px 15px 70px 
+		padding: 20px 30px 70px 
 	&__title
 		font-size: 36px
 		line-height: 1
@@ -267,9 +291,9 @@
 			font-size: 24px
 			line-height: 26px
 			margin-bottom: 30px
+			text-align: center
 		+r4
-			font-size: 20px
-			line-height: 24px
+			font-size: 22px
 	&__author
 		font-size: 0
 		+clr
@@ -339,3 +363,36 @@
 				width: 100px 
 				transform-origin: bottom left
 				transform: rotate(-13deg)
+
+.load-more
+	position: relative
+	margin-top: 35px
+	border-top: 1px solid #9bc1bc
+	background-color: #e4eae9
+	.btn-load
+		margin-top: -25px
+		margin-bottom: 45px
+
+.btn-load
+	max-width: 410px
+	width: 100%
+	padding: 16px 
+	background-color: #9bc1bc
+	border-radius: 2px
+	color: #fff
+	line-height: 1
+	cursor: pointer
+	font-size: 0
+	display: block
+	margin: 0 auto 
+	+r3
+		max-width: 290px 
+	&:hover
+		background: darken(#9bc1bc, 5%) 
+	&:active
+		background: darken(#9bc1bc, 10%) 
+	span
+		font-size: 18px
+	i
+		font-size: 20px
+		margin-right: 17px

@@ -4,6 +4,9 @@
 	&__top
 		background-color: #9bc1bc
 		padding: 35px 0 17px
+		+r3
+			text-align: center
+			padding: 5px 0 22px 
 	&__bottom
 		background-color: #657977
 		padding: 43px 0 38px
@@ -14,13 +17,15 @@
 		font-size: 0
 		line-height: 1
 		float: left
+		+r3
+			display: inline-block
+			vertical-align: top
+			float: none
 		span
 			display: inline-block
 			vertical-align: top
 			font-size: 40px
 			position: relative
-			+r2
-				font-size: 32px
 	&__gray
 		color: #d4e5e3
 		margin-right: -9px
@@ -43,7 +48,9 @@
 		+r3
 			clear: both
 			float: none
-			font-size: 18px
+			font-size: 20px
+			line-height: 24px
+			padding: 5px 10px 
 	&__text
 		padding-bottom: 8px
 		+clr
@@ -59,7 +66,7 @@
 			vertical-align: top
 			padding: 0 26px 0 12px
 			+r3
-				padding: 0 12px
+				padding: 0 18px
 		a
 			color: #fff
 			display: block
@@ -88,11 +95,17 @@
 		width: 40px
 		background: #fff
 		border-radius: 4px
+	.subscribe
+		border: none
+		border-top: 2px solid #fff
+		+r2
+			padding: 15px 0 0
 
 .subscribe
 	+clr
 	padding: 25px 18px 21px
 	border: 2px solid #fff
+	text-align: left
 	+r1
 		padding: 25px 12px 21px
 	+r2
@@ -111,7 +124,7 @@
 				+r2
 					font-size: 22px
 				+r3
-					font-size: 18px
+					font-size: 20px
 			&__input
 				border: 1px solid #9bc1bc
 		+r1
@@ -135,8 +148,7 @@
 			font-size: 22px
 			padding: 0 0 10px
 		+r3
-			text-align: center
-			font-size: 18px
+			font-size: 20px
 	&__form
 		width: 49%
 		position: relative
@@ -173,7 +185,7 @@
 			width: 150px
 		+r4
 			width: 100%
-			max-width: 250px
+			max-width: 300px
 			position: relative
 			top: auto
 			right: auto

@@ -72,16 +72,7 @@ $(document).ready(function() {
 		dots: true,
 		nextArrow: $('.js-slider-next'),
 		prevArrow: $('.js-slider-prev'),
-		adaptiveHeight: true,
-		responsive: [
-			{
-				breakpoint: 661,
-				settings: {
-					arrows: false
-				}
-			}
-
-		]
+		adaptiveHeight: true
 	});
 
 });
