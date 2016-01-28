@@ -642,7 +642,7 @@ body.overflow-hidden { position: fixed; width: 100%; }
 
 .fullheight { position: relative; display: table; width: 100%; min-height: 100vh; z-index: 0; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 .fullheight:before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; background-color: rgba(30, 18, 27, 0.3); background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(30, 18, 27, 0.3)), to(rgba(27, 16, 24, 0.66))); background-image: -webkit-linear-gradient(rgba(30, 18, 27, 0.3), rgba(27, 16, 24, 0.66)); background-image: linear-gradient(rgba(30, 18, 27, 0.3), rgba(27, 16, 24, 0.66)); }
-.fullheight__in { height: 100%; display: table-cell; padding: 100px 0 68px; color: #FFF; vertical-align: bottom; }
+.fullheight__in { height: 100vh; display: table-cell; padding: 100px 0 68px; color: #FFF; vertical-align: bottom; }
 .fullheight__bl { max-width: 1290px; margin: 0 auto; padding: 0 110px; }
 .fullheight__el { width: 70%; }
 .fullheight .btn { background: #FFF; }
@@ -674,7 +674,8 @@ body.overflow-hidden { position: fixed; width: 100%; }
 .list-links .fa-angle-right { position: absolute; top: 50%; right: 30px; margin-top: -32px; font-size: 64px; line-height: 1; color: #9bc1bc; }
 
 .expand { position: relative; margin-bottom: 20px; }
-.expand .fa { position: absolute; top: 20px; right: 20px; font-size: 30px; color: #FFF; }
+.expand__img { display: block; max-width: 100%; }
+.expand__link { position: absolute; top: 20px; right: 20px; font-size: 30px; color: #FFF; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1320px){
