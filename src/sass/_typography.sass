@@ -5,7 +5,6 @@ $indent: 30px
 	line-height: 1.6
 	&_serif
 		+lora
-		margin-bottom: 7px
 	&__list
 		&-num
 			display: table-cell
@@ -23,6 +22,8 @@ $indent: 30px
 	&__option
 		display: table-cell
 		vertical-align: top
+	&__inner
+		padding: 0 55px
 	h2
 		+med
 	a
@@ -45,6 +46,8 @@ $indent: 30px
 		border-bottom: 1px solid #9bc1bc
 		padding-bottom: 20px
 		margin-bottom: 20px
+		&.figure_mb
+			margin-bottom: 35px
 		> img
 			max-width: 100%
 			margin-bottom: 10px
@@ -60,7 +63,8 @@ $indent: 30px
 				height: 100%
 				width: 100%
 	figcaption
-		+light
+		font-family: "Fira Sans", Helvetica, Arial, sans-serif
+		font-weight: 300
 		> .square
 			float: left
 			margin-top: 3px
@@ -91,6 +95,15 @@ $indent: 30px
 		display: block
 		quotes: "\201C""\201D""\2018""\2019"
 		+lorai
+		&.blockquote_no-quotes
+			&:before,
+			&:after
+				display: none
+			p
+				&:before,
+				&:after
+					width: 87px
+					margin-left: -43.5px
 		&:before,
 		&:after
 			position: absolute
@@ -130,14 +143,17 @@ $indent: 30px
 	.man
 		margin: 37px 0 10px
 	+r5
-		.article__list-num
+		&__list-num
 			font-size: 50px
 			min-width: 80px
+	+r2
+		&__inner
+			padding: 0
 	+r3
-		blockquote
-			font-size: 20px
-		.article__list-num
+		&__list-num
 			min-width: 50px
 			text-align: left
 			font-size: 35px
 			letter-spacing: 3.25px
+		blockquote
+			font-size: 20px
