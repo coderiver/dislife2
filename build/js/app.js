@@ -77,8 +77,39 @@ $(document).ready(function() {
 
 	//select
 	$('.js-select').each(function() {
-		var select = $(this).find('select'),
-			selectText = $(this).find('.js-select-text');
+		var selectField = $(this),
+			select = selectField.find('select'),
+			selectText = selectField.find('.js-select-text'),
+			selectList = selectField.find('.js-select-list li');
+
+		selectText.click(function() {
+			if (selectField.hasClass('is-active')) {
+				$('.js-select').removeClass('is-active');
+			}
+			else {
+				$('.js-select').removeClass('is-active');
+				selectField.addClass('is-active');
+			}
+			return false;		
+		});
+
+		$('body').click(function() {
+			$('.js-select').removeClass('is-active');
+		});
+
+		selectList.click(function() {
+			var id = $(this).data('val');
+
+			select.find('option').removeAttr('selected');
+
+			select.find('option[value="' + id + '"]').attr('selected', 'selected');
+
+			selectText.text($(this).text());
+
+			$('.js-select').removeClass('is-active');
+
+			return false;
+		});
 
 		select.change(function() {
 			selectText.text($(this).find('option:selected').text());
