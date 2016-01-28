@@ -109,9 +109,10 @@
 	&__link
 		display: block
 		+clr
+		color: #282828
+		transition: color 0.25s
 		&:hover
-			.news-item__title
-				text-decoration: underline
+			color: $red
 	&__img
 		float: right
 		width: 160px
@@ -917,6 +918,7 @@
 		position: relative
 		z-index: 1
 		padding: 27px 21px 30px 
+		height: 100vh
 		+r2
 			display: block
 			vertical-align: top
