@@ -1,5 +1,7 @@
 .main
 	padding: 30px 15px
+	&-in
+		padding: 30px 15px 50px 
 	&__row
 		margin: 0 -15px
 		+clr
@@ -95,20 +97,28 @@
 			right: 0
 			height: 100px
 			background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%)
-			
+		.news-item
+			&:last-child
+				border: none
 
 .news-item
 	border-bottom: 1px solid #e6e6e6
 	padding: 25px 0  
 	&:first-child
 		padding-top: 22px
-	&:last-child
-		border: none
 	&__link
 		display: block
+		+clr
 		&:hover
 			.news-item__title
 				text-decoration: underline
+	&__img
+		float: right
+		width: 160px
+		font-size: 0
+		margin: 5px 0 0 10px
+		img
+			width: 100%
 	&__title
 		font-size: 20px
 		line-height: 22px
@@ -794,8 +804,9 @@
 
 .main-head
 	+light
-	padding: 60px 15px 115px
+	padding: 60px 15px 85px
 	position: relative
+	margin-bottom: 30px
 	+r2
 		padding: 20px 15px 
 	&__info
@@ -845,9 +856,10 @@
 	width: 100%
 	position: relative
 	color: #fff 
+	+cover
 	+r2
 		display: block
-		min-height: 1px 
+		min-height: 1px
 	&:before, &:after
 		position: absolute
 		content: "" 
@@ -868,20 +880,53 @@
 	&_yellow
 		&:after
 			border-color: $gold 
+	&_violet
+		+r2
+			min-height: 368px
+		.fullscreen
+			&__center
+				+r2
+					max-width: 500px 
+			&__inner
+				+r2
+					position: absolute
+					bottom: 0
+					left: 0
+					right: 0
+					padding-bottom: 10px
+		&:after
+			border-color: $violet 
+			+r2
+				display: block
+				top: 15px
+				left: 15px
+				right: 15px
+				bottom: 18px
+	&_red
+		.fullscreen
+			&__inner
+				+r3
+					padding: 30px 10px 
+			&__center
+				padding-bottom: 15px
+		&:after
+			border-color: $red 
 	&__inner
 		display: table-cell
 		vertical-align: bottom
 		position: relative
 		z-index: 1
+		padding: 27px 21px 30px 
 		+r2
 			display: block
 			vertical-align: top
+			padding: 15px 15px 18px 
 	&__center
 		max-width: 1110px
 		margin: 0 auto
-		padding: 75px 30px 75px
+		padding: 45px 10px 45px
 		+r2
-			padding: 30px 
+			padding: 15px 
 	.slider
 		margin: 0 auto 60px
 		background-image: linear-gradient(180deg, rgba(55, 33, 49, 0.6) 0%, rgba(53, 31, 47, 0.8) 100%) 
@@ -909,5 +954,190 @@
 		+r2
 			font-size: 16px
 			line-height: 22px
+	h4
+		font-size: 24px
+		line-height: 1
+		+light
+		max-width: 840px 
+		margin: 0 auto 
+		+r1
+			max-width: 740px 
+		+r2
+			font-size: 20px
 	&__info
 		text-align: center
+	&__author
+		font-size: 14px
+		line-height: 17px
+		color: #ccc
+		margin-bottom: 10px
+
+.info-block
+	background-color: #fff
+	display: block
+	text-align: center
+	padding: 15px 15px 27px
+	position: relative
+	&:hover
+		.info-block
+			&__author
+				text-decoration: none
+	&__arr
+		overflow: hidden 
+		height: 20px
+		position: absolute
+		bottom: 100%
+		left: 0
+		right: 0
+		&:before, &:after
+			content: "" 
+			position: absolute
+			bottom: 0
+			border-style: solid
+			border-width: 9px 9px 10px
+			border-color: transparent transparent #fff
+		&:before
+			left: -15px
+			right: 50%
+		&:after
+			left: 50%
+			right: -15px
+	&_red
+		.info-block
+			&__author
+				color: #d27857
+	&__author
+		font-size: 14px
+		line-height: 17px
+		text-decoration: underline
+		margin-bottom: 15px
+		+regi
+	&__title
+		font-size: 22px
+		line-height: 26px
+		margin-bottom: 10px
+		+lora
+		+r3
+			font-size: 20px
+			line-height: 24px
+	&__user
+		max-width: 500px
+		margin: 0 auto  
+		text-align: left
+	&__img
+		width: 60px
+		height: 60px
+		border-radius: 50%
+		overflow: hidden
+		margin-right: 18px
+		float: left
+		img
+			border-radius: 50%
+	&__text
+		padding: 12px 0
+		overflow: hidden 
+		p
+			color: #282828
+			font-size: 16px
+			line-height: 18px
+			+light
+
+.item-full
+	background: #FFF
+	border: 1px solid #000
+	position: relative
+	display: block
+	height: 672px
+	+cover
+	text-align: center
+	color: #fff 
+	margin-bottom: 30px
+	+r3
+		height: auto
+	&:hover
+		&:after
+			opacity: 1
+		&:before
+			opacity: 0
+		.item-full
+			&__author
+				color: #fff 
+	&:before, &:after
+		content: "" 
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		transition: opacity 0.25s
+	&:before
+		background-image: linear-gradient(to top, rgba(47, 28, 42, 0.5) 0%, rgba(45, 26, 40, 0.76) 100%)
+	&:after
+		opacity: 0
+	&_gold
+		border-color: $gold
+		&:after
+			background: rgba(242,192,94,0.80)
+	&_red
+		border-color: $red
+		&:after
+			background: rgba(210,120,87,0.80)
+	&_violet
+		border-color: $violet
+		&:after
+			background: rgba(142, 119, 154, 0.6)
+	&_orange
+		border-color: $orange
+		&:after
+			background: rgba(#ff8c61, 0.5)
+	&__title
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 1
+		padding: 40px 15px 
+		+r3
+			position: relative
+	&__subtitle
+		font-size: 56px
+		line-height: 1
+		padding: 5px 0 15px 
+		+bold
+		+r3
+			font-size: 23px
+			line-height: 27px
+	&__author
+		+light
+		font-size: 14px
+		color: #ccc 
+		transition: color 0.25s
+		margin-bottom: 5px
+	&__info
+		font-size: 18px
+		max-width: 740px 
+		margin: 0 auto 
+		+r3
+			font-size: 16px
+
+.col-news, .col-more, .news-column, .col-items
+	display: inline-block
+	vertical-align: top
+	padding: 0 15px 
+.col-news
+	width: 33.33%
+.col-more
+	width: 66.67%
+.col-news, .col-more	
+	+r2
+		width: 100%
+	.h2
+		padding: 20px 0 30px
+		border-bottom: 1px solid #9bc1bc 
+		margin-bottom: 55px
+		+r3
+			text-align: center
+.col-items
+	width: 50%
+	+r3
+		width: 100%
