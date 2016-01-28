@@ -32,7 +32,7 @@ $green: #9bc1bc
 
 .divider
 	height: 1px
-	margin: 20px 0
+	margin: 25px 0
 	background: $green
 
 // news
@@ -120,7 +120,7 @@ $green: #9bc1bc
 	h1, .h1
 		margin-bottom: 20px
 	.text-big
-		margin-bottom: 40px
+		margin-bottom: 20px
 
 .news-line
 	margin: 0 -5px 40px
@@ -230,3 +230,49 @@ $green: #9bc1bc
 		right: 0
 		bottom: 0
 		+g(rgba(30, 18, 27, 0.3), rgba(27, 16, 24, 0.66))
+
+// slider on inner pages
+.inner-slider
+	position: relative
+	margin-bottom: 15px
+	.slick-dots
+		margin-bottom: 20px
+		li
+			margin: 0 5px
+			&.slick-active button
+				background: $mint
+		button
+			width: 12px
+			height: 12px
+	&__prev,
+	&__next
+		position: absolute
+		top: 50%
+		margin-top: -25px
+		font-size: 50px
+		background: none
+		color: #FFF
+		line-height: 1
+		cursor: pointer
+		transition: color 0.2s
+		&:hover
+			color: $mint
+	&__prev
+		left: 24px
+	&__next
+		right: 24px
+	+r4
+		&__prev,
+		&__next
+			font-size: 30px
+			margin-top: -15px
+		&__prev
+			left: 15px
+		&__next
+			right: 15px
+		.slick-dots
+			margin-bottom: 10px
+			button
+				width: 8px
+				height: 8px
+
