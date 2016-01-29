@@ -25,6 +25,8 @@
 		font-size: 22px
 		line-height: 1.18
 		+medi
+		a
+			display: inline-block
 		&:after
 			width: 38px
 			border-bottom: 3px solid #e6e6e6
@@ -82,13 +84,9 @@
 			position: absolute
 			top: 1px
 			right: 0
-	&__list
-		max-height: 1387px
-		overflow: hidden
-		position: relative
+	&__scroll
 		margin-bottom: 15px
-		+r1
-			max-height: 1210px 
+		position: relative
 		&:before
 			content: "" 
 			position: absolute
@@ -97,9 +95,35 @@
 			right: 0
 			height: 100px
 			background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%)
+			z-index: 1
+	&__list
+		max-height: 1387px
+		+r1
+			max-height: 1210px 
 		.news-item
 			&:last-child
 				border: none
+
+.scroll
+	position: relative
+	overflow: hidden
+	&.ps-active-y
+		padding-right: 10px
+	&:hover, &.ps-in-scrolling
+		.ps-scrollbar-y, .ps-scrollbar-x
+			opacity: 1
+	.ps-scrollbar-x-rail, .ps-scrollbar-y-rail
+		position: absolute
+		z-index: 2
+	.ps-scrollbar-y
+		width: 8px
+	.ps-scrollbar-x
+		height: 8px
+	.ps-scrollbar-y, .ps-scrollbar-x
+		position: relative
+		background: rgba(#000, 0.3) 
+		opacity: 0
+		transition: opacity 0.2s
 
 .news-item
 	border-bottom: 1px solid #e6e6e6
@@ -546,39 +570,64 @@
 				font-size: 16px
 
 .item-banner
-	background-position: right center
-	background-repeat: no-repeat
 	padding: 0 30px 
 	color: #fff 
 	position: relative
 	margin-bottom: 20px
-	+r1
-		background-size: cover  
-	+r2
-		background-position: center
 	+r3
 		max-width: 320px
 		margin: 0 auto 20px
-		background-size: contain 
-		background-position: top center 
 		padding: 150px 20px 30px
+	&__bg		
+		background-position: right center
+		background-repeat: no-repeat
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		+r1
+			background-size: cover  
+		+r2
+			background-position: center
+		+r3
+			background-size: contain 
+			background-position: top center 	
 	&_blue
 		background-color: #051431 
 		.item-banner
-			&__left
+			&__bg
+				+r3					
+					height: 140px
+					bottom: auto 	
 				&:before
+					content: "" 
+					position: absolute
+					top: 0
+					bottom: 0
+					left: 340px
+					width: 230px
 					background-image: linear-gradient(to right, #051431 0%, rgba(5, 20, 49, 0) 100%)
+					+r1
+						left: 0
+						right: 0
+						margin: 0
+						width: auto
+					+r3
+						display: none					
 	&_yellow
 		background-color: #f2cd42
-		&:before
-			position: absolute
-			top: 0
-			left: 0
-			right: 0
-			bottom: 0
-			background-color: rgba(58, 34, 48, 0.44)
-			border: 1px solid #979797
-			content: "" 
+		.item-banner
+			&__bg
+				&:before
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					background-color: rgba(58, 34, 48, 0.44)
+					border: 1px solid #979797
+					content: "" 
 	.btn
 		position: absolute
 		top: 10px
@@ -589,27 +638,13 @@
 		position: relative
 		max-width: 380px 
 		padding: 70px 0 30px
+		z-index: 1
 		+r1
 			position: static
 			max-width: 270px
 			padding: 60px 0 30px 
 		+r3
 			padding: 0 
-		&:before
-			content: "" 
-			position: absolute
-			top: 0
-			bottom: 0
-			left: 100%
-			margin-left: -70px
-			width: 230px
-			+r1
-				left: 0
-				right: 0
-				margin: 0
-				width: auto
-			+r3
-				display: none
 		&-in
 			position: relative
 			z-index: 2
@@ -667,27 +702,36 @@
 			color: #fff 
 
 .item-image
-	+cover
 	position: relative
 	padding: 117px 30px 83px 
 	margin-bottom: 20px
 	+r3
 		padding: 170px 0 0
-		background-size: contain 
-		background-position: top center 
 		max-width: 320px 
 		margin: 0 auto 20px 
 	+r4
 		padding-top: 150px
-	&:before
-		content: "" 
+	&__bg
 		position: absolute
 		top: 0
+		bottom: 0
 		left: 0
 		right: 0
-		bottom: 0
-		background-color: rgba(58, 34, 48, 0.44)
-		border: 1px solid #979797
+		+cover
+		+r3			
+			background-size: contain 
+			background-position: top center 
+			bottom: auto
+			height: 170px
+		&:before
+			content: "" 
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: rgba(58, 34, 48, 0.44)
+			border: 1px solid #979797
 	.btn
 		position: absolute
 		top: 10px

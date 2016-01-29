@@ -113,4 +113,69 @@ $(document).ready(function() {
 		launchIntoFullscreen(img);
 	});
 
+	//header
+	if ($('.js-header').length) {
+		function getScrollTop(){
+			if(typeof pageYOffset!= 'undefined'){
+				return pageYOffset;
+			}
+			else{
+				var b = document.body;
+				var d = document.documentElement;
+				d = (d.clientHeight)? d : b;
+				return d.scrollTop;
+			}
+		}
+
+		var scrollTop = 0;
+
+		function headerScroll() {
+			var scrollNow = $(window).scrollTop();
+
+			if (scrollNow > scrollTop) {
+				if(getScrollTop() > $('.js-header').offset().top) {
+					$('.js-header').addClass('is-hidden');
+				}
+			}
+			else {
+				if (scrollTop - scrollNow > 10) {				
+					if(getScrollTop() > 10) {
+						$('.js-header').removeClass('is-hidden');
+					}
+					else {
+						$('.js-header').removeClass('is-hidden');
+					}
+				};
+			}
+
+			scrollTop = scrollNow;
+
+			if (getScrollTop() < $('.js-header').offset().top + $('.js-header').outerHeight()) {
+				$('.js-header').removeClass('is-hidden');
+			}
+			
+			if ($(window).scrollTop() > $('.js-header').offset().top) {
+				$('.js-header').addClass('is-fixed');
+			}
+			else {
+				$('.js-header').removeClass('is-fixed');
+			}
+
+			$('.js-header').css('min-height', $('.js-header').find('.header__fixed').outerHeight());
+		}
+
+		$(window).on('scroll', function() {
+			headerScroll();		
+		});
+		$(window).on('load', function() {
+			headerScroll();		
+		});
+		$(window).on('resize', function() {
+			headerScroll();
+		});
+	}
+	
+	//scroll
+	$('.js-scroll').perfectScrollbar();
+
 });

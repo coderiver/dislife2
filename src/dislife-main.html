@@ -7,7 +7,7 @@
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	//=include partials/header.html
+	//=include partials/header-main.html
 	<div class="container main">
 		<div class="row">
 			<div class="col-lg">
@@ -37,7 +37,7 @@
 			</div>
 			<div class="col-xs">
 				<div class="social">
-					<div class="social__title">Кто мы такие?</div>
+					<div class="social__title"><a href="#">Кто мы такие?</a></div>
 					<ul class="social__list">
 						<li><a href="https://www.facebook.com/disliferu/" class="is-fb"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="https://vk.com/dislife_ru" class="is-tw"><i class="fa fa-twitter"></i></a></li>
@@ -109,80 +109,82 @@
 			<div class="col-sm">
 				<div class="news-main">
 					<div class="news-main__title"><i class="fa fa-rss"></i>ПОСЛЕДНИЕ НОВОСТИ</div>
-					<ul class="news-main__list">
-						<li class="news-item">
-							<a href="#" class="news-item__link">
-								<div class="news-item__title">Правительство не вернет сигарет</div>
-								<div class="news-item__info">
-									<p>Решилась судьба читающих курильщиков. Правительство России отвергло предложение депутатов вернуть сигареты в ларьки «Печать»</p>
-									<time class="meta">29 ОКТЯБРЯ, 20:27</time>
-								</div>
-							</a>
-						</li>
-						<li class="news-item">
-							<a href="#" class="news-item__link">
-								<div class="news-item__title">Правительство не вернет сигарет</div>
-								<div class="news-item__info">
-									<p>Решилась судьба читающих курильщиков. Правительство России отвергло предложение депутатов вернуть сигареты в ларьки «Печать»</p>
-									<time class="meta">29 ОКТЯБРЯ, 20:27</time>
-								</div>
-							</a>
-						</li>
-						<li class="news-item">
-							<a href="#" class="news-item__link">
-								<div class="news-item__title">Правительство не вернет сигарет</div>
-								<div class="news-item__info">
-									<p>Решилась судьба читающих курильщиков. Правительство России отвергло предложение депутатов вернуть сигареты в ларьки «Печать»</p>
-									<time class="meta">29 ОКТЯБРЯ, 20:27</time>
-								</div>
-							</a>
-						</li>
-						<li class="news-item">
-							<a href="#" class="news-item__link">
-								<div class="news-item__title">Правительство не вернет сигарет</div>
-								<div class="news-item__info">
-									<p>Решилась судьба читающих курильщиков. Правительство России отвергло предложение депутатов вернуть сигареты в ларьки «Печать»</p>
-									<time class="meta">29 ОКТЯБРЯ, 20:27</time>
-								</div>
-							</a>
-						</li>
-						<li class="news-item">
-							<a href="#" class="news-item__link">
-								<div class="news-item__title">Правительство не вернет сигарет</div>
-								<div class="news-item__info">
-									<p>Заработали новые временные нормы по приему пациентов в государственных поликлиниках. Минздрав РФ подчеркивает, что только рекомендует врачам ориентироваться на указанное время. Выгонять пациентов ведомство не просит</p>
-									<time class="meta">29 ОКТЯБРЯ, 20:27</time>
-								</div>
-							</a>
-						</li>
-						<li class="news-item">
-							<a href="#" class="news-item__link">
-								<div class="news-item__title">Правительство не вернет сигарет</div>
-								<div class="news-item__info">
-									<p>Решилась судьба читающих курильщиков. Правительство России отвергло предложение депутатов вернуть сигареты в ларьки «Печать»</p>
-									<time class="meta">29 ОКТЯБРЯ, 20:27</time>
-								</div>
-							</a>
-						</li>
-						<li class="news-item">
-							<a href="#" class="news-item__link">
-								<div class="news-item__title">Правительство не вернет сигарет</div>
-								<div class="news-item__info">
-									<p>Заработали новые временные нормы по приему пациентов в государственных поликлиниках. Минздрав РФ подчеркивает, что только рекомендует врачам ориентироваться на указанное время. Выгонять пациентов ведомство не просит</p>
-									<time class="meta">29 ОКТЯБРЯ, 20:27</time>
-								</div>
-							</a>
-						</li>
-						<li class="news-item">
-							<a href="#" class="news-item__link">
-								<div class="news-item__title">Правительство не вернет сигарет</div>
-								<div class="news-item__info">
-									<p>Заработали новые временные нормы по приему пациентов в государственных поликлиниках. Минздрав РФ подчеркивает, что только рекомендует врачам ориентироваться на указанное время. Выгонять пациентов ведомство не просит</p>
-									<time class="meta">29 ОКТЯБРЯ, 20:27</time>
-								</div>
-							</a>
-						</li>
-					</ul>
+					<div class="news-main__scroll">
+						<ul class="news-main__list scroll js-scroll">
+							<li class="news-item">
+								<a href="#" class="news-item__link">
+									<div class="news-item__title">Правительство не вернет сигарет</div>
+									<div class="news-item__info">
+										<p>Решилась судьба читающих курильщиков. Правительство России отвергло предложение депутатов вернуть сигареты в ларьки «Печать»</p>
+										<time class="meta">29 ОКТЯБРЯ, 20:27</time>
+									</div>
+								</a>
+							</li>
+							<li class="news-item">
+								<a href="#" class="news-item__link">
+									<div class="news-item__title">Правительство не вернет сигарет</div>
+									<div class="news-item__info">
+										<p>Решилась судьба читающих курильщиков. Правительство России отвергло предложение депутатов вернуть сигареты в ларьки «Печать»</p>
+										<time class="meta">29 ОКТЯБРЯ, 20:27</time>
+									</div>
+								</a>
+							</li>
+							<li class="news-item">
+								<a href="#" class="news-item__link">
+									<div class="news-item__title">Правительство не вернет сигарет</div>
+									<div class="news-item__info">
+										<p>Решилась судьба читающих курильщиков. Правительство России отвергло предложение депутатов вернуть сигареты в ларьки «Печать»</p>
+										<time class="meta">29 ОКТЯБРЯ, 20:27</time>
+									</div>
+								</a>
+							</li>
+							<li class="news-item">
+								<a href="#" class="news-item__link">
+									<div class="news-item__title">Правительство не вернет сигарет</div>
+									<div class="news-item__info">
+										<p>Решилась судьба читающих курильщиков. Правительство России отвергло предложение депутатов вернуть сигареты в ларьки «Печать»</p>
+										<time class="meta">29 ОКТЯБРЯ, 20:27</time>
+									</div>
+								</a>
+							</li>
+							<li class="news-item">
+								<a href="#" class="news-item__link">
+									<div class="news-item__title">Правительство не вернет сигарет</div>
+									<div class="news-item__info">
+										<p>Заработали новые временные нормы по приему пациентов в государственных поликлиниках. Минздрав РФ подчеркивает, что только рекомендует врачам ориентироваться на указанное время. Выгонять пациентов ведомство не просит</p>
+										<time class="meta">29 ОКТЯБРЯ, 20:27</time>
+									</div>
+								</a>
+							</li>
+							<li class="news-item">
+								<a href="#" class="news-item__link">
+									<div class="news-item__title">Правительство не вернет сигарет</div>
+									<div class="news-item__info">
+										<p>Решилась судьба читающих курильщиков. Правительство России отвергло предложение депутатов вернуть сигареты в ларьки «Печать»</p>
+										<time class="meta">29 ОКТЯБРЯ, 20:27</time>
+									</div>
+								</a>
+							</li>
+							<li class="news-item">
+								<a href="#" class="news-item__link">
+									<div class="news-item__title">Правительство не вернет сигарет</div>
+									<div class="news-item__info">
+										<p>Заработали новые временные нормы по приему пациентов в государственных поликлиниках. Минздрав РФ подчеркивает, что только рекомендует врачам ориентироваться на указанное время. Выгонять пациентов ведомство не просит</p>
+										<time class="meta">29 ОКТЯБРЯ, 20:27</time>
+									</div>
+								</a>
+							</li>
+							<li class="news-item">
+								<a href="#" class="news-item__link">
+									<div class="news-item__title">Правительство не вернет сигарет</div>
+									<div class="news-item__info">
+										<p>Заработали новые временные нормы по приему пациентов в государственных поликлиниках. Минздрав РФ подчеркивает, что только рекомендует врачам ориентироваться на указанное время. Выгонять пациентов ведомство не просит</p>
+										<time class="meta">29 ОКТЯБРЯ, 20:27</time>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
 					<a href="#" class="news-main__link">Все новости<i class="fa fa-angle-right"></i></a>
 				</div>
 			</div>
@@ -302,7 +304,8 @@
 		</button>
 		<div class="container main">
 			<div class="load-more__section">
-				<div class="item-banner item-banner_blue" style="background-image: url(img/patronus-big.jpg);">
+				<div class="item-banner item-banner_blue">
+					<a href="#" class="item-banner__bg" style="background-image: url(img/patronus-big.jpg);"></a>
 					<a href="#" class="btn btn_orange">Спецпроекты</a> 
 					<div class="item-banner__left">
 						<div class="item-banner__left-in">
@@ -373,7 +376,8 @@
 				</div>
 			</div>
 			<div class="load-more__section">
-				<div class="item-image" style="background-image: url(img/nogi.jpg);">
+				<div class="item-image">
+					<a href="#" class="item-image__bg" style="background-image: url(img/nogi.jpg);"></a>
 					<a href="#" class="btn btn_orange">Спецпроекты</a> 
 					<form class="box-form">
 						<div class="box-form__title">Пазлы</div>
@@ -496,7 +500,8 @@
 				</div>
 			</div>
 			<div class="load-more__section">
-				<div class="item-banner item-banner_yellow" style="background-image: url(img/bitmap2.jpg);">
+				<div class="item-banner item-banner_yellow">
+					<a href="#" class="item-banner__bg" style="background-image: url(img/bitmap2.jpg);"></a>
 					<a href="#" class="btn btn_orange">Спецпроекты</a> 
 					<div class="item-banner__left">
 						<div class="item-banner__left-in">
