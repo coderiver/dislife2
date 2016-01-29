@@ -88,7 +88,12 @@ $green: #9bc1bc
 	position: absolute
 	left: 0
 	top: 0
-	> li
+	ul
+		&.is-active
+			padding-top: 90px
+			+r(1150)
+				padding-top: 0
+	li
 		text-align: center
 		margin-bottom: 1px
 		display: block
@@ -110,7 +115,7 @@ $green: #9bc1bc
 		position: static
 		clear: both
 		+clr
-		> li
+		li
 			float: left
 			margin-right: 1px
 
