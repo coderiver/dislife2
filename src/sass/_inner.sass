@@ -129,25 +129,39 @@ $green: #9bc1bc
 
 .news-line
 	margin: 0 -5px 40px
-	.btn
-		display: inline-block
-		vertical-align: middle
-		margin-right: 20px
 	&__info
 		display: inline-block
 		max-width: 80%
 		vertical-align: middle
 		color: #757575
-		span
-			display: inline-block
-			padding: 0 5px
-			+light
+	&__time
+		display: inline-block
+		color: #757575
+		vertical-align: middle
+	span
+		display: inline-block
+		padding: 0 5px
+		+light
+	.btn
+		display: inline-block
+		vertical-align: middle
+		margin-right: 20px
 	+r3
 		&__info
 			display: block
 			margin-top: 10px
 		.btn
 			margin-left: 0
+	+r4
+		+clr
+		&__time
+			float: right
+			margin-top: 7px
+			+ span
+				display: block
+				margin-top: 13px
+				padding-left: 0
+				clear: both
 
 // sidebar
 .banner-img
@@ -228,7 +242,6 @@ $green: #9bc1bc
 	display: table
 	width: 100%
 	min-height: 100vh
-	z-index: 0
 	+cover
 	&:before
 		content: ""
@@ -237,14 +250,15 @@ $green: #9bc1bc
 		left: 0
 		right: 0
 		bottom: 0
-		z-index: -1
 		+g(rgba(30, 18, 27, 0.3), rgba(27, 16, 24, 0.66))
 	&__in
+		position: relative
 		height: 100vh
 		display: table-cell
 		padding: 100px 0 68px
 		color: #FFF
 		vertical-align: bottom
+		z-index: 1
 	&__bl
 		max-width: 1290px
 		margin: 0 auto
@@ -277,6 +291,7 @@ $green: #9bc1bc
 	+r2
 		min-height: 500px
 		&__in
+			height: auto
 			padding-bottom: 10px
 		&__bl
 			max-width: 660px
@@ -392,3 +407,59 @@ $green: #9bc1bc
 		right: 20px
 		font-size: 30px
 		color: #FFF
+		line-height: 1
+	+r4
+		&__link
+			top: 8px
+			right: 8px
+			font-size: 18px
+
+.cut
+	position: relative
+	display: block
+	float: left
+	margin: 5px 30px 30px -110px
+	padding: 23px 23px 25px 31px
+	border: 1px dashed $mint
+	&-ico
+		position: absolute
+		top: -1px
+		left: -1px
+		width: 29px
+		height: 29px
+		background: #fff
+		overflow: hidden
+		&:before
+			content: ""
+			position: absolute
+			width: 50px
+			left: 0
+			right: 0
+			bottom: 0
+			border-bottom: 1px dashed $mint
+			transform: rotate(-45deg)
+			transform-origin: 0 0 0
+	.news-header
+		max-width: 367px
+		&__subtitle
+			margin-bottom: 0
+			font-size: 22px
+	.h3
+		+bold
+	.fa
+		position: absolute
+		top: -11.5px
+		left: -11px
+		font-size: 23px
+		color: #abcac5
+		z-index: 1
+	+r1
+		margin-left: 0
+		.news-header
+			max-width: 300px
+	+r3
+		float: none
+		.news-header
+			max-width: initial
+		.h3
+			+med
