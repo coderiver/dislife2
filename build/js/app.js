@@ -32,9 +32,6 @@ $(document).ready(function() {
 		$(this).siblings().removeClass('is-active');
 	});
 
-	$('.js-mini-search-btn').click(function() {
-		$('.js-mini-search-input').toggleClass('is-active');
-	});
 
 	function navClose() {
 		$('.js-nav-btn').removeClass('is-active');
@@ -74,9 +71,26 @@ $(document).ready(function() {
 		dots: true,
 		nextArrow: $('.js-slider-next'),
 		prevArrow: $('.js-slider-prev'),
+		adaptiveHeight: true,
+		autoplay: true,
+  		autoplaySpeed: 5000,
+		pauseOnHover: false,
+		responsive: [
+		   {
+			 breakpoint: 660,
+			 settings: {
+				 autoplay: false,
+			 }
+		   },
+	   ]
+	});
+	$('.js-slider-images').slick({
+		fade: true,
+		dots: true,
+		nextArrow: $('.js-slider-next'),
+		prevArrow: $('.js-slider-prev'),
 		adaptiveHeight: true
 	});
-
 	//select
 	$('.js-select').each(function() {
 		var selectField = $(this),
@@ -164,7 +178,7 @@ $(document).ready(function() {
 				}
 			}
 			else {
-				if (scrollTop - scrollNow > 10) {				
+				if (scrollTop - scrollNow > 10) {
 					if(getScrollTop() > 10) {
 						$('.js-header').removeClass('is-hidden');
 					}
@@ -179,7 +193,7 @@ $(document).ready(function() {
 			if (getScrollTop() < $('.js-header').offset().top + $('.js-header').outerHeight()) {
 				$('.js-header').removeClass('is-hidden');
 			}
-			
+
 			if ($(window).scrollTop() > $('.js-header').offset().top) {
 				$('.js-header').addClass('is-fixed');
 			}
@@ -191,10 +205,10 @@ $(document).ready(function() {
 		}
 
 		$(window).on('scroll', function() {
-			headerScroll();		
+			headerScroll();
 		});
 		$(window).on('load', function() {
-			headerScroll();		
+			headerScroll();
 		});
 		$(window).on('resize', function() {
 			headerScroll();
@@ -206,16 +220,16 @@ $(document).ready(function() {
 
 	//social fixed
 	function stickySocial() {
-		if ($('.js-sticky').length) { 
+		if ($('.js-sticky').length) {
 			var el = $('.js-sticky');
-			var stickyTop = $('.js-sticky').offset().top; 
-			var footerTop = $('.js-sticky-end').offset().top; 
+			var stickyTop = $('.js-sticky').offset().top;
+			var footerTop = $('.js-sticky-end').offset().top;
 			var stickyHeight = $('.js-sticky').outerHeight();
 			var limit = footerTop - stickyHeight - 90;
-			$(window).scroll(function(){ 
+			$(window).scroll(function(){
 				var windowTop = $(window).scrollTop();
 				if ($(window).width() >= 1150) {
-				
+
 					if (stickyTop-90 < windowTop){
 						el.css({ position: 'fixed', top: 0 });
 						el.addClass('is-active');
@@ -228,12 +242,12 @@ $(document).ready(function() {
 					if (limit < windowTop) {
 						var diff = limit - windowTop;
 						el.css({top: diff});
-					} 
-				} 
+					}
+				}
 			});
 		}
 	}
-	$(window).load(function() {		
+	$(window).load(function() {
 		if ($(window).width() > 1150) {
 			stickySocial();
 		}

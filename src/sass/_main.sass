@@ -1,12 +1,12 @@
 .main
 	padding: 30px 15px
 	&-in
-		padding: 30px 15px 50px 
+		padding: 30px 15px 50px
 	&__row
 		margin: 0 -15px
 		+clr
 	&__content, &__sidebar
-		padding: 0 15px 
+		padding: 0 15px
 		float: left
 	&__sidebar
 		width: 25%
@@ -20,42 +20,59 @@
 	margin-bottom: 30px
 	+r3
 		max-width: 320px
-		margin: 0 auto 30px  
+		margin: 0 auto 30px
 	&__title
 		font-size: 22px
 		line-height: 1.18
 		+medi
 		a
 			display: inline-block
+			+tr(color .3s)
+			&:hover
+				color: $orange
 		&:after
 			width: 38px
 			border-bottom: 3px solid #e6e6e6
 			margin: 11px auto 15px
 			display: block
-			content: "" 
+			content: ""
+
 	&__list
 		font-size: 0
 		li
 			display: inline-block
 			vertical-align: top
-			padding: 5px 
+			padding: 5px
 		a
 			display: block
 			color: #fff
 			width: 40px
 			height: 40px
 			padding: 9px 0 7px
-			text-align: center  
+			text-align: center
+			+tr(background .3s)
 			&.is-fb
 				background-color: #3b5998
+				&:hover
+					background-color: lighten(#3b5998, 10)
+
 			&.is-tw
 				background-color: #55acee
+				&:hover
+					background-color: lighten(#55acee, 10)
+
 			&.is-vk
 				background-color: #45668e
+				&:hover
+					background-color: lighten(#45668e, 10)
+
 			&.is-od
 				background-color: #ed812b
+				&:hover
+					background-color: lighten(#ed812b, 10)
+
 		i
-			font-size: 24px 
+			font-size: 24px
 
 .news-main
 	margin-bottom: 30px
@@ -84,11 +101,12 @@
 			position: absolute
 			top: 1px
 			right: 0
-	&__scroll
+	&__wrap
 		margin-bottom: 15px
 		position: relative
+		overflow: hidden
 		&:before
-			content: "" 
+			content: ""
 			position: absolute
 			bottom: 0
 			left: 0
@@ -99,7 +117,7 @@
 	&__list
 		max-height: 1387px
 		+r1
-			max-height: 1210px 
+			max-height: 1210px
 		.news-item
 			&:last-child
 				border: none
@@ -121,13 +139,13 @@
 		height: 8px
 	.ps-scrollbar-y, .ps-scrollbar-x
 		position: relative
-		background: rgba(#000, 0.3) 
+		background: rgba(#000, 0.3)
 		opacity: 0
 		transition: opacity 0.2s
 
 .news-item
 	border-bottom: 1px solid #e6e6e6
-	padding: 25px 0  
+	padding: 25px 0
 	&:first-child
 		padding-top: 22px
 	&__link
@@ -166,10 +184,10 @@
 	position: relative
 	+cover
 	+r3
-		padding: 60px 20px 30px 
-		margin: 0 -15px 
+		padding: 60px 20px 30px
+		margin: 0 -15px
 	&:before
-		content: "" 
+		content: ""
 		position: absolute
 		top: 0
 		left: 0
@@ -177,13 +195,13 @@
 		bottom: 0
 		background-image: linear-gradient(180deg, rgba(64, 38, 57, 0.7) 0%, rgba(62, 36, 55, 0.85) 100%)
 		z-index: 1
-		
+
 	.btn
 		position: absolute
 		top: 10px
 		left: -5px
 		z-index: 2
-		background: #fff 
+		background: #fff
 		+r3
 			left: 15px
 	&__in
@@ -197,9 +215,9 @@
 	&__box
 		background-color: rgba(255, 255, 255, 0.9)
 		width: 31%
-		padding: 25px 20px 32px 28px 
+		padding: 25px 20px 32px 28px
 		+r1
-			padding: 21px 17px 32px 
+			padding: 21px 17px 32px
 			width: 30%
 		+r2
 			width: auto
@@ -218,12 +236,12 @@
 		padding: 0 20px 0 71px
 		+r1
 			width: 70%
-			padding: 0 15px 0 54px 
+			padding: 0 15px 0 54px
 		+r2
 			width: auto
-			padding: 0 20px 
+			padding: 0 20px
 		+r3
-			padding: 0 
+			padding: 0
 	&__title
 		font-size: 52px
 		line-height: 1
@@ -233,14 +251,14 @@
 			font-size: 38px
 
 .slider
-	max-width: 100% 
+	max-width: 100%
 	width: 760px
 	min-height: 350px
 	position: relative
 	+r2
-		min-height: 1px 
+		min-height: 1px
 	&:before, &:after
-		content: "" 
+		content: ""
 		position: absolute
 		left: 0
 		right: 0
@@ -259,7 +277,7 @@
 		position: relative
 		z-index: 2
 		+r2
-			min-height: 1px 
+			min-height: 1px
 	&__prev, &__next
 		position: absolute
 		top: 50%
@@ -270,7 +288,7 @@
 		border-radius: 50%
 		font-size: 32px
 		color: #fff
-		background: none  
+		background: none
 		cursor: pointer
 		z-index: 10
 		transition: all 0.2s
@@ -300,10 +318,10 @@
 		font-size: 0
 		li
 			padding: 0
-			margin: 0 5px  
+			margin: 0 5px
 			&.slick-active
 				button
-					background: #fff 
+					background: #fff
 			button
 				width: 12px
 				height: 12px
@@ -316,9 +334,9 @@
 	position: relative
 	z-index: 3
 	+r1
-		padding: 45px 45px 70px 
+		padding: 45px 45px 70px
 	+r3
-		padding: 20px 30px 70px 
+		padding: 20px 30px 70px
 	&__title
 		font-size: 36px
 		line-height: 1
@@ -371,10 +389,10 @@
 		height: 14px
 		margin-bottom: 15px
 		&:before, &:after
-			content: "" 
+			content: ""
 			position: absolute
 			top: 0
-			border-top: 2px solid #fff 
+			border-top: 2px solid #fff
 			width: 300px
 		&:before
 			left: -115px
@@ -390,17 +408,17 @@
 			margin-left: 185px
 			width: 55px
 			border-left: 2px solid #fff
-			display: block 
+			display: block
 			position: relative
 			+r3
 				margin-left: 85px
 			&:before
-				content: "" 
+				content: ""
 				position: absolute
 				bottom: 0
 				left: 0
 				border-bottom: 2px solid #fff
-				width: 100px 
+				width: 100px
 				transform-origin: bottom left
 				transform: rotate(-13deg)
 
@@ -415,30 +433,30 @@
 	&__section
 		+r3
 			max-width: 320px
-			margin: 0 auto 
+			margin: 0 auto
 		&:last-child
 			&:after
 				display: none
 		&:after
-			content: "" 
+			content: ""
 			display: block
 			width: 100%
 			max-width: 300px
 			margin: 0 auto 30px
-			border-bottom: 2px solid #9bc1bc 
+			border-bottom: 2px solid #9bc1bc
 	&__title
 		font-size: 14px
 		letter-spacing: 0.2em
-		line-height: 15px 
+		line-height: 15px
 		+med
 		text-transform: uppercase
-		padding: 0 15px 15px 
+		padding: 0 15px 15px
 	.main
 		padding-bottom: 0
 .btn-load
 	max-width: 410px
 	width: 100%
-	padding: 16px 
+	padding: 16px
 	background-color: #9bc1bc
 	border-radius: 2px
 	color: #fff
@@ -446,13 +464,13 @@
 	cursor: pointer
 	font-size: 0
 	display: block
-	margin: 0 auto 
+	margin: 0 auto
 	+r3
-		max-width: 290px 
+		max-width: 290px
 	&:hover
-		background: darken(#9bc1bc, 5%) 
+		background: darken(#9bc1bc, 5%)
 	&:active
-		background: darken(#9bc1bc, 10%) 
+		background: darken(#9bc1bc, 10%)
 	span
 		font-size: 18px
 	i
@@ -463,13 +481,13 @@
 	height: 462px
 	border: 1px solid
 	position: relative
-	text-align: center 
+	text-align: center
 	margin-bottom: 30px
 	+r1
 		height: 402px
 	+r3
-		max-width: 320px 
-		margin: 0 auto 30px 
+		max-width: 320px
+		margin: 0 auto 30px
 		height: 370px
 	&_red
 		border-color: #d27857
@@ -517,7 +535,7 @@
 		padding: 57px 20px 17px
 		overflow: hidden
 		+r1
-			padding: 43px 20px 15px 
+			padding: 43px 20px 15px
 	&__info
 		font-size: 16px
 		line-height: 18px
@@ -525,11 +543,11 @@
 		+r1
 			font-size: 14px
 	&__text
-		max-width: 340px 
+		max-width: 340px
 		quotes: "\201C""\201D"
 		margin: 0 auto
-		position: relative 
-		padding: 50px 0 
+		position: relative
+		padding: 50px 0
 		+r3
 			padding: 45px 0 40px
 		&:before, &:after
@@ -558,27 +576,27 @@
 			+lorai
 			font-size: 20px
 			line-height: 28px
-			color: #282828 
-			max-height: 252px 
+			color: #282828
+			max-height: 252px
 			overflow: hidden
 			transition: color 0.25s
 			+r1
 				font-size: 17px
 				line-height: 20px
-				max-height: 200px 
+				max-height: 200px
 			+r3
 				font-size: 16px
 
 .item-banner
-	padding: 0 30px 
-	color: #fff 
+	padding: 0 30px
+	color: #fff
 	position: relative
 	margin-bottom: 20px
 	+r3
 		max-width: 320px
 		margin: 0 auto 20px
 		padding: 150px 20px 30px
-	&__bg		
+	&__bg
 		background-position: right center
 		background-repeat: no-repeat
 		position: absolute
@@ -587,21 +605,21 @@
 		left: 0
 		right: 0
 		+r1
-			background-size: cover  
+			background-size: cover
 		+r2
 			background-position: center
 		+r3
-			background-size: contain 
-			background-position: top center 	
+			background-size: contain
+			background-position: top center
 	&_blue
-		background-color: #051431 
+		background-color: #051431
 		.item-banner
 			&__bg
-				+r3					
+				+r3
 					height: 140px
-					bottom: auto 	
+					bottom: auto
 				&:before
-					content: "" 
+					content: ""
 					position: absolute
 					top: 0
 					bottom: 0
@@ -614,7 +632,7 @@
 						margin: 0
 						width: auto
 					+r3
-						display: none					
+						display: none
 	&_yellow
 		background-color: #f2cd42
 		.item-banner
@@ -627,24 +645,24 @@
 					bottom: 0
 					background-color: rgba(58, 34, 48, 0.44)
 					border: 1px solid #979797
-					content: "" 
+					content: ""
 	.btn
 		position: absolute
 		top: 10px
 		left: -5px
 		z-index: 10
-		background: #fff 
+		background: #fff
 	&__left
 		position: relative
-		max-width: 380px 
+		max-width: 380px
 		padding: 70px 0 30px
 		z-index: 1
 		+r1
 			position: static
 			max-width: 270px
-			padding: 60px 0 30px 
+			padding: 60px 0 30px
 		+r3
-			padding: 0 
+			padding: 0
 		&-in
 			position: relative
 			z-index: 2
@@ -684,7 +702,7 @@
 		+r1
 			font-size: 16px
 			line-height: 20px
-			margin-bottom: 23px 
+			margin-bottom: 23px
 	&__btn
 		display: block
 		width: 100%
@@ -693,22 +711,28 @@
 		font-size: 22px
 		line-height: 1
 		text-align: center
-		padding: 16px 
+		padding: 16px
+		transition: background .3s, border .3s, color .3s
 		+r3
 			font-size: 20px
-			padding: 17px  
+			padding: 17px
+		&:hover
+			background: #ff8c61
+			color: #fff
 		&_full
 			background-color: #ff8c61
-			color: #fff 
-
+			color: #fff
+			&:hover
+				background-color: lighten(#ff8c61, 7)
+				border-color: lighten(#ff8c61, 7)
 .item-image
 	position: relative
-	padding: 117px 30px 83px 
+	padding: 117px 30px 83px
 	margin-bottom: 20px
 	+r3
 		padding: 170px 0 0
-		max-width: 320px 
-		margin: 0 auto 20px 
+		max-width: 320px
+		margin: 0 auto 20px
 	+r4
 		padding-top: 150px
 	&__bg
@@ -718,13 +742,13 @@
 		left: 0
 		right: 0
 		+cover
-		+r3			
-			background-size: contain 
-			background-position: top center 
+		+r3
+			background-size: contain
+			background-position: top center
 			bottom: auto
 			height: 170px
 		&:before
-			content: "" 
+			content: ""
 			position: absolute
 			top: 0
 			left: 0
@@ -737,23 +761,23 @@
 		top: 10px
 		left: -5px
 		background: #fff
-		z-index: 2 
+		z-index: 2
 
 .box-form
 	position: relative
 	z-index: 2
 	background-color: rgba(255, 255, 255, 0.9)
 	border-radius: 6px
-	padding: 20px 40px 33px 
-	max-width: 380px 
+	padding: 20px 40px 33px
+	max-width: 380px
 	+r1
 		max-width: 270px
-		padding: 20px 20px 30px 
+		padding: 20px 20px 30px
 	+r3
 		max-width: 100%
-		background: #fff 
+		background: #fff
 		padding: 20px 25px 25px
-		border-radius: 0 
+		border-radius: 0
 	&__title, &__subtitle
 		+bold
 	&__title
@@ -761,7 +785,7 @@
 		line-height: 1.2
 		+r1
 			font-size: 38px
-			line-height: 42px 
+			line-height: 42px
 	&__subtitle
 		font-size: 22px
 		line-height: 1
@@ -783,13 +807,16 @@
 		color: #fff
 		font-size: 17px
 		line-height: 21px
-		padding: 13px 12px 12px 
+		padding: 13px 12px 12px
+		+tr(background .3s)
+		&:hover
+			background: lighten(#ff8c61, 7)
 	p
 		font-size: 16px
 		line-height: 18px
 		+light
-		padding: 5px 0 0 
-		a			
+		padding: 5px 0 0
+		a
 			color: #ff8c61
 			text-decoration: underline
 			&:hover
@@ -828,7 +855,7 @@
 		right: 22px
 		font-size: 14px
 		margin-top: -7px
-		color: #ff8c61 
+		color: #ff8c61
 	&__list
 		position: absolute
 		top: 100%
@@ -836,11 +863,11 @@
 		right: 0
 		background: #fff
 		+reg
-		padding: 19px 18px 12px 14px 
+		padding: 19px 18px 12px 14px
 		display: none
 		border: 1px solid #ff8c61
 		border-top: none
-		z-index: 200 
+		z-index: 200
 		li
 			padding: 10px 0
 			border-top: 1px solid #e5e5e5
@@ -853,7 +880,7 @@
 	position: relative
 	margin-bottom: 30px
 	+r2
-		padding: 20px 15px 
+		padding: 20px 15px
 	&__info
 		max-width: 620px
 		width: 40%
@@ -887,27 +914,27 @@
 		background-position: right center
 		background-repeat: no-repeat
 		+r1
-			width: 70% 
+			width: 70%
 			background-size: contain
 		+r2
 			width: 100%
 			padding-bottom: 40%
 			position: relative
-			background-position: center 
+			background-position: center
 
 .fullscreen
 	min-height: 100vh
 	display: table
 	width: 100%
 	position: relative
-	color: #fff 
+	color: #fff
 	+cover
 	+r2
 		display: block
 		min-height: 1px
 	&:before, &:after
 		position: absolute
-		content: "" 
+		content: ""
 	&:before
 		top: 0
 		left: 0
@@ -924,14 +951,14 @@
 			display: none
 	&_yellow
 		&:after
-			border-color: $gold 
+			border-color: $gold
 	&_violet
 		+r2
 			min-height: 368px
 		.fullscreen
 			&__center
 				+r2
-					max-width: 500px 
+					max-width: 500px
 			&__inner
 				+r2
 					position: absolute
@@ -940,7 +967,7 @@
 					right: 0
 					padding-bottom: 10px
 		&:after
-			border-color: $violet 
+			border-color: $violet
 			+r2
 				display: block
 				top: 15px
@@ -951,35 +978,35 @@
 		.fullscreen
 			&__inner
 				+r3
-					padding: 30px 10px 
+					padding: 30px 10px
 			&__center
 				padding-bottom: 15px
 		&:after
-			border-color: $red 
+			border-color: $red
 	&__inner
 		display: table-cell
 		vertical-align: bottom
 		position: relative
 		z-index: 1
-		padding: 27px 21px 30px 
+		padding: 27px 21px 30px
 		height: 100vh
 		+r2
 			display: block
 			vertical-align: top
-			padding: 15px 15px 18px 
+			padding: 15px 15px 18px
 	&__center
 		max-width: 1110px
 		margin: 0 auto
 		padding: 45px 10px 45px
 		+r2
-			padding: 15px 
+			padding: 15px
 	.slider
 		margin: 0 auto 60px
-		background-image: linear-gradient(180deg, rgba(55, 33, 49, 0.6) 0%, rgba(53, 31, 47, 0.8) 100%) 
+		background-image: linear-gradient(180deg, rgba(55, 33, 49, 0.6) 0%, rgba(53, 31, 47, 0.8) 100%)
 		&__prev, &__next
 			background: rgba(53, 31, 47, 1)
 			&:hover
-				background: $gold 
+				background: $gold
 	.slide
 		position: relative
 	&__title
@@ -1004,10 +1031,10 @@
 		font-size: 24px
 		line-height: 1
 		+light
-		max-width: 840px 
-		margin: 0 auto 
+		max-width: 840px
+		margin: 0 auto
 		+r1
-			max-width: 740px 
+			max-width: 740px
 		+r2
 			font-size: 20px
 	&__info
@@ -1029,14 +1056,14 @@
 			&__author
 				text-decoration: none
 	&__arr
-		overflow: hidden 
+		overflow: hidden
 		height: 20px
 		position: absolute
 		bottom: 100%
 		left: 0
 		right: 0
 		&:before, &:after
-			content: "" 
+			content: ""
 			position: absolute
 			bottom: 0
 			border-style: solid
@@ -1068,7 +1095,7 @@
 			line-height: 24px
 	&__user
 		max-width: 500px
-		margin: 0 auto  
+		margin: 0 auto
 		text-align: left
 	&__img
 		width: 60px
@@ -1081,7 +1108,7 @@
 			border-radius: 50%
 	&__text
 		padding: 12px 0
-		overflow: hidden 
+		overflow: hidden
 		p
 			color: #282828
 			font-size: 16px
@@ -1096,7 +1123,7 @@
 	height: 672px
 	+cover
 	text-align: center
-	color: #fff 
+	color: #fff
 	margin-bottom: 30px
 	+r3
 		height: auto
@@ -1107,9 +1134,9 @@
 			opacity: 0
 		.item-full
 			&__author
-				color: #fff 
+				color: #fff
 	&:before, &:after
-		content: "" 
+		content: ""
 		position: absolute
 		top: 0
 		bottom: 0
@@ -1142,13 +1169,13 @@
 		left: 0
 		right: 0
 		z-index: 1
-		padding: 40px 15px 
+		padding: 40px 15px
 		+r3
 			position: relative
 	&__subtitle
 		font-size: 56px
 		line-height: 1
-		padding: 5px 0 15px 
+		padding: 5px 0 15px
 		+bold
 		+r3
 			font-size: 23px
@@ -1156,30 +1183,30 @@
 	&__author
 		+light
 		font-size: 14px
-		color: #ccc 
+		color: #ccc
 		transition: color 0.25s
 		margin-bottom: 5px
 	&__info
 		font-size: 18px
-		max-width: 740px 
-		margin: 0 auto 
+		max-width: 740px
+		margin: 0 auto
 		+r3
 			font-size: 16px
 
 .col-news, .col-more, .news-column, .col-items
 	display: inline-block
 	vertical-align: top
-	padding: 0 15px 
+	padding: 0 15px
 .col-news
 	width: 33.33%
 .col-more
 	width: 66.67%
-.col-news, .col-more	
+.col-news, .col-more
 	+r2
 		width: 100%
 	.h2
 		padding: 20px 0 30px
-		border-bottom: 1px solid #9bc1bc 
+		border-bottom: 1px solid #9bc1bc
 		margin-bottom: 55px
 		+r3
 			text-align: center
