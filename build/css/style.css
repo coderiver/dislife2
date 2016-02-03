@@ -475,6 +475,9 @@ a { color: #000; text-decoration: none; }
 
 .col-items { width: 50%; }
 
+.accordion__block { display: none; }
+.accordion__block .article { padding-top: 15px; }
+
 .search { position: relative; display: block; margin: 5px 0; }
 .search input { display: block; width: 100%; padding: 18.5px 18px 18.5px 108px; font-size: 42px; background: #f4f5f1; font-weight: 700; }
 .search input::-webkit-search-cancel-button { cursor: pointer; }

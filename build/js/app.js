@@ -134,24 +134,24 @@ $(document).ready(function() {
 	});
 
 	// expand img
-	function launchIntoFullscreen(element) {
-		if (element.requestFullscreen) {
-			element.requestFullscreen();
-		} else if (element.mozRequestFullScreen) {
-			element.mozRequestFullScreen();
-		} else if (element.webkitRequestFullscreen) {
-			element.webkitRequestFullscreen();
-		} else if (element.msRequestFullscreen) {
-			element.msRequestFullscreen();
-		}
-	}
+	// function launchIntoFullscreen(element) {
+	// 	if (element.requestFullscreen) {
+	// 		element.requestFullscreen();
+	// 	} else if (element.mozRequestFullScreen) {
+	// 		element.mozRequestFullScreen();
+	// 	} else if (element.webkitRequestFullscreen) {
+	// 		element.webkitRequestFullscreen();
+	// 	} else if (element.msRequestFullscreen) {
+	// 		element.msRequestFullscreen();
+	// 	}
+	// }
 
-	$('.js-expand').click(function(e) {
-		e.preventDefault();
-		var img = this.closest('.expand').querySelector('img');
+	// $('.js-expand').click(function(e) {
+	// 	e.preventDefault();
+	// 	var img = this.closest('.expand').querySelector('img');
 
-		launchIntoFullscreen(img);
-	});
+	// 	launchIntoFullscreen(img);
+	// });
 
 	//header
 	if ($('.js-header').length) {
@@ -259,6 +259,14 @@ $(document).ready(function() {
 		else {
 			$('.js-sticky').removeAttr('style');
 		}
+	});
+	//accordion
+	$('.js-accordion-title').click(function() {
+		var el = $(this),
+			elBlock = $(this).siblings('.js-accordion-block');
+
+		elBlock.slideToggle('slow');
+		return false;
 	});
 
 });
