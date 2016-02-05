@@ -239,19 +239,19 @@ a { color: #000; text-decoration: none; }
 .social { border: 1px solid #e6e6e6; padding: 19px 15px 15px; text-align: center; margin-bottom: 30px; }
 .social__title { font-size: 22px; line-height: 1.18; font-weight: 500; font-style: italic; }
 .social__title a { display: inline-block; -webkit-transition: color 0.3s; transition: color 0.3s; }
-.social__title a:hover { color: #ff8c61; }
+.social__title a:hover { color: #9bc1bc; }
 .social__title:after { width: 38px; border-bottom: 3px solid #e6e6e6; margin: 11px auto 15px; display: block; content: ""; }
 .social__list { font-size: 0; }
 .social__list li { display: inline-block; vertical-align: top; padding: 5px; }
-.social__list a { display: block; color: #fff; width: 40px; height: 40px; padding: 9px 0 7px; text-align: center; -webkit-transition: background 0.3s; transition: background 0.3s; }
+.social__list a { display: block; color: #fff; width: 40px; height: 40px; padding: 9px 0 7px; text-align: center; -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s; }
 .social__list a.is-fb { background-color: #3b5998; }
-.social__list a.is-fb:hover { background-color: #4c70ba; }
+.social__list a.is-fb:hover { -webkit-transform: scale(1.2); -ms-transform: scale(1.2); transform: scale(1.2); }
 .social__list a.is-tw { background-color: #55acee; }
-.social__list a.is-tw:hover { background-color: #83c3f3; }
+.social__list a.is-tw:hover { -webkit-transform: scale(1.2); -ms-transform: scale(1.2); transform: scale(1.2); }
 .social__list a.is-vk { background-color: #45668e; }
-.social__list a.is-vk:hover { background-color: #587fae; }
+.social__list a.is-vk:hover { -webkit-transform: scale(1.2); -ms-transform: scale(1.2); transform: scale(1.2); }
 .social__list a.is-od { background-color: #ed812b; }
-.social__list a.is-od:hover { background-color: #f19d5a; }
+.social__list a.is-od:hover { -webkit-transform: scale(1.2); -ms-transform: scale(1.2); transform: scale(1.2); }
 .social__list i { font-size: 24px; }
 
 .news-main { margin-bottom: 30px; }
@@ -374,10 +374,12 @@ a { color: #000; text-decoration: none; }
 .item-banner__subtitle { font-size: 22px; line-height: 31px; margin-bottom: 20px; }
 .item-banner__title_mod { font-size: 48px; line-height: 1; margin-bottom: 10px; }
 .item-banner p { font-size: 18px; line-height: 24px; font-weight: 300; margin-bottom: 35px; }
-.item-banner__btn { display: block; width: 100%; border: 3px solid #ff8c61; color: #ff8c61; font-size: 22px; line-height: 1; text-align: center; padding: 16px; -webkit-transition: background 0.3s, border 0.3s, color 0.3s; transition: background 0.3s, border 0.3s, color 0.3s; }
-.item-banner__btn:hover { background: #ff8c61; color: #fff; }
-.item-banner__btn_full { background-color: #ff8c61; color: #fff; }
-.item-banner__btn_full:hover { background-color: #ffa685; border-color: #ffa685; }
+.item-banner__btn { display: block; width: 100%; border: 3px solid #ff8c61; color: #ff8c61; font-size: 22px; line-height: 1; text-align: center; padding: 16px; position: relative; -webkit-transition: border 0.3s, color 0.3s; transition: border 0.3s, color 0.3s; z-index: 1; }
+.item-banner__btn:before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: #ff8c61; z-index: -1; -webkit-transition: width 0.3s; transition: width 0.3s; }
+.item-banner__btn:hover { color: #fff; }
+.item-banner__btn:hover:before { width: 100%; }
+.item-banner__btn_full { background-color: #ff8c61; color: #fff; border: 0; padding: 19px 16px; }
+.item-banner__btn_full:before { background: #E17952; }
 
 .item-image { position: relative; padding: 117px 30px 83px; margin-bottom: 20px; }
 .item-image__bg { position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
@@ -389,8 +391,9 @@ a { color: #000; text-decoration: none; }
 .box-form__title { font-size: 52px; line-height: 1.2; }
 .box-form__subtitle { font-size: 22px; line-height: 1; max-width: 240px; margin-bottom: 35px; }
 .box-form__field { margin-bottom: 19px; }
-.box-form__btn { background-color: #ff8c61; display: inline-block; vertical-align: top; text-align: center; width: 100%; font-weight: 500; color: #fff; font-size: 17px; line-height: 21px; padding: 13px 12px 12px; -webkit-transition: background 0.3s; transition: background 0.3s; }
-.box-form__btn:hover { background: #ffa685; }
+.box-form__btn { background-color: #ff8c61; display: inline-block; vertical-align: top; text-align: center; width: 100%; font-weight: 500; color: #fff; font-size: 17px; line-height: 21px; padding: 13px 12px 12px; -webkit-transition: background 0.3s; transition: background 0.3s; position: relative; z-index: 1; }
+.box-form__btn:before { content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 0; z-index: -1; background: #E17952; -webkit-transition: width 0.3s; transition: width 0.3s; }
+.box-form__btn:hover:before { width: 100%; }
 .box-form p { font-size: 16px; line-height: 18px; font-weight: 300; padding: 5px 0 0; }
 .box-form p a { color: #ff8c61; text-decoration: underline; }
 .box-form p a:hover { text-decoration: none; }
@@ -716,9 +719,11 @@ body.overflow-hidden { position: fixed; width: 100%; }
 .expand__img { display: block; max-width: 100%; }
 .expand__link { position: absolute; top: 20px; right: 20px; font-size: 30px; color: #FFF; line-height: 1; }
 
-.cut { position: relative; display: block; float: left; margin: 5px 30px 30px -110px; padding: 23px 23px 25px 31px; border: 1px dashed #9bc1bc; }
-.cut-ico { position: absolute; top: -1px; left: -1px; width: 29px; height: 29px; background: #fff; overflow: hidden; }
+.cut { position: relative; display: block; float: left; margin: 5px 30px 30px -110px; padding: 23px 23px 25px 31px; border: 1px dashed #9bc1bc; -webkit-transition: background 0.3s; transition: background 0.3s; }
+.cut:hover { background: #EFF0EA; }
+.cut-ico { position: absolute; top: -1px; left: -1px; width: 29px; height: 29px; overflow: hidden; }
 .cut-ico:before { content: ""; position: absolute; width: 50px; left: 0; right: 0; bottom: 0; border-bottom: 1px dashed #9bc1bc; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); -webkit-transform-origin: 0 0 0; -ms-transform-origin: 0 0 0; transform-origin: 0 0 0; }
+.cut-ico:after { content: ""; position: absolute; width: 0px; height: 0px; border-style: solid; border-width: 28px 28px 0 0; border-color: white transparent transparent transparent; }
 .cut .news-header { max-width: 367px; }
 .cut .news-header__subtitle { margin-bottom: 0; font-size: 22px; }
 .cut .h3 { font-weight: 700; }
