@@ -96,7 +96,7 @@ $(document).ready(function() {
 			prevArrow: prev,
 			adaptiveHeight: true
 		});
-	});	
+	});
 	//select
 	$('.js-select').each(function() {
 		var selectField = $(this),
@@ -268,7 +268,7 @@ $(document).ready(function() {
 	});
 	//accordion
 	$('.js-accordion-title').click(function() {
-		var el = $(this),			
+		var el = $(this),
 			elBlock = $(this).siblings('.js-accordion-block');
 
 		el.parents('.js-accordion').find('.js-slider-images').slick('unslick');
@@ -285,9 +285,35 @@ $(document).ready(function() {
 					prevArrow: prev,
 					adaptiveHeight: true
 				});
-			});	
+			});
 		});
 		return false;
 	});
+
+	// tabs
+	function tabsLoad() {
+       $(".js-tabs").each(function(){
+         if ($(this).find('.js-tabs-link.is-active').length) {
+            var index = $(this).find(".is-active").index();
+         	$(this).find(".js-tabs-content").eq(index).show();
+         }
+         else {
+           $(this).find('.js-tabs-link').eq(0).addClass("is-active");
+           $(this).find(".js-tabs-content").eq(0).show();
+         }
+       });
+   }
+   tabsLoad();
+    $('.js-tabs-link').on("click",function () {
+		console.log('was')
+			var tabs = $(this).parents(".js-tabs");
+			var tabsCont = tabs.find(".js-tabs-content");
+			var index = $(this).index();
+			tabs.find(".js-tabs-link").removeClass("is-active");
+	      	$(this).addClass("is-active");
+			tabsCont.hide();
+			tabsCont.eq(index).show();
+			return false;
+    });
 
 });

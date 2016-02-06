@@ -48,6 +48,12 @@
 
 // fonts
 
+// lucida-font
++font(lucidagrande, lucidagrande)
+
+=lucida
+	font-family: 'lucidagrande', Arial, sans-serif
+
 // roboto-font
 =roboto
 	font-family: 'Roboto', Arial, sans-serif
@@ -183,7 +189,7 @@ strong, b
 i, em
 	font-style: normal
 
-button, input[type="button"]
+button, input[type="button"], input[type="submit"]
 	cursor: pointer
 
 h1, .h1
@@ -609,3 +615,48 @@ a
 		&_big-img
 			.man__text
 				font-size: 14px
+
+.social-big
+	margin: -4px
+	+clr
+	> li
+		padding: 4px
+		float: left
+
+		a
+			width: 55px
+			height: 50px
+			border-radius: 3px
+			color: #fff
+			display: block
+			text-align: center
+			+vertical
+			i
+				display: inline-block
+				vertical-align: middle
+				font-size: 20px
+				line-height: 1
+			&.is-vk
+				background-color: #38639a
+				box-shadow: 0 2px 0 #2d4f7a
+			&.is-fb
+				background-color: #3a579a
+				border-radius: 3px
+				box-shadow: 0 2px 0 #324b86
+			&.is-odk
+				background-color: #fda700
+				border-radius: 3px
+				box-shadow: 0 2px 0 #d6a753
+			&.is-gp
+				background-color: #d63b22
+				border-radius: 3px
+				box-shadow: 0 2px 0 #a42b18
+			&.is-ya
+				background-color: #f72415
+				border-radius: 3px
+				box-shadow: 0 2px 0 #d63b22
+
+.social-ya
+	// +roboto
+	// +light
+	+lucida
