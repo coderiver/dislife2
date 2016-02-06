@@ -316,4 +316,18 @@ $(document).ready(function() {
 			return false;
     });
 
+	// popup
+
+	$('.js-open-popup').on('click', function () {
+		var popup = $('.' + $(this).data('popup'));
+		popup.addClass('is-open');
+		return false;
+	});
+
+	$('.js-close-popup').on('click', function () {
+		var popup = $(this).parents('.js-popup');
+
+		popup.removeClass('is-open');
+	});
+
 });

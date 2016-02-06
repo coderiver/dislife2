@@ -35,7 +35,7 @@
 						<li class="nav__item"><a href="#" class="nav__link is-drop is-active is-orange"><span>Спецпроекты</span> <i class="fa fa-chevron-down"></i></a></li>
 					</ul>
 				</nav>
-				<a href="#" class="btn-enter">
+				<a href="#" class="btn-enter js-open-popup" data-popup="js-popup-login">
 					<i class="fa fa-sign-in"></i>
 					<span>Вход</span>
 				</a>
@@ -649,7 +649,7 @@
 <!-- END out-->
 
 <!-- begin popup-login -->
-<div class="popup js-popup">
+<div class="popup js-popup js-popup-login">
     <div class="popup__in js-tabs">
         <button class="fa fa-close popup__close js-close-popup"></button>
         <div class="popup__tabs">
@@ -700,7 +700,53 @@
                     </form>
                 </div>
             </div>
-            <div class="tab-content js-tabs-content">lorem</div>
+            <div class="tab-content js-tabs-content">
+                <div class="popup__form">
+                    <form action="#">
+                        <div class="field">
+                            <label class="field__label">Логин</label>
+                            <div class="field__input input is-valid">
+                                <i class="fa fa-user input__icon"></i>
+                                <input type="text" class="input-text" name="email" value="kocha">
+                                <i class="input__valid fa fa-check"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">E-mail</label>
+                            <div class="field__input input">
+                                <i class="fa fa-user input__icon"></i>
+                                <input type="text" class="input-text" name="email" value="kochaji@gmail.com">
+                                <i class="input__valid fa fa-check"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">Повторите пароль</label>
+                            <div class="field__input input">
+                                <i class="fa fa-lock input__icon"></i>
+                                <input type="password" name="password" class="input-text input-text_pwd" value="1234567812">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">Пароль</label>
+                            <div class="field__input input">
+                                <i class="fa fa-lock input__icon"></i>
+                                <input type="password" name="password" class="input-text input-text_pwd" value="1234567812">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Я принимаю пользовательское соглашение</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="submit" value="Зарегистрироваться" class="input-btn input-btn_full">
+                        </div>
+                </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>

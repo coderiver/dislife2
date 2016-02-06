@@ -47,6 +47,12 @@
 		@content
 
 // fonts
+=fa
+	font: normal normal normal 14px/1 FontAwesome
+	font-size: inherit
+	text-rendering: auto
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
 
 // lucida-font
 +font(lucidagrande, lucidagrande)
@@ -631,6 +637,7 @@ a
 			display: block
 			text-align: center
 			+vertical
+			transition: opacity .3s, box-shadow .3s
 			i
 				display: inline-block
 				vertical-align: middle
@@ -641,20 +648,20 @@ a
 				box-shadow: 0 2px 0 #2d4f7a
 			&.is-fb
 				background-color: #3a579a
-				border-radius: 3px
 				box-shadow: 0 2px 0 #324b86
 			&.is-odk
 				background-color: #fda700
-				border-radius: 3px
 				box-shadow: 0 2px 0 #d6a753
 			&.is-gp
 				background-color: #d63b22
-				border-radius: 3px
 				box-shadow: 0 2px 0 #a42b18
 			&.is-ya
 				background-color: #f72415
-				border-radius: 3px
 				box-shadow: 0 2px 0 #d63b22
+			&:hover
+				opacity: .8
+				box-shadow: none
+
 
 .social-ya
 	// +roboto
