@@ -293,7 +293,8 @@ $(document).ready(function() {
 	// popup
 
 	$('.js-open-popup').on('click', function () {
-		var popup = $('.' + $(this).data('popup'));
+		var link = $(this).data('link');
+		var popup = $('[data-popup="' + link + '"]');
 		popup.addClass('is-open');
 		return false;
 	});
