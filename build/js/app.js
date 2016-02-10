@@ -238,7 +238,7 @@ $(document).ready(function() {
 
 					if (stickyTop-90 < windowTop){
 						el.css({ position: 'fixed', top: 0 });
-						el.addClass('is-active');
+						el.addClass('is-active');						
 					}
 					else {
 						el.css('position','static');
