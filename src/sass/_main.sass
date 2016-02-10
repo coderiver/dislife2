@@ -29,7 +29,7 @@
 			display: inline-block
 			+tr(color .3s)
 			&:hover
-				color: $orange
+				color: $mint
 		&:after
 			width: 38px
 			border-bottom: 3px solid #e6e6e6
@@ -50,27 +50,23 @@
 			height: 40px
 			padding: 9px 0 7px
 			text-align: center
-			+tr(background .3s)
+			+tr(transform .3s)
 			&.is-fb
 				background-color: #3b5998
 				&:hover
-					background-color: lighten(#3b5998, 10)
-
+					transform: scale(1.2)
 			&.is-tw
 				background-color: #55acee
 				&:hover
-					background-color: lighten(#55acee, 10)
-
+					transform: scale(1.2)
 			&.is-vk
 				background-color: #45668e
 				&:hover
-					background-color: lighten(#45668e, 10)
-
+					transform: scale(1.2)
 			&.is-od
 				background-color: #ed812b
 				&:hover
-					background-color: lighten(#ed812b, 10)
-
+					transform: scale(1.2)
 		i
 			font-size: 24px
 
@@ -712,19 +708,36 @@
 		line-height: 1
 		text-align: center
 		padding: 16px
-		transition: background .3s, border .3s, color .3s
+		position: relative
+		transition: border .3s, color .3s
+		z-index: 1
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			width: 0
+			background: $orange
+			z-index: -1
+			+tr(width .3s)
 		+r3
 			font-size: 20px
 			padding: 17px
 		&:hover
-			background: #ff8c61
 			color: #fff
+			&:before
+				width: 100%
 		&_full
 			background-color: #ff8c61
 			color: #fff
+			border: 0
+			padding: 19px 16px
+			&:before
+				background: #E17952
 			&:hover
-				background-color: lighten(#ff8c61, 7)
-				border-color: lighten(#ff8c61, 7)
+				&:before
+
 .item-image
 	position: relative
 	padding: 117px 30px 83px
@@ -809,8 +822,21 @@
 		line-height: 21px
 		padding: 13px 12px 12px
 		+tr(background .3s)
+		position: relative
+		z-index: 1
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			width: 0
+			z-index: -1
+			background: #E17952
+			+tr(width .3s)
 		&:hover
-			background: lighten(#ff8c61, 7)
+			&:before
+				width: 100%
 	p
 		font-size: 16px
 		line-height: 18px
@@ -957,7 +983,7 @@
 			&__hidden
 				max-height: 100px
 				opacity: 1
-				overflow: hidden 
+				overflow: hidden
 	&_yellow
 		&:after
 			border-color: $gold
@@ -1046,7 +1072,7 @@
 		text-align: center
 		+r2
 			max-height: 100px
-			opacity: 1 
+			opacity: 1
 	h4
 		font-size: 24px
 		line-height: 1
@@ -1066,7 +1092,7 @@
 		margin-bottom: 10px
 	&__link
 		color: #fff
-		display: block 
+		display: block
 		padding-bottom: 10px
 		position: relative
 		&:before
@@ -1075,7 +1101,7 @@
 			left: 0
 			right: 0
 			height: 2000px
-			content: "" 
+			content: ""
 
 .info-block
 	background-color: #fff
@@ -1113,9 +1139,9 @@
 			&__author
 				color: #d27857
 		&:hover
-			color: #d27857 
+			color: #d27857
 			p
-				color: #d27857 
+				color: #d27857
 	&__author
 		font-size: 14px
 		line-height: 17px
@@ -1128,11 +1154,11 @@
 		margin-bottom: 10px
 		+lora
 		max-height: 26px
-		overflow: hidden 
+		overflow: hidden
 		+r3
 			font-size: 20px
 			line-height: 24px
-			max-height: 24px 
+			max-height: 24px
 	&__user
 		max-width: 500px
 		margin: 0 auto
@@ -1156,7 +1182,7 @@
 			+light
 			transition: color 0.2s
 			max-height: 36px
-			overflow: hidden 
+			overflow: hidden
 			+r2
 				line-height: 18px
 
@@ -1182,7 +1208,7 @@
 				color: #fff
 			&__hidden
 				max-height: 100px
-				opacity: 1 
+				opacity: 1
 	&:before, &:after
 		content: ""
 		position: absolute
@@ -1244,7 +1270,7 @@
 		max-height: 0
 		overflow: hidden
 		opacity: 0
-		transition: max-height 0.4s, opacity 0.3s 
+		transition: max-height 0.4s, opacity 0.3s
 
 .col-news, .col-more, .news-column, .col-items
 	display: inline-block

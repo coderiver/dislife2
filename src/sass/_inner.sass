@@ -427,13 +427,15 @@ $green: #9bc1bc
 	margin: 5px 30px 30px -110px
 	padding: 23px 23px 25px 31px
 	border: 1px dashed $mint
+	+tr(background .3s)
+	&:hover
+		background: #EFF0EA
 	&-ico
 		position: absolute
 		top: -1px
 		left: -1px
 		width: 29px
 		height: 29px
-		background: #fff
 		overflow: hidden
 		&:before
 			content: ""
@@ -445,6 +447,11 @@ $green: #9bc1bc
 			border-bottom: 1px dashed $mint
 			transform: rotate(-45deg)
 			transform-origin: 0 0 0
+		&:after
+			content: ''
+			position: absolute
+			+arr(28, 28, white, tl)
+
 	.news-header
 		max-width: 367px
 		&__subtitle

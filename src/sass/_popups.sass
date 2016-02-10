@@ -1,0 +1,259 @@
+// popups
+
+.popup
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(#59344F, .4)
+    z-index: 500
+    +vertical
+    padding: 45px 10px 45px
+    overflow-y: auto
+    visibility: hidden
+    opacity: 0
+    transition: visibility .3s, opacity .3s
+    &.is-open
+        visibility: visible
+        opacity: 1
+        .popup__in
+            transform: scale(1)
+    +r4
+        padding-bottom: 25px
+    &__in
+        box-shadow:  0 2px 0 #e6e7e3, 0 5px 20px rgba(0, 0, 0, 0.28)
+        border: 1px solid #d0d0d0
+        border-width: 1px 1px 0 0
+        display: inline-block
+        vertical-align: middle
+        position: relative
+        width: 100%
+        max-width: 410px
+        background: #fff
+        border-radius: 3px
+        font-size: 14px
+        text-align: left
+        transform: scale(.9)
+        transition: transform .2s
+    &__close
+        color: #fff
+        position: absolute
+        right: 0
+        top: -35px
+        background: transparent
+        font-size: 22px
+        opacity: .8
+        +tr(opacity .3s)
+        &:hover
+            opacity: 1
+    &__body
+        padding: 10px 50px
+        +r4
+            padding: 10px 20px
+    &__tabs
+        +clr
+        > a
+            float: left
+            width: 50%
+            color: #282828
+            font-size: 22px
+            padding: 10px 15px 10px
+            background: #e6e7e3
+            position: relative
+            z-index: 1
+            transition: background .3s, color .3s
+            +r4
+                font-size: 16px
+                text-align: center
+            &:hover
+                background: $mint
+                color: #fff
+            &:after
+                content: ''
+                position: absolute
+                width: 10px
+                top: 0
+                bottom: 0
+            &.is-active
+                background: #fff
+                &:after
+                    display: none
+                &:hover
+                    color: #282828
+            &:first-child
+                border-radius: 2px 0 0 0
+                padding-left: 50px
+                +r4
+                    padding-left: 15px
+                &:after
+                    right: 0
+                    background-image: linear-gradient(-270deg, transparent 0%, rgba(0,0,0, .1) 100%)
+            &:last-child
+                border-radius: 0 2px 0 0
+                padding-left: 30px
+                +r4
+                    padding-left: 15px
+                &:after
+                    left: 0
+                    background-image: linear-gradient(270deg, transparent 0%, rgba(0,0,0, .1) 100%)
+    &__title
+        position: relative
+        text-align: center
+        margin: 10px 0
+        span
+            font-size: 14px
+            color: rgba(#4a4a4a, .4)
+            +light
+            padding: 0 15px
+            background: #fff
+            position: relative
+            z-index: 2
+        &:before
+            content: ''
+            position: absolute
+            left: 0
+            right: 0
+            height: 1px
+            z-index: 1
+            top: 50%
+            background: #9bc1bc
+    .social-big
+        margin: 20px -5px
+.tab-content
+    display: none
+    &.is-active
+        display: block
+
+.field
+    margin-bottom: 20px
+    &__label
+        text-transform: uppercase
+        +bold
+        font-size: 12px
+        margin-bottom: 7px
+        color: #4a4a4a
+    &__input
+        .input-text
+            width: 100%
+
+.field-login
+    +clr
+    margin-bottom: 20px
+    .checkbox
+        float: left
+        margin-top: 13px
+        +r4
+            float: none
+            margin-bottom: 15px
+    .login
+        float: right
+        display: inline-block
+        text-align: center
+        +r4
+            float: none
+            display: block
+        input
+            display: block
+            margin-bottom: 20px
+            +r4
+                width: 100%
+.input
+    position: relative
+    margin: 7px 0
+    &.is-valid
+        .input-text
+            border: 1px dashed $mint
+            padding-right: 50px
+        .input__valid
+            visibility: visible
+            opacity: 1
+    &__icon
+        position: absolute
+        left: 0
+        top: 0
+        font-size: 14px
+        padding: 18px
+    &__valid
+        transition: visibility .3s, opacity .3s
+        visibility: hidden
+        opacity: 0
+        position: absolute
+        top: 0
+        right: 0
+        padding: 18px
+        background: $mint
+        color: #fff
+        font-size: 14px
+        border-radius: 0 3px 3px 0
+.input-text
+    border-radius: 3px
+    border: 1px solid #d8d8d8
+    color: #4a4a4a
+    padding: 16px 15px 15px 40px
+    font-size: 14px
+    &_pwd
+        letter-spacing: 4px
+.input-btn
+    color: #fff
+    background-image: linear-gradient(180deg, #9bc1bc 0%, #93b6b2 100%)
+    border-radius: 3px
+    box-shadow: 0 2px 0 #8da8a4
+    font-size: 18px
+    padding: 10px 44px
+    transition: opacity .3s, box-shadow .3s
+    +r4
+        padding: 10px 5px
+    &_full
+        display: block
+        width: 100%
+    &:hover
+        opacity: .8
+        box-shadow: none
+
+.orange-link
+    display: inline-block
+    color: #ff8c61
+    border-bottom: 1px dashed #ff8c61
+    +light
+    &:hover
+        border-style: solid
+
+.checkbox
+    position: relative
+    padding-left: 25px
+    input[type="checkbox"]
+        opacity: 0
+        visibility: hidden
+        position: absolute
+    span
+        color: rgba(74, 74, 74, 0.4)
+        cursor: pointer
+        font-size: 12px
+        +light
+        &::before
+            content: ''
+            display: inline-block
+            position: absolute
+            left: 0
+            top: -3px
+            margin-right: 7px
+            width: 18px
+            height: 18px
+            background: #fff
+            border: 1px solid #d8d8d8
+            border-radius: 2px
+        &::after
+            content: "\f00c"
+            display: none
+            position: absolute
+            left: 3px
+            top: 0
+            color: $mint
+            +fa
+    input[type="checkbox"]:checked
+        + span
+            &:before
+                border-color: $mint
+            &::after
+                display: block
