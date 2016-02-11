@@ -108,7 +108,7 @@ $green: #9bc1bc
 			+tr(background .3s)
 			&.fa-envelope
 				font-size: 24px
-			&.icon-vk
+			&.icon-vk, &.fa-odnoklassniki
 				font-size: 24px
 			&:hover
 				background: darken(#9bc1bc, 10)
@@ -225,15 +225,32 @@ $green: #9bc1bc
 	font-size: 18px
 	color: #000
 	border: 1px solid #9BC1BC
+	position: relative
+	&:hover
+		&:before
+			width: 100%
+		.fa, span
+			color: #fff 
 	&_mod
 		margin-left: 108px
+	&:before
+		content: "" 
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		width: 0
+		transition: width 0.25s
+		background: #9BC1BC 
 	.fa
 		margin-right: 18px
 		font-size: 24px
 		color: #9BC1BC
+	.fa, span
 		vertical-align: middle
-	span
-		vertical-align: middle
+		position: relative
+		z-index: 1
+		transition: color 0.25s
 	+r2
 		margin-left: 80px
 	+r3

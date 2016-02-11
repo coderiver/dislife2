@@ -26,16 +26,16 @@ body
 			transform: translateY(-110%)
 	&__fixed
 		transition: transform 0.4s
-		padding: 0 200px
+		padding: 0 70px 0 200px
 		background-color: #fff
 		box-shadow: 0 2px 6px rgba(159, 159, 159, 0.5)
-		min-height: 80px
+		min-height: 70px
 		z-index: 300
 		min-width: 320px
 		position: relative
 		+r1
 			padding: 0 70px 0 165px
-		+r2
+		+r1
 			min-height: 60px
 			padding: 0 45px 0 0
 	&__inner
@@ -47,7 +47,7 @@ body
 	position: absolute
 	top: 0
 	right: 0
-	padding: 24px 25px 26px 10px
+	padding: 19px 25px 21px 10px
 	background: #fff
 	min-width: 70px
 	+r2
@@ -57,11 +57,11 @@ body
 		font-size: 29px
 		color: #282828
 		position: absolute
-		top: 24px
+		top: 19px
 		right: 25px
 		cursor: pointer
 		+tr(color .3s)
-		+r2
+		+r1
 			top: 19px
 			right: 15px
 			font-size: 20px
@@ -72,67 +72,64 @@ body
 	+bold
 	color: #282828
 	white-space: nowrap
-	font-size: 0
 	line-height: 1
 	position: absolute
-	top: 10px
+	top: 12px
 	left: 25px
-	padding: 13px 0 7px
-	+r2
+	font-size: 0
+	+r1
 		top: 0
 		left: 50%
-		padding: 13px 0 7px
-		width: 130px
+		padding: 18px 0 7px
+		width: 60px
 		text-align: center
-		margin-left: -65px
-	&__orange
-		color: #ff8c61
-		margin-right: -9px
-		z-index: 2
-	span
-		display: inline-block
-		vertical-align: top
-		font-size: 40px
-		position: relative
+		margin-left: -30px
+	i
+		font-size: 48px
+		+r1
+			font-size: 27px
 
 .btn-nav
 	float: left
-	width: 26px
-	height: 22px
 	position: relative
 	cursor: pointer
-	margin: 20px 10px 0
 	display: none
 	background: none
-	+r2
+	width: 60px
+	height: 60px
+	transition: background 0.2s
+	+r1
 		display: block
-	&.is-active
+	&.is-active		
+		background-color: #ff8c61
 		&:before, &:after
 			top: 9px
-			transition: transform 0.2s 0.2s, top 0.2s
+			transition: transform 0.2s 0.2s, top 0.2s, border-color 0.2s
+			border-color: #fff 
 		&:before
 			transform: rotate(45deg)
 		&:after
 			transform: rotate(-45deg)
 		span
 			opacity: 0
-			transition: opacity 0.2s
+			transition: opacity 0.2s, border-color 0.2s
 	&:before, &:after, span
 		border-bottom: 4px solid #282828
-		width: 100%
+		width: 26px
 		position: absolute
 		left: 50%
 		margin-left: -13px
+		margin-top: 19px
 	&:before, &:after
 		content: ""
-		transition: transform 0.2s, top 0.2s 0.2s
+		transition: transform 0.2s, top 0.2s 0.2s, border-color 0.2s
 	&:before
 		top: 0
 	&:after
 		top: 18px
 	span
 		top: 9px
-		transition: opacity 0.2s 0.25s
+		transition: opacity 0.2s 0.25s, border-color 0.2s
 
 
 .btn-enter
@@ -144,10 +141,10 @@ body
 	content: ""
 	position: relative
 	padding: 10px 0 10px 40px
-	margin: 21px 0
+	margin: 16px 0
 	min-height: 37px
 	+tr(color .3s)
-	+r2
+	+r1
 		padding: 0
 		margin: 17px 0 0
 		min-height: 1px
@@ -157,12 +154,14 @@ body
 		top: 50%
 		left: 0
 		margin-top: -19px
-		+r2
+		+r1
 			font-size: 26px
-			position: static
+			position: relative
+			z-index: 1
+			top: auto 
 			margin: 0
 	span
-		+r2
+		+r1
 			display: none
 	&:hover
 		color: #ff8c61
@@ -171,13 +170,13 @@ body
 .nav
 	font-size: 0
 	float: left
-	+r2
+	+r1
 		position: fixed
 		top: 60px
 		bottom: 0
 		left: 0
 		width: 100%
-		max-width: 300px
+		max-width: 290px
 		background: #fff
 		box-shadow: 0 5px 6px rgba(159, 159, 159, 0.5)
 		overflow: hidden
@@ -187,33 +186,33 @@ body
 		transition-property: opacity, visibility, transform
 		transition-duration: 0.4s
 	&.is-active
-		+r2
+		+r1
 			transform: translateX(0)
 			opacity: 1
 			visibility: visible
 	&:before
 		content: ""
 		position: absolute
-		top: -9px
+		top: -10px
 		left: 0
 		right: 0
 		box-shadow: 0 2px 6px rgba(159, 159, 159, 0.5)
 		height: 10px
 		display: none
-		+r2
+		+r1
 			display: block
 	&__list
-		+r2
+		+r1
 			max-height: 100%
 			overflow: auto
-			padding: 20px 0
 	&__item
 		display: inline-block
 		vertical-align: top
-		padding: 0 20px 0 0
-		+r2
+		margin: 0 20px 0 0
+		position: relative
+		+r1
 			display: block
-			padding: 0
+			margin: 0
 	&__link
 		color: #282828
 		font-size: 18px
@@ -222,50 +221,70 @@ body
 		display: block
 		position: relative
 		transition: color 0.3s
+		+r1
+			padding: 0 10px 0 30px 
+			line-height: 58px
+			border-bottom: 1px solid #e6e6e6
 		&:hover
 			span
 				&:before
 					width: 100%
+			small
+				opacity: 1
+				visibility: visible
+		&:before
+			content: "" 
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			width: 10px
+			display: none
+			+r1
+				display: block
 		&.is-brown
 			&:hover, &.is-active
 				color: #d27857
+			&:before
+				background: #d27857
 			span
 				&:before
 					border-color: #d27857
 		&.is-purple
 			&:hover, &.is-active
 				color: #c0a6cd
+			&:before
+				background: #c0a6cd
 			span
 				&:before
 					border-color: #c0a6cd
 		&.is-yellow
 			&:hover, &.is-active
 				color: #f2c05e
+			&:before
+				background: #f2c05e
 			span
 				&:before
 					border-color: #f2c05e
 		&.is-orange
 			&:hover, &.is-active
 				color: #ff8c61
+			&:before
+				background: #ff8c61
 			span
 				&:before
 					border-color: #ff8c61
-		&.is-drop
-			padding-right: 25px
-		i
-			font-size: 14px
-			position: absolute
-			top: 50%
-			right: 0
-			margin-top: -9px
-			+r2
-				right: 15px
+		&-in
+			display: inline-block
+			vertical-align: middle
+			position: relative
+			z-index: 1
 		span
 			display: block
-			padding: 30px 0 32px
+			padding: 25px 0 27px
 			position: relative
-			+r2
-				padding: 10px 15px
+			+r1
+				padding: 0
 			&:before
 				content: ""
 				position: absolute
@@ -274,5 +293,31 @@ body
 				width: 20px
 				border-bottom: 5px solid
 				transition: width 0.3s
-				+r2
+				+r1
 					display: none
+		span, small
+			line-height: 1
+		small
+			position: absolute
+			top: 100%
+			left: 0
+			opacity: 0
+			visibility: hidden
+			transition: opacity 0.25s, visibility 0.25s 
+			width: 200px
+			display: block
+			font-size: 16px
+			line-height: 18px
+			background-color: #fffff3
+			padding: 13px 8px 12px  
+			color: #282828
+			+reg
+			+r1
+				position: relative
+				top: auto
+				visibility: visible
+				opacity: 1
+				width: 100%
+				padding: 0
+				color: #949494
+				background: none

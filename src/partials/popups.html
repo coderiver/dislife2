@@ -20,20 +20,21 @@
                 <div class="popup__title"><span>Или логин Dislife.ru</span></div>
 
                 <div class="popup__form">
-                    <form action="#">
+                    <form action="#" class="js-validation">
                         <div class="field">
                             <label class="field__label">Логин</label>
-                            <div class="field__input input is-valid">
+                            <div class="field__input input">
                                 <i class="fa fa-user input__icon"></i>
-                                <input type="text" class="input-text" name="email" value="kochaji@gmail.com">
+                                <input type="text" class="input-text" name="email" data-validation="email" data-validation-error-msg=" ">
                                 <i class="input__valid fa fa-check"></i>
+                                <i class="input__invalid fa fa-close"></i>
                             </div>
                         </div>
                         <div class="field">
                             <label class="field__label">Пароль</label>
                             <div class="field__input input">
                                 <i class="fa fa-lock input__icon"></i>
-                                <input type="password" name="password" class="input-text input-text_pwd" value="1234567812">
+                                <input type="password" name="password" class="input-text input-text_pwd" data-validation="required" data-validation-error-msg=" ">
                             </div>
                         </div>
                         <div class="field-login">
@@ -53,35 +54,37 @@
             </div>
             <div class="tab-content js-tabs-content">
                 <div class="popup__form">
-                    <form action="#">
+                    <form action="#" class="js-validation">
                         <div class="field">
                             <label class="field__label">Логин</label>
-                            <div class="field__input input is-valid">
+                            <div class="field__input input">
                                 <i class="fa fa-user input__icon"></i>
-                                <input type="text" class="input-text" name="email" value="kocha">
+                                <input type="text" class="input-text" name="email" data-validation="required" data-validation-error-msg=" ">
                                 <i class="input__valid fa fa-check"></i>
+                                <i class="input__invalid fa fa-close"></i>
                             </div>
                         </div>
                         <div class="field">
                             <label class="field__label">E-mail</label>
                             <div class="field__input input">
                                 <i class="fa fa-user input__icon"></i>
-                                <input type="text" class="input-text" name="email" value="kochaji@gmail.com">
+                                <input type="text" class="input-text" name="email" data-validation="email" data-validation-error-msg=" ">
                                 <i class="input__valid fa fa-check"></i>
+                                <i class="input__invalid fa fa-close"></i>
                             </div>
                         </div>
                         <div class="field">
                             <label class="field__label">Повторите пароль</label>
                             <div class="field__input input">
                                 <i class="fa fa-lock input__icon"></i>
-                                <input type="password" name="password" class="input-text input-text_pwd" value="1234567812">
+                                <input type="password" name="password" class="input-text input-text_pwd" data-validation="required" data-validation-error-msg=" ">
                             </div>
                         </div>
                         <div class="field">
                             <label class="field__label">Пароль</label>
                             <div class="field__input input">
                                 <i class="fa fa-lock input__icon"></i>
-                                <input type="password" name="password" class="input-text input-text_pwd" value="1234567812">
+                                <input type="password" name="password" class="input-text input-text_pwd" data-validation="required" data-validation-error-msg=" ">
                             </div>
                         </div>
                         <div class="field">

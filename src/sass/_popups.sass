@@ -161,20 +161,27 @@
 .input
     position: relative
     margin: 7px 0
-    &.is-valid
+    &.has-success
         .input-text
             border: 1px dashed $mint
             padding-right: 50px
         .input__valid
             visibility: visible
             opacity: 1
+    &.has-error
+        .input-text
+            border-style: dashed 
+        .input__invalid
+            visibility: visible
+            opacity: 1
+            background: rgb(185, 74, 72) 
     &__icon
         position: absolute
         left: 0
         top: 0
         font-size: 14px
         padding: 18px
-    &__valid
+    &__valid, &__invalid
         transition: visibility .3s, opacity .3s
         visibility: hidden
         opacity: 0
@@ -190,8 +197,9 @@
     border-radius: 3px
     border: 1px solid #d8d8d8
     color: #4a4a4a
-    padding: 16px 15px 15px 40px
+    padding: 17px 15px 14px 40px
     font-size: 14px
+    +reg
     &_pwd
         letter-spacing: 4px
 .input-btn
