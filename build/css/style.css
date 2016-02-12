@@ -638,6 +638,11 @@ a { color: #000; text-decoration: none; }
 .all-news__info { overflow: hidden; }
 .all-news__img { width: 160px; height: 117px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; position: absolute; top: 30px; right: 0; }
 
+.special { color: #282828; max-width: 640px; position: relative; }
+.special__letters { font-size: 110px; line-height: 95px; margin: 0 0 -10px; font-weight: 500; float: left; }
+.special p { font-size: 18px; line-height: 30px; }
+.special p a { color: #9bc1bc; }
+
 .search { position: relative; display: block; margin: 5px 0; }
 .search input { display: block; width: 100%; padding: 18.5px 18px 18.5px 108px; font-size: 42px; background: #f4f5f1; font-weight: 700; }
 .search input::-webkit-search-cancel-button { cursor: pointer; }
