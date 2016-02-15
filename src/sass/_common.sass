@@ -118,6 +118,9 @@ body
 	&.body_bg-grey
 		background: #f4f5f1
 
+.out
+	overflow: hidden
+
 // colors
 $violet: #c0a6cd
 $gold: #f2c05e
@@ -161,7 +164,7 @@ $mint: #9bc1bc
 	font-size: 0
 	margin: 0 -15px
 
-.col-lg, .col-sm, .col-xs
+.col-lg, .col-sm, .col-xs, .col-md
 	display: inline-block
 	padding: 0 15px
 	vertical-align: top
@@ -171,6 +174,13 @@ $mint: #9bc1bc
 	+r1
 		width: 66.66%
 	+r2
+		width: 100%
+
+.col-md
+	width: 66.66%
+	+r2
+		width: 50%
+	+r3
 		width: 100%
 
 .col-sm
@@ -428,6 +438,24 @@ a
 				+r3
 					font-size: 23px
 					line-height: 27px
+	&_lg
+		height: 954px
+		.item
+			&__img
+				height: 634px
+			&__txt
+				height: 318px
+				&-title
+					font-size: 42px
+					line-height: 50px
+					margin-bottom: 6px
+			&__title
+				.item__subtitle
+					font-size: 56px
+					line-height: 66px
+					max-height: 132px 
+			&__instruction
+				margin-bottom: 15px
 	&__in
 		display: block
 	&__img
@@ -559,11 +587,30 @@ a
 				height: 460px
 			.item__txt
 				height: 210px
+		&.item_lg
+			height: 834px
+			.item
+				&__img
+					height: 510px
+				&__txt
+					height: 310px
 	+r2
 		&.item_mod
 			.item__img:hover
 				.item__info
 					max-height: 100px
+		&.item_lg
+			.item
+				&__txt
+					&-title
+						font-size: 20px
+						line-height: 23px
+						margin-bottom: 20px
+				&__title
+					.item__subtitle
+						font-size: 24px
+						line-height: 27px
+						max-height: 54px 
 	+r3
 		max-width: 320px
 		margin: 0 auto 30px
@@ -585,6 +632,15 @@ a
 			.item__txt
 				position: static
 				height: auto
+		&.item_lg
+			height: 370px
+			.item
+				&__img
+					height: 217px
+				&__txt
+					height: 150px
+				&__instruction 
+					margin: 0
 		.man
 			display: none
 

@@ -356,4 +356,10 @@ $(document).ready(function() {
 
 	};
 
+	//load more
+	$('.js-load-btn').click(function() {
+		$('.js-load-block').show();
+		return false;
+	});
+
 });

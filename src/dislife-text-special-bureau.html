@@ -9,8 +9,8 @@
 <div class="out">
 	//=include partials/header.html
 	<div class="container container_news">
-		<div class="row">
-			<div class="col-lg">
+		<div class="l-news">
+			<div class="l-col1">
 				<div class="special">
 					<div class="special__text">
 						<div class="special__letters">На</div>
@@ -18,24 +18,66 @@
 						<p>Помочь вызвался депутат Госдумы РФ Сергей Миронов. Вы можете напрямую обратиться к законодателю или почитать, как мы вместе пытаемся менять законы.</p>
 						<p>Ежедневно мы будем обновлять информацию о работе нашего небольшого «Бюро справедливости».</p>
 					</div>
-					<div class="soc-v">
-						<ul class="js-sticky">
-							<li><a href="#" class="fa fa-facebook"></a></li>
-							<li><a href="#" class="fa fa-twitter"></a></li>
-							<li><a href="#" class="icon-vk"></a></li>
-							<li><a href="#" class="fa fa-odnoklassniki"></a></li>
-						</ul>
-					</div>	
 				</div>
+				<div class="soc-v">
+					<ul class="js-sticky">
+						<li><a href="#" class="fa fa-facebook"></a></li>
+						<li><a href="#" class="fa fa-twitter"></a></li>
+						<li><a href="#" class="icon-vk"></a></li>
+						<li><a href="#" class="fa fa-odnoklassniki"></a></li>
+					</ul>
+				</div>	
+				<div class="js-sticky-end"></div>
 			</div>
-			<div class="col-xs">
+			<div class="l-col2">
 				<div class="side-photo">
 					<a href="#" class="side-photo__img">
-						<img src="https://placecage.com/500/500" alt="">
+						<img src="https://placecage.com/300/440" alt="">
 					</a>
 					<div class="side-photo__text">Фото Е. Мартынюк</div>
 				</div>
 			</div>			
+		</div>
+	</div>
+	<div class="section-gray">
+		<div class="container">
+			<div class="l-news">
+				<div class="l-col1">
+					<div class="special">
+						<form action="#" class="send-message">
+							<div class="send-message__title">Обратиться к Сергею Миронову</div>
+							<label>
+								<span class="send-message__label">Ваша почта</span>
+								<input type="main" class="input-full input-full_white">
+							</label>
+							<div class="send-message__text">Пожалуйста, указывайте адрес почты, по которому с вами действительно можно связаться, иначе мы не сможем вам ответить.</div>
+							<label>
+								<span class="send-message__label">Сообщение</span>
+								<textarea cols="30" rows="10" class="textarea-full textarea-full_white"></textarea>
+							</label>
+							<div class="send-message__row">
+								<div class="send-message__file">
+									<span class="send-message__label">Документы</span>
+									<label class="file">
+										<input type="file">
+										<i class="fa fa-plus-square"></i>
+										<span>Добавить файл</span>
+									</label>
+								</div>
+								<div class="captcha">
+									<img src="img/captcha-gray.png" alt="">
+								</div>
+							</div>
+							<div class="send-message__bottom">
+								<button class="btn-full btn-full_orange">
+									<span>Отправить </span>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="l-col2"></div>
+			</div>
 		</div>
 	</div>
 	//=include partials/more.html

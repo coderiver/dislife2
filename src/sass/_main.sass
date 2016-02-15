@@ -1397,7 +1397,9 @@
 		margin-bottom: 9px
 
 .send-message
-	margin-bottom: 50px
+	padding-bottom: 50px
+	+clr
+	font-size: 0
 	label, &__label
 		display: block
 		margin-bottom: 7px
@@ -1411,10 +1413,64 @@
 		font-size: 14px
 		line-height: 18px
 		max-width: 630px
-		padding: 0 0 15px 
+		padding: 0 0 5px 
+	&__row
+		+clr
+		padding: 20px 0 
+		.captcha
+			float: right
+		.send-message__file
+			float: left
+	&__file
+		padding: 8px 0 7px 
+		.send-message__label
+			margin-bottom: 18px
+	&__bottom
+		.btn-full
+			max-width: 100%
+	&__cols
+		+clr
+		margin: 0 -20px 
+	&__col
+		width: 50%
+		float: left
+		padding: 0 20px 10px
+		+r3
+			width: 100%
+	&__field
+		padding-bottom: 10px
+	&__title
+		color: #282828
+		font-size: 24px
+		line-height: 30px
+		+med
+		margin-bottom: 30px
+
+.file
+	color: #ff8c61
+	font-size: 16px
+	line-height: 18px
+	display: inline-block
+	vertical-align: top
+	position: relative
+	overflow: hidden
+	padding-left: 20px
+	cursor: pointer
+	input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		visibility: hidden
+	i
+		font-size: 14px
+		position: absolute
+		top: 2px
+		left: 0
+	span
+		display: block
 
 .captcha
-	margin-bottom: 10px
 	img
 		max-width: 100%
 
@@ -1427,9 +1483,17 @@
 	padding: 17px 15px 14px
 	font-size: 14px
 	+reg  
+	&_white
+		border-color: #d8d8d8
+		background-color: #fff
+	&_orange
+		border-color: #ff8c61
+		background-color: #fff
+		
 
 .textarea-full
 	resize: none
+	height: 160px
 
 .btn-full
 	width: 100%
@@ -1451,11 +1515,15 @@
 		bottom: 0
 		left: 0
 		width: 0
-		transition: width 0.25s
+		transition: width 0.25s linear
 		background: darken(#9bc1bc, 10%) 
 	span
 		position: relative
 		z-index: 1
+	&_orange
+		background-color: #ff8c61
+		&:before
+			background: darken(#ff8c61, 10%) 
 .photo
 	width: 100%
 	img
@@ -1573,17 +1641,326 @@
 
 .special
 	color: #282828 
-	max-width: 640px
 	position: relative
-	padding: 0 110px 
+	&__text
+		max-width: 635px
 	&__letters
 		font-size: 110px
 		line-height: 95px
 		margin: 0 0 -10px 
 		+med
 		float: left
-	p
+		+r3
+			font-size: 80px
+			line-height: 90px
+			margin: 0 0 -15px 
+	p, li
 		font-size: 18px
 		line-height: 30px
+		+r3
+			font-size: 16px
+			line-height: 1.6
 		a
 			color: #9bc1bc
+	p, ul
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+			+r(1150)
+				margin-bottom: 20px
+	li
+		padding-left: 35px 
+		position: relative
+		+r3
+			padding-left: 17px
+		&:before
+			content: "" 
+			position: absolute
+			top: 12px
+			left: 13px
+			width: 6px
+			height: 6px
+			border-radius: 50%
+			background: #9bc1bc
+			+r3
+				left: 0
+	&__top
+		padding-top: 27px
+
+.side-photo
+	padding-bottom: 20px
+	border-bottom: 1px solid #9bc1bc
+	&__img
+		display: block
+		margin-bottom: 8px
+	img
+		width: 100%
+	&__text
+		color: #b8b8b8
+		font-size: 14px
+		line-height: 16px
+		+light
+		position: relative
+		padding-left: 30px
+		&:before
+			content: "" 
+			position: absolute
+			top: 2px
+			left: 0
+			width: 12px
+			height: 12px
+			background-color: #9bc1bc
+
+.section-gray
+	background-color: #f5f7f7
+	padding: 30px 0 0 
+	&_mod
+		padding: 0
+
+.special-side
+	color: #282828
+	padding: 20px 0 0 
+	+r1
+		padding: 22px 0 0 
+	&__title
+		font-size: 36px
+		line-height: 38px
+		+bold
+		+r1
+			font-size: 28px
+			line-height: 1.2
+	&__number, &__text
+		+med
+	&__number
+		color: #000
+		font-size: 72px
+		line-height: 85px
+		+r1
+			font-size: 60px
+			line-height: 1.2
+	&__text
+		color: #000
+		font-size: 38px
+		line-height: 46px
+		+r1
+			font-size: 28px
+			line-height: 1.2
+		+r2
+			font-size: 24px
+	p
+		font-size: 16px
+		line-height: 22px
+		padding-top: 6px
+	&__item
+		padding: 21px 0 12px 68px
+		position: relative
+		+r1
+			padding: 20px 0 12px 55px 
+		i
+			position: absolute
+			top: 30px
+			left: 0
+			color: #ff8c61
+		.fa-gavel
+			font-size: 52px
+			+r1
+				font-size: 42px
+		.fa-file-text-o
+			font-size: 42px
+			+r1
+				font-size: 32px
+			&:before
+				z-index: 1
+				position: relative
+				background: #fff
+				padding: 0 2px 1px 0  
+			&:after
+				content: "" 
+				position: absolute
+				top: 12px
+				left: 10px
+				width: 34px
+				height: 38px
+				border: solid 3px #ff8c61
+				border-radius: 3px
+				+r1
+					width: 26px
+					height: 28px
+.side-text, .side-tooltip
+	p
+		color: #282828
+.side-tooltip
+	background-color: #fff2b8
+	padding: 25px 7px 15px 25px
+	margin-top: 26px
+	+r3
+		padding: 21px 25px 23px
+		margin: 26px -15px 0  
+	p
+		line-height: 30px
+		+bold
+		font-size: 18px
+		+r3
+			line-height: 24px
+.side-text
+	margin: 20px 0
+	p
+		font-size: 16px
+		line-height: 22px
+
+.p-section
+	min-height: 600px
+	position: relative
+	padding-left: 110px 
+	+r1
+		padding-left: 0
+		min-height: 1px 
+		padding: 20px 0 
+	+r3
+		padding: 0
+	&_team
+		min-height: 680px
+		+r1
+			min-height: 1px
+	&__title
+		color: #ff8c61
+		font-size: 80px
+		line-height: 1
+		+med
+		transform: rotate(-90deg) translate(-100%, 100%)
+		position: absolute
+		top: 0
+		left: 0
+		transform-origin: bottom left
+		+r1
+			position: relative
+			transform: rotate(0) translate(0, 0)
+		+r3
+			font-size: 22px
+			line-height: 26px
+		
+.graphics
+	font-size: 0
+	padding: 52px 0 20px 
+	+r3
+		padding: 10px 0 15px 
+.graphic
+	display: inline-block
+	vertical-align: top
+	width: 33.33%
+	padding: 102px 10px 82px 30px
+	+r2
+		width: 50%
+		padding: 0 10px 10px 0
+	&__icon
+		position: absolute
+		top: -102px
+		border: 1px solid #2020dc
+		border-radius: 50%
+		background: url(../img/graphic-bg.png)
+		+r2
+			display: none
+		&.is-lg
+			width: 298px
+			height: 298px
+			left: -30px
+		&.is-md
+			width: 153px
+			height: 153px
+		&.is-sm
+			width: 43px
+			height: 43px
+			top: -43px
+		&.is-md, &.is-sm
+			left: 50%
+			transform: translateX(-50%)
+	&__text
+		position: relative
+		max-width: 270px  
+		&-in
+			position: relative
+			z-index: 1
+			padding: 9px 12px 11px 19px
+			background-color: #fff
+			+r2
+				padding: 0
+	h5, p
+		color: #282828
+		line-height: 22px
+	h5
+		font-size: 20px
+		+bold
+		margin-bottom: 4px
+		+r3
+			font-size: 14px
+			line-height: 17px
+	p
+		font-size: 16px
+		+r3
+			font-size: 12px
+			line-height: 12px
+	&__number
+		color: #2020dc
+		font-size: 44px
+		line-height: 52px
+		+med
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		z-index: 1
+		padding: 0 20px 
+		+r2
+			position: relative
+			top: auto
+			padding: 0
+		+r3
+			font-size: 22px
+			line-height: 26px
+
+.p-team
+	font-size: 0
+	padding: 64px 0 0 60px
+	+r1
+		padding: 50px 0 0 
+	+r2
+		padding: 15px 0 26px
+
+.team-user
+	display: inline-block
+	vertical-align: top
+	width: 25%
+	padding-bottom: 12px
+	+r2
+		width: 50%
+	+r3
+		width: 100%
+	&__img
+		display: block
+		width: 103px
+		height: 205px
+		+cover
+		margin-bottom: 20px
+		+r3
+			float: left
+			margin: 0 20px 0 0 
+			width: 90px
+			height: 179px
+	h5
+		font-size: 20px
+		line-height: 24px
+		+bold
+		max-width: 170px
+		margin-bottom: 20px
+		+r3
+			margin-bottom: 10px
+	p
+		font-size: 16px
+		line-height: 18px
+	&__text
+		max-width: 190px
+		+r2
+			max-width: 100%
+		+r3
+			overflow: hidden
+			padding: 10px 0 
