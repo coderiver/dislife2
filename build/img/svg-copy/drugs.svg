@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 47.5 43.5"
+	 style="enable-background:new 0 0 47.5 43.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FF8C61;}
+</style>
+<g id="drugs">
+	<path id="_xF0FA_" class="st0" d="M25.5,19.9c0,0.4-0.3,0.6-0.6,0.6h-4.4v4.4c0,0.4-0.3,0.6-0.6,0.6h-3.8c-0.4,0-0.6-0.3-0.6-0.6
+		v-4.4h-4.4c-0.4,0-0.6-0.3-0.6-0.6v-3.8c0-0.4,0.3-0.6,0.6-0.6h4.4v-4.4c0-0.4,0.3-0.6,0.6-0.6h3.8c0.4,0,0.6,0.3,0.6,0.6v4.4h4.4
+		c0.4,0,0.6,0.3,0.6,0.6V19.9z M13,5.5V3h10v2.5H13z M5.5,5.5H4.9c-2.4,0-4.4,2-4.4,4.4v16.3c0,2.4,2,4.4,4.4,4.4h0.6V5.5z
+		 M28.6,5.5h-3.1V2.4c0-1-0.8-1.9-1.9-1.9H12.4c-1,0-1.9,0.8-1.9,1.9v3.1H7.4v25h21.3V5.5z M35.5,9.9c0-2.4-2-4.4-4.4-4.4h-0.6v25
+		h0.6c2.4,0,4.4-2,4.4-4.4V9.9z"/>
+	<path class="st0" d="M44,43.5H14c-1.9,0-3.5-1.6-3.5-3.5v-3.9h3V40c0,0.3,0.2,0.5,0.5,0.5h30c0.3,0,0.5-0.2,0.5-0.5V6
+		c0-0.3-0.2-0.5-0.5-0.5h-4.3v-3H44c1.9,0,3.5,1.6,3.5,3.5v34C47.5,41.9,45.9,43.5,44,43.5z"/>
+</g>
+</svg>
