@@ -5,8 +5,12 @@
 	font-weight: normal
 	font-style: normal
 
-$icon-logo: "\EA01"
-$icon-vk: "\EA02"
+$icon-drugs: "\EA01"
+$icon-edu: "\EA02"
+$icon-home: "\EA03"
+$icon-logo: "\EA04"
+$icon-reabilitation: "\EA05"
+$icon-vk: "\EA06"
 
 
 %icon
@@ -23,7 +27,15 @@ $icon-vk: "\EA02"
 	@extend %icon
 	display: inline-block
 
+.icon-drugs:before
+	content: $icon-drugs
+.icon-edu:before
+	content: $icon-edu
+.icon-home:before
+	content: $icon-home
 .icon-logo:before
 	content: $icon-logo
+.icon-reabilitation:before
+	content: $icon-reabilitation
 .icon-vk:before
 	content: $icon-vk

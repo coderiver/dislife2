@@ -1419,8 +1419,12 @@
 		padding: 20px 0 
 		.captcha
 			float: right
+			+r3
+				float: none
 		.send-message__file
 			float: left
+			+r3
+				float: none
 	&__file
 		padding: 8px 0 7px 
 		.send-message__label
@@ -1445,6 +1449,9 @@
 		line-height: 30px
 		+med
 		margin-bottom: 30px
+	.block-alert
+		margin-top: 23px
+
 
 .file
 	color: #ff8c61
@@ -1690,6 +1697,8 @@
 .side-photo
 	padding-bottom: 20px
 	border-bottom: 1px solid #9bc1bc
+	+r2
+		padding-top: 20px
 	&__img
 		display: block
 		margin-bottom: 8px
@@ -1716,6 +1725,9 @@
 	padding: 30px 0 0 
 	&_mod
 		padding: 0
+	.container_news
+		padding-top: 0
+		padding-bottom: 0 
 
 .special-side
 	color: #282828
@@ -1964,3 +1976,66 @@
 		+r3
 			overflow: hidden
 			padding: 10px 0 
+
+.block-alert
+	background: #fff2b8
+	padding: 14px 30px 14px 80px
+	position: relative  
+	+r3
+		padding: 14px 13px 14px 80px 
+	i
+		font-size: 42px
+		color: #ff8c61
+		position: absolute
+		top: 18px
+		left: 17px
+	p
+		font-size: 16px
+		line-height: 26px
+		color: #282828
+		margin: 0 !important
+		+r3
+			font-size: 14px
+			line-height: 20px
+
+.side-info
+	color: #282828 
+	padding: 85px 0 0 
+	+r2
+		padding: 0 0 20px
+	&__title
+		+bold
+		font-size: 20px
+		line-height: 22px
+		margin-bottom: 20px
+	&__list
+		li
+			font-size: 18px
+			line-height: 22px 
+			padding: 18px 0 18px 58px
+			position: relative
+			i
+				position: absolute
+				top: 50%
+				left: 0
+				font-size: 0
+				color: #ff8c61
+				&.icon-home
+					// +s(home)
+					margin-top: -26px
+					font-size: 47px
+				&.icon-drugs
+					// +s(drugs)
+					margin-top: -23px
+					font-size: 44px
+				&.icon-reabilitation
+					// +s(reabilitation)
+					margin-top: -33px
+					font-size: 53px
+				&.icon-edu
+					// +s(edu)
+					margin-top: -19px
+					font-size: 38px
+			span
+				display: block
+				max-width: 240px
