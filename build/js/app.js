@@ -361,5 +361,14 @@ $(document).ready(function() {
 		$('.js-load-block').show();
 		return false;
 	});
+	//special more
+	$('.js-special-check').change(function() {
+		if ($(this).prop('checked')) {
+			$('.js-special-more').slideDown('fast');
+		}
+		else {
+			$('.js-special-more').slideUp('fast');
+		}
+	});
 
 });

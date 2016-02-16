@@ -461,6 +461,7 @@
 	font-size: 0
 	display: block
 	margin: 0 auto
+	transition: background 0.25s
 	+r3
 		max-width: 290px
 	&:hover
@@ -854,6 +855,13 @@
 	line-height: 21px
 	position: relative
 	cursor: pointer
+	&_white
+		background-color: #fff 
+		.select__text
+			padding: 14px 35px 13px 14px
+			min-height: 50px
+		.select__list, .select__text
+			border-color: #d8d8d8			
 	&.is-active
 		.select
 			&__list
@@ -870,6 +878,7 @@
 		height: 100%
 		opacity: 0
 	&__text
+		min-height: 46px 
 		+regi
 		padding: 12px 35px 11px 14px
 		border: 1px solid #ff8c61
@@ -1487,9 +1496,11 @@
 	width: 100%
 	display: block
 	color: #4a4a4a
-	padding: 17px 15px 14px
-	font-size: 14px
+	padding: 14px 15px 12px
+	font-size: 18px
 	+reg  
+	&::placeholder
+		+regi
 	&_white
 		border-color: #d8d8d8
 		background-color: #fff
@@ -1997,6 +2008,21 @@
 		+r3
 			font-size: 14px
 			line-height: 20px
+		a
+			color: #ff8c61
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+	&_mod
+		padding: 29px 0 26px 17px
+		+r3
+			padding: 14px 13px 
+		i
+			display: block
+			position: relative
+			top: auto
+			left: auto 
+			margin-bottom: 10px
 
 .side-info
 	color: #282828 
@@ -2039,3 +2065,408 @@
 			span
 				display: block
 				max-width: 240px
+
+.puzzles-top
+	color: #282828
+	+r2
+		padding-bottom: 20px
+	h5
+		font-size: 24px
+		line-height: 30px
+		+med
+		+r3
+			font-size: 20px
+			line-height: 26px
+	&__info
+		font-size: 0
+		text-align: justify
+		+r2
+			text-align: center
+		&:after
+			display: inline-block
+			vertical-align: top
+			content: ""
+			width: 100% 
+		strong, span
+			display: block
+		strong
+			+med
+			color: #2020dc
+			font-size: 44px
+			line-height: 52px
+		span
+			+reg
+			font-size: 18px
+			line-height: 22px
+		li
+			display: inline-block
+			vertical-align: top
+			text-align: left
+			+r2
+				padding: 0 10px 
+			+r3
+				width: 50%
+			+r4
+				width: 100%
+				text-align: center
+			&.is-active
+				strong
+					color: #ff8c61
+
+.special-form
+	color: #282828
+	padding-bottom: 40px
+	+clr
+	+r3
+		max-width: 320px
+		margin: 0 auto 
+	&__label
+		display: block
+		+med
+		font-size: 17px
+		line-height: 20px
+		margin-bottom: 8px
+	&__top
+		margin: 0 -15px
+		padding: 0 0 9px 
+		font-size: 0
+	&__gender, &__years
+		width: 28%
+	&__country
+		width: 44%
+	&__years
+		+r3
+			width: 220px
+		.input-full
+			width: 42%
+			text-align: center
+		span
+			width: 16%
+			font-size: 18px
+			+regi
+			text-align: center
+		.input-full, span
+			display: inline-block
+			vertical-align: middle
+	&__gender, &__years, &__country
+		padding: 0 15px 15px
+		display: inline-block
+		vertical-align: top
+	&__gender, &__country
+		+r3
+			width: 100%
+	&__field
+		padding-bottom: 15px
+		width: 100%
+	&__check-row
+		padding-bottom: 8px
+		font-size: 0 
+		.form-checkbox
+			margin: 0 13px 15px 0
+			+r3
+				width: 100%
+				margin: 0 0 15px 
+	&__row
+		margin: 0 -15px
+		font-size: 0
+		padding-bottom: 13px
+		display: none
+	&__left, &__right
+		padding: 0 15px
+		display: inline-block
+		vertical-align: top
+	&__left
+		width: 43%
+		+r1
+			width: 100%
+			padding: 0 
+		.special-form__field
+			display: inline-block
+			vertical-align: top
+			+r1
+				width: 50%
+				padding: 0 15px 15px
+			+r3
+				width: 100%
+	&__right
+		width: 57%
+		+r1
+			width: 100%
+	&__check-cols
+		font-size: 0
+		padding: 20px 20px 13px
+		background: #fff  
+		margin-bottom: 15px
+	&__checklist
+		display: inline-block
+		vertical-align: top
+		width: 40%
+		+r3
+			width: 100%
+		&:first-child
+			width: 60%
+			+r3
+				width: 100%
+		li
+			padding-bottom: 7px
+	&__bottom
+		.btn-full
+			max-width: 100%
+			padding: 17px 10px 15px 
+	.block-alert
+		margin-top: 28px
+.form-checkbox
+	display: inline-block
+	vertical-align: top
+	position: relative
+	padding-left: 40px
+	cursor: pointer
+	user-select: none
+	input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		visibility: hidden
+		&:checked + span
+			&:after
+				transform: scale(1)
+				opacity: 1
+	span
+		font-size: 17px
+		color: #282828
+		line-height: 20px
+		+med
+		display: block
+		padding: 6px 0 4px 
+		&:before, &:after
+			content: "" 
+			position: absolute
+		&:before
+			width: 30px
+			height: 30px
+			background-color: #fff
+			border: 1px solid #d8d8d8
+			top: 0
+			left: 0
+		&:after
+			top: 7px
+			left: 7px
+			width: 15px
+			height: 15px
+			background-color: #ff8c61
+			opacity: 0
+			transform: scale(0.5)
+			transition: 0.25s ease
+
+.special-users
+	font-size: 0
+	margin: 0 -5px 
+	padding: 25px 0
+	+r3
+		margin: 0 -15px 
+	&__item
+		display: inline-block
+		vertical-align: top
+		width: 50%
+		padding: 5px 
+		+r1
+			width: 100%
+		+r3
+			padding: 5px 0 
+
+.special-user
+	position: relative
+	background-color: #f5f7f7
+	+clr
+	+r3
+		min-height: 225px 
+	&__img
+		float: left
+		width: 180px
+		height: 225px
+		+cover
+		margin-right: 10px
+		+r3
+			width: 160px
+			height: 200px
+			margin: 0 0 20px
+	.btn-photo
+		position: absolute
+		left: 0
+		top: 175px
+		+r3
+			left: 15px
+	&__text, &__link
+		overflow: hidden
+	&__text
+		padding: 15px
+		min-height: 149px 
+	&__link
+		padding: 0 10px 10px
+		+r3
+			overflow: visible
+			padding: 0 15px 10px 
+		time
+			padding: 0 5px
+			display: block
+			font-size: 14px
+			line-height: 26px
+			color: #949494
+			+r3
+				overflow: hidden
+				padding: 0 15px 
+	&__title, &__title a
+		color: #282828
+		display: block
+	&__title
+		font-size: 18px
+		line-height: 20px
+		+bold
+		margin-bottom: 10px
+		a
+			transition: color 0.25s
+			&:hover
+				color: #ff8c61 
+	&__info
+		font-size: 16px
+		line-height: 1.2
+	.btn-mail
+		width: 100%
+		max-width: 160px 
+		+r3
+			margin-left: -15px
+
+.btn-photo, .btn-mail
+	color: #fff
+	display: inline-block
+	vertical-align: top 
+	position: relative
+	line-height: 40px
+	height: 40px
+	background-color: #ff8c61
+	font-size: 0
+	&:hover
+		&:before
+			width: 100%
+	&:before
+		content: "" 
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		width: 0
+		transition: width 0.25s ease
+		background: darken(#ff8c61, 10%) 
+	span, i
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		z-index: 1
+		
+.btn-photo
+	min-width: 50px
+	text-align: right
+	padding: 0 10px 
+	span
+		font-size: 14px
+		+med
+	i
+		font-size: 12px
+		margin-left: 5px
+
+.btn-mail
+	padding: 0 15px
+	text-align: left 
+	span
+		font-size: 16px
+	i
+		font-size: 14px
+		margin: 0 15px 0 0
+
+.special-menu
+	padding: 10px 0 0 
+	li
+		&:last-child
+			a
+				border-bottom: none
+	a
+		font-size: 20px
+		line-height: 60px
+		display: block
+		border-bottom: 1px solid #e6e6e6
+		padding: 0 30px
+		+med 
+		transition: color 0.25s
+		color: #282828 
+		+r1
+			padding: 0 15px 
+		&:hover
+			color: #ff8c61 
+		&.is-orange
+			sup
+				background-color: #ff8c61
+	span
+		display: inline-block
+		line-height: 1
+		vertical-align: middle
+	sup
+		display: inline-block
+		vertical-align: top
+		line-height: 21px
+		padding: 0 9px
+		font-size: 16px 
+		background-color: #a5a5a5
+		border-radius: 54px
+		color: #fff
+		margin: 12px 0 0 4px  
+
+.block-text
+	text-align: center
+	padding: 20px 0 22px 
+	max-width: 1070px
+	margin: 0 auto 
+	+r1
+		max-width: 820px
+		margin: 0 auto 
+	+r5
+		max-width: 960px
+	&__inner
+		border: 3px solid #5186e2
+		padding: 20px 30px 61px 
+		text-align: left
+		+r3
+			padding: 20px 20px 60px 
+		p
+			color: #282828
+			font-size: 18px
+			line-height: 21px
+			+r3
+				font-size: 16px
+	.btn-blue
+		margin-top: -25px
+.btn-blue
+	max-width: 410px
+	width: 100%
+	height: 50px
+	line-height: 50px
+	background-color: #5186e2
+	border-radius: 2px
+	display: inline-block
+	vertical-align: top
+	color: #fff 
+	text-align: center
+	transition: background 0.25s
+	&:hover
+		background: darken(#5186e2, 5%)
+	&:active
+		background: darken(#5186e2, 10%)
+	i, span
+		display: inline-block
+		vertical-align: middle
+	span
+		font-size: 18px
+		line-height: 21px
+	i
+		font-size: 20px
+		margin-right: 12px
