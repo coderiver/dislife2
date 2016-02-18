@@ -337,4 +337,29 @@ $(document).ready(function() {
 		}
 	});
 
+	//user sliders
+	$('.js-user-photo').slick({
+		fade: true,
+		arrows: false,
+		infinite: false,
+		asNavFor: '.js-user-photos'
+	});
+	
+
+	$('.js-user-photos').each(function() {
+		var arrNext = $(this).siblings('.js-user-next'),
+			arrPrev = $(this).siblings('.js-user-prev');
+		$(this).slick({
+			variableWidth: true,
+			infinite: false,
+			asNavFor: '.js-user-photo',
+			nextArrow: arrNext,
+			prevArrow: arrPrev
+		});
+		$(this).find('.user-photos__item').click(function() {
+			var id = $(this).data('slick-index');
+			$('.js-user-photo').slick('slickGoTo', id);
+		});
+	});
+
 });

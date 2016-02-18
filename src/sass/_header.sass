@@ -2,6 +2,7 @@ body
 	&.overflow-hidden
 		position: fixed
 		width: 100%
+		overflow-y: scroll
 
 .top-banner
 	width: 100%
@@ -45,25 +46,21 @@ body
 
 .mini-search
 	position: absolute
-	top: 0
-	right: 0
-	padding: 19px 25px 21px 10px
-	background: #fff
-	min-width: 70px
-	+r2
-		padding: 17px 15px 16px 10px
-		min-width: 45px
+	top: 19px
+	right: 25px
+	+r1
+		top: 19px
+		right: 15px
+	&_mod
+		+r2
+			top: 19px
+			right: 70px
 	a
 		font-size: 29px
 		color: #282828
-		position: absolute
-		top: 19px
-		right: 25px
 		cursor: pointer
 		+tr(color .3s)
 		+r1
-			top: 19px
-			right: 15px
 			font-size: 20px
 		&:hover
 			color: $orange
@@ -160,12 +157,97 @@ body
 			z-index: 1
 			top: auto 
 			margin: 0
+		&.fa-user
+			font-size: 27px
+			margin-top: -16px
+			margin-left: 4px
+			+r1
+				margin: 0
 	span
 		+r1
 			display: none
 	&:hover
 		color: #ff8c61
 
+.btn-profile
+	width: 130px
+	font-size: 0
+	position: relative
+	color: #282828
+	+tr(color .3s)
+	float: right
+	margin: 15px 15px 0 0
+	&:hover
+		color: #ff8c61
+	+r(1400)
+		width: 40px
+	+r1
+		margin: 10px 15px 0 0 
+	+r2
+		position: absolute
+		top: 0
+		right: 0
+	&__img
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		+cover
+		margin-right: 6px
+	&__img, span
+		display: inline-block
+		vertical-align: middle
+	span
+		font-size: 18px
+		line-height: 1
+		+med
+		+r(1400)
+			display: none
+.btn-out
+	float: right
+	+tr(color .3s)
+	position: relative
+	color: #282828 
+	font-size: 25px
+	margin: 18px 0 0
+	&:hover
+		color: #ff8c61
+	+r1
+		margin: 14px 0 0
+	+r2
+		display: none 
+
+.btn-add, .btn-message
+	float: right
+	font-size: 25px
+	position: relative
+	color: #282828 
+	margin: 16px 20px 0 0
+	+tr(color .3s)
+	&:hover
+		color: #ff8c61
+	+r1
+		margin: 13px 20px 0 0
+	+r2
+		display: none
+	span
+		font-size: 16px
+		line-height: 20px
+		+med
+		color: #fff
+		text-align: center
+		min-width: 21px
+		padding: 1px 6px 0
+		background: #ff8c61   
+		position: absolute
+		top: -8px
+		left: 100%
+		border-radius: 54px
+.btn-add
+	span
+		margin-left: -17px
+.btn-message
+	span
+		margin-left: -10px
 
 .nav
 	font-size: 0
