@@ -55,10 +55,19 @@
 	-moz-osx-font-smoothing: grayscale
 
 // lucida-font
-+font(lucidagrande, lucidagrande)
++font("lucidagrande", lucidagrande)
+
++font("FiraSans-Regular", FiraSans-Regular)
++font("FiraSans-Italic", FiraSans-Italic)
++font("FiraSans-Light", FiraSans-Light)
++font("FiraSans-LightItalic", FiraSans-LightItalic)
++font("FiraSans-Medium", FiraSans-Medium)
++font("FiraSans-MediumItalic", FiraSans-MediumItalic)
++font("FiraSans-Bold", FiraSans-Bold)
++font("FiraSans-BoldItalic", FiraSans-BoldItalic)
 
 =lucida
-	font-family: 'lucidagrande', Arial, sans-serif
+	font-family: "lucidagrande", Arial, sans-serif
 
 // roboto-font
 =roboto
@@ -82,32 +91,46 @@
 
 // 'Fira Sans' font
 =fira
-	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
+	// font-family: 'Fira Sans', Helvetica, Arial, sans-serif
+	font-family: "FiraSans-Regular", Arial, sans-serif
 
 =reg
-	font-family: 'Fira Sans', Helvetica, Arial, sans-serif
-	font-weight: 400
+	// font-family: 'Fira Sans', Helvetica, Arial, sans-serif
+	// font-weight: 400
+	font-family: "FiraSans-Regular", Arial, sans-serif
 
 =regi
-	font-weight: 400
-	font-style: italic
+	// font-weight: 400
+	// font-style: italic
+	font-family: "FiraSans-Italic", Arial, sans-serif
 
 =light
-	font-weight: 300
+	// font-weight: 300
+	font-family: "FiraSans-Light", Arial, sans-serif
+=lighti
+	// font-weight: 300
+	font-family: "FiraSans-LightItalic", Arial, sans-serif
 
 =med
-	font-weight: 500
+	// font-weight: 500
+	font-family: "FiraSans-Medium", Arial, sans-serif
 
 =medi
-	font-weight: 500
-	font-style: italic
+	// font-weight: 500
+	// font-style: italic
+	font-family: "FiraSans-MediumItalic", Arial, sans-serif
 
 =bold
-	font-weight: 700
+	// font-weight: 700
+	font-family: "FiraSans-Bold", Arial, sans-serif
 
 =boldi
-	font-weight: 700
-	font-style: italic
+	// font-weight: 700
+	// font-style: italic
+	font-family: "FiraSans-BoldItalic", Arial, sans-serif
+
+h1, h2, h3, h4, h5, h6, strong, b, th
+	font-weight: normal
 
 body
 	min-width: 320px
@@ -720,6 +743,4 @@ a
 
 
 .social-ya
-	// +roboto
-	// +light
-	+lucida
+	+reg
