@@ -381,6 +381,20 @@ $(document).ready(function() {
 	
 
 	$('.js-user-photos').each(function() {
+		if ($(this).length) {
+			$(this).find('.user-photos__item').click(function() {
+				var id = $(this).data('slick-index');
+				$('.js-user-photo').slick('slickGoTo', id);
+			});
+			var totalWidth = 0;
+			var thisEl = $(this);
+			setTimeout(function() {
+				thisEl.find('.user-photos__item').each(function() {
+					totalWidth += parseInt($(this).outerWidth(), 10);	
+					console.log(totalWidth, $(this).outerWidth())
+				});				
+			}, 300)
+		};
 		var arrNext = $(this).siblings('.js-user-next'),
 			arrPrev = $(this).siblings('.js-user-prev');
 		$(this).slick({
@@ -389,10 +403,6 @@ $(document).ready(function() {
 			asNavFor: '.js-user-photo',
 			nextArrow: arrNext,
 			prevArrow: arrPrev
-		});
-		$(this).find('.user-photos__item').click(function() {
-			var id = $(this).data('slick-index');
-			$('.js-user-photo').slick('slickGoTo', id);
 		});
 	});
 

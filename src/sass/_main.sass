@@ -19,7 +19,6 @@
 	text-align: center
 	margin-bottom: 30px
 	+r3
-		max-width: 320px
 		margin: 0 auto 30px
 	&__title
 		font-size: 22px
@@ -981,6 +980,7 @@
 			padding: 10px 0
 			border-top: 1px solid #e5e5e5
 			transition: color 0.25s 
+			list-style-type: none
 			&:hover
 				color: #ff8c61
 			&:first-child
@@ -2155,10 +2155,11 @@
 			font-size: 20px
 			line-height: 26px
 	&__info
-		font-size: 0
+		font-size: 0.1px
 		text-align: justify
 		+r2
 			text-align: center
+			font-size: 0
 		&:after
 			display: inline-block
 			vertical-align: top
@@ -2621,6 +2622,7 @@
 	+clr
 	background-color: #fff
 	margin-bottom: 1px
+	display: block
 	&__number
 		float: left
 		text-align: right
@@ -2689,6 +2691,12 @@
 		float: right
 		padding-left: 30px
 		padding-right: 5px
+		+r3
+			padding: 0
+	&__imgs, &__info
+		+r3
+			width: 100%
+			float: none
 	&__title, &__years
 		+bold
 	&__title
@@ -2696,11 +2704,16 @@
 		font-size: 27px
 		line-height: 32px
 		margin-bottom: 6px
+		+r3
+			font-size: 22px
+			line-height: 28px
 	&__years
 		font-size: 22px
 		line-height: 26px
 		color: #8e8e8e
 		margin-bottom: 26px
+		+r3
+			margin-bottom: 20px
 	&__time
 		color: #8e8e8e
 		font-size: 14px
@@ -2709,8 +2722,11 @@
 		margin-bottom: 20px
 	.btn-mail
 		margin-bottom: 9px
+		+r3
+			max-width: 320px
 	.profile-title
 		margin-bottom: 3px
+		+reg
 	&__text
 		li
 			padding-bottom: 22px
@@ -2729,6 +2745,7 @@
 	color: #33333b
 	font-size: 22px
 	line-height: 26px
+	+bold
 	span
 		color: #fff
 		font-size: 16px
@@ -2742,6 +2759,27 @@
 		vertical-align: top
 		margin-top: 2px
 		+med
+	sup
+		display: inline-block
+		vertical-align: top
+		font-size: 14px
+		margin: -9px 0 0 -1px
+		&.is-like
+			.fa-heart
+				color: #ff8c61
+		&.is-dislike
+			.fa-heart
+				color: #9b9b9b 
+				position: relative
+			.fa-bolt
+				position: absolute
+				top: 1px
+				bottom: 1px
+				left: 0
+				right: 0
+				text-align: center
+				color: #fff 
+				font-size: 12px
 
 .user-photo
 	margin-bottom: 5px
@@ -2749,6 +2787,8 @@
 		height: 514px
 		+vertical
 		background: #f5f7f7 
+		+r3
+			height: 363px
 		img
 			display: inline-block
 			vertical-align: middle
@@ -2757,10 +2797,14 @@
 
 .user-photos
 	position: relative
+	+r3
+		margin-bottom: 20px
+		padding: 0 20px 
 	&__item
 		height: 100px
 		cursor: pointer
 		padding: 0 5px 0 0 
+		float: left
 		img
 			height: 100%
 	&__arr
@@ -2775,16 +2819,24 @@
 		margin-top: -13px
 	&__prev
 		left: -15px
+		+r3
+			left: 0
 	&__next
 		right: -15px
+		+r3
+			right: 0
 
 .friends
 	padding: 10px 0 30px
 	border-bottom: 3px solid #e6e6e6
 	.profile-title
 		padding: 0 0 0 110px
+		+r2
+			padding: 0 
 	&__container
 		padding: 22px 0 13px 
+		+r4
+			padding: 10px 0 
 	&__row, &__items
 		+clr
 	&__info
@@ -2792,9 +2844,16 @@
 		font-size: 16px
 		line-height: 18px
 		width: 110px
+		+r2
+			width: 100%
+			float: none
 		div
 			color: #333
 			margin-bottom: 9px
+			+r2
+				display: inline-block
+				vertical-align: top
+				padding: 2px 3px 0 0 
 		span
 			display: inline-block
 			vertical-align: top
@@ -2810,14 +2869,21 @@
 	&__items
 		font-size: 0
 		padding: 5px 0 0 110px
+		+r2
+			padding: 5px 0 0
 	.profile-more
 		padding: 5px 110px 0
+		+r2
+			padding: 5px 0 0
 
 .user-block
 	width: 33.33%
 	display: inline-block
 	vertical-align: top
 	padding: 0 0 18px 
+	+r3
+		width: 50%
+		padding: 0 0 10px
 	&__container
 		display: block
 		font-size: 0
@@ -2826,6 +2892,10 @@
 		height: 48px
 		+cover
 		margin: 0 8px 3px 0
+		+r4
+			margin-bottom: 8px
+			width: 80px
+			height: 80px
 	&__name
 		color: #343434
 		font-size: 14px
@@ -2835,15 +2905,17 @@
 	&__img, &__name
 		display: inline-block
 		vertical-align: bottom
+		+r4
+			display: block
 
 .link-more
 	color: #9bc1bc
 	display: inline-block
 	vertical-align: top
 	font-size: 0
+	transition: color 0.25s
 	&:hover
-		span
-			text-decoration: none
+		color: #ff8c61
 	i
 		font-size: 20px
 		margin-right: 6px
@@ -2854,9 +2926,14 @@
 	i, span
 		display: inline-block
 		vertical-align: middle
-.comments
+.profile-block
 	padding: 10px 0 30px 110px
 	border-bottom: 3px solid #e6e6e6
+	+r2
+		padding: 10px 0 20px 
+	&_mod
+		border-bottom: none
+		padding-bottom: 20px
 	.profile-more
 		padding: 20px 0 13px 
 .comment
@@ -2872,8 +2949,13 @@
 	&__time
 		color: #8e8e8e
 		padding-right: 5px
+		+r3
+			display: block
 	&__theme
 		color: #9bc1bc
+		transition: color 0.25s
+		&:hover
+			color: #ff8c61 
 		i
 			font-size: 14px
 			margin-right: 5px
@@ -2883,3 +2965,22 @@
 			font-size: 14px
 			line-height: 17px
 			max-width: 520px
+
+.users-list
+	font-size: 0
+	padding: 27px 0 6px 
+	li
+		display: inline-block
+		vertical-align: top
+		padding: 0 10px 10px 0 
+		a
+			display: block
+			height: 100px
+			+r3
+				height: 80px
+			img
+				height: 100%
+
+.profile-side
+	.block-alert
+		margin-bottom: 30px
