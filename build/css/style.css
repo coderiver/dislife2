@@ -1476,7 +1476,6 @@ body.overflow-hidden { position: fixed; width: 100%; overflow-y: scroll; }
  .fullheight__el{ width: 100%; }
  .fullheight .h1{ font-size: 40px; }
  .fullheight .text-big{ font-size: 20px; }
- .fullheight_special{ min-height: 1px; }
  .fullheight_special .fullheight__in{ padding: 50px 0 10px; }
  .fullheight_special h1{ font-size: 36px; }
  .fullheight_special .text-big{ font-size: 18px; line-height: 1.2; } }
@@ -1650,6 +1649,7 @@ body.overflow-hidden { position: fixed; width: 100%; overflow-y: scroll; }
  .note{ margin-left: 0; }
  .download{ margin-left: 0; padding: 13px; text-align: center; }
  .download span{ display: block; }
+ .fullheight_special{ min-height: 1px; }
  .list-links .man{ max-width: initial; }
  .list-links .fa-angle-right{ display: none; }
  .cut{ float: none; }
