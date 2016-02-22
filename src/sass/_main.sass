@@ -27,8 +27,9 @@
 		a
 			display: inline-block
 			+tr(color .3s)
-			&:hover
-				color: $mint
+			.no-touch &
+				&:hover
+					color: $mint
 		&:after
 			width: 38px
 			border-bottom: 3px solid #e6e6e6
@@ -50,22 +51,17 @@
 			padding: 9px 0 7px
 			text-align: center
 			+tr(transform .3s)
+			.no-touch &
+				&:hover
+					transform: scale(1.2)
 			&.is-fb
 				background-color: #3b5998
-				&:hover
-					transform: scale(1.2)
 			&.is-tw
 				background-color: #55acee
-				&:hover
-					transform: scale(1.2)
 			&.is-vk
 				background-color: #45668e
-				&:hover
-					transform: scale(1.2)
 			&.is-od
 				background-color: #ed812b
-				&:hover
-					transform: scale(1.2)
 		i
 			font-size: 24px
 
@@ -122,9 +118,10 @@
 	overflow: hidden
 	&.ps-active-y
 		padding-right: 10px
-	&:hover, &.ps-in-scrolling
-		.ps-scrollbar-y, .ps-scrollbar-x
-			opacity: 1
+	.no-touch &
+		&:hover, &.ps-in-scrolling
+			.ps-scrollbar-y, .ps-scrollbar-x
+				opacity: 1
 	.ps-scrollbar-x-rail, .ps-scrollbar-y-rail
 		position: absolute
 		z-index: 2
@@ -148,8 +145,9 @@
 		+clr
 		color: #282828
 		transition: color 0.25s
-		&:hover
-			color: $red
+		.no-touch &
+			&:hover
+				color: $red
 	&__img
 		float: right
 		width: 160px
@@ -292,9 +290,10 @@
 			height: 40px
 			margin: -20px 0 0
 			font-size: 25px
-		&:hover
-			background-color: #f2c05e
-			border-color: #f2c05e
+		.no-touch &
+			&:hover
+				background-color: #f2c05e
+				border-color: #f2c05e
 	&__prev
 		left: -24px
 		+r3
@@ -463,10 +462,11 @@
 	transition: background 0.25s
 	+r3
 		max-width: 290px
-	&:hover
-		background: darken(#9bc1bc, 5%)
-	&:active
-		background: darken(#9bc1bc, 10%)
+	.no-touch &
+		&:hover
+			background: darken(#9bc1bc, 5%)
+		&:active
+			background: darken(#9bc1bc, 10%)
 	span
 		font-size: 18px
 	i
@@ -487,10 +487,11 @@
 		height: 370px
 	&_red
 		border-color: #d27857
-		&:hover
-			.blockquote__text
-				p
-					color: #d27857
+		.no-touch &
+			&:hover
+				.blockquote__text
+					p
+						color: #d27857
 		.blockquote
 			&__info
 				color: #d27857
@@ -499,10 +500,11 @@
 					color: #d27857
 	&_yellow
 		border-color: #f2c05e
-		&:hover
-			.blockquote__text
-				p
-					color: #f2c05e
+		.no-touch &
+			&:hover
+				.blockquote__text
+					p
+						color: #f2c05e
 		.blockquote
 			&__info
 				color: #f2c05e
@@ -511,10 +513,11 @@
 					color: #f2c05e
 	&_violet
 		border-color: #c0a6cd
-		&:hover
-			.blockquote__text
-				p
-					color: #c0a6cd
+		.no-touch &
+			&:hover
+				.blockquote__text
+					p
+						color: #c0a6cd
 		.blockquote
 			&__info
 				color: #c0a6cd
@@ -766,10 +769,11 @@
 		+r3
 			font-size: 20px
 			padding: 17px
-		&:hover
-			color: #fff
-			&:before
-				width: 100%
+		.no-touch &
+			&:hover
+				color: #fff
+				&:before
+					width: 100%
 		&_full
 			background-color: #ff8c61
 			color: #fff
@@ -777,8 +781,6 @@
 			padding: 19px 16px
 			&:before
 				background: #E17952
-			&:hover
-				&:before
 	&__link-text
 		position: absolute
 		bottom: 0
@@ -908,9 +910,10 @@
 			z-index: -1
 			background: #E17952
 			+tr(width .3s)
-		&:hover
-			&:before
-				width: 100%
+		.no-touch &
+			&:hover
+				&:before
+					width: 100%
 	p
 		font-size: 16px
 		line-height: 18px
@@ -919,8 +922,9 @@
 		a
 			color: #ff8c61
 			text-decoration: underline
-			&:hover
-				text-decoration: none
+			.no-touch &
+				&:hover
+					text-decoration: none
 
 .select
 	color: #282828
@@ -981,8 +985,9 @@
 			border-top: 1px solid #e5e5e5
 			transition: color 0.25s 
 			list-style-type: none
-			&:hover
-				color: #ff8c61
+			.no-touch &
+				&:hover
+					color: #ff8c61
 			&:first-child
 				border-top: none
 
@@ -1064,12 +1069,13 @@
 		border: 1px solid
 		+r2
 			display: none
-	&:hover
-		.fullscreen
-			&__hidden
-				max-height: 100px
-				opacity: 1
-				overflow: hidden
+	.no-touch &
+		&:hover
+			.fullscreen
+				&__hidden
+					max-height: 100px
+					opacity: 1
+					overflow: hidden
 	&_yellow
 		&:after
 			border-color: $gold
@@ -1128,8 +1134,9 @@
 		background-image: linear-gradient(180deg, rgba(55, 33, 49, 0.6) 0%, rgba(53, 31, 47, 0.8) 100%)
 		&__prev, &__next
 			background: rgba(53, 31, 47, 1)
-			&:hover
-				background: $gold
+			.no-touch &
+				&:hover
+					background: $gold
 	.slide
 		position: relative
 	&__title
@@ -1196,10 +1203,11 @@
 	padding: 15px 15px 27px
 	position: relative
 	transition: color 0.2s
-	&:hover
-		.info-block
-			&__author
-				text-decoration: none
+	.no-touch &
+		&:hover
+			.info-block
+				&__author
+					text-decoration: none
 	&__arr
 		overflow: hidden
 		height: 20px
@@ -1224,10 +1232,11 @@
 		.info-block
 			&__author
 				color: #d27857
-		&:hover
-			color: #d27857
-			p
+		.no-touch &
+			&:hover
 				color: #d27857
+				p
+					color: #d27857
 	&__author
 		font-size: 14px
 		line-height: 17px
@@ -1284,17 +1293,18 @@
 	margin-bottom: 30px
 	+r3
 		height: auto
-	&:hover
-		&:after
-			opacity: 1
-		&:before
-			opacity: 0
-		.item-full
-			&__author
-				color: #fff
-			&__hidden
-				max-height: 100px
+	.no-touch &
+		&:hover
+			&:after
 				opacity: 1
+			&:before
+				opacity: 0
+			.item-full
+				&__author
+					color: #fff
+				&__hidden
+					max-height: 100px
+					opacity: 1
 	&:before, &:after
 		content: ""
 		position: absolute
@@ -1429,8 +1439,9 @@
 		a
 			color: #282828
 			transition: color 0.25s
-			&:hover
-				color: #ff8c61 
+			.no-touch &
+				&:hover
+					color: #ff8c61 
 	&__title
 		font-size: 22px
 		+bold
@@ -1474,8 +1485,9 @@
 				+bold
 			a
 				color: #76938f
-				&:hover
-					text-decoration: underline
+				.no-touch &
+					&:hover
+						text-decoration: underline
 	h5
 		line-height: 30px
 		font-size: 24px
@@ -1600,9 +1612,10 @@
 	line-height: 1 
 	+reg
 	position: relative
-	&:hover
-		&:before
-			width: 100%
+	.no-touch &
+		&:hover
+			&:before
+				width: 100%
 	&:before
 		content: "" 
 		position: absolute
@@ -2088,8 +2101,9 @@
 		a
 			color: #ff8c61
 			text-decoration: underline
-			&:hover
-				text-decoration: none
+			.no-touch &
+				&:hover
+					text-decoration: none
 	&_mod
 		padding: 29px 0 26px 17px
 		+r3
@@ -2124,19 +2138,15 @@
 				font-size: 0
 				color: #ff8c61
 				&.icon-home
-					// +s(home)
 					margin-top: -26px
 					font-size: 47px
 				&.icon-drugs
-					// +s(drugs)
 					margin-top: -23px
 					font-size: 44px
 				&.icon-reabilitation
-					// +s(reabilitation)
 					margin-top: -33px
 					font-size: 53px
 				&.icon-edu
-					// +s(edu)
 					margin-top: -19px
 					font-size: 38px
 			span
@@ -2405,8 +2415,9 @@
 		margin-bottom: 10px
 		a
 			transition: color 0.25s
-			&:hover
-				color: #ff8c61 
+			.no-touch &
+				&:hover
+					color: #ff8c61 
 	&__info
 		font-size: 16px
 		line-height: 1.2
@@ -2425,9 +2436,10 @@
 	height: 40px
 	background-color: #ff8c61
 	font-size: 0
-	&:hover
-		&:before
-			width: 100%
+	.no-touch &
+		&:hover
+			&:before
+				width: 100%
 	&:before
 		content: "" 
 		position: absolute
@@ -2490,8 +2502,9 @@
 		color: #282828 
 		+r1
 			padding: 0 15px 
-		&:hover
-			color: #ff8c61 
+		.no-touch &
+			&:hover
+				color: #ff8c61 
 		&.is-orange
 			sup
 				background-color: #ff8c61
@@ -2546,10 +2559,11 @@
 	color: #fff 
 	text-align: center
 	transition: background 0.25s
-	&:hover
-		background: darken(#5186e2, 5%)
-	&:active
-		background: darken(#5186e2, 10%)
+	.no-touch &
+		&:hover
+			background: darken(#5186e2, 5%)
+		&:active
+			background: darken(#5186e2, 10%)
 	i, span
 		display: inline-block
 		vertical-align: middle
@@ -2676,8 +2690,9 @@
 		text-decoration: underline
 		+regi
 		margin: 6px 0 7px 
-		&:hover
-			text-decoration: none
+		.no-touch &
+			&:hover
+				text-decoration: none
 
 .user-profile
 	+clr
@@ -2817,6 +2832,9 @@
 		height: 26px
 		background: none
 		margin-top: -13px
+		visibility: hidden
+		&.is-active
+			visibility: visible
 	&__prev
 		left: -15px
 		+r3
@@ -2914,8 +2932,9 @@
 	vertical-align: top
 	font-size: 0
 	transition: color 0.25s
-	&:hover
-		color: #ff8c61
+	.no-touch &
+		&:hover
+			color: #ff8c61
 	i
 		font-size: 20px
 		margin-right: 6px
@@ -2954,8 +2973,9 @@
 	&__theme
 		color: #9bc1bc
 		transition: color 0.25s
-		&:hover
-			color: #ff8c61 
+		.no-touch &
+			&:hover
+				color: #ff8c61 
 		i
 			font-size: 14px
 			margin-right: 5px

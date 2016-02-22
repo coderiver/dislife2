@@ -66,13 +66,6 @@
 +font("FiraSans-Bold", FiraSans-Bold)
 +font("FiraSans-BoldItalic", FiraSans-BoldItalic)
 
-=lucida
-	font-family: "lucidagrande", Arial, sans-serif
-
-// roboto-font
-=roboto
-	font-family: 'Roboto', Arial, sans-serif
-
 // lora-font
 =lora
 	font-family: 'Lora', serif
@@ -288,10 +281,11 @@ a
 		background: #333
 		z-index: -1
 		+tr(width .3s)
-	&:hover
-		color: #fff
-		&:before
-			width: 100%
+	.no-touch &
+		&:hover
+			color: #fff
+			&:before
+				width: 100%
 	&_gold
 		&.btn_bd
 			border-color: $gold
@@ -321,8 +315,9 @@ a
 	padding: 10px 10px 9px
 	cursor: pointer
 	+tr(background .3s)
-	&:hover
-		background: darken(#f7b153, 10)
+	.no-touch &
+		&:hover
+			background: darken(#f7b153, 10)
 
 // item
 .item
@@ -331,76 +326,85 @@ a
 	height: 462px
 	background: #FFF
 	border: 1px solid #000
-	&:hover
-		&:not(.item_mod)
-			.item__txt
-				height: 235px
-			.item__info
-				opacity: 1
-			.item__img
-				&:before
-					opacity: 1
-					visibility: visible
-	&_gold
-		border-color: $gold
+	.no-touch &
 		&:hover
 			&:not(.item_mod)
-				.item__author,
 				.item__txt
-					color: $gold
+					height: 235px
+				.item__info
+					opacity: 1
+				.item__img
+					&:before
+						opacity: 1
+						visibility: visible
+	&_gold
+		border-color: $gold
+		.no-touch &
+			&:hover
+				&:not(.item_mod)
+					.item__author,
+					.item__txt
+						color: $gold
 		.item__instruction
 			color: $gold
 		.item__img
 			&:before
 				background: rgba(242,192,94,0.80)
 		.item__txt
-			&:hover
-				color: $gold
+			.no-touch &
+				&:hover
+					color: $gold
 	&_red
 		border-color: $red
-		&:hover
-			&:not(.item_mod)
-				.item__author,
-				.item__txt
-					color: $red
+		.no-touch &
+			&:hover
+				&:not(.item_mod)
+					.item__author,
+					.item__txt
+						color: $red
 		.item__instruction
 			color: $red
 		.item__img
 			&:before
 				background: rgba(210,120,87,0.80)
 		.item__txt
-			&:hover
-				color: $red
+			.no-touch &
+				&:hover
+					color: $red
 	&_violet
 		border-color: $violet
-		&:hover
-			&:not(.item_mod)
-				.item__author,
-				.item__txt
-					color: $violet
+		.no-touch &
+			&:hover
+				&:not(.item_mod)
+					.item__author,
+					.item__txt
+						color: $violet
 		.item__instruction
 			color: $violet
 		.item__img
 			&:before
 				background: rgba(142, 119, 154, 0.5)
 		.item__txt
-			&:hover
-				color: $violet
+			.no-touch &
+				&:hover
+					color: $violet
 	&_orange
 		border-color: $orange
-		&:hover
-			&:not(.item_mod)
-				.item__author,
-				.item__txt
-					color: $orange
+		.no-touch &
+			&:hover
+				&:not(.item_mod)
+					.item__author,
+					.item__txt
+						color: $orange
 		.item__instruction
 			color: $orange
 		.item__img
 			&:before
 				background: rgba(#ff8c61, 0.5)
 		.item__txt
-			&:hover
-				color: $orange
+			.no-touch &
+				&:hover
+					color: $orange
 	&_mod
 		.item__img
 			height: 310px
@@ -409,25 +413,27 @@ a
 			&:after
 				opacity: 0.8
 				visibility: visible
-			&:hover
-				&:before
-					opacity: 1
-					visibility: visible
-				&:after
-					opacity: 0
-					visibility: hidden
-				.item__author
-					color: #fff
-				.item__info
-					max-height: 120px
-					opacity: 1
+			.no-touch &
+				&:hover
+					&:before
+						opacity: 1
+						visibility: visible
+					&:after
+						opacity: 0
+						visibility: hidden
+					.item__author
+						color: #fff
+					.item__info
+						max-height: 120px
+						opacity: 1
 		.item__txt
 			height: 150px
 			font-size: 22px
 			+lora
-			&:hover
-				.item__instruction
-					text-decoration: none
+			.no-touch &
+				&:hover
+					.item__instruction
+						text-decoration: none
 		.item__author
 			color: #ccc
 		.item__info
@@ -436,17 +442,23 @@ a
 			color: #FFF
 			overflow: hidden
 		&.item_gold
-			.item__img:hover
-				&:before
-					background: rgba(242,192,94,0.80)
+			.item__img
+				.no-touch &
+					&:hover
+						&:before
+							background: rgba(242,192,94,0.80)
 		&.item_red
-			.item__img:hover
-				&:before
-					background: rgba(210,120,87,0.80)
+			.item__img
+				.no-touch &
+					&:hover
+						&:before
+							background: rgba(210,120,87,0.80)
 		&.item_violet
-			.item__img:hover
-				&:before
-					background: rgba(142, 119, 154, 0.6)
+			.item__img
+				.no-touch &
+					&:hover
+					&:before
+						background: rgba(142, 119, 154, 0.6)
 	&_big
 		height: 672px
 		.item__txt
@@ -619,9 +631,11 @@ a
 					height: 310px
 	+r2
 		&.item_mod
-			.item__img:hover
-				.item__info
-					max-height: 100px
+			.item__img
+				.no-touch &
+					&:hover
+						.item__info
+							max-height: 100px
 		&.item_lg
 			.item
 				&__txt
@@ -645,9 +659,10 @@ a
 		&.item_mod
 			.item__img
 				height: 217px
-				&:hover
-					.item__info
-						max-height: 80px
+				.no-touch &
+					&:hover
+						.item__info
+							max-height: 80px
 			.item__txt
 				font-size: 19px
 		&.item_big
@@ -737,9 +752,10 @@ a
 			&.is-ya
 				background-color: #f72415
 				box-shadow: 0 2px 0 #d63b22
-			&:hover
-				opacity: .8
-				box-shadow: none
+			.no-touch &
+				&:hover
+					opacity: .8
+					box-shadow: none
 
 
 .social-ya

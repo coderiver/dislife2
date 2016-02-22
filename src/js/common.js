@@ -338,38 +338,75 @@ $(document).ready(function() {
 	});
 
 	//user sliders
-	$('.js-user-photo').slick({
-		fade: true,
-		arrows: false,
-		infinite: false,
-		asNavFor: '.js-user-photos'
-	});
-	
-
-	$('.js-user-photos').each(function() {
+	$('.js-user-gallery').each(function() {
 		if ($(this).length) {
+
+			var totalWidth = 0;
+			var thisEl = $(this).find('.js-user-photos');
+			var arr = $(this).find('.user-photos__arr');
+
+
+			setTimeout(function() {
+
+				thisEl.find('.user-photos__item').each(function() {
+					totalWidth += parseInt($(this).outerWidth());	
+				});	
+
+				if (totalWidth > thisEl.width()) {
+					var sliderSettings = true;
+					var userPhoto = {
+						fade: true,
+						arrows: false,
+						infinite: false,
+						asNavFor: '.js-user-photos'
+					};
+					arr.addClass('is-active');
+				}
+				else {
+					var sliderSettings = false;
+					var userPhoto = {
+						fade: true,
+						arrows: false,
+						infinite: false,
+					};
+					arr.removeClass('is-active');
+				};
+
+				$('.js-user-photo').each(function() {
+					$(this).slick(userPhoto);
+				});
+
+				$('.js-user-photos').each(function() {
+
+					var arrNext = $(this).siblings('.js-user-next'),
+						arrPrev = $(this).siblings('.js-user-prev');
+
+					$(this).slick({
+						variableWidth: true,
+						infinite: false,
+						asNavFor: '.js-user-photo',
+						nextArrow: arrNext,
+						prevArrow: arrPrev,
+						arrows: sliderSettings,
+						swipe: sliderSettings
+					});
+				});
+
+			}, 300);
+
 			$(this).find('.user-photos__item').click(function() {
 				var id = $(this).data('slick-index');
 				$('.js-user-photo').slick('slickGoTo', id);
 			});
-			var totalWidth = 0;
-			var thisEl = $(this);
-			setTimeout(function() {
-				thisEl.find('.user-photos__item').each(function() {
-					totalWidth += parseInt($(this).outerWidth(), 10);	
-					console.log(totalWidth, $(this).outerWidth())
-				});				
-			}, 300)
 		};
-		var arrNext = $(this).siblings('.js-user-next'),
-			arrPrev = $(this).siblings('.js-user-prev');
-		$(this).slick({
-			variableWidth: true,
-			infinite: false,
-			asNavFor: '.js-user-photo',
-			nextArrow: arrNext,
-			prevArrow: arrPrev
-		});
+	});
+	
+	$(function() {
+		FastClick.attach(document.body);
 	});
 
+	var isTouchDevice = 'ontouchstart' in document.documentElement;
+	if (!isTouchDevice) {
+		$('html').addClass('no-touch');
+	}
 });

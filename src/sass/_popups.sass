@@ -45,8 +45,9 @@
         font-size: 22px
         opacity: .8
         +tr(opacity .3s)
-        &:hover
-            opacity: 1
+        .no-touch &
+            &:hover
+                opacity: 1
     &__body
         padding: 10px 50px
         +r4
@@ -66,9 +67,10 @@
             +r4
                 font-size: 16px
                 text-align: center
-            &:hover
-                background: $mint
-                color: #fff
+            .no-touch &
+                &:hover
+                    background: $mint
+                    color: #fff
             &:after
                 content: ''
                 position: absolute
@@ -79,8 +81,9 @@
                 background: #fff
                 &:after
                     display: none
-                &:hover
-                    color: #282828
+                .no-touch &
+                    &:hover
+                        color: #282828
             &:first-child
                 border-radius: 2px 0 0 0
                 padding-left: 50px
@@ -215,17 +218,19 @@
     &_full
         display: block
         width: 100%
-    &:hover
-        opacity: .8
-        box-shadow: none
+    .no-touch &
+        &:hover
+            opacity: .8
+            box-shadow: none
 
 .orange-link
     display: inline-block
     color: #ff8c61
     border-bottom: 1px dashed #ff8c61
     +light
-    &:hover
-        border-style: solid
+    .no-touch &
+        &:hover
+            border-style: solid
 
 .checkbox
     position: relative

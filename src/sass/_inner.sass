@@ -110,8 +110,9 @@ $green: #9bc1bc
 				font-size: 24px
 			&.icon-vk, &.fa-odnoklassniki
 				font-size: 24px
-			&:hover
-				background: darken(#9bc1bc, 10)
+			.no-touch &
+				&:hover
+					background: darken(#9bc1bc, 10)
 	+r5
 		position: static
 		clear: both
@@ -196,9 +197,10 @@ $green: #9bc1bc
 	.text-big
 		margin-bottom: 10px
 		line-height: 1
-	&:hover
-		.text-big
-			text-decoration: underline
+	.no-touch &
+		&:hover
+			.text-big
+				text-decoration: underline
 
 .disqus
 	display: block
@@ -226,11 +228,12 @@ $green: #9bc1bc
 	color: #000
 	border: 1px solid #9BC1BC
 	position: relative
-	&:hover
-		&:before
-			width: 100%
-		.fa, span
-			color: #fff 
+	.no-touch &
+		&:hover
+			&:before
+				width: 100%
+			.fa, span
+				color: #fff 
 	&_mod
 		margin-left: 108px
 	&:before
@@ -366,8 +369,9 @@ $green: #9bc1bc
 		line-height: 1
 		cursor: pointer
 		transition: color 0.2s
-		&:hover
-			color: $mint
+		.no-touch &
+			&:hover
+				color: $mint
 	&__prev
 		left: 24px
 	&__next
@@ -396,8 +400,9 @@ $green: #9bc1bc
 		background: rgba(#eff0ea, 0.5)
 		border-bottom: 1px solid $mint
 		transition: background 0.2s ease
-		&:hover
-			background: #eff0ea
+		.no-touch &
+			&:hover
+				background: #eff0ea
 		&:last-child
 			border-bottom: none
 	&__more
@@ -459,8 +464,9 @@ $green: #9bc1bc
 	padding: 23px 23px 25px 31px
 	border: 1px dashed $mint
 	+tr(background .3s)
-	&:hover
-		background: #EFF0EA
+	.no-touch &
+		&:hover
+			background: #EFF0EA
 	&-ico
 		position: absolute
 		top: -1px

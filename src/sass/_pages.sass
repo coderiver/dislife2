@@ -60,8 +60,9 @@
 		color: #9bc1bc
 		letter-spacing: 1.2px
 		+bold
-		&:hover
-			text-decoration: underline
+		.no-touch &
+			&:hover
+				text-decoration: underline
 	&__num
 		white-space: nowrap
 	.sort
@@ -108,9 +109,10 @@
 	padding: 21px 0
 	border-bottom: 1px solid #e4eae9
 	+clr
-	&:hover
-		.textbl__ttl
-			color: $mint
+	.no-touch &
+		&:hover
+			.textbl__ttl
+				color: $mint
 	&_no-border
 		border-color: transparent
 	&__inner

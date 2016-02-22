@@ -62,8 +62,9 @@ body
 		+tr(color .25s)
 		+r1
 			font-size: 20px
-		&:hover
-			color: $orange
+		.no-touch &
+			&:hover
+				color: $orange
 
 .logo
 	+bold
@@ -166,8 +167,9 @@ body
 	span
 		+r1
 			display: none
-	&:hover
-		color: #ff8c61
+	.no-touch &
+		&:hover
+			color: #ff8c61
 
 .btn-profile
 	width: 130px
@@ -177,8 +179,9 @@ body
 	+tr(color .25s)
 	float: right
 	margin: 15px 15px 0 0
-	&:hover
-		color: #ff8c61
+	.no-touch &
+		&:hover
+			color: #ff8c61
 	+r(1400)
 		width: 40px
 	+r1
@@ -209,8 +212,9 @@ body
 	color: #282828 
 	font-size: 25px
 	margin: 18px 0 0
-	&:hover
-		color: #ff8c61
+	.no-touch &
+		&:hover
+			color: #ff8c61
 	+r1
 		margin: 14px 0 0
 	+r2
@@ -223,8 +227,9 @@ body
 	color: #282828 
 	margin: 16px 20px 0 0
 	+tr(color .25s)
-	&:hover
-		color: #ff8c61
+	.no-touch &
+		&:hover
+			color: #ff8c61
 	+r1
 		margin: 13px 20px 0 0
 	+r2
@@ -307,13 +312,14 @@ body
 			padding: 0 10px 0 30px 
 			line-height: 58px
 			border-bottom: 1px solid #e6e6e6
-		&:hover
-			span
-				&:before
-					width: 100%
-			small
-				opacity: 1
-				visibility: visible
+		.no-touch &
+			&:hover
+				span
+					&:before
+						width: 100%
+				small
+					opacity: 1
+					visibility: visible
 		&:before
 			content: "" 
 			position: absolute
@@ -325,32 +331,36 @@ body
 			+r1
 				display: block
 		&.is-brown
-			&:hover, &.is-active
-				color: #d27857
+			.no-touch &
+				&:hover, &.is-active
+					color: #d27857
 			&:before
 				background: #d27857
 			span
 				&:before
 					border-color: #d27857
 		&.is-purple
-			&:hover, &.is-active
-				color: #c0a6cd
+			.no-touch &
+				&:hover, &.is-active
+					color: #c0a6cd
 			&:before
 				background: #c0a6cd
 			span
 				&:before
 					border-color: #c0a6cd
 		&.is-yellow
-			&:hover, &.is-active
-				color: #f2c05e
+			.no-touch &
+				&:hover, &.is-active
+					color: #f2c05e
 			&:before
 				background: #f2c05e
 			span
 				&:before
 					border-color: #f2c05e
 		&.is-orange
-			&:hover, &.is-active
-				color: #ff8c61
+			.no-touch &
+				&:hover, &.is-active
+					color: #ff8c61
 			&:before
 				background: #ff8c61
 			span
