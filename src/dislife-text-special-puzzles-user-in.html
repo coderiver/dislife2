@@ -2,12 +2,12 @@
 <html>
 <head>
 	//=include partials/head.html
-	<title>Special Puzzles User</title>
+	<title>Special Puzzles User Signed-In</title>
 </head>
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	//=include partials/header.html
+	//=include partials/header-user.html
 	<div class="container">
 		<div class="l-news">
 			<div class="l-col1">
@@ -17,11 +17,21 @@
 						<div class="user-profile__years">26 лет</div>
 					</div>
 					<div class="user-profile__info">
-					<!-- 	<a href="#" class="btn-mail btn-mail_big">
+						<a href="#" class="btn-mail btn-mail_big">
 							<i class="fa fa-envelope"></i>
 							<span>Написать</span>
-						</a> -->
+						</a>
 						<div class="user-profile__time">была на сайте 12 минут назад</div>
+						<div class="user-profile__btns">
+							<a href="#" class="btn-action btn-action_mint btn-action_big">
+								<i class="fa fa-user-plus"></i>
+								<span>Добавить в друзья</span>
+							</a>
+							<a href="#" class="btn-action btn-action_red btn-action_big">
+								<i class="fa fa-close"></i>
+								<span>Заблокировать</span>
+							</a>
+						</div>
 					</div>
 					<div class="user-profile__imgs js-user-gallery">
 						<div class="user-photo">
@@ -275,17 +285,14 @@
 				</div>
 			</div>
 			<div class="l-col2">	
-				<div class="profile-side">
-					<div class="block-alert block-alert_mod">
-						<i class="fa fa-exclamation-triangle"></i>
-						<p><a href="#">Зарегистрируйтесь</a>, чтобы смотреть анкеты и писать сообщения.</p>
-					</div>
-					<div class="banner-img">
-						<a href="#">
-							<img src="img/banner.jpg" alt="banner">
-						</a>
-					</div>
-				</div>
+				<ul class="special-menu">
+					<li><a href="#"><span>Моя анкета в «Пазлах»</span></a></li>
+					<li><a href="#" class="is-orange"><span>Сообщения</span><sup>12</sup></a></li>
+					<li><a href="#"><span>Фотографии</span></a></li>
+					<li><a href="#"><span>Друзья</span></a></li>
+					<li><a href="#"><span>Гости</span><sup>12</sup></a></li>
+					<li><a href="#"><span>Настройки</span></a></li>
+				</ul>
 			</div>
 		</div>
 	</div>

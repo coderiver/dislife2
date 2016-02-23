@@ -22,11 +22,11 @@
 			<a href="#" class="logo">
 				<i class="icon-logo"></i>
 			</a>
-			<button class="btn-nav js-nav-btn">
+			<button class="btn-nav js-nav-btn" data-id="main-nav">
 				<span></span>
 			</button>
 			<div class="header__inner">
-				<nav class="nav js-nav">
+				<nav class="nav js-nav" data-nav="main-nav">
 					<ul class="nav__list">
 						<li class="nav__item">
 							<a href="#" class="nav__link is-brown">
@@ -683,6 +683,50 @@
     </div>
 </div>
 <!-- end popup-login -->
-
+<!-- begin popup-download  -->
+<div class="popup popup_download js-popup" data-popup="popup-download">
+    <div class="popup__in">
+        <button class="fa fa-close popup__close js-close-popup"></button>
+        <div class="popup__body">
+            <div class="popup__name">Загрузка фотографии</div>
+            <form action="" class="profile-form">
+                <div class="profile-form__field">
+                    <div class="profile-form__label">АЛЬБОМ</div>
+                    <div class="select select_mod js-select">
+                        <div class="select__text js-select-text">Мой альбом</div>
+                        <i class="fa fa-angle-down"></i>
+                        <ul class="select__list js-select-list">
+                            <li data-val="value">value</li>
+                            <li data-val="value1">value1</li>
+                            <li data-val="value2">value2</li>
+                        </ul>
+                        <select>
+                            <option value="value">value</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="profile-form__field">
+                    <div class="profile-form__label">ОПИСАНИЕ</div>
+                    <input type="text" class="input-full input-full_white">
+                </div>
+                <div class="profile-form__add">
+                    <label class="add-file">
+                        <input type="file">
+                        <i class="fa fa-camera"></i>
+                        <span>Выбрать файл</span>
+                    </label>
+                </div>
+                <div class="profile-form__btn">
+                    <button class="btn-full btn-full_mod">
+                        <span>Загрузить</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>    
+</div>
+<!-- end popup-download -->
 </body>
 </html>

@@ -11,7 +11,7 @@
 	<link rel="stylesheet" media="all" href="css/font-awesome.min.css" >
 	<link rel="stylesheet" media="all" href="css/style.css" >
 	<script src="js/app.js"></script>
-	<title>Special Puzzles User</title>
+	<title>Special Puzzles User Signed-In</title>
 </head>
 <body>
 <!-- BEGIN  out-->
@@ -22,11 +22,11 @@
 			<a href="#" class="logo">
 				<i class="icon-logo"></i>
 			</a>
-			<button class="btn-nav js-nav-btn">
+			<button class="btn-nav js-nav-btn" data-id="main-nav">
 				<span></span>
 			</button>
 			<div class="header__inner">
-				<nav class="nav js-nav">
+				<nav class="nav js-nav" data-nav="main-nav">
 					<ul class="nav__list">
 						<li class="nav__item">
 							<a href="#" class="nav__link is-brown">
@@ -75,12 +75,24 @@
 						</li>
 					</ul>
 				</nav>
-				<a href="#" class="btn-enter js-open-popup" data-link="popup-login">
-					<i class="fa fa-sign-in"></i>
-					<span>Вход</span>
+				<a href="#" class="btn-out">
+					<i class="fa fa-sign-out"></i>
+				</a>
+				<a href="#" class="btn-profile js-nav-btn"  data-id="user-nav">
+					<i></i>
+					<div class="btn-profile__img" style="background-image: url(https://placecage.com/50/50);"></div>
+					<span>Профайл</span>
+				</a>
+				<a href="#" class="btn-message">
+					<i class="fa fa-envelope"></i>
+					<span>12</span>
+				</a>
+				<a href="#" class="btn-add">
+					<i class="fa fa-user-plus"></i>
+					<span>2</span>
 				</a>
 			</div>
-			<div class="mini-search">
+			<div class="mini-search mini-search_mod">
 				<a href="#" class="fa fa-search"></a>
 			</div>
 		</div>
@@ -95,11 +107,21 @@
 						<div class="user-profile__years">26 лет</div>
 					</div>
 					<div class="user-profile__info">
-					<!-- 	<a href="#" class="btn-mail btn-mail_big">
+						<a href="#" class="btn-mail btn-mail_big">
 							<i class="fa fa-envelope"></i>
 							<span>Написать</span>
-						</a> -->
+						</a>
 						<div class="user-profile__time">была на сайте 12 минут назад</div>
+						<div class="user-profile__btns">
+							<a href="#" class="btn-action btn-action_mint btn-action_big">
+								<i class="fa fa-user-plus"></i>
+								<span>Добавить в друзья</span>
+							</a>
+							<a href="#" class="btn-action btn-action_red btn-action_big">
+								<i class="fa fa-close"></i>
+								<span>Заблокировать</span>
+							</a>
+						</div>
 					</div>
 					<div class="user-profile__imgs js-user-gallery">
 						<div class="user-photo">
@@ -353,17 +375,14 @@
 				</div>
 			</div>
 			<div class="l-col2">	
-				<div class="profile-side">
-					<div class="block-alert block-alert_mod">
-						<i class="fa fa-exclamation-triangle"></i>
-						<p><a href="#">Зарегистрируйтесь</a>, чтобы смотреть анкеты и писать сообщения.</p>
-					</div>
-					<div class="banner-img">
-						<a href="#">
-							<img src="img/banner.jpg" alt="banner">
-						</a>
-					</div>
-				</div>
+				<ul class="special-menu">
+					<li><a href="#"><span>Моя анкета в «Пазлах»</span></a></li>
+					<li><a href="#" class="is-orange"><span>Сообщения</span><sup>12</sup></a></li>
+					<li><a href="#"><span>Фотографии</span></a></li>
+					<li><a href="#"><span>Друзья</span></a></li>
+					<li><a href="#"><span>Гости</span><sup>12</sup></a></li>
+					<li><a href="#"><span>Настройки</span></a></li>
+				</ul>
 			</div>
 		</div>
 	</div>
