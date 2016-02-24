@@ -887,6 +887,7 @@ $(document).ready(function() {
 		$('.js-nav-btn').removeClass('is-active');
 		$('.js-nav').removeClass('is-active');
 		$('body').removeClass('overflow-hidden');
+		$('.overlay').removeClass('is-active');
 	};
 
 	function navOpen(btn, id) {
@@ -895,12 +896,13 @@ $(document).ready(function() {
 		btn.addClass('is-active');
 		$('.js-nav[data-nav="' + id + '"]').addClass('is-active');
 		$('body').addClass('overflow-hidden');
+		$('.overlay').addClass('is-active');
 	}
 
 	$('.js-nav-btn').click(function() {
 		var id = $(this).data('id');
 		var item = $(this);
-		if ($(this).hasClass('btn-profile')) {			
+		if ($(this).hasClass('is-profile')) {			
 			if (window.matchMedia("(max-width: 990px)").matches) {
 				if ($(this).hasClass('is-active')) {
 					navClose();

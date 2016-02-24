@@ -170,6 +170,61 @@ body
 	.no-touch &
 		&:hover
 			color: #ff8c61
+	&.is-profile
+		+r2
+			text-align: center
+			line-height: 40px
+		i
+			+r2
+				vertical-align: middle
+		&.is-active
+			+r2
+				background: #ff8c61
+			.btn-profile
+				&__img
+					+r2
+						opacity: 0
+						visibility: hidden
+			.is-close
+				opacity: 1
+				visibility: visible
+				&:before
+					transform: rotate(45deg)
+				&:after
+					transform: rotate(-45deg)
+			.fa
+				display: none
+		+r2
+			position: absolute
+			top: 0
+			right: 0
+			padding: 10px
+			width: 60px
+			height: 60px  
+			margin: 0
+		.is-close
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			line-height: 60px
+			text-align: center
+			display: none
+			color: #fff
+			opacity: 0
+			visibility: hidden
+			+r2
+				display: block
+			&:before, &:after
+				position: absolute
+				top: 28px
+				left: 50%
+				width: 26px
+				margin-left: -13px
+				content: "" 
+				border-bottom: 4px solid #fff
+				transition: transform 0.3s
 
 .btn-profile
 	width: 130px

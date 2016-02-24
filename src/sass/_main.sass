@@ -939,7 +939,7 @@
 			min-height: 50px
 		.select__list, .select__text
 			border-color: #d8d8d8
-	&_mod
+	&_mod, &_user
 		.select__list, .select__text
 			border-color: #d8d8d8
 		.select__text
@@ -1004,6 +1004,14 @@
 					color: #ff8c61
 			&:first-child
 				border-top: none
+	&_user
+		background: #fff 
+		font-size: 14px
+		.select__text
+			min-height: 50px
+			padding: 14px 35px 13px 15px 
+		i
+			color: #999 
 
 .main-head
 	+light
@@ -1610,6 +1618,13 @@
 	&_orange
 		border-color: #ff8c61
 		background-color: #fff
+	&_small
+		font-size: 14px
+		padding: 16px 15px 15px 
+		border-radius: 3px
+		&::placeholder
+			+reg
+			color: #8e8e8e
 		
 
 .textarea-full
@@ -2373,6 +2388,10 @@
 			opacity: 0
 			transform: scale(0.5)
 			transition: 0.25s ease
+	&_mod
+		span
+			&:before
+				border-radius: 3px
 
 .special-users
 	font-size: 0
@@ -2525,6 +2544,27 @@
 			font-size: 19px
 .special-menu
 	padding: 10px 0 0 
+	&_nav
+		+r2
+			width: 100%
+			max-width: 290px 
+			position: fixed
+			top: 60px
+			bottom: 0
+			right: 0
+			z-index: 280
+			transform: translateX(100%)
+			opacity: 0
+			visibility: hidden
+			transition-property: opacity, visibility, transform
+			transition-duration: 0.4s
+			background: #fff 
+			padding: 0
+		&.is-active
+			+r2
+				transform: translateX(0)
+				opacity: 1
+				visibility: visible
 	li
 		&:first-child
 			a
@@ -2544,6 +2584,8 @@
 		color: #282828 
 		+r1
 			padding: 0 15px 
+		+r2
+			padding: 0 30px 
 		.no-touch &
 			&:hover, &.is-active
 				color: #ff8c61 
@@ -3173,6 +3215,7 @@
 	min-height: 700px
 	+r2
 		width: 100%
+		min-height: 500px 
 	&__in
 		float: right
 		width: 800px
@@ -3313,6 +3356,7 @@
 		line-height: 15px
 		+bold
 		padding-bottom: 6px
+		text-transform: uppercase
 	&__add
 		margin-bottom: 22px
 	&__btn
@@ -3407,6 +3451,7 @@
 		line-height: 15px
 		+bold
 		padding-bottom: 6px
+		text-transform: uppercase
 		+r4
 			overflow: hidden
 			padding: 35px 0 0 
@@ -3646,3 +3691,179 @@
 				display: block
 				img
 					height: 100%
+
+.settings
+	&__field
+		+clr
+		padding-bottom: 35px
+		+r3
+			padding-bottom: 25px
+	&__label
+		color: #4a4a4a
+		font-size: 12px
+		letter-spacing: 1px
+		line-height: 15px
+		+bold
+		padding-bottom: 4px
+		text-transform: uppercase
+	&__user
+		padding: 6px 0 0 
+	&__img, &__download
+		display: inline-block
+		vertical-align: bottom
+	&__img
+		width: 48px
+		height: 48px
+		+cover
+		margin: 0 14px 0 0
+	&__text
+		color: #282828
+		font-size: 28px
+		line-height: 33px
+		+med
+		+r3
+			font-size: 20px
+			line-height: 23px
+			display: block
+		&_mod
+			padding-right: 35px
+			border-right: 1px solid #d8d8d8 
+			margin-right: 15px
+			+r3
+				padding: 0
+				border: none
+				margin: 0
+	&__link
+		color: #ff8c61
+		font-size: 18px
+		text-decoration: underline
+		line-height: 1
+		.no-touch &
+			&:hover
+				text-decoration: none
+	&__link, &__text_mod
+		display: inline-block
+		vertical-align: middle
+
+.link-download
+	display: inline-block
+	vertical-align: top
+	color: #ff8c61
+	line-height: 1
+	.no-touch &
+		&:hover
+			span
+				text-decoration: none
+	i, span
+		display: inline-block
+		vertical-align: middle
+	i
+		font-size: 20px
+		margin-right: 6px
+	span
+		font-size: 18px
+		text-decoration: underline
+
+.user-form
+	+clr
+	padding-left: 30px
+	+r2
+		padding-left: 0
+	+r3
+		max-width: 500px
+		margin: 0 auto 
+	&__right
+		float: right
+		width: 40%
+		+r2
+			padding-top: 15px
+			+clr
+	&__left
+		float: left
+		width: 60%
+		padding-right: 30px
+		+r2
+			padding: 0
+	&__right, &__left
+		+r2
+			float: none
+			width: 100%
+	&__full
+		clear: both
+	&__field
+		font-size: 0
+		padding-bottom: 15px
+	&__date
+		margin: 0 -15px 
+		+r1
+			margin: 0 -10px
+	&__year
+		width: 50%
+		+r1
+			width: 40%
+	&__month, &__day
+		width: 25%
+		+r1
+			width: 30%
+	&__year, &__month, &__day
+		display: inline-block
+		vertical-align: top
+		padding: 0 15px 
+		+r1
+			padding: 0 10px 
+	&__label
+		color: #4a4a4a
+		font-size: 12px
+		letter-spacing: 1px
+		line-height: 15px
+		+bold
+		padding-bottom: 6px
+		text-transform: uppercase
+	&__img
+		padding: 18px 0 10px
+		+r2
+			width: 50%
+			float: left
+			padding: 0 15px 10px 0 
+		+r3
+			width: 100%
+			float: none
+			max-width: 320px
+			padding: 0 0 20px 0 
+		img
+			width: 100%
+	&__right-info
+		+r2
+			width: 50%
+			float: left
+		+r3
+			width: 100%
+			float: none
+	&__download, &__checkbox
+		padding-bottom: 35px
+	&__checks
+		li
+			padding-bottom: 9px
+	&__btn
+		padding: 5px 0 20px 
+	.input-btn
+		width: 100%
+
+.overlay
+	background-image: linear-gradient(to top, rgba(38, 23, 34, 0.4) 0%, rgba(36, 21, 32, 0.71) 100%)
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 250
+	display: none
+	visibility: hidden
+	opacity: 0
+	transition: opacity 0.25s, visibility 0.25s
+	+r2
+		display: block
+	&.is-active
+		+r2
+			visibility: visible
+			opacity: 1
