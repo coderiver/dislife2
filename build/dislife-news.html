@@ -327,5 +327,157 @@
 	</footer>
 </div>
 <!-- END out-->
+
+<!-- begin popup-login -->
+<div class="popup js-popup" data-popup="popup-login">
+    <div class="popup__in js-tabs">
+        <button class="fa fa-close popup__close js-close-popup"></button>
+        <div class="popup__tabs">
+            <a href="#" class="popup__tab js-tabs-link is-active">Вход</a>
+            <a href="#" class="popup__tab js-tabs-link">Регистрация</a>
+        </div>
+        <div class="popup__body">
+            <div class="tab-content js-tabs-content">
+                <div class="popup__title"><span>Через соцсети</span></div>
+                <ul class="social-big">
+                    <li><a href="#" class="is-vk"><i class="fa fa-vk"></i></a></li>
+                    <li><a href="#" class="is-fb"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#" class="is-odk"><i class="fa fa-odnoklassniki"></i></a></li>
+                    <li><a href="#" class="is-gp"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#" class="is-ya"><i class="social-ya">Я</i></a></li>
+                </ul>
+                <div class="popup__title"><span>Или логин Dislife.ru</span></div>
+
+                <div class="popup__form">
+                    <form action="#" class="js-validation">
+                        <div class="field">
+                            <label class="field__label">Логин</label>
+                            <div class="field__input input">
+                                <i class="fa fa-user input__icon"></i>
+                                <input type="text" class="input-text" name="email" data-validation="email" data-validation-error-msg=" ">
+                                <i class="input__valid fa fa-check"></i>
+                                <i class="input__invalid fa fa-close"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">Пароль</label>
+                            <div class="field__input input">
+                                <i class="fa fa-lock input__icon"></i>
+                                <input type="password" name="password" class="input-text input-text_pwd" data-validation="required" data-validation-error-msg=" ">
+                            </div>
+                        </div>
+                        <div class="field-login">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Запомнить меня</span>
+                                </label>
+                            </div>
+                            <div class="login">
+                                <input type="submit" value="Войти" class="input-btn">
+                                <a href="#" class="orange-link">Я забыл пароль</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="tab-content js-tabs-content">
+                <div class="popup__form">
+                    <form action="#" class="js-validation">
+                        <div class="field">
+                            <label class="field__label">Логин</label>
+                            <div class="field__input input">
+                                <i class="fa fa-user input__icon"></i>
+                                <input type="text" class="input-text" name="email" data-validation="required" data-validation-error-msg=" ">
+                                <i class="input__valid fa fa-check"></i>
+                                <i class="input__invalid fa fa-close"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">E-mail</label>
+                            <div class="field__input input">
+                                <i class="fa fa-user input__icon"></i>
+                                <input type="text" class="input-text" name="email" data-validation="email" data-validation-error-msg=" ">
+                                <i class="input__valid fa fa-check"></i>
+                                <i class="input__invalid fa fa-close"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">Повторите пароль</label>
+                            <div class="field__input input">
+                                <i class="fa fa-lock input__icon"></i>
+                                <input type="password" name="password" class="input-text input-text_pwd" data-validation="required" data-validation-error-msg=" ">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">Пароль</label>
+                            <div class="field__input input">
+                                <i class="fa fa-lock input__icon"></i>
+                                <input type="password" name="password" class="input-text input-text_pwd" data-validation="required" data-validation-error-msg=" ">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Я принимаю пользовательское соглашение</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="submit" value="Зарегистрироваться" class="input-btn input-btn_full">
+                        </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end popup-login -->
+<!-- begin popup-download  -->
+<div class="popup popup_download js-popup" data-popup="popup-download">
+    <div class="popup__in">
+        <button class="fa fa-close popup__close js-close-popup"></button>
+        <div class="popup__body">
+            <div class="popup__name">Загрузка фотографии</div>
+            <form action="" class="profile-form">
+                <div class="profile-form__field">
+                    <div class="profile-form__label">АЛЬБОМ</div>
+                    <div class="select select_mod js-select">
+                        <div class="select__text js-select-text">Мой альбом</div>
+                        <i class="fa fa-angle-down"></i>
+                        <ul class="select__list js-select-list">
+                            <li data-val="value">value</li>
+                            <li data-val="value1">value1</li>
+                            <li data-val="value2">value2</li>
+                        </ul>
+                        <select>
+                            <option value="value">value</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="profile-form__field">
+                    <div class="profile-form__label">ОПИСАНИЕ</div>
+                    <input type="text" class="input-full input-full_white">
+                </div>
+                <div class="profile-form__add">
+                    <label class="add-file">
+                        <input type="file">
+                        <i class="fa fa-camera"></i>
+                        <span>Выбрать файл</span>
+                    </label>
+                </div>
+                <div class="profile-form__btn">
+                    <button class="btn-full btn-full_mod">
+                        <span>Загрузить</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>    
+</div>
+<!-- end popup-download -->
 </body>
 </html>

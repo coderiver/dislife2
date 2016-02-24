@@ -1197,6 +1197,14 @@ $(document).ready(function() {
 		var link = $(this).data('link');
 		var popup = $('[data-popup="' + link + '"]');
 		popup.addClass('is-open');
+		if ($(this).data('link') == "popup-login") {
+			if ($(this).hasClass('is-registration')) {
+				popup.find('.popup__tab:last-child').trigger('click');
+			}
+			else {
+				popup.find('.popup__tab:first-child').trigger('click');
+			}
+		};
 		return false;
 	});
 
