@@ -35,8 +35,8 @@ body
 		min-width: 320px
 		position: relative
 		+r1
-			padding: 0 70px 0 165px
-		+r1
+			padding: 0 60px 0 150px 
+		+r2
 			min-height: 60px
 			padding: 0 45px 0 0
 	&__inner
@@ -60,7 +60,7 @@ body
 		color: #282828
 		cursor: pointer
 		+tr(color .25s)
-		+r1
+		+r2
 			font-size: 20px
 		.no-touch &
 			&:hover
@@ -75,7 +75,7 @@ body
 	top: 12px
 	left: 25px
 	font-size: 0
-	+r1
+	+r2
 		top: 0
 		left: 50%
 		padding: 18px 0 7px
@@ -85,6 +85,8 @@ body
 	i
 		font-size: 48px
 		+r1
+			font-size: 44px
+		+r2
 			font-size: 27px
 
 .btn-nav
@@ -96,7 +98,7 @@ body
 	width: 60px
 	height: 60px
 	transition: background 0.2s
-	+r1
+	+r2
 		display: block
 	&.is-active		
 		background-color: #ff8c61
@@ -142,7 +144,7 @@ body
 	margin: 16px 0
 	min-height: 37px
 	+tr(color .25s)
-	+r1
+	+r2
 		padding: 0
 		margin: 17px 0 0
 		min-height: 1px
@@ -152,7 +154,7 @@ body
 		top: 50%
 		left: 0
 		margin-top: -19px
-		+r1
+		+r2
 			font-size: 26px
 			position: relative
 			z-index: 1
@@ -162,10 +164,10 @@ body
 			font-size: 27px
 			margin-top: -16px
 			margin-left: 4px
-			+r1
+			+r2
 				margin: 0
 	span
-		+r1
+		+r2
 			display: none
 	.no-touch &
 		&:hover
@@ -239,9 +241,8 @@ body
 			color: #ff8c61
 	+r(1400)
 		width: 40px
-	+r1
-		margin: 10px 15px 0 0 
 	+r2
+		margin: 10px 15px 0 0 
 		position: absolute
 		top: 0
 		right: 0
@@ -314,9 +315,8 @@ body
 	.no-touch &
 		&:hover
 			color: #ff8c61
-	+r1
-		margin: 14px 0 0
 	+r2
+		margin: 14px 0 0
 		display: none 
 
 .btn-add, .btn-message
@@ -329,9 +329,8 @@ body
 	.no-touch &
 		&:hover
 			color: #ff8c61
-	+r1
-		margin: 13px 20px 0 0
 	+r2
+		margin: 13px 20px 0 0
 		display: none
 	span
 		font-size: 16px
@@ -356,7 +355,7 @@ body
 .nav
 	font-size: 0
 	float: left
-	+r1
+	+r2
 		position: fixed
 		top: 60px
 		bottom: 0
@@ -372,7 +371,7 @@ body
 		transition-property: opacity, visibility, transform
 		transition-duration: 0.4s
 	&.is-active
-		+r1
+		+r2
 			transform: translateX(0)
 			opacity: 1
 			visibility: visible
@@ -385,10 +384,10 @@ body
 		box-shadow: 0 2px 6px rgba(159, 159, 159, 0.5)
 		height: 10px
 		display: none
-		+r1
+		+r2
 			display: block
 	&__list
-		+r1
+		+r2
 			max-height: 100%
 			overflow: auto
 	&__item
@@ -396,9 +395,76 @@ body
 		vertical-align: top
 		margin: 0 20px 0 0
 		position: relative
-		+r1
+		+r2
 			display: block
 			margin: 0
+		&.nav-specials
+			.nav-specials
+				&__link
+					display: none
+					+r1
+						display: block
+					+r2
+						display: none
+					&.is-active
+						span
+							&:before
+								width: 20px
+					.nav__link-in
+						padding-right: 20px
+						i
+							font-size: 14px
+							position: absolute
+							top: 50%
+							right: 0
+							margin-top: -8px
+				&__list
+					+r1
+						background: #fff 
+						position: absolute
+						top: 100%
+						left: 0
+						width: 340px
+						box-shadow: 0 4px 6px 0 rgba(159, 159, 159, 0.5)
+						visibility: hidden
+						opacity: 0
+					+r2
+						width: 100%
+						position: relative
+						visibility: visible
+						opacity: 1
+						box-shadow: none
+					&.is-active
+						visibility: visible
+						opacity: 1
+					&:before
+						+r1
+							content: "" 
+							position: absolute
+							top: 0
+							bottom: 0
+							left: 0
+							width: 20px
+							z-index: 20
+							background: #ff8c61 
+						+r2
+							display: none
+					.nav
+						&__item
+							+r1
+								display: block
+								margin: 0
+						&__link
+							+r1
+								padding: 0 10px 0 30px
+								line-height: 58px 
+								border-bottom: 1px solid #e6e6e6
+							span
+								+r1
+									padding: 0
+								&:before
+									+r1
+										display: none
 	&__link
 		color: #282828
 		font-size: 18px
@@ -407,7 +473,7 @@ body
 		display: block
 		position: relative
 		transition: color 0.3s
-		+r1
+		+r2
 			padding: 0 10px 0 30px 
 			line-height: 58px
 			border-bottom: 1px solid #e6e6e6
@@ -427,7 +493,7 @@ body
 			left: 0
 			width: 10px
 			display: none
-			+r1
+			+r2
 				display: block
 		&.is-brown
 			.no-touch &
@@ -474,7 +540,7 @@ body
 			display: block
 			padding: 25px 0 27px
 			position: relative
-			+r1
+			+r2
 				padding: 0
 			&:before
 				content: ""
@@ -484,7 +550,7 @@ body
 				width: 20px
 				border-bottom: 5px solid
 				transition: width 0.3s
-				+r1
+				+r2
 					display: none
 		span, small
 			line-height: 1

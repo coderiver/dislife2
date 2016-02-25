@@ -938,6 +938,32 @@ $(document).ready(function() {
 
 	$(window).resize(function() {
 		navClose();
+		specialsClose();
+	});
+
+	function specialsClose() {
+		$('.js-specials-drop').removeClass('is-active');
+		$('.js-specials-link').removeClass('is-active');
+	}
+
+	$('.js-specials-link').click(function() {
+		if ($(this).hasClass('is-active')) {
+			specialsClose();
+		}
+		else {
+			$(this).siblings('.js-specials-drop').addClass('is-active');
+			$(this).addClass('is-active');
+		};
+		return false;
+	});
+
+	$('.js-nav-specials').each(function() {
+		$('body').click(function() {
+			specialsClose();
+		});
+		$(this).click(function(event) {
+			event.stopPropagation();
+		});
 	});
 
 	//slider
