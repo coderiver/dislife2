@@ -217,7 +217,7 @@ a { color: #000; text-decoration: none; cursor: pointer; }
 .man_big-img .man__text { font-weight: 400; color: #757575; line-height: 1.45; }
 .man__text { display: table-cell; padding-left: 20px; text-align: left; font-size: 16px; line-height: 1.125; vertical-align: middle; font-family: "FiraSans-Light", Arial, sans-serif; }
 .man__img { display: table-cell; width: 60px; height: 60px; -webkit-border-radius: 50%; border-radius: 50%; overflow: hidden; vertical-align: middle; }
-.man__img img { max-width: 100%; }
+.man__img img { max-width: 100%; -webkit-border-radius: 50% 50% 0; border-radius: 50% 50% 0; }
 
 .social-big { margin: -4px; *zoom: 1; }
 .social-big:after { content: " "; display: table; clear: both; }
@@ -311,6 +311,7 @@ a { color: #000; text-decoration: none; cursor: pointer; }
 .article h2 { font-family: "FiraSans-Medium", Arial, sans-serif; margin-bottom: 7px; font-size: 28px; }
 .article a { font-size: 18px; }
 .article p { margin-bottom: 30px; }
+.article p strong, .article p b, .article li strong, .article li b { font-family: "Lora", serif; font-weight: 700; }
 .article ul { margin-bottom: 30px; }
 .article ul li { position: relative; color: #9bc1bc; list-style-type: disc; margin-left: 30px; }
 .article ul li span { display: inline-block; color: #000; padding-left: 7px; vertical-align: top; }
@@ -1465,7 +1466,7 @@ body.overflow-hidden { position: fixed; width: 100%; overflow-y: scroll; }
 .no-touch .list-links__bl:hover { background: #eff0ea; }
 .list-links__bl:last-child { border-bottom: none; }
 .list-links__more { margin-top: 15px; font-family: "FiraSans-Medium", Arial, sans-serif; font-size: 16px; color: #9bc1bc; }
-.list-links .man { max-width: 575px; margin: 0 auto; font-size: 18px; font-family: "FiraSans-Regular", Arial, sans-serif; }
+.list-links .man { max-width: 575px; margin: 0 auto; font-size: 18px; font-family: "FiraSans-Regular", Arial, sans-serif; width: 100%; }
 .list-links .man p { margin-bottom: 0; }
 .list-links .man__img { vertical-align: top; }
 .list-links .man__text { color: #000; padding-right: 50px; }
