@@ -313,8 +313,8 @@ a { color: #000; text-decoration: none; cursor: pointer; }
 .article p { margin-bottom: 30px; }
 .article p strong, .article p b, .article li strong, .article li b { font-family: "Lora", serif; font-weight: 700; }
 .article ul { margin-bottom: 30px; }
-.article ul li { position: relative; color: #9bc1bc; list-style-type: disc; margin-left: 30px; }
-.article ul li span { display: inline-block; color: #000; padding-left: 7px; vertical-align: top; }
+.article ul li { position: relative; color: #000; padding-left: 37px; }
+.article ul li:before { content: ""; position: absolute; top: 12px; left: 12px; width: 6px; height: 6px; background: #9bc1bc; -webkit-border-radius: 50%; border-radius: 50%; }
 .article figure { border-bottom: 1px solid #9bc1bc; padding-bottom: 20px; margin-bottom: 20px; }
 .article figure.figure_mb { margin-bottom: 35px; }
 .article figure > img { max-width: 100%; margin-bottom: 10px; }

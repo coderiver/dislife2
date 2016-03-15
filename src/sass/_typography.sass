@@ -40,14 +40,17 @@ $indent: 30px
 		margin-bottom: $indent
 		li
 			position: relative
-			color: #9bc1bc
-			list-style-type: disc
-			margin-left: 30px
-			span
-				display: inline-block
-				color: #000
-				padding-left: 7px
-				vertical-align: top
+			color: #000
+			padding-left: 37px
+			&:before
+				content: ''
+				position: absolute
+				top: 12px
+				left: 12px
+				width: 6px
+				height: 6px
+				background: #9bc1bc
+				border-radius: 50%
 	figure
 		border-bottom: 1px solid #9bc1bc
 		padding-bottom: 20px
