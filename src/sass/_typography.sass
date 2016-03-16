@@ -51,6 +51,11 @@ $indent: 30px
 				height: 6px
 				background: #9bc1bc
 				border-radius: 50%
+		&.slick-dots
+			li
+				padding: 0
+				&:before
+					display: none
 	figure
 		border-bottom: 1px solid #9bc1bc
 		padding-bottom: 20px
@@ -59,7 +64,8 @@ $indent: 30px
 			margin-bottom: 35px
 		> img
 			max-width: 100%
-			margin-bottom: 10px
+			display: block
+			margin: 0 auto 10px
 		.iframe-wrap
 			position: relative
 			margin-bottom: 10px
