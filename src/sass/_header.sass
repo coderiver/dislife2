@@ -35,7 +35,7 @@ body
 		min-width: 320px
 		position: relative
 		+r1
-			padding: 0 60px 0 150px 
+			padding: 0 60px 0 150px
 		+r2
 			min-height: 60px
 			padding: 0 45px 0 0
@@ -100,12 +100,12 @@ body
 	transition: background 0.2s
 	+r2
 		display: block
-	&.is-active		
+	&.is-active
 		background-color: #ff8c61
 		&:before, &:after
 			top: 9px
 			transition: transform 0.2s 0.2s, top 0.2s, border-color 0.2s
-			border-color: #fff 
+			border-color: #fff
 		&:before
 			transform: rotate(45deg)
 		&:after
@@ -158,7 +158,7 @@ body
 			font-size: 26px
 			position: relative
 			z-index: 1
-			top: auto 
+			top: auto
 			margin: 0
 		&.fa-user
 			font-size: 27px
@@ -202,7 +202,7 @@ body
 			right: 0
 			padding: 10px
 			width: 60px
-			height: 60px  
+			height: 60px
 			margin: 0
 		.is-close
 			position: absolute
@@ -224,7 +224,7 @@ body
 				left: 50%
 				width: 26px
 				margin-left: -13px
-				content: "" 
+				content: ""
 				border-bottom: 4px solid #fff
 				transition: transform 0.3s
 
@@ -242,13 +242,13 @@ body
 	+r(1400)
 		width: 40px
 	+r2
-		margin: 10px 15px 0 0 
+		margin: 10px 15px 0 0
 		position: absolute
 		top: 0
 		right: 0
 		padding: 10px
 		width: 60px
-		height: 60px  
+		height: 60px
 		margin: 0
 	&.is-active
 		+r2
@@ -293,7 +293,7 @@ body
 			left: 50%
 			width: 26px
 			margin-left: -13px
-			content: "" 
+			content: ""
 			border-bottom: 4px solid #fff
 			transition: transform 0.3s
 	&__img, span
@@ -309,7 +309,7 @@ body
 	float: right
 	+tr(color .25s)
 	position: relative
-	color: #282828 
+	color: #282828
 	font-size: 25px
 	margin: 18px 0 0
 	.no-touch &
@@ -317,13 +317,13 @@ body
 			color: #ff8c61
 	+r2
 		margin: 14px 0 0
-		display: none 
+		display: none
 
 .btn-add, .btn-message
 	float: right
 	font-size: 25px
 	position: relative
-	color: #282828 
+	color: #282828
 	margin: 16px 20px 0 0
 	+tr(color .25s)
 	.no-touch &
@@ -340,7 +340,7 @@ body
 		text-align: center
 		min-width: 21px
 		padding: 1px 6px 0
-		background: #ff8c61   
+		background: #ff8c61
 		position: absolute
 		top: -8px
 		left: 100%
@@ -420,33 +420,30 @@ body
 							margin-top: -8px
 				&__list
 					+r1
-						background: #fff 
+						background: #fff
 						position: absolute
 						top: 100%
 						left: 0
 						width: 340px
 						box-shadow: 0 4px 6px 0 rgba(159, 159, 159, 0.5)
-						visibility: hidden
-						opacity: 0
+						display: none
 					+r2
 						width: 100%
 						position: relative
-						visibility: visible
-						opacity: 1
+						display: block
 						box-shadow: none
 					&.is-active
-						visibility: visible
-						opacity: 1
+						display: block
 					&:before
 						+r1
-							content: "" 
+							content: ""
 							position: absolute
 							top: 0
 							bottom: 0
 							left: 0
 							width: 20px
 							z-index: 20
-							background: #ff8c61 
+							background: #ff8c61
 						+r2
 							display: none
 					.nav
@@ -457,7 +454,7 @@ body
 						&__link
 							+r1
 								padding: 0 10px 0 30px
-								line-height: 58px 
+								line-height: 58px
 								border-bottom: 1px solid #e6e6e6
 							span
 								+r1
@@ -474,7 +471,7 @@ body
 		position: relative
 		transition: color 0.3s
 		+r2
-			padding: 0 10px 0 30px 
+			padding: 0 10px 0 30px
 			line-height: 58px
 			border-bottom: 1px solid #e6e6e6
 		.no-touch &
@@ -486,7 +483,7 @@ body
 					opacity: 1
 					visibility: visible
 		&:before
-			content: "" 
+			content: ""
 			position: absolute
 			top: 0
 			bottom: 0
@@ -560,13 +557,13 @@ body
 			left: 0
 			opacity: 0
 			visibility: hidden
-			transition: opacity 0.25s, visibility 0.25s 
+			transition: opacity 0.25s, visibility 0.25s
 			width: 200px
 			display: block
 			font-size: 16px
 			line-height: 18px
 			background-color: #fffff3
-			padding: 13px 8px 12px  
+			padding: 13px 8px 12px
 			color: #282828
 			+reg
 			+r1

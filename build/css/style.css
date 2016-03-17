@@ -1321,7 +1321,7 @@ body.overflow-hidden { position: fixed; width: 100%; overflow-y: scroll; }
 .nav__item.nav-specials .nav-specials__link.is-active span:before { width: 20px; }
 .nav__item.nav-specials .nav-specials__link .nav__link-in { padding-right: 20px; }
 .nav__item.nav-specials .nav-specials__link .nav__link-in i { font-size: 14px; position: absolute; top: 50%; right: 0; margin-top: -8px; }
-.nav__item.nav-specials .nav-specials__list.is-active { visibility: visible; opacity: 1; }
+.nav__item.nav-specials .nav-specials__list.is-active { display: block; }
 .nav__link { color: #282828; font-size: 18px; line-height: 1; font-family: "FiraSans-Medium", Arial, sans-serif; display: block; position: relative; -webkit-transition: color 0.3s; transition: color 0.3s; }
 .no-touch .nav__link:hover span:before { width: 100%; }
 .no-touch .nav__link:hover small { opacity: 1; visibility: visible; }
@@ -1577,7 +1577,7 @@ body.overflow-hidden { position: fixed; width: 100%; overflow-y: scroll; }
  .mini-search{ top: 19px; right: 15px; }
  .logo i{ font-size: 44px; }
  .nav__item.nav-specials .nav-specials__link{ display: block; }
- .nav__item.nav-specials .nav-specials__list{ background: #fff; position: absolute; top: 100%; left: 0; width: 340px; -webkit-box-shadow: 0 4px 6px 0 rgba(159, 159, 159, 0.5); box-shadow: 0 4px 6px 0 rgba(159, 159, 159, 0.5); visibility: hidden; opacity: 0; }
+ .nav__item.nav-specials .nav-specials__list{ background: #fff; position: absolute; top: 100%; left: 0; width: 340px; -webkit-box-shadow: 0 4px 6px 0 rgba(159, 159, 159, 0.5); box-shadow: 0 4px 6px 0 rgba(159, 159, 159, 0.5); display: none; }
  .nav__item.nav-specials .nav-specials__list:before{ content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 20px; z-index: 20; background: #ff8c61; }
  .nav__item.nav-specials .nav-specials__list .nav__item{ display: block; margin: 0; }
  .nav__item.nav-specials .nav-specials__list .nav__link{ padding: 0 10px 0 30px; line-height: 58px; border-bottom: 1px solid #e6e6e6; }
@@ -1729,7 +1729,7 @@ body.overflow-hidden { position: fixed; width: 100%; overflow-y: scroll; }
  .nav__list{ max-height: 100%; overflow: auto; }
  .nav__item{ display: block; margin: 0; }
  .nav__item.nav-specials .nav-specials__link{ display: none; }
- .nav__item.nav-specials .nav-specials__list{ width: 100%; position: relative; visibility: visible; opacity: 1; -webkit-box-shadow: none; box-shadow: none; }
+ .nav__item.nav-specials .nav-specials__list{ width: 100%; position: relative; display: block; -webkit-box-shadow: none; box-shadow: none; }
  .nav__item.nav-specials .nav-specials__list:before{ display: none; }
  .nav__link{ padding: 0 10px 0 30px; line-height: 58px; border-bottom: 1px solid #e6e6e6; }
  .nav__link:before{ display: block; }
