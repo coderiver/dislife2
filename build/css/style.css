@@ -340,6 +340,14 @@ a { color: #000; text-decoration: none; cursor: pointer; }
 .article blockquote p:after { bottom: 19px; }
 .article .man { margin: 37px 0 10px; }
 .article .expand__link { font-size: 30px; }
+.article__content { padding: 0; }
+.article__content p, .article__content ul, .article__content ol, .article__content .news-header, .article__content .divider { max-width: 630px; }
+.article__content p, .article__content ul, .article__content ol, .article__content blockquote { margin: 0 auto 30px; }
+.article__content .news-header { margin: 0 auto; }
+.article__content .news-header h4, .article__content .news-header .h4 { font-family: "FiraSans-Bold", Arial, sans-serif; }
+.article__content .divider { margin: 25px auto; }
+.article__content blockquote { max-width: 740px; }
+.article__content figure p, .article__content blockquote p { max-width: 100%; margin: 0; }
 
 .main { padding: 30px 15px; }
 .main-in { padding: 30px 15px 50px; }
