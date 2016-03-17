@@ -341,13 +341,15 @@ a { color: #000; text-decoration: none; cursor: pointer; }
 .article .man { margin: 37px 0 10px; }
 .article .expand__link { font-size: 30px; }
 .article__content { padding: 0; }
-.article__content p, .article__content ul, .article__content ol, .article__content .news-header, .article__content .divider { max-width: 630px; }
-.article__content p, .article__content ul, .article__content ol, .article__content blockquote { margin: 0 auto 30px; }
+.article__content p, .article__content ul, .article__content ol, .article__content .news-header, .article__content .divider, .article__content figure, .article__content h2, .article__content h3, .article__content h4, .article__content .h2, .article__content .h3, .article__content .h4 { max-width: 630px; }
+.article__content p, .article__content ul, .article__content ol, .article__content blockquote, .article__content figure, .article__content h2, .article__content h3, .article__content h4, .article__content .h2, .article__content .h3, .article__content .h4 { margin: 0 auto 30px; }
 .article__content .news-header { margin: 0 auto; }
 .article__content .news-header h4, .article__content .news-header .h4 { font-family: "FiraSans-Bold", Arial, sans-serif; }
 .article__content .divider { margin: 25px auto; }
 .article__content blockquote { max-width: 740px; }
 .article__content figure p, .article__content blockquote p { max-width: 100%; margin: 0; }
+.article__content .inner-slider figure { margin: 0; max-width: 100%; }
+.article__content figcaption { padding: 15px 0 0; }
 
 .main { padding: 30px 15px; }
 .main-in { padding: 30px 15px 50px; }
@@ -1473,6 +1475,7 @@ body.overflow-hidden { position: fixed; width: 100%; overflow-y: scroll; }
 .inner-slider__next { right: 0; text-align: right; }
 .inner-slider__caption { margin-bottom: 35px; padding: 15px 0 0; }
 .inner-slider__caption figure { margin: 0; outline: none; }
+.inner-slider__caption figcaption { padding: 0; }
 .inner-slider__top { position: relative; }
 
 .list-links { margin: 53px 0 43px; }
