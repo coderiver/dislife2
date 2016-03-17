@@ -361,21 +361,32 @@ $green: #9bc1bc
 	&__prev,
 	&__next
 		position: absolute
-		top: 50%
-		margin-top: -25px
+		top: 0
+		bottom: 0
+		margin: 0
 		font-size: 50px
 		background: none
-		color: #FFF
+		color: $mint
 		line-height: 1
 		cursor: pointer
 		transition: color 0.2s
+		padding: 0 24px
+		width: 50%
 		.no-touch &
 			&:hover
-				color: $mint
+				i
+					opacity: 1
+		i
+			opacity: 0
+			transition: opacity 0.25s
+			+r2
+				opacity: 1
 	&__prev
-		left: 24px
+		left: 0
+		text-align: left
 	&__next
-		right: 24px
+		right: 0
+		text-align: right
 	+r4
 		&__prev,
 		&__next
