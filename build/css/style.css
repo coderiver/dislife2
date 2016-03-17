@@ -312,6 +312,8 @@ a { color: #000; text-decoration: none; cursor: pointer; }
 .article a { font-size: 18px; }
 .article p { margin-bottom: 30px; }
 .article p strong, .article p b, .article li strong, .article li b { font-family: "Lora", serif; font-weight: 700; }
+.article p a, .article li a { color: #76938f; }
+.no-touch .article p a:hover, .no-touch .article li a:hover { text-decoration: underline; }
 .article ul { margin-bottom: 30px; }
 .article ul li { position: relative; color: #000; padding-left: 37px; }
 .article ul li:before { content: ""; position: absolute; top: 12px; left: 12px; width: 6px; height: 6px; background: #9bc1bc; -webkit-border-radius: 50%; border-radius: 50%; }
