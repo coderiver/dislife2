@@ -477,6 +477,16 @@ a
 				+r3
 					font-size: 23px
 					line-height: 27px
+	&_big-mod
+		.item__txt
+			padding-top: 20px
+			height: 170px
+		.item__subtitle
+			font-size: 22px
+			+lora
+			line-height: 1.1
+			margin: 5px 0
+			max-height: 74px
 	&_lg
 		height: 954px
 		.item
@@ -633,6 +643,21 @@ a
 					height: 510px
 				&__txt
 					height: 310px
+		&.item_big-mod
+			.no-touch &
+				&:hover
+					&:not(.item_mod)
+						.item__txt
+							height: 230px
+			.item__txt
+				height: 160px
+			.item__img
+				height: 510px
+			.item__subtitle
+				font-size: 20px
+				line-height: 23px
+				max-height: 70px
+				margin: 5px 0 7px
 	+r2
 		&.item_mod
 			.item__img
@@ -674,6 +699,12 @@ a
 			.item__txt
 				position: static
 				height: auto
+		&.item_big-mod
+			.item__txt
+				position: absolute
+				height: 150px
+			.item__img
+				height: 218px
 		&.item_lg
 			height: 370px
 			.item
