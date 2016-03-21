@@ -487,8 +487,22 @@ a
 			line-height: 1.1
 			margin: 5px 0
 			max-height: 74px
+		.item__txt-title
+			+lora
+			max-height: 150px
+			overflow: hidden
+		&.item_lg
+			.item__img
+				height: 702px
+			.item__txt
+				height: 250px
 	&_lg
 		height: 954px
+		.no-touch &
+			&:hover:not(.item_mod)
+				.item
+					&__txt
+						height: 385px
 		.item
 			&__img
 				height: 634px
@@ -636,13 +650,6 @@ a
 				height: 460px
 			.item__txt
 				height: 210px
-		&.item_lg
-			height: 834px
-			.item
-				&__img
-					height: 510px
-				&__txt
-					height: 310px
 		&.item_big-mod
 			.no-touch &
 				&:hover
@@ -658,6 +665,24 @@ a
 				line-height: 23px
 				max-height: 70px
 				margin: 5px 0 7px
+		&.item_lg
+			height: 834px
+			.no-touch &
+				&:hover
+					&:not(.item_mod)
+						.item__txt
+							height: 365px
+			.item
+				&__img
+					height: 510px
+				&__txt
+					height: 310px
+			&.item_big-mod
+				.item
+					&__img
+						height: 590px
+					&__txt
+						height: 230px
 	+r2
 		&.item_mod
 			.item__img
@@ -677,6 +702,9 @@ a
 						font-size: 24px
 						line-height: 27px
 						max-height: 54px
+		&.item_big-mod
+			.item__txt-title
+				max-height: 138px
 	+r3
 		max-width: 320px
 		margin: 0 auto 30px
@@ -707,6 +735,10 @@ a
 				height: 218px
 		&.item_lg
 			height: 370px
+			.no-touch &
+				&:hover:not(.item_mod)
+					.item__txt
+						height: 230px
 			.item
 				&__img
 					height: 217px
@@ -714,6 +746,14 @@ a
 					height: 150px
 				&__instruction
 					margin: 0
+			&.item_big-mod
+				.item
+					&__img
+						height: 217px
+					&__txt
+						height: 150px
+						&-title
+							max-height: 70px
 		.man
 			display: none
 
