@@ -1431,7 +1431,7 @@ body.overflow-hidden { position: fixed; width: 100%; overflow-y: scroll; }
 
 .news-line { margin: 0 -5px 40px; }
 .news-line__info { display: inline-block; max-width: 80%; vertical-align: middle; color: #757575; }
-.news-line__time { display: inline-block; color: #757575; vertical-align: middle; }
+.news-line__time { display: inline-block; color: #757575; vertical-align: middle; text-transform: uppercase; }
 .news-line span { display: inline-block; padding: 0 5px; font-family: "FiraSans-Light", Arial, sans-serif; }
 .news-line .btn { display: inline-block; vertical-align: middle; margin-right: 20px; }
 
