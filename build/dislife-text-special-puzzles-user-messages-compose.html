@@ -9,6 +9,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" media="all" href="css/font-awesome.min.css" >
+	<link rel="stylesheet" media="all" href="css/jquery.selectBox.css" >
 	<link rel="stylesheet" media="all" href="css/style.css" >
 	<script src="js/app.js"></script>
 	<title>Special Puzzles User Messages Compose</title>
@@ -121,7 +122,7 @@
 						<form action="" class="profile-form">
 							<div class="profile-form__field">
 								<div class="profile-form__label">КОМУ</div>
-								<div class="select select_white js-select">
+								<!-- <div class="select select_white js-select">
 									<div class="select__text js-select-text"></div>
 									<i class="fa fa-angle-down"></i>
 									<ul class="select__list js-select-list">
@@ -134,7 +135,12 @@
 										<option value="value1">value1</option>
 										<option value="value2">value2</option>
 									</select>
-								</div>
+								</div> -->
+								<select class="js-select-box is-gray" style="width: 100%;">
+									<option value="value">value</option>
+									<option value="value1">value1</option>
+									<option value="value2">value2</option>
+								</select>
 							</div>
 							<div class="profile-form__field">
 								<div class="profile-form__label">ТЕКСТ СООБЩЕНИЯ</div>
@@ -327,7 +333,7 @@
             <form action="" class="profile-form">
                 <div class="profile-form__field">
                     <div class="profile-form__label">АЛЬБОМ</div>
-                    <div class="select select_mod js-select">
+                    <!-- <div class="select select_mod js-select">
                         <div class="select__text js-select-text">Мой альбом</div>
                         <i class="fa fa-angle-down"></i>
                         <ul class="select__list js-select-list">
@@ -340,7 +346,12 @@
                             <option value="value1">value1</option>
                             <option value="value2">value2</option>
                         </select>
-                    </div>
+                    </div> -->
+                    <select class="js-select-box is-gray" style="width: 100%;">
+                        <option value="Мой альбом">Мой альбом</option>
+                        <option value="value1">value1</option>
+                        <option value="value2">value2</option>
+                    </select>
                 </div>
                 <div class="profile-form__field">
                     <div class="profile-form__label">ОПИСАНИЕ</div>
@@ -360,7 +371,7 @@
                 </div>
             </form>
         </div>
-    </div>    
+    </div>
 </div>
 <!-- end popup-download -->
 </body>

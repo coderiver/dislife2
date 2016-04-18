@@ -473,5 +473,5 @@ $(document).ready(function() {
 		});
 	}
 
-
+	$('.js-select-box').selectBox();
 });

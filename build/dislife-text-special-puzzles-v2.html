@@ -9,6 +9,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" media="all" href="css/font-awesome.min.css" >
+	<link rel="stylesheet" media="all" href="css/jquery.selectBox.css" >
 	<link rel="stylesheet" media="all" href="css/style.css" >
 	<script src="js/app.js"></script>
 	<title>Special Puzzles</title>
@@ -135,7 +136,7 @@
 						<li><a href="https://twitter.com/DislifeRu" class="is-od"><i class="fa fa-odnoklassniki"></i></a></li>
 					</ul>
 				</div>
-			</div>			
+			</div>
 		</div>
 	</div>
 	<div class="section-gray">
@@ -146,7 +147,7 @@
 						<div class="special-form__top">
 							<div class="special-form__gender">
 								<div class="special-form__label">Пол</div>
-								<div class="select select_white js-select">
+								<!-- <div class="select select_white js-select">
 									<div class="select__text js-select-text"></div>
 									<i class="fa fa-angle-down"></i>
 									<ul class="select__list js-select-list">
@@ -159,7 +160,12 @@
 										<option value="женский">женский</option>
 										<option value="мужской">мужской</option>
 									</select>
-								</div>
+								</div> -->
+								<select class="js-select-box is-gray" style="width: 100%;">
+									<option value="любой">любой</option>
+									<option value="женский">женский</option>
+									<option value="мужской">мужской</option>
+								</select>
 							</div>
 							<div class="special-form__years">
 								<div class="special-form__label">Возраст, лет</div>
@@ -171,7 +177,7 @@
 							</div>
 							<div class="special-form__country">
 								<div class="special-form__label">Страна / город</div>
-								<div class="select select_white js-select">
+								<!-- <div class="select select_white js-select">
 									<div class="select__text js-select-text"></div>
 									<i class="fa fa-angle-down"></i>
 									<ul class="select__list js-select-list">
@@ -184,7 +190,12 @@
 										<option value="value1">value1</option>
 										<option value="value2">value2</option>
 									</select>
-								</div>
+								</div> -->
+								<select class="js-select-box is-gray" style="width: 100%;">
+									<option value="value">value</option>
+									<option value="value1">value1</option>
+									<option value="value2">value2</option>
+								</select>
 							</div>
 						</div>
 						<div class="special-form__check-row">
@@ -534,7 +545,7 @@
 			<div class="block-text">
 				<div class="block-text__inner">
 					<p>Семь лет назад Dislife.ru был зарегистрирован как портал для людей с ограниченными возможностями.</p>
-					<p>Ежемесячно его читают около 100 000 тысяч инвалидов со всей страны. Мы дорожим этой аудиторией  и не хотим ее терять. Самым популярным разделом на старой версии Dislife.ru был форум. И мы сохранили его.</p>
+					<p>Ежемесячно его читают около 100 000 тысяч инвалидов со всей страны. Мы дорожим этой аудиторией и не хотим ее терять. Самым популярным разделом на старой версии Dislife.ru был форум. И мы сохранили его.</p>
 				</div>
 				<a href="#" class="btn-blue"><i class="fa fa-weixin"></i><span>Форум Dislife.ru</span></a>
 			</div>
@@ -692,7 +703,7 @@
             <form action="" class="profile-form">
                 <div class="profile-form__field">
                     <div class="profile-form__label">АЛЬБОМ</div>
-                    <div class="select select_mod js-select">
+                    <!-- <div class="select select_mod js-select">
                         <div class="select__text js-select-text">Мой альбом</div>
                         <i class="fa fa-angle-down"></i>
                         <ul class="select__list js-select-list">
@@ -705,7 +716,12 @@
                             <option value="value1">value1</option>
                             <option value="value2">value2</option>
                         </select>
-                    </div>
+                    </div> -->
+                    <select class="js-select-box is-gray" style="width: 100%;">
+                        <option value="Мой альбом">Мой альбом</option>
+                        <option value="value1">value1</option>
+                        <option value="value2">value2</option>
+                    </select>
                 </div>
                 <div class="profile-form__field">
                     <div class="profile-form__label">ОПИСАНИЕ</div>
@@ -725,7 +741,7 @@
                 </div>
             </form>
         </div>
-    </div>    
+    </div>
 </div>
 <!-- end popup-download -->
 </body>

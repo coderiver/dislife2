@@ -3,4 +3,5 @@
 //=include lib/perfect-scrollbar.min.js
 //=include lib/jquery.form-validator.min.js
 //=include lib/fastclick.js
+//=include lib/jquery.selectBox.js
 //=include common.js

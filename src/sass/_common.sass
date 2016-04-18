@@ -836,3 +836,88 @@ a
 
 .social-ya
 	+reg
+
+.selectBox
+	border: 1px solid #ff8c61
+	border-radius: 0
+	background: none
+	font-size: 0
+	+regi
+	position: relative
+	cursor: pointer
+	&:focus
+		border-color: #ff8c61
+	.selectBox-arrow
+		background: none
+		border: none
+		font: normal normal normal 14px/1 FontAwesome
+		font-size: inherit
+		text-rendering: auto
+		-webkit-font-smoothing: antialiased
+		-moz-osx-font-smoothing: grayscale
+		position: absolute
+		top: 50%
+		right: 22px
+		font-size: 14px
+		margin-top: -7px
+		color: #ff8c61
+		width: auto
+		height: auto
+		&:before
+			content: "\f107"
+	.selectBox-label
+		font-size: 18px
+		line-height: 21px
+		padding: 12px 35px 11px 14px
+	&.is-gray
+		border-color: #d8d8d8
+		background: #fff
+	&.is-small
+		border-radius: 3px
+		border-color: #d8d8d8
+		background: #fff
+		&.selectBox-menuShowing
+			border-radius: 3px 3px 0 0
+		.selectBox-label
+			font-size: 14px
+			padding: 14px 35px 13px 15px
+		.selectBox-arrow
+			color: #999
+.selectBox-options
+	background: #fff
+	+reg
+	padding: 19px 0 12px 0
+	border: 1px solid #ff8c61
+	max-height: 300px
+	border-radius: 0 !important
+	box-shadow: none
+	&.selectBox-options-top
+		margin-top: -1px
+		border-bottom: none
+	&.selectBox-options-bottom
+		margin-top: 1px
+		border-top: none
+	&.is-gray-selectBox-dropdown-menu
+		border-color: #d8d8d8
+	&.is-small-selectBox-dropdown-menu
+		border-color: #d8d8d8
+		li
+			a
+				font-size: 14px
+	li
+		margin: 0 18px 0 14px
+		border-top: 1px solid #e5e5e5
+		&:first-child
+			border: none
+		a
+			padding: 10px 0
+			transition: color 0.25s
+			list-style-type: none
+			font-size: 18px
+			line-height: 21px
+			cursor: pointer
+			&:hover
+				background: none
+		&.selectBox-selected
+			a
+				background: none

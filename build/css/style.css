@@ -240,6 +240,29 @@ a { color: #000; text-decoration: none; cursor: pointer; }
 
 .social-ya { font-family: "FiraSans-Regular", Arial, sans-serif; }
 
+.selectBox { border: 1px solid #ff8c61; -webkit-border-radius: 0; border-radius: 0; background: none; font-size: 0; font-family: "FiraSans-Italic", Arial, sans-serif; position: relative; cursor: pointer; }
+.selectBox:focus { border-color: #ff8c61; }
+.selectBox .selectBox-arrow { background: none; border: none; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; position: absolute; top: 50%; right: 22px; font-size: 14px; margin-top: -7px; color: #ff8c61; width: auto; height: auto; }
+.selectBox .selectBox-arrow:before { content: ""; }
+.selectBox .selectBox-label { font-size: 18px; line-height: 21px; padding: 12px 35px 11px 14px; }
+.selectBox.is-gray { border-color: #d8d8d8; background: #fff; }
+.selectBox.is-small { -webkit-border-radius: 3px; border-radius: 3px; border-color: #d8d8d8; background: #fff; }
+.selectBox.is-small.selectBox-menuShowing { -webkit-border-radius: 3px 3px 0 0; border-radius: 3px 3px 0 0; }
+.selectBox.is-small .selectBox-label { font-size: 14px; padding: 14px 35px 13px 15px; }
+.selectBox.is-small .selectBox-arrow { color: #999; }
+
+.selectBox-options { background: #fff; font-family: "FiraSans-Regular", Arial, sans-serif; padding: 19px 0 12px 0; border: 1px solid #ff8c61; max-height: 300px; -webkit-border-radius: 0 !important; border-radius: 0 !important; -webkit-box-shadow: none; box-shadow: none; }
+.selectBox-options.selectBox-options-top { margin-top: -1px; border-bottom: none; }
+.selectBox-options.selectBox-options-bottom { margin-top: 1px; border-top: none; }
+.selectBox-options.is-gray-selectBox-dropdown-menu { border-color: #d8d8d8; }
+.selectBox-options.is-small-selectBox-dropdown-menu { border-color: #d8d8d8; }
+.selectBox-options.is-small-selectBox-dropdown-menu li a { font-size: 14px; }
+.selectBox-options li { margin: 0 18px 0 14px; border-top: 1px solid #e5e5e5; }
+.selectBox-options li:first-child { border: none; }
+.selectBox-options li a { padding: 10px 0; -webkit-transition: color 0.25s; transition: color 0.25s; list-style-type: none; font-size: 18px; line-height: 21px; cursor: pointer; }
+.selectBox-options li a:hover { background: none; }
+.selectBox-options li.selectBox-selected a { background: none; }
+
 .popup { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(89, 52, 79, 0.4); z-index: 500; text-align: center; font-size: 0; padding: 45px 10px 45px; overflow-y: auto; visibility: hidden; opacity: 0; -webkit-transition: visibility 0.3s, opacity 0.3s; transition: visibility 0.3s, opacity 0.3s; }
 .popup:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .popup.is-open { visibility: visible; opacity: 1; }

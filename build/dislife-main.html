@@ -9,6 +9,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" media="all" href="css/font-awesome.min.css" >
+	<link rel="stylesheet" media="all" href="css/jquery.selectBox.css" >
 	<link rel="stylesheet" media="all" href="css/style.css" >
 	<script src="js/app.js"></script>
 	<title>Main</title>
@@ -531,7 +532,7 @@
 						<div class="box-form__title">Пазлы</div>
 						<div class="box-form__subtitle">Знакомства для людей с ограниченными возможностями</div>
 						<div class="box-form__field">
-							<div class="select js-select">
+							<!-- <div class="select js-select">
 								<div class="select__text js-select-text">Возраст</div>
 								<i class="fa fa-angle-down"></i>
 								<ul class="select__list js-select-list">
@@ -544,10 +545,15 @@
 									<option value="Возраст1">Возраст1</option>
 									<option value="Возраст2">Возраст2</option>
 								</select>
-							</div>
+							</div> -->
+							<select class="js-select-box" style="width: 100%;">
+								<option value="Возраст">Возраст</option>
+								<option value="Возраст1">Возраст1</option>
+								<option value="Возраст2">Возраст2</option>
+							</select>
 						</div>
 						<div class="box-form__field">
-							<div class="select js-select">
+						<!-- 	<div class="select js-select">
 								<div class="select__text js-select-text">Пол</div>
 								<i class="fa fa-angle-down"></i>
 								<ul class="select__list js-select-list">
@@ -560,10 +566,15 @@
 									<option value="Пол1">Пол1</option>
 									<option value="Пол2">Пол2</option>
 								</select>
-							</div>
+							</div> -->
+							<select class="js-select-box" style="width: 100%;">
+								<option value="Пол">Пол</option>
+								<option value="Пол1">Пол1</option>
+								<option value="Пол2">Пол2</option>
+							</select>
 						</div>
 						<div class="box-form__field">
-							<div class="select js-select">
+							<!-- <div class="select js-select">
 								<div class="select__text js-select-text">Город</div>
 								<i class="fa fa-angle-down"></i>
 								<ul class="select__list js-select-list">
@@ -580,7 +591,14 @@
 									<option value="Город3">Город3</option>
 									<option value="Город4">Город4</option>
 								</select>
-							</div>
+							</div> -->
+							<select class="js-select-box" style="width: 100%;">
+								<option value="Город">Город</option>
+								<option value="Город1">Город1</option>
+								<option value="Город2">Город2</option>
+								<option value="Город3">Город3</option>
+								<option value="Город4">Город4</option>
+							</select>
 						</div>
 						<div class="box-form__bottom">
 							<button class="box-form__btn">Найти</button>
@@ -872,7 +890,7 @@
             <form action="" class="profile-form">
                 <div class="profile-form__field">
                     <div class="profile-form__label">АЛЬБОМ</div>
-                    <div class="select select_mod js-select">
+                    <!-- <div class="select select_mod js-select">
                         <div class="select__text js-select-text">Мой альбом</div>
                         <i class="fa fa-angle-down"></i>
                         <ul class="select__list js-select-list">
@@ -885,7 +903,12 @@
                             <option value="value1">value1</option>
                             <option value="value2">value2</option>
                         </select>
-                    </div>
+                    </div> -->
+                    <select class="js-select-box is-gray" style="width: 100%;">
+                        <option value="Мой альбом">Мой альбом</option>
+                        <option value="value1">value1</option>
+                        <option value="value2">value2</option>
+                    </select>
                 </div>
                 <div class="profile-form__field">
                     <div class="profile-form__label">ОПИСАНИЕ</div>
@@ -905,7 +928,7 @@
                 </div>
             </form>
         </div>
-    </div>    
+    </div>
 </div>
 <!-- end popup-download -->
 </body>
