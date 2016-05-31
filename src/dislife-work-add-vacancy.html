@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+<head>
+	//=include partials/head.html
+	<script src="js/lib/jquery.maskedinput.min.js"></script>
+	<title>Добавить вакансию</title>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	//=include partials/header.html
+	<div class="container main-head">
+		<div class="main-head__info">
+			<!--<div class="main-head__title">Трудоустройство</div>-->
+			<p>Разместите вакансию на DISLIFE и мы начнем подбирать вам кандидата</p>
+		</div>
+		<div class="main-head__img" style=""></div>
+	</div>
+	<!--
+	<div class="container main">
+		<div class="l-news">
+			<div class="l-col1">
+				<div class="special">
+					<div class="special__text">
+						<p>Пожалуйста, заполните все необходимые поля.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	-->
+	<div class="section-gray" id="send-resume">
+		<div class="container">
+			<div class="l-news">
+				<form action="#" class="send-message">
+					<div class="send-message__title"><!-- yo --></div>
+					<div class="l-col2">
+						<div class="side-text">
+							<div class="blockquote" style="height: 240px;border-color: lightgray;">
+								<a href="#" class="blockquote__link">
+									<div class="blockquote__info">
+										<div><img src="img/rostrud-logo.png"></div>
+										<div>Проект работает при поддержке Министерства труда ОНФ Роструд</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="l-col1">
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Название организации</span>
+								<input type="main" class="input-full input-full_white">
+							</label>
+						</div>
+						<div class="send-message__cols">
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Телефон</span>
+									<input type="main" class="js-input-phone input-full input-full_white">
+								</label>
+							</div>
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">E-mail</span>
+									<input type="email" class="input-full input-full_white">
+								</label>
+							</div>
+						</div>
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Отрасль</span>
+								<input type="text" class="input-full input-full_white">
+							</label>
+						</div>
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Город</span>
+								<input type="text" class="input-full input-full_white">
+							</label>
+						</div>
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Сайт</span>
+								<input type="text" class="input-full input-full_white">
+							</label>
+						</div>
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Контактное лицо</span>
+								<input type="text" class="input-full input-full_white">
+							</label>
+						</div>
+						<div class="send-message__field" style="margin-bottom: 40px;">
+							<label>
+								<span class="send-message__label">Опыт работы с людьми с инвалидностью</span>
+								<select class="js-select-box is-gray" style="width: 100px;">
+									<option value="женский">Да</option>
+									<option value="мужской">Нет</option>
+								</select>
+							</label>
+						</div>
+
+
+
+
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Должность</span>
+								<input type="text" class="input-full input-full_white">
+							</label>
+						</div>
+
+						<div class="send-message__cols">
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Уровень дохода</span>
+									<input type="text" class="input-full input-full_white" placeholder="от">
+								</label>
+							</div>
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">&nbsp;</span>
+									<input type="text" class="input-full input-full_white" placeholder="до">
+								</label>
+							</div>
+						</div>
+
+						<div class="send-message__cols">
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Занятость</span>
+									<select class="js-select-box is-gray" style="width: 100%;">
+										<option>не имеет значения</option>
+										<option>полная занятость</option>
+										<option>частичная занятость</option>
+										<option>сменный график работы</option>
+										<option>стажировка</option>
+									</select>
+								</label>
+							</div>
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Условия работы</span>
+									<select class="js-select-box is-gray" style="width: 100%;">
+										<option>На территории работодателя</option>
+										<option>На дому</option>
+										<option>Разъездного характера</option>
+									</select>
+								</label>
+							</div>
+						</div>
+
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Должностные обязанности</span>
+								<textarea class="input-full input-full_white" rows="3"></textarea>
+							</label>
+						</div>
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Требования</span>
+								<textarea class="input-full input-full_white" rows="3"></textarea>
+							</label>
+						</div>
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Условия</span>
+								<textarea class="input-full input-full_white" rows="3"></textarea>
+							</label>
+						</div>
+
+						<div class="send-message__cols">
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Опыт работы</span>
+									<select class="js-select-box is-gray" style="width: 100%;">
+										<option>меньше 1 года</option>
+										<option>1 год</option>
+										<option>от 1 до 3 лет</option>
+										<option>от 3 до 6 лет</option>
+										<option>от 6 лет</option>
+									</select>
+								</label>
+							</div>
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Уровень образования</span>
+									<select class="js-select-box is-gray" style="width: 100%;">
+										<option>Высшее</option>
+										<option>Бакалавр</option>
+										<option>Магист</option>
+										<option>Кандидат наук</option>
+										<option>Доктор наук</option>
+										<option>Неполное высшее</option>
+										<option>Среднее специальное</option>
+										<option>Среднее</option>
+										<option>Не имеет значения</option>
+									</select>
+								</label>
+							</div>
+						</div>
+
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Знание иностранного языка</span>
+								<input type="text" class="input-full input-full_white">
+							</label>
+						</div>
+
+					</div>
+					<div class="l-col1">
+						<button class="btn-full btn-full_orange">
+							<span>Отправить </span>
+						</button>
+					</div>
+					<div class="l-col2">
+						<!--<div class="side-tooltip">-->
+							<!--<p>Не забывайте прикреплять документы, подтверждающие то, о чем вы рассказываете.</p>-->
+						<!--</div>-->
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	//=include partials/footer.html
+</div>
+<!-- END out-->
+
+<script>
+	$(function(){
+		$('.js-input-date').mask("99.99.9999", {placeholder:"дд.мм.гггг"});
+		$('.js-input-phone').mask("9 (999) 999-99-99");
+	});
+</script>
+</body>
+</html>
