@@ -1,0 +1,416 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="theme-color" content="#fff">
+	<link href='https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400italic,500,700,500italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" media="all" href="css/font-awesome.min.css" >
+	<link rel="stylesheet" media="all" href="css/jquery.selectBox.css" >
+	<link rel="stylesheet" media="all" href="css/style.css" >
+	<script src="js/app.js"></script>
+	<script src="js/lib/jquery.maskedinput.min.js"></script>
+	<title>Добавить резюме</title>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<a href="#" class="top-banner" style="background-image: url(img/top-banner.jpg);"></a>
+	<header class="header js-header">
+		<div class="header__fixed">
+			<a href="#" class="logo">
+				<i class="icon-logo"></i>
+			</a>
+			<button class="btn-nav js-nav-btn" data-id="main-nav">
+				<span></span>
+			</button>
+			<div class="header__inner">
+	
+				<nav class="nav js-nav" data-nav="main-nav">
+				    <ul class="nav__list">
+				        <li class="nav__item">
+				            <a href="#" class="nav__link is-brown">
+				                <div class="nav__link-in">
+				                    <span>Здоровье</span>
+				                </div>
+				            </a>
+				        </li>
+				        <li class="nav__item">
+				            <a href="#" class="nav__link is-purple">
+				                <div class="nav__link-in">
+				                    <span>Льготы</span>
+				                </div>
+				            </a>
+				        </li>
+				        <li class="nav__item">
+				            <a href="#" class="nav__link is-yellow">
+				                <div class="nav__link-in">
+				                    <span>Общество</span>
+				                </div>
+				            </a>
+				        </li>
+				        <li class="nav__item">
+				            <a href="#" class="nav__link is-black">
+				                <div class="nav__link-in">
+				                    <span>Трудоустройство</span>
+				                </div>
+				            </a>
+				        </li>
+				        <li class="nav__item">
+				            <a href="#" class="nav__link is-orange">
+				                <div class="nav__link-in">
+				                    <span>Знакомства</span>
+				                </div>
+				            </a>
+				        </li>
+				        <li class="nav__item">
+				            <a href="#" class="nav__link is-orange">
+				                <div class="nav__link-in">
+				                    <span>Форум</span>
+				                </div>
+				            </a>
+				        </li>
+				        <li class="nav__item nav-specials js-nav-specials">
+				            <a href="#" class="nav-specials__link nav__link is-orange js-specials-link">
+				                <div class="nav__link-in">
+				                    <span>Помощь</span>
+				                    <i class="fa fa-chevron-down"></i>
+				                </div>
+				            </a>
+				            <ul class="nav-specials__list js-specials-drop">
+				                <li class="nav__item">
+				                    <a href="#" class="nav__link is-orange">
+				                        <div class="nav__link-in">
+				                            <span>Бюро справедливости</span>
+				                            <small>Обратиться к депутату</small>
+				                        </div>
+				                    </a>
+				                </li>
+				            </ul>
+				        </li>
+				    </ul>
+				</nav>
+	
+				<a href="#" class="btn-enter js-open-popup" data-link="popup-login">
+					<i class="fa fa-sign-in"></i>
+					<span>Вход</span>
+				</a>
+			</div>
+			<div class="mini-search">
+				<a href="#" class="fa fa-search"></a>
+			</div>
+		</div>
+	</header>
+	
+	<div class="container main-head">
+		<div class="main-head__info">
+			<div class="main-head__title">Трудоустройство</div>
+			<p>Разместите резюме на DISLIFE и мы начнем подбирать вам вакансию</p>
+		</div>
+		<div class="main-head__img" style="background-image: url(img/main-head-education.jpg);"></div>
+	</div>
+	<!--
+	<div class="container main">
+		<div class="l-news">
+			<div class="l-col1">
+				<div class="special">
+					<div class="special__text">
+						<p>Пожалуйста, заполните все необходимые поля.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	-->
+	<div class="section-gray" id="send-resume">
+		<div class="container">
+			<div class="l-news">
+				<form action="#" class="send-message">
+					<div class="send-message__title"><!-- yo --></div>
+					<div class="l-col2">
+						<div class="side-text">
+							<p>На указанный мобильный номер будет отправлен СМС для завершения процедуры размещения резюме.</p>
+						</div>
+					</div>
+					<div class="l-col1">
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">ФИО *</span>
+								<input type="main" class="input-full input-full_white">
+							</label>
+						</div>
+						<div class="send-message__cols">
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Телефон (моб) *</span>
+									<input type="main" class="js-input-phone input-full input-full_white">
+								</label>
+							</div>
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">E-mail</span>
+									<input type="email" class="input-full input-full_white">
+								</label>
+							</div>
+						</div>
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Город проживания</span>
+								<input type="text" class="input-full input-full_white">
+							</label>
+							<!--<div class="send-message__text">Пожалуйста, указывайте адрес почты, по которому с вами действительно можно связаться, иначе мы не сможем вам ответить.</div>-->
+						</div>
+						<div class="send-message__cols">
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Пол</span>
+									<select class="js-select-box is-gray" style="width: 100%;">
+										<option value="женский">женский</option>
+										<option value="мужской">мужской</option>
+									</select>
+								</label>
+							</div>
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Дата рождения</span>
+									<input type="text" class="js-input-date input-full input-full_white">
+								</label>
+							</div>
+						</div>
+
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Желаемая должность</span>
+								<input type="text" class="input-full input-full_white">
+							</label>
+							<!--<div class="send-message__text">Пожалуйста, указывайте адрес почты, по которому с вами действительно можно связаться, иначе мы не сможем вам ответить.</div>-->
+						</div>
+						<div class="send-message__cols">
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Зарплата</span>
+									<input type="number" class="input-full input-full_white">
+								</label>
+								<div class="send-message__text">Рублей в месяц</div>
+							</div>
+						</div>
+
+						<div class="send-message__cols">
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Группа инвалидности</span>
+									<select class="js-select-box is-gray" style="width: 100%;">
+										<option>1 группа</option>
+										<option>2 группа</option>
+										<option>3 группа</option>
+									</select>
+								</label>
+							</div>
+						</div>
+
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Степень ограничения способности к трудовой деятельности</span>
+								<select class="js-select-box is-gray" style="width: 100%;">
+									<option>1 степень</option>
+									<option>2 степень</option>
+									<option>3 степень</option>
+								</select>
+							</label>
+						</div>
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Причина инвалидности</span>
+								<input type="text" class="input-full input-full_white">
+							</label>
+							<div class="send-message__text">Как в справке</div>
+						</div>
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Подтвердить инвалидность</span>
+								<input type="file" class="input-full">
+							</label>
+							<div class="send-message__text">Для подбора вакансии обязательно подтверждение инвалидности справкой</div>
+						</div>
+
+						<div class="send-message__cols">
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Занятость</span>
+									<select class="js-select-box is-gray" style="width: 100%;">
+										<option>не имеет значения</option>
+										<option>полная занятость</option>
+										<option>частичная занятость</option>
+										<option>сменный график работы</option>
+										<option>стажировка</option>
+									</select>
+								</label>
+							</div>
+						</div>
+						<div class="send-message__cols">
+							<div class="send-message__col">
+								<label class="form-checkbox">
+									<input type="checkbox">
+									<span>Удаленная работа</span>
+								</label>
+							</div>
+						</div>
+
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Опыт работы</span>
+								<textarea class="input-full input-full_white" rows="10"></textarea>
+							</label>
+						</div>
+
+						<div class="send-message__cols">
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Образование</span>
+									<select class="js-select-box is-gray" style="width: 100%;">
+										<option>Высшее</option>
+										<option>Бакалавр</option>
+										<option>Магист</option>
+										<option>Кандидат наук</option>
+										<option>Доктор наук</option>
+										<option>Неполное высшее</option>
+										<option>Среднее специальное</option>
+										<option>Среднее</option>
+									</select>
+								</label>
+							</div>
+						</div>
+
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Учебное заведение</span>
+								<textarea class="input-full input-full_white" rows="10"></textarea>
+							</label>
+						</div>
+
+						<div class="send-message__cols">
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Иностранные языки</span>
+									<select class="js-select-box is-gray" style="width: 100%;">
+										<option>Английский</option>
+										<option>Немецкий</option>
+										<option>Испанский</option>
+										<option>Итальянский</option>
+										<option>Украинский</option>
+									</select>
+								</label>
+							</div>
+						</div>
+
+						<div class="send-message__cols">
+							<span class="send-message__label" style="margin-left: 20px">Водительские права</span>
+							<div class="send-message__col">
+
+								<label class="form-checkbox">
+									<input type="checkbox">
+									<span>A</span>
+								</label>
+								<label class="form-checkbox">
+									<input type="checkbox">
+									<span>B</span>
+								</label>
+								<label class="form-checkbox">
+									<input type="checkbox">
+									<span>C</span>
+								</label>
+							</div>
+							<div class="send-message__col">
+
+								<label class="form-checkbox">
+									<input type="checkbox">
+									<span>D</span>
+								</label>
+								<label class="form-checkbox">
+									<input type="checkbox">
+									<span>E</span>
+								</label>
+							</div>
+						</div>
+
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Дополнительные сведения</span>
+								<textarea class="input-full input-full_white" rows="5"></textarea>
+							</label>
+						</div>
+
+
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Фотография</span>
+								<input type="file" class="input-full">
+							</label>
+							<!--<div class="send-message__text">При желании можете прикрепить свою фотографию</div>-->
+						</div>
+
+
+					</div>
+					<div class="l-col1">
+						<button class="btn-full btn-full_orange">
+							<span>Отправить </span>
+						</button>
+					</div>
+					<div class="l-col2">
+						<div class="side-tooltip">
+							<p>Не забывайте прикреплять документы, подтверждающие то, о чем вы рассказываете.</p>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<!--<div class="footer__top">-->
+			<!--<div class="container">-->
+				<!--<div class="footer__text">-->
+					<!--<a href="#" class="footer__logo">-->
+						<!--<img src="img/footer-logo.svg" alt="">-->
+					<!--</a>-->
+					<!--<div class="footer__question">КАК ЖИТЬ В РОССИИ И НЕ УМЕРЕТЬ</div>-->
+				<!--</div>-->
+				<!--<div class="subscribe">-->
+					<!--<div class="subscribe__label">Подпишитесь на еженедельную рассылку:</div>-->
+					<!--<form action="" class="subscribe__form">-->
+						<!--<input type="text" class="subscribe__input" placeholder="Ваш e-mail">-->
+						<!--<i class="fa fa-envelope-o"></i>-->
+						<!--<button class="subscribe__btn">Подписаться</button>-->
+					<!--</form>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+		<div class="footer__bottom">
+			<div class="container">
+				<ul class="footer__social">
+					<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+					<li><a href="#"><i class="fa fa-vk"></i></a></li>
+					<li><a href="#"><i class="fa fa-odnoklassniki-square"></i></a></li>
+				</ul>
+				<div class="footer__copy">
+					<p>© Dislife.ru 2015</p>
+					<div class="footer__age">18+</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+<!-- END out-->
+
+<script>
+	$(function(){
+		$('.js-input-date').mask("99.99.9999", {placeholder:"дд.мм.гггг"});
+		$('.js-input-phone').mask("9 (999) 999-99-99");
+	});
+</script>
+</body>
+</html>

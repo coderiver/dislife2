@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="theme-color" content="#fff">
+	<link href='https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400italic,500,700,500italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" media="all" href="css/font-awesome.min.css" >
+	<link rel="stylesheet" media="all" href="css/jquery.selectBox.css" >
+	<link rel="stylesheet" media="all" href="css/style.css" >
+	<script src="js/app.js"></script>
+	<script src="js/lib/jquery.maskedinput.min.js"></script>
+	<title>Добавить вакансию</title>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<a href="#" class="top-banner" style="background-image: url(img/top-banner.jpg);"></a>
+	<header class="header js-header">
+		<div class="header__fixed">
+			<a href="#" class="logo">
+				<i class="icon-logo"></i>
+			</a>
+			<button class="btn-nav js-nav-btn" data-id="main-nav">
+				<span></span>
+			</button>
+			<div class="header__inner">
+	
+				<nav class="nav js-nav" data-nav="main-nav">
+				    <ul class="nav__list">
+				        <li class="nav__item">
+				            <a href="#" class="nav__link is-brown">
+				                <div class="nav__link-in">
+				                    <span>Здоровье</span>
+				                </div>
+				            </a>
+				        </li>
+				        <li class="nav__item">
+				            <a href="#" class="nav__link is-purple">
+				                <div class="nav__link-in">
+				                    <span>Льготы</span>
+				                </div>
+				            </a>
+				        </li>
+				        <li class="nav__item">
+				            <a href="#" class="nav__link is-yellow">
+				                <div class="nav__link-in">
+				                    <span>Общество</span>
+				                </div>
+				            </a>
+				        </li>
+				        <li class="nav__item">
+				            <a href="#" class="nav__link is-black">
+				                <div class="nav__link-in">
+				                    <span>Трудоустройство</span>
+				                </div>
+				            </a>
+				        </li>
+				        <li class="nav__item">
+				            <a href="#" class="nav__link is-orange">
+				                <div class="nav__link-in">
+				                    <span>Знакомства</span>
+				                </div>
+				            </a>
+				        </li>
+				        <li class="nav__item">
+				            <a href="#" class="nav__link is-orange">
+				                <div class="nav__link-in">
+				                    <span>Форум</span>
+				                </div>
+				            </a>
+				        </li>
+				        <li class="nav__item nav-specials js-nav-specials">
+				            <a href="#" class="nav-specials__link nav__link is-orange js-specials-link">
+				                <div class="nav__link-in">
+				                    <span>Помощь</span>
+				                    <i class="fa fa-chevron-down"></i>
+				                </div>
+				            </a>
+				            <ul class="nav-specials__list js-specials-drop">
+				                <li class="nav__item">
+				                    <a href="#" class="nav__link is-orange">
+				                        <div class="nav__link-in">
+				                            <span>Бюро справедливости</span>
+				                            <small>Обратиться к депутату</small>
+				                        </div>
+				                    </a>
+				                </li>
+				            </ul>
+				        </li>
+				    </ul>
+				</nav>
+	
+				<a href="#" class="btn-enter js-open-popup" data-link="popup-login">
+					<i class="fa fa-sign-in"></i>
+					<span>Вход</span>
+				</a>
+			</div>
+			<div class="mini-search">
+				<a href="#" class="fa fa-search"></a>
+			</div>
+		</div>
+	</header>
+	
+	<div class="container main-head">
+		<div class="main-head__info">
+			<!--<div class="main-head__title">Трудоустройство</div>-->
+			<p>Разместите вакансию на DISLIFE и мы начнем подбирать вам кандидата</p>
+		</div>
+		<div class="main-head__img" style=""></div>
+	</div>
+	<!--
+	<div class="container main">
+		<div class="l-news">
+			<div class="l-col1">
+				<div class="special">
+					<div class="special__text">
+						<p>Пожалуйста, заполните все необходимые поля.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	-->
+	<div class="section-gray" id="send-resume">
+		<div class="container">
+			<div class="l-news">
+				<form action="#" class="send-message">
+					<div class="send-message__title"><!-- yo --></div>
+					<div class="l-col2">
+						<div class="side-text">
+							<div class="blockquote" style="height: 240px;border-color: lightgray;">
+								<a href="#" class="blockquote__link">
+									<div class="blockquote__info">
+										<div><img src="img/rostrud-logo.png"></div>
+										<div>Проект работает при поддержке Министерства труда ОНФ Роструд</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="l-col1">
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Название организации</span>
+								<input type="main" class="input-full input-full_white">
+							</label>
+						</div>
+						<div class="send-message__cols">
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Телефон</span>
+									<input type="main" class="js-input-phone input-full input-full_white">
+								</label>
+							</div>
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">E-mail</span>
+									<input type="email" class="input-full input-full_white">
+								</label>
+							</div>
+						</div>
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Отрасль</span>
+								<input type="text" class="input-full input-full_white">
+							</label>
+						</div>
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Город</span>
+								<input type="text" class="input-full input-full_white">
+							</label>
+						</div>
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Сайт</span>
+								<input type="text" class="input-full input-full_white">
+							</label>
+						</div>
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Контактное лицо</span>
+								<input type="text" class="input-full input-full_white">
+							</label>
+						</div>
+						<div class="send-message__field" style="margin-bottom: 40px;">
+							<label>
+								<span class="send-message__label">Опыт работы с людьми с инвалидностью</span>
+								<select class="js-select-box is-gray" style="width: 100px;">
+									<option value="женский">Да</option>
+									<option value="мужской">Нет</option>
+								</select>
+							</label>
+						</div>
+
+
+
+
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Должность</span>
+								<input type="text" class="input-full input-full_white">
+							</label>
+						</div>
+
+						<div class="send-message__cols">
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Уровень дохода</span>
+									<input type="text" class="input-full input-full_white" placeholder="от">
+								</label>
+							</div>
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">&nbsp;</span>
+									<input type="text" class="input-full input-full_white" placeholder="до">
+								</label>
+							</div>
+						</div>
+
+						<div class="send-message__cols">
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Занятость</span>
+									<select class="js-select-box is-gray" style="width: 100%;">
+										<option>не имеет значения</option>
+										<option>полная занятость</option>
+										<option>частичная занятость</option>
+										<option>сменный график работы</option>
+										<option>стажировка</option>
+									</select>
+								</label>
+							</div>
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Условия работы</span>
+									<select class="js-select-box is-gray" style="width: 100%;">
+										<option>На территории работодателя</option>
+										<option>На дому</option>
+										<option>Разъездного характера</option>
+									</select>
+								</label>
+							</div>
+						</div>
+
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Должностные обязанности</span>
+								<textarea class="input-full input-full_white" rows="3"></textarea>
+							</label>
+						</div>
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Требования</span>
+								<textarea class="input-full input-full_white" rows="3"></textarea>
+							</label>
+						</div>
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Условия</span>
+								<textarea class="input-full input-full_white" rows="3"></textarea>
+							</label>
+						</div>
+
+						<div class="send-message__cols">
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Опыт работы</span>
+									<select class="js-select-box is-gray" style="width: 100%;">
+										<option>меньше 1 года</option>
+										<option>1 год</option>
+										<option>от 1 до 3 лет</option>
+										<option>от 3 до 6 лет</option>
+										<option>от 6 лет</option>
+									</select>
+								</label>
+							</div>
+							<div class="send-message__col">
+								<label>
+									<span class="send-message__label">Уровень образования</span>
+									<select class="js-select-box is-gray" style="width: 100%;">
+										<option>Высшее</option>
+										<option>Бакалавр</option>
+										<option>Магист</option>
+										<option>Кандидат наук</option>
+										<option>Доктор наук</option>
+										<option>Неполное высшее</option>
+										<option>Среднее специальное</option>
+										<option>Среднее</option>
+										<option>Не имеет значения</option>
+									</select>
+								</label>
+							</div>
+						</div>
+
+						<div class="send-message__field">
+							<label>
+								<span class="send-message__label">Знание иностранного языка</span>
+								<input type="text" class="input-full input-full_white">
+							</label>
+						</div>
+
+					</div>
+					<div class="l-col1">
+						<button class="btn-full btn-full_orange">
+							<span>Отправить </span>
+						</button>
+					</div>
+					<div class="l-col2">
+						<!--<div class="side-tooltip">-->
+							<!--<p>Не забывайте прикреплять документы, подтверждающие то, о чем вы рассказываете.</p>-->
+						<!--</div>-->
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<!--<div class="footer__top">-->
+			<!--<div class="container">-->
+				<!--<div class="footer__text">-->
+					<!--<a href="#" class="footer__logo">-->
+						<!--<img src="img/footer-logo.svg" alt="">-->
+					<!--</a>-->
+					<!--<div class="footer__question">КАК ЖИТЬ В РОССИИ И НЕ УМЕРЕТЬ</div>-->
+				<!--</div>-->
+				<!--<div class="subscribe">-->
+					<!--<div class="subscribe__label">Подпишитесь на еженедельную рассылку:</div>-->
+					<!--<form action="" class="subscribe__form">-->
+						<!--<input type="text" class="subscribe__input" placeholder="Ваш e-mail">-->
+						<!--<i class="fa fa-envelope-o"></i>-->
+						<!--<button class="subscribe__btn">Подписаться</button>-->
+					<!--</form>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+		<div class="footer__bottom">
+			<div class="container">
+				<ul class="footer__social">
+					<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+					<li><a href="#"><i class="fa fa-vk"></i></a></li>
+					<li><a href="#"><i class="fa fa-odnoklassniki-square"></i></a></li>
+				</ul>
+				<div class="footer__copy">
+					<p>© Dislife.ru 2015</p>
+					<div class="footer__age">18+</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+<!-- END out-->
+
+<script>
+	$(function(){
+		$('.js-input-date').mask("99.99.9999", {placeholder:"дд.мм.гггг"});
+		$('.js-input-phone').mask("9 (999) 999-99-99");
+	});
+</script>
+</body>
+</html>
