@@ -406,6 +406,7 @@ a { color: #000; text-decoration: none; cursor: pointer; }
 .social__list a.is-vk { background-color: #45668e; }
 .social__list a.is-od { background-color: #ed812b; }
 .social__list i { font-size: 24px; }
+.social__list .is-gx { width: 40px; }
 
 .news-main { margin-bottom: 30px; }
 .news-main__title { font-size: 14px; line-height: 20px; padding-left: 23px; position: relative; font-family: "FiraSans-Light", Arial, sans-serif; }
