@@ -869,9 +869,17 @@ a
 		font-size: 18px
 		line-height: 21px
 		padding: 12px 35px 11px 14px
+		overflow: hidden
+		text-overflow: ellipsis
 	&.is-gray
 		border-color: #d8d8d8
 		background: #fff
+	&.is-gray-mod
+		border-color: #d8d8d8
+		background: #fff
+		.selectBox-label
+			font-size: 16px
+			padding: 15px 35px 14px 14px
 	&.is-small
 		border-radius: 3px
 		border-color: #d8d8d8
@@ -898,8 +906,12 @@ a
 	&.selectBox-options-bottom
 		margin-top: 1px
 		border-top: none
-	&.is-gray-selectBox-dropdown-menu
+	&.is-gray-selectBox-dropdown-menu, &.is-gray-mod-selectBox-dropdown-menu
 		border-color: #d8d8d8
+	&.is-gray-mod-selectBox-dropdown-menu
+		li
+			a
+				font-size: 16px
 	&.is-small-selectBox-dropdown-menu
 		border-color: #d8d8d8
 		li

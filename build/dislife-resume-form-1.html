@@ -1,0 +1,560 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="theme-color" content="#fff">
+	<link href='https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400italic,500,700,500italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" media="all" href="css/font-awesome.min.css" >
+	<link rel="stylesheet" media="all" href="css/jquery.selectBox.css" >
+	<link rel="stylesheet" media="all" href="css/style.css" >
+	<script src="js/app.js"></script>
+	<title>Resume Form</title>
+</head>
+<body class="body_bg-grey">
+<!-- BEGIN  out-->
+<div class="out">
+	<a href="#" class="top-banner" style="background-image: url(img/top-banner.jpg);"></a>
+	<header class="header js-header">
+		<div class="header__fixed">
+			<a href="#" class="logo">
+				<i class="icon-logo"></i>
+			</a>
+			<button class="btn-nav js-nav-btn" data-id="main-nav">
+				<span></span>
+			</button>
+			<div class="header__inner">
+				<nav class="nav js-nav" data-nav="main-nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="#" class="nav__link is-brown">
+								<div class="nav__link-in">
+									<span>Здоровье</span>
+								</div>
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link is-purple">
+								<div class="nav__link-in">
+									<span>Образование</span>
+								</div>
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link is-yellow">
+								<div class="nav__link-in">
+									<span>Маленькая политика</span>
+								</div>
+							</a>
+						</li>
+						<li class="nav__item nav-specials js-nav-specials">
+							<a href="#" class="nav-specials__link nav__link is-orange js-specials-link">
+								<div class="nav__link-in">
+									<span>Спецпроекты</span>
+									<i class="fa fa-chevron-down"></i>
+								</div>
+							</a>
+							<ul class="nav-specials__list js-specials-drop">
+								<li class="nav__item">
+									<a href="#" class="nav__link is-orange">
+										<div class="nav__link-in">
+											<span>Патронус</span>
+											<small>Детский правозащитный проект</small>
+										</div>
+									</a>
+								</li>
+								<li class="nav__item">
+									<a href="#" class="nav__link is-orange">
+										<div class="nav__link-in">
+											<span>Пазлы</span>
+											<small>Знакомства для инвалидов</small>
+										</div>
+									</a>
+								</li>
+								<li class="nav__item">
+									<a href="#" class="nav__link is-orange">
+										<div class="nav__link-in">
+											<span>Бюро справедливости</span>
+											<small>Обратиться к депутату</small>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<a href="#" class="btn-enter js-open-popup" data-link="popup-login">
+					<i class="fa fa-sign-in"></i>
+					<span>Вход</span>
+				</a>
+			</div>
+			<div class="mini-search">
+				<a href="#" class="fa fa-search"></a>
+			</div>
+		</div>
+	</header>
+	
+	<div class="white-wrap">
+		<div class="container main-head">
+			<div class="main-head__info">
+				<div class="main-head__title">Трудоустройство</div>
+				<p>Разместите резюме на DISLIFE и мы начнем подбирать вам вакансию</p>
+			</div>
+			<div class="main-head__img" style="background-image: url(img/main-head-education.jpg);"></div>
+		</div>
+	</div>
+	<div class="container resume">
+		<form action="" class="resume__form">
+			<div class="resume__row">
+				<div class="resume__title">Разместить резюме</div>
+				<div class="resume__left">
+					<div class="r-box">
+						<div class="r-box__label">ФИО</div>
+						<div class="r-box__field">
+							<input type="text" class="input-full input-full_white">
+						</div>
+					</div>
+					<div class="r-box">
+						<div class="r-box__label">Пол</div>
+						<div class="r-box__field">
+							<div class="r-radios">
+								<label class="r-radio">
+									<input type="radio" name="gender">
+									<span>Мужской</span>
+								</label>
+								<label class="r-radio">
+									<input type="radio" name="gender">
+									<span>Женский</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="r-box">
+						<div class="r-box__label">Дата рождения</div>
+						<div class="r-box__field">
+							<div class="r-box__date">
+								<div class="r-box__med">
+									<input type="text" class="input-full input-full_white" placeholder="Год">
+								</div>
+								<div class="r-box__small">
+									<input type="text" class="input-full input-full_white" placeholder="Месяц">
+								</div>
+								<div class="r-box__small">
+									<input type="text" class="input-full input-full_white" placeholder="День">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="r-box">
+						<div class="r-box__label">Телефон</div>
+						<div class="r-box__field">
+							<input type="text" class="input-full input-full_white input-full_big" placeholder="+7 (•••) ••• •• ••">
+							<p>На указанный мобильный номер будет отправлен СМС для завершения процедуры размещения резюме.</p>
+						</div>
+					</div>
+					<div class="r-box">
+						<div class="r-box__label">E-mail</div>
+						<div class="r-box__field">
+							<input type="text" class="input-full input-full_white">
+						</div>
+					</div>
+					<div class="r-box">
+						<div class="r-box__label">Город проживания</div>
+						<div class="r-box__field">
+							<input type="text" class="input-full input-full_white">
+						</div>
+					</div>
+				</div>
+				<div class="resume__right">
+					<label class="upload-photo">
+						<input type="file">
+						<span>
+							<i class="fa fa-camera"></i>
+							<small>Загрузить фото</small>
+						</span>
+					</label>
+				</div>
+			</div>
+			<div class="resume__row">
+				<div class="resume__left">
+					<div class="r-box r-box_mod">
+						<div class="r-box__label">Группа инвалидности</div>
+						<div class="r-box__field">
+							<div class="r-radios r-radios_mod">
+								<label class="r-radio">
+									<input type="radio" name="group">
+									<span>I группа</span>
+								</label>
+								<label class="r-radio">
+									<input type="radio" name="group">
+									<span>II группа</span>
+								</label>
+								<label class="r-radio">
+									<input type="radio" name="group">
+									<span>III группа</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="r-box r-box_mod">
+						<div class="r-box__label">Степень ограничения способности к трудовой деятельности</div>
+						<div class="r-box__field">
+							<div class="r-radios r-radios_mod">
+								<label class="r-radio">
+									<input type="radio" name="classification">
+									<span>I степень</span>
+								</label>
+								<label class="r-radio">
+									<input type="radio" name="classification">
+									<span>II степень</span>
+								</label>
+								<label class="r-radio">
+									<input type="radio" name="classification">
+									<span>III степень</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="r-box">
+						<div class="r-box__label">Причина инвалидности</div>
+						<div class="r-box__field">
+							<input type="text" class="input-full input-full_white">
+							<p>Как в справке</p>
+						</div>
+					</div>
+					<div class="r-box">
+						<div class="r-box__label">Подтвердить инвалидность</div>
+						<div class="r-box__field">
+							<label class="upload-file">
+								<input type="file">
+								<i class="fa fa-plus-square"></i>
+								<span>Добавить файл</span>
+							</label>
+							<p>Для подбора вакансии обязательно подтверждение инвалидности справкой</p>
+						</div>
+					</div>
+				</div>
+				<div class="resume__right">
+					<div class="block-alert">
+						<p>Не забывайте прикреплять документы, подтверждающие то, о чем вы рассказываете.</p>
+					</div>
+				</div>
+			</div>
+			<div class="resume__row">
+				<div class="resume__left">
+					<div class="r-box">
+						<div class="r-box__label">Желаемая должность</div>
+						<div class="r-box__field">
+							<input type="text" class="input-full input-full_white">
+						</div>
+					</div>
+					<div class="r-box">
+						<div class="r-box__label">Желаемая зарплата</div>
+						<div class="r-box__field">
+							<div class="r-box__select">
+								<input type="text" class="input-full input-full_white">
+								<p>Рублей в месяц</p>
+							</div>
+						</div>
+					</div>
+					<div class="r-box">
+						<div class="r-box__label">Занятость</div>
+						<div class="r-box__field r-box__field_mod">
+							<div class="r-box__select">
+								<select class="js-select-box is-gray-mod" style="width: 100%;">
+									<option value="Не имеет значения">Не имеет значения</option>
+									<option value="Имеет значение">Имеет значение</option>
+								</select>
+							</div>
+							<div class="r-box__checkbox">
+								<label class="form-checkbox">
+									<input type="checkbox">
+									<span>Удаленная работа</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="r-box">
+						<div class="r-box__label">Опыт работы</div>
+						<div class="r-box__field">
+							<textarea type="text" class="textarea-full textarea-full_white"></textarea>
+						</div>
+					</div>
+					<div class="r-box">
+						<div class="r-box__label">Образование</div>
+						<div class="r-box__field r-box__field_mod">
+							<div class="r-box__select">
+								<select class="js-select-box is-gray-mod" style="width: 100%;">
+									<option value="Высшее">Высшее</option>
+									<option value="Среднее">Среднее</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="r-box">
+						<div class="r-box__label">Учебное заведение</div>
+						<div class="r-box__field">
+							<textarea type="text" class="textarea-full textarea-full_white"></textarea>
+						</div>
+					</div>
+					<div class="r-box">
+						<div class="r-box__label">Иностранные языки</div>
+						<div class="r-box__field r-box__field_mod">
+							<div class="r-box__select">
+								<select class="js-select-box is-gray-mod" style="width: 100%;">
+									<option value="Английский">Английский</option>
+									<option value="Эльфийский">Эльфийский</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="r-box">
+						<div class="r-box__label">Водительские права</div>
+						<div class="r-box__field">
+							<ul class="r-checks">
+								<li>
+									<label class="form-checkbox">
+										<input type="checkbox">
+										<span>A</span>
+									</label>
+								</li>
+								<li>
+									<label class="form-checkbox">
+										<input type="checkbox">
+										<span>B</span>
+									</label>
+								</li>
+								<li>
+									<label class="form-checkbox">
+										<input type="checkbox">
+										<span>C</span>
+									</label>
+								</li>
+								<li>
+									<label class="form-checkbox">
+										<input type="checkbox">
+										<span>D</span>
+									</label>
+								</li>
+								<li>
+									<label class="form-checkbox">
+										<input type="checkbox">
+										<span>E</span>
+									</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="r-box">
+						<div class="r-box__label">Дополнительные сведения</div>
+						<div class="r-box__field">
+							<textarea type="text" class="textarea-full textarea-full_white"></textarea>
+						</div>
+					</div>
+					<div class="r-box">
+						<button class="btn-full btn-full_orange">
+							<span>Отправить </span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<footer class="footer">
+		<div class="footer__top">
+			<div class="container">
+				<div class="footer__text">
+					<a href="#" class="footer__logo">
+						<img src="img/footer-logo.svg" alt="">
+					</a>
+					<div class="footer__question">КАК ЖИТЬ В РОССИИ И НЕ УМЕРЕТЬ</div>
+				</div>
+				<div class="subscribe">
+					<div class="subscribe__label">Подпишитесь на еженедельную рассылку:</div>
+					<form action="" class="subscribe__form">
+						<input type="text" class="subscribe__input" placeholder="Ваш e-mail">
+						<i class="fa fa-envelope-o"></i>
+						<button class="subscribe__btn">Подписаться</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="container">
+				<ul class="footer__social">
+					<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+					<li><a href="#"><i class="fa fa-vk"></i></a></li>
+					<li><a href="#"><i class="fa fa-odnoklassniki-square"></i></a></li>
+				</ul>
+				<div class="footer__copy">
+					<p>© Dislife.ru 2015</p>
+					<div class="footer__age">18+</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+<!-- END out-->
+
+<!-- begin popup-login -->
+<div class="popup js-popup" data-popup="popup-login">
+    <div class="popup__in js-tabs">
+        <button class="fa fa-close popup__close js-close-popup"></button>
+        <div class="popup__tabs">
+            <a href="#" class="popup__tab js-tabs-link is-active">Вход</a>
+            <a href="#" class="popup__tab js-tabs-link">Регистрация</a>
+        </div>
+        <div class="popup__body">
+            <div class="tab-content js-tabs-content">
+                <div class="popup__title"><span>Через соцсети</span></div>
+                <ul class="social-big">
+                    <li><a href="#" class="is-vk"><i class="fa fa-vk"></i></a></li>
+                    <li><a href="#" class="is-fb"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#" class="is-odk"><i class="fa fa-odnoklassniki"></i></a></li>
+                    <li><a href="#" class="is-gp"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#" class="is-ya"><i class="social-ya">Я</i></a></li>
+                </ul>
+                <div class="popup__title"><span>Или логин Dislife.ru</span></div>
+
+                <div class="popup__form">
+                    <form action="#" class="js-validation">
+                        <div class="field">
+                            <label class="field__label">Логин</label>
+                            <div class="field__input input">
+                                <i class="fa fa-user input__icon"></i>
+                                <input type="text" class="input-text" name="email" data-validation="email" data-validation-error-msg=" ">
+                                <i class="input__valid fa fa-check"></i>
+                                <i class="input__invalid fa fa-close"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">Пароль</label>
+                            <div class="field__input input">
+                                <i class="fa fa-lock input__icon"></i>
+                                <input type="password" name="password" class="input-text input-text_pwd" data-validation="required" data-validation-error-msg=" ">
+                            </div>
+                        </div>
+                        <div class="field-login">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Запомнить меня</span>
+                                </label>
+                            </div>
+                            <div class="login">
+                                <input type="submit" value="Войти" class="input-btn">
+                                <a href="#" class="orange-link">Я забыл пароль</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="tab-content js-tabs-content">
+                <div class="popup__form">
+                    <form action="#" class="js-validation">
+                        <div class="field">
+                            <label class="field__label">Логин</label>
+                            <div class="field__input input">
+                                <i class="fa fa-user input__icon"></i>
+                                <input type="text" class="input-text" name="email" data-validation="required" data-validation-error-msg=" ">
+                                <i class="input__valid fa fa-check"></i>
+                                <i class="input__invalid fa fa-close"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">E-mail</label>
+                            <div class="field__input input">
+                                <i class="fa fa-user input__icon"></i>
+                                <input type="text" class="input-text" name="email" data-validation="email" data-validation-error-msg=" ">
+                                <i class="input__valid fa fa-check"></i>
+                                <i class="input__invalid fa fa-close"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">Повторите пароль</label>
+                            <div class="field__input input">
+                                <i class="fa fa-lock input__icon"></i>
+                                <input type="password" name="password" class="input-text input-text_pwd" data-validation="required" data-validation-error-msg=" ">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">Пароль</label>
+                            <div class="field__input input">
+                                <i class="fa fa-lock input__icon"></i>
+                                <input type="password" name="password" class="input-text input-text_pwd" data-validation="required" data-validation-error-msg=" ">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Я принимаю пользовательское соглашение</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="submit" value="Зарегистрироваться" class="input-btn input-btn_full">
+                        </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end popup-login -->
+<!-- begin popup-download  -->
+<div class="popup popup_download js-popup" data-popup="popup-download">
+    <div class="popup__in">
+        <button class="fa fa-close popup__close js-close-popup"></button>
+        <div class="popup__body">
+            <div class="popup__name">Загрузка фотографии</div>
+            <form action="" class="profile-form">
+                <div class="profile-form__field">
+                    <div class="profile-form__label">АЛЬБОМ</div>
+                    <!-- <div class="select select_mod js-select">
+                        <div class="select__text js-select-text">Мой альбом</div>
+                        <i class="fa fa-angle-down"></i>
+                        <ul class="select__list js-select-list">
+                            <li data-val="value">value</li>
+                            <li data-val="value1">value1</li>
+                            <li data-val="value2">value2</li>
+                        </ul>
+                        <select>
+                            <option value="value">value</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                        </select>
+                    </div> -->
+                    <select class="js-select-box is-gray" style="width: 100%;">
+                        <option value="Мой альбом">Мой альбом</option>
+                        <option value="value1">value1</option>
+                        <option value="value2">value2</option>
+                    </select>
+                </div>
+                <div class="profile-form__field">
+                    <div class="profile-form__label">ОПИСАНИЕ</div>
+                    <input type="text" class="input-full input-full_white">
+                </div>
+                <div class="profile-form__add">
+                    <label class="add-file">
+                        <input type="file">
+                        <i class="fa fa-camera"></i>
+                        <span>Выбрать файл</span>
+                    </label>
+                </div>
+                <div class="profile-form__btn">
+                    <button class="btn-full btn-full_mod">
+                        <span>Загрузить</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- end popup-download -->
+</body>
+</html>
