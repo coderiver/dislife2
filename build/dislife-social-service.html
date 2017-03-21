@@ -1,0 +1,496 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="theme-color" content="#fff">
+	<link href='https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400italic,500,700,500italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" media="all" href="css/font-awesome.min.css" >
+	<link rel="stylesheet" media="all" href="css/jquery.selectBox.css" >
+	<link rel="stylesheet" media="all" href="css/style.css" >
+	<script src="js/app.js"></script>
+	<link rel="stylesheet" href="css/new-style.css">
+	<title>Social Service</title>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<a href="#" class="top-banner" style="background-image: url(img/top-banner.jpg);"></a>
+	<header class="header js-header">
+		<div class="header__fixed">
+			<a href="#" class="logo">
+				<i class="icon-logo"></i>
+			</a>
+			<button class="btn-nav js-nav-btn" data-id="main-nav">
+				<span></span>
+			</button>
+			<div class="header__inner">
+				<nav class="nav js-nav" data-nav="main-nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="#" class="nav__link is-brown">
+								<div class="nav__link-in">
+									<span>Здоровье</span>
+								</div>
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link is-purple">
+								<div class="nav__link-in">
+									<span>Образование</span>
+								</div>
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link is-yellow">
+								<div class="nav__link-in">
+									<span>Маленькая политика</span>
+								</div>
+							</a>
+						</li>
+						<li class="nav__item nav-specials js-nav-specials">
+							<a href="#" class="nav-specials__link nav__link is-orange js-specials-link">
+								<div class="nav__link-in">
+									<span>Спецпроекты</span>
+									<i class="fa fa-chevron-down"></i>
+								</div>
+							</a>
+							<ul class="nav-specials__list js-specials-drop">
+								<li class="nav__item">
+									<a href="#" class="nav__link is-orange">
+										<div class="nav__link-in">
+											<span>Патронус</span>
+											<small>Детский правозащитный проект</small>
+										</div>
+									</a>
+								</li>
+								<li class="nav__item">
+									<a href="#" class="nav__link is-orange">
+										<div class="nav__link-in">
+											<span>Пазлы</span>
+											<small>Знакомства для инвалидов</small>
+										</div>
+									</a>
+								</li>
+								<li class="nav__item">
+									<a href="#" class="nav__link is-orange">
+										<div class="nav__link-in">
+											<span>Бюро справедливости</span>
+											<small>Обратиться к депутату</small>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<a href="#" class="btn-enter js-open-popup" data-link="popup-login">
+					<i class="fa fa-sign-in"></i>
+					<span>Вход</span>
+				</a>
+			</div>
+			<div class="mini-search">
+				<a href="#" class="fa fa-search"></a>
+			</div>
+		</div>
+	</header>
+	
+	<!-- begin page-heading  -->
+	<div class="page-heading">
+		<div class="container">
+			<div class="page-heading__title">Социальная помощь для инвалидов</div>
+		</div>
+	</div>
+	<!-- end page-heading -->
+	
+	<!-- begin big-map  -->
+	<div class="big-map">
+		<div class="big-map__frame" id="big-map"></div>
+		<div class="big-map__content container">
+			<div class="big-map__popup">
+				<div class="big-map__modal" data-scroll-parent="modal">
+					<div class="infobox">
+						<button class="infobox__close fa fa-close"></button>
+						<div class="infobox__header">
+							<div class="infobox__title">Юрий Ковалев</div>
+							<div class="infobox__avatar" style="background-image: url(https://placehold.it/200/200);"></div>
+							<div class="infobox__info">
+								<div class="infobox__rating">
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+									<div class="infobox__rating-in" style="width: 70%;">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+								<ul class="infobox__social">
+									<li>
+										<a href="#" class="fa fa-vk"></a>
+									</li>
+									<li>
+										<a href="#" class="fa fa-facebook-square"></a>
+									</li>
+									<li>
+										<a href="#" class="fa fa-instagram"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="infobox__content block-scroll" data-scrollable="modal">
+							<div class="infobox__subtitle">Перевозка на личном автомобиле</div>
+							<p>Художественное переживание, в первом приближении, многопланово иллюстрирует деструктивный принцип артистизма. Канон биографии, как бы это ни казалось парадоксальным, диссонирует модернизм, так Г.Корф формулирует собственную антитезу. Игровое начало, следовательно, имитирует горизонт ожидания.</p>
+							<ul class="infobox__points">
+								<li>
+									<div class="infobox__points-icon infobox__points-icon_blue">A</div>
+									<div class="infobox__points-value">г. Москва, ул. Славянский бульвар 83</div>
+								</li>
+								<li>
+									<div class="infobox__points-icon infobox__points-icon_green">B</div>
+									<div class="infobox__points-value">г. Москва, ул. Пречистенка 123</div>
+								</li>
+							</ul>
+							<div class="infobox__subtitle">Реализовать до 19 января, 20:00</div>
+						</div>
+						<div class="infobox__footer" data-scrollend="modal">
+							<div class="infobox__meta">2 ДНЯ НАЗАД</div>
+							<div class="infobox__buttons">
+								<button class="btn-pretty btn-pretty_orange">Принять заявку</button>
+								<button class="btn-pretty btn-pretty_gray">Закрыть</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="request js-show-container" data-state="request-content">
+				<div class="request__inner" data-scroll-parent="request">
+					<div class="request-content">
+						<div class="request__header">
+							<button class="btn-simple js-show-button" data-target="request-form">
+								<span>Новая заявка</span>
+							</button>
+						</div>
+						<div class="request-filters">
+							<form action="/">
+								<div class="request-search">
+									<button class="request-search__btn fa fa-search"></button>
+									<input type="text" class="request-search__input input-full input-full_small input-full_white" placeholder="Поиск">
+								</div>
+								<div class="request-filters__row">
+									<div class="request-filters__field request-filters__field_lg">
+										<div class="request-label">ТИП ЗАЯВКИ</div>
+										<select class="js-select-box is-medium" style="width: 100%;">
+											<option value="value">value</option>
+											<option value="value 1">value 1</option>
+											<option value="value 2">value 2</option>
+										</select>
+									</div>
+									<div class="request-filters__field request-filters__field_sm">
+										<div class="request-label">СОРТИРОВАТЬ ПО</div>
+										<select class="js-select-box is-medium" style="width: 100%;">
+											<option value="value">value</option>
+											<option value="value 1">value 1</option>
+											<option value="value 2">value 2</option>
+										</select>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="request-container">
+							<div class="request-posts block-scroll" data-scrollable="request">
+								<div class="request-post">
+									<div class="request-post__title">Физическая помощь людям с инвалидностью в выходе из дома</div>
+									<div class="request-post__body">
+										<div class="request-post__data">
+											<a href="#" class="request-post__user">
+												<div class="request-post__avatar" style="background-image: url(https://placehold.it/70/70);"></div>
+												<div class="request-post__meta">ОЛЬГА И.В.</div>
+											</a>
+											<div class="request-post__date request-post__meta">РЕАЛИЗОВАТЬ ДО 17 ФЕВРАЛЯ, 16:30</div>
+										</div>
+										<div class="request-post__content">
+											<p>Отвезти девочку на процедуры в реабилитационный центр, помочь пройти процедуры и довести обратно.</p>
+										</div>
+									</div>
+								</div>
+								<div class="request-post">
+									<div class="request-post__title">Физическая помощь людям с инвалидностью в выходе из дома</div>
+									<div class="request-post__body">
+										<div class="request-post__data">
+											<a href="#" class="request-post__user">
+												<div class="request-post__avatar" style="background-image: url(https://placehold.it/70/70);"></div>
+												<div class="request-post__meta">ОЛЬГА И.В.</div>
+											</a>
+											<div class="request-post__date request-post__meta">РЕАЛИЗОВАТЬ ДО 17 ФЕВРАЛЯ, 16:30</div>
+										</div>
+										<div class="request-post__content">
+											<p>Отвезти девочку на процедуры в реабилитационный центр, помочь пройти процедуры и довести обратно.</p>
+										</div>
+									</div>
+								</div>
+								<div class="request-post">
+									<div class="request-post__title">Физическая помощь людям с инвалидностью в выходе из дома</div>
+									<div class="request-post__body">
+										<div class="request-post__data">
+											<a href="#" class="request-post__user">
+												<div class="request-post__avatar" style="background-image: url(https://placehold.it/70/70);"></div>
+												<div class="request-post__meta">ОЛЬГА И.В.</div>
+											</a>
+											<div class="request-post__date request-post__meta">РЕАЛИЗОВАТЬ ДО 17 ФЕВРАЛЯ, 16:30</div>
+										</div>
+										<div class="request-post__content">
+											<p>Отвезти девочку на процедуры в реабилитационный центр, помочь пройти процедуры и довести обратно.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="request-form block-scroll js-show-onfocus-parent" data-scrollable="request">
+						<form action="/">
+							<div class="request-form__title">Новая заявка</div>
+							<div class="request-form__field">
+								<div class="request-label">ТИП ЗАЯВКИ</div>
+								<select class="js-select-box is-small" style="width: 100%;">
+									<option value="value">value</option>
+									<option value="value 1">value 1</option>
+									<option value="value 2">value 2</option>
+								</select>
+							</div>
+							<div class="request-form__field">
+								<div class="request-label">МАРШРУТ</div>
+								<div class="request-form__point">
+									<span class="request-form__point-icon request-form__point-icon_blue">A</span>
+									<input type="text" class="request-form__point-input input-full input-full_small input-full_white js-show-onfocus-field" data-field="points" placeholder="Адрес или точка на карте">
+								</div>
+								<div class="request-form__point">
+									<span class="request-form__point-icon request-form__point-icon_green">B</span>
+									<input type="text" class="request-form__point-input input-full input-full_small input-full_white js-show-onfocus-field" data-field="points" placeholder="Адрес или точка на карте">
+								</div>
+								<div class="request-form__checkbox">
+									<label class="checkbox-sm">
+										<input type="checkbox">
+										<span>Туда-обратно</span>
+									</label>
+								</div>
+							</div>
+							<div class="request-form__field">
+								<div class="request-label">ДО КАКОГО ВРЕМЕНИ</div>
+								<div class="request-form__calendar">
+									<div class="request-form__calendar-icon">
+										<i class="fa fa-calendar"></i>
+									</div>
+									<input type="text" class="request-form__calendar-input input-full input-full_small input-full_white">
+								</div>
+							</div>
+							<div class="request-form__field">
+								<div class="request-label">ОПИСАНИЕ</div>
+								<textarea class="request-form__textarea textarea-full textarea-full_small textarea-full_white"></textarea>
+							</div>
+							<div class="request-form__footer">
+								<div class="request-form__submit">
+									<button class="request-form__submit-btn btn-pretty btn-pretty_orange">Создать заявку</button>
+								</div>
+								<div class="request-form__cancel">
+									<button class="request-form__cancel-btn btn-pretty btn-pretty_gray js-show-button" data-target="request-content" type="reset">Отменить</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="request-tooltip js-show-onfocus-container" data-container="points">
+						<div class="request-tooltip__hint js-tooltip-hint" data-tooltip="request">Использовать домашний адрес</div>
+						<button class="request-tooltip__btn request-tooltip__marker fa fa-map-marker js-tooltip-item" data-tooltip="request" data-title="Использовать не домашний адрес"></button>
+						<button class="request-tooltip__btn request-tooltip__home fa fa-home js-tooltip-item" data-tooltip="request" data-title="Использовать домашний адрес"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end big-map -->
+	<footer class="footer">
+		<div class="footer__bottom">
+			<div class="container">
+				<ul class="footer__social">
+					<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+					<li><a href="#"><i class="fa fa-vk"></i></a></li>
+					<li><a href="#"><i class="fa fa-odnoklassniki-square"></i></a></li>
+				</ul>
+				<div class="footer__copy">
+					<p>© Dislife.ru 2015</p>
+					<div class="footer__age">18+</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+<!-- END out-->
+
+<!-- begin popup-login -->
+<div class="popup js-popup" data-popup="popup-login">
+    <div class="popup__in js-tabs">
+        <button class="fa fa-close popup__close js-close-popup"></button>
+        <div class="popup__tabs">
+            <a href="#" class="popup__tab js-tabs-link is-active">Вход</a>
+            <a href="#" class="popup__tab js-tabs-link">Регистрация</a>
+        </div>
+        <div class="popup__body">
+            <div class="tab-content js-tabs-content">
+                <div class="popup__title"><span>Через соцсети</span></div>
+                <ul class="social-big">
+                    <li><a href="#" class="is-vk"><i class="fa fa-vk"></i></a></li>
+                    <li><a href="#" class="is-fb"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#" class="is-odk"><i class="fa fa-odnoklassniki"></i></a></li>
+                    <li><a href="#" class="is-gp"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#" class="is-ya"><i class="social-ya">Я</i></a></li>
+                </ul>
+                <div class="popup__title"><span>Или логин Dislife.ru</span></div>
+
+                <div class="popup__form">
+                    <form action="#" class="js-validation">
+                        <div class="field">
+                            <label class="field__label">Логин</label>
+                            <div class="field__input input">
+                                <i class="fa fa-user input__icon"></i>
+                                <input type="text" class="input-text" name="email" data-validation="email" data-validation-error-msg=" ">
+                                <i class="input__valid fa fa-check"></i>
+                                <i class="input__invalid fa fa-close"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">Пароль</label>
+                            <div class="field__input input">
+                                <i class="fa fa-lock input__icon"></i>
+                                <input type="password" name="password" class="input-text input-text_pwd" data-validation="required" data-validation-error-msg=" ">
+                            </div>
+                        </div>
+                        <div class="field-login">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Запомнить меня</span>
+                                </label>
+                            </div>
+                            <div class="login">
+                                <input type="submit" value="Войти" class="input-btn">
+                                <a href="#" class="orange-link">Я забыл пароль</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="tab-content js-tabs-content">
+                <div class="popup__form">
+                    <form action="#" class="js-validation">
+                        <div class="field">
+                            <label class="field__label">Логин</label>
+                            <div class="field__input input">
+                                <i class="fa fa-user input__icon"></i>
+                                <input type="text" class="input-text" name="email" data-validation="required" data-validation-error-msg=" ">
+                                <i class="input__valid fa fa-check"></i>
+                                <i class="input__invalid fa fa-close"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">E-mail</label>
+                            <div class="field__input input">
+                                <i class="fa fa-user input__icon"></i>
+                                <input type="text" class="input-text" name="email" data-validation="email" data-validation-error-msg=" ">
+                                <i class="input__valid fa fa-check"></i>
+                                <i class="input__invalid fa fa-close"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">Повторите пароль</label>
+                            <div class="field__input input">
+                                <i class="fa fa-lock input__icon"></i>
+                                <input type="password" name="password" class="input-text input-text_pwd" data-validation="required" data-validation-error-msg=" ">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">Пароль</label>
+                            <div class="field__input input">
+                                <i class="fa fa-lock input__icon"></i>
+                                <input type="password" name="password" class="input-text input-text_pwd" data-validation="required" data-validation-error-msg=" ">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Я принимаю пользовательское соглашение</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="submit" value="Зарегистрироваться" class="input-btn input-btn_full">
+                        </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end popup-login -->
+<!-- begin popup-download  -->
+<div class="popup popup_download js-popup" data-popup="popup-download">
+    <div class="popup__in">
+        <button class="fa fa-close popup__close js-close-popup"></button>
+        <div class="popup__body">
+            <div class="popup__name">Загрузка фотографии</div>
+            <form action="" class="profile-form">
+                <div class="profile-form__field">
+                    <div class="profile-form__label">АЛЬБОМ</div>
+                    <!-- <div class="select select_mod js-select">
+                        <div class="select__text js-select-text">Мой альбом</div>
+                        <i class="fa fa-angle-down"></i>
+                        <ul class="select__list js-select-list">
+                            <li data-val="value">value</li>
+                            <li data-val="value1">value1</li>
+                            <li data-val="value2">value2</li>
+                        </ul>
+                        <select>
+                            <option value="value">value</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                        </select>
+                    </div> -->
+                    <select class="js-select-box is-gray" style="width: 100%;">
+                        <option value="Мой альбом">Мой альбом</option>
+                        <option value="value1">value1</option>
+                        <option value="value2">value2</option>
+                    </select>
+                </div>
+                <div class="profile-form__field">
+                    <div class="profile-form__label">ОПИСАНИЕ</div>
+                    <input type="text" class="input-full input-full_white">
+                </div>
+                <div class="profile-form__add">
+                    <label class="add-file">
+                        <input type="file">
+                        <i class="fa fa-camera"></i>
+                        <span>Выбрать файл</span>
+                    </label>
+                </div>
+                <div class="profile-form__btn">
+                    <button class="btn-full btn-full_mod">
+                        <span>Загрузить</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- end popup-download -->
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="js/new-app.js"></script>
+</body>
+</html>

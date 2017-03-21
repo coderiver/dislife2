@@ -1,0 +1,219 @@
+@import lib/mixins
+
+// media
+=r1
+	@media only screen and (max-width: 1320px)
+		@content
+
+=r2
+	@media only screen and (max-width: 990px)
+		@content
+=r3
+	@media only screen and (max-width: 660px)
+		@content
+=r4
+	@media only screen and (max-width: 480px)
+		@content
+=r5
+	@media only screen and (max-width: 1150px)
+		@content
+
+// fonts
+=fa
+	font: normal normal normal 14px/1 FontAwesome
+	font-size: inherit
+	text-rendering: auto
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+
++font("Arial Rounded MT Bold", ArialRoundedMTBold)
+
+//Arial rounded
+=arb
+	font-family: "Arial Rounded MT Bold", Arial, sans-serif
+
+// lora-font
+=lora
+	font-family: 'Lora', serif
+	font-weight: 400
+=lorai
+	font-family: 'Lora', serif
+	font-weight: 400
+	font-style: italic
+=lorab
+	font-family: 'Lora', serif
+	font-weight: 700
+=lorabi
+	font-family: 'Lora', serif
+	font-weight: 700
+	font-style: italic
+
+// 'Fira Sans' font
+=fira
+	font-family: "FiraSans-Regular", Arial, sans-serif
+
+=reg
+	font-family: "FiraSans-Regular", Arial, sans-serif
+
+=regi
+	font-family: "FiraSans-Italic", Arial, sans-serif
+
+=light
+	font-family: "FiraSans-Light", Arial, sans-serif
+=lighti
+	font-family: "FiraSans-LightItalic", Arial, sans-serif
+
+=med
+	font-family: "FiraSans-Medium", Arial, sans-serif
+
+=medi
+	font-family: "FiraSans-MediumItalic", Arial, sans-serif
+
+=bold
+	font-family: "FiraSans-Bold", Arial, sans-serif
+
+=boldi
+	font-family: "FiraSans-BoldItalic", Arial, sans-serif
+
+// colors
+$violet: #c0a6cd
+$gold: #f2c05e
+$red: #d27857
+$orange: #ff8c61
+$mint: #9bc1bc
+
+=hover
+	.no-touch &
+		&:hover
+			@content
+
+@import big-map
+
+//CONTENT
+.selectBox-dropdown
+	box-shadow: none
+	&.is-medium
+		border-radius: 3px
+		border-color: #d8d8d8
+		background: #fff
+		+reg
+		&.selectBox-menuShowing
+			border-radius: 3px 3px 0 0
+		.selectBox-label
+			font-size: 16px
+			padding: 14px 20px 13px 8px
+		.selectBox-arrow
+			right: 12px
+			color: #999
+
+.selectBox-options
+	&.is-medium-selectBox-dropdown-menu
+		border-color: #d8d8d8
+		li
+			a
+				font-size: 16px
+
+.page-heading
+	padding: 35px 0 36px
+	&__title
+		color: #1e1e1e
+		+light
+		font-size: 46px
+		line-height: 1.3
+		+r2
+			font-size: 32px
+
+.btn-simple
+	position: relative
+	display: inline-block
+	vertical-align: top
+	padding: 15px 20px
+	color: #fff
+	background: #ff8c61
+	+med
+	font-size: 22px
+	line-height: 30px
+	+hover
+		&:before
+			transform: scaleX(1)
+	&:before
+		content: ''
+		position: absolute
+		z-index: 1
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background: darken($orange, 10%)
+		transform: scaleX(0)
+		transform-origin: left center
+		+tr(transform .5s)
+	span
+		position: relative
+		z-index: 2
+
+
+.checkbox-sm
+	position: relative
+	display: inline-block
+	vertical-align: top
+	padding-left: 30px
+	cursor: pointer
+	user-select: none
+	input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		visibility: hidden
+		&:checked + span
+			&:after
+				opacity: 1
+				transform: scale(1)
+	span
+		display: block
+		padding: 1px 0
+		color: #9c9c9c
+		+reg
+		font-size: 14px
+		line-height: 18px
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+		&:before
+			border: 1px solid #d9d9d9
+			width: 20px
+			height: 20px
+			background: #ffffff
+		&:after
+			margin: 5px
+			width: 10px
+			height: 10px
+			opacity: 0
+			background: $orange
+			transform: scale(0)
+			transition: opacity 0.3s ease, transform 0.3s ease
+
+.btn-pretty
+	display: inline-block
+	vertical-align: top
+	padding: 6px 18px
+	border-radius: 3px
+	color: #fff
+	+reg
+	font-size: 18px
+	line-height: 28px
+	&_orange
+		background: linear-gradient(180deg, #ff8c61 0%, #e7825d 100%)
+		box-shadow: 0 2px 0 #e87448
+		&:active
+			background: linear-gradient(180deg, #e7825d 0%, #ff8c61 100%)
+	&_gray
+		background: linear-gradient(180deg, #9bc1bc 0%, #93b6b2 100%)
+		box-shadow: 0 2px 0 #8da8a4
+		&:active
+			background: linear-gradient(180deg, #93b6b2 0%, #9bc1bc 100%)
