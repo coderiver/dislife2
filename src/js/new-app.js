@@ -1,18 +1,25 @@
 $(document).ready(function() {
+
+	var desktopMD = function() {
+		return window.matchMedia('(max-width: 1320px)').matches;
+	};
+
 	(function() {
 		//MAP
 		ymaps.ready(function () {
 			var myMap = new ymaps.Map('big-map', {
 					center: [55.7555282, 37.6144813],
 					zoom: 14,
+					scrollZoom: false,
 					controls: []
 				}, {
 					searchControlProvider: 'yandex#search'
 				});
+			myMap.behaviors.disable('scrollZoom');
+			myMap.behaviors.disable('drag');
 		});
 		//SCROLL
 		var requestScroll = $('[data-scrollable]');
-		requestScroll.perfectScrollbar();
 
 		$(window).on('resize', function() {
 			setCurrentHeight();
@@ -20,6 +27,19 @@ $(document).ready(function() {
 		setCurrentHeight();
 
 		function setCurrentHeight() {
+			console.log(desktopMD());
+			if (desktopMD()) {
+				requestScroll.removeAttr('style');
+				requestScroll.perfectScrollbar('destroy');
+				requestScroll.scrollInited = false;
+				return;
+			}
+
+			if (!requestScroll.scrollInited) {
+				requestScroll.scrollInited = true;
+				requestScroll.perfectScrollbar();
+			}
+
 			requestScroll.each(function() {
 				var $this = $(this);
 				$this.css('max-height', '100%');
