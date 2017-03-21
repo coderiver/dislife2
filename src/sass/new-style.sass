@@ -88,8 +88,6 @@ $mint: #9bc1bc
 		&:hover
 			@content
 
-@import big-map
-
 //CONTENT
 .selectBox-dropdown
 	box-shadow: none
@@ -217,3 +215,28 @@ $mint: #9bc1bc
 		box-shadow: 0 2px 0 #8da8a4
 		&:active
 			background: linear-gradient(180deg, #93b6b2 0%, #9bc1bc 100%)
+
+.new-input,
+.new-textarea
+	display: block
+	padding: 16px 15px 15px
+	border: 1px solid #d8d8d8
+	border-radius: 3px
+	width: 100%
+
+	color: #4a4a4a
+	background: #fff
+
+	+reg
+	font-size: 14px
+
+	transition: box-shadow 0.3s ease
+	&:focus
+		box-shadow: 0 0 3px rgba(0, 101, 255, 0.83)
+	&::placeholder
+		color: #8e8e8e
+		opacity: 1
+
+
+
+@import big-map
