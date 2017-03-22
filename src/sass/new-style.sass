@@ -207,6 +207,7 @@ $mint: #9bc1bc
 	+reg
 	font-size: 18px
 	line-height: 28px
+	text-align: center
 	&_orange
 		background: linear-gradient(180deg, #ff8c61 0%, #e7825d 100%)
 		box-shadow: 0 2px 0 #e87448
@@ -217,6 +218,16 @@ $mint: #9bc1bc
 		box-shadow: 0 2px 0 #8da8a4
 		&:active
 			background: linear-gradient(180deg, #93b6b2 0%, #9bc1bc 100%)
+	&_darkgray
+		background: linear-gradient(180deg, #bdbdbd 0%, #acabab 100%)
+		box-shadow: 0 2px 0 #949393
+		&:active
+			background: linear-gradient(180deg, #acabab 0%, #bdbdbd 100%)
+	&_small
+		padding: 3px 10px 2px
+		font-size: 14px
+		line-height: 22px
+
 
 .new-input,
 .new-textarea
@@ -239,6 +250,36 @@ $mint: #9bc1bc
 		color: #8e8e8e
 		opacity: 1
 
+.button
+	&_orange
+		display: inline-block
+		vertical-align: top
+		background: $orange
+		line-height: 1.2
+		text-align: center
+		+hover
+			background: darken($orange, 10%)
 
+.star-rating
+	position: relative
+	display: inline-block
+	vertical-align: top
+	font-size: 0
+	white-space: nowrap
+	pointer-events: none
+	i
+		color: #f8e71c
+		font-size: 18px
+		padding: 0 1px
+	&__inner
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		overflow: hidden
 
 @import big-map
+@import service-menu
+@import inbox
+@import service-feedback
+@import evaluate

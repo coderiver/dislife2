@@ -1,0 +1,51 @@
+.service-menu
+	padding: 70px 0 0
+	+med
+	+r2
+		padding: 0
+	&__link
+		display: block
+		padding: 6px 16px 5px
+		border-bottom: 1px solid #e6e6e6
+		font-size: 18px
+		+r2
+			padding: 17px 30px 16px
+	&__submenu
+		padding: 0 0 0 23px
+		border-bottom: 1px solid #e6e6e6
+		li
+			&:last-child
+				a
+					border: none
+		a
+			display: block
+			padding: 7px
+			border-bottom: 1px solid #e6e6e6
+			font-size: 16px
+			+r2
+				padding: 12px 10px
+			&.is-active
+				color: $orange
+				small
+					background: $orange
+		span,
+		small
+			display: inline-block
+			vertical-align: top
+		small
+			padding: 0 9px
+			margin-left: 10px
+			border-radius: 12px
+			color: #fff
+			background: #a5a5a5
+			font-size: 16px
+			line-height: 21px
+	.is-hidden
+		display: none
+		+r2
+			display: block
+	&__out
+		i
+			vertical-align: middle
+			font-size: 26px
+			margin-left: 17px

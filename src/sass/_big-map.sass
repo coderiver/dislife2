@@ -396,78 +396,6 @@
 			top: 10px
 			right: 10px
 			color: #fff
-	&__header
-		padding-bottom: 15px
-		+r3
-			padding-bottom: 0
-	&__title
-		padding: 31px 50px 11px 141px
-		margin: -1px -1px 0
-		color: #fff
-		background: linear-gradient(45deg, #43cea2 0%, #185a9d 100%)
-		+med
-		font-size: 24px
-		line-height: 30px
-		+r3
-			padding: 25px 20px 11px 120px
-			font-size: 16px
-			line-height: 24px
-	&__avatar
-		position: absolute
-		top: 21px
-		left: 24px
-		border: 2px solid #fff
-		border-radius: 50%
-		width: 104px
-		height: 104px
-		background-repeat: no-repeat
-		background-position: center
-		background-color: #d8d8d8
-		background-size: cover
-		+r3
-			width: 74px
-			height: 74px
-	&__info
-		padding: 9px 15px 22px 140px
-		+clr
-		+r3
-			padding-left: 120px
-	&__rating
-		position: relative
-		float: left
-		font-size: 0
-		white-space: nowrap
-		pointer-events: none
-		+r3
-			float: none
-		i
-			color: #f8e71c
-			font-size: 18px
-			padding: 0 1px
-	&__rating-in
-		position: absolute
-		top: 0
-		bottom: 0
-		left: 0
-		overflow: hidden
-	&__social
-		float: right
-		font-size: 0
-		+r3
-			float: none
-			padding-top: 10px
-			margin-left: -5px
-		li,
-		a
-			display: inline-block
-			vertical-align: top
-		a
-			padding: 0 5px
-			color: #97bbb7
-			font-size: 18px
-			+tr(color 0.3s ease)
-			+hover
-				color: darken(#97bbb7, 20%)
 	&__content
 		padding: 0 20px
 		color: #282828
@@ -546,3 +474,63 @@
 				display: block
 				width: 100%
 				margin: 20px auto 0
+
+.service-header
+	position: relative
+	padding-bottom: 15px
+	+r3
+		padding-bottom: 0
+	&__title
+		padding: 31px 50px 11px 141px
+		margin: -1px -1px 0
+		color: #fff
+		background: linear-gradient(45deg, #43cea2 0%, #185a9d 100%)
+		+med
+		font-size: 24px
+		line-height: 30px
+		+r3
+			padding: 25px 20px 11px 120px
+			font-size: 16px
+			line-height: 24px
+	&__avatar
+		position: absolute
+		top: 21px
+		left: 24px
+		border: 2px solid #fff
+		border-radius: 50%
+		width: 104px
+		height: 104px
+		background-repeat: no-repeat
+		background-position: center
+		background-color: #d8d8d8
+		background-size: cover
+		+r3
+			width: 74px
+			height: 74px
+	&__info
+		padding: 9px 15px 22px 140px
+		+clr
+		+r3
+			padding-left: 120px
+	&__rating
+		float: left
+		+r3
+			float: none
+	&__social
+		float: right
+		font-size: 0
+		+r3
+			float: none
+			padding-top: 10px
+			margin-left: -5px
+		li,
+		a
+			display: inline-block
+			vertical-align: top
+		a
+			padding: 0 5px
+			color: #97bbb7
+			font-size: 18px
+			+tr(color 0.3s ease)
+			+hover
+				color: darken(#97bbb7, 20%)

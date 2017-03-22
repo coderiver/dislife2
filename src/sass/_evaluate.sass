@@ -1,0 +1,32 @@
+.evaluate
+	font-size: 0
+	li,
+	label,
+	i
+		display: inline-block
+		vertical-align: top
+	li
+	label
+		position: relative
+		cursor: pointer
+		&.is-active
+			.fa-star
+				opacity: 1
+				visibility: visible
+	input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		visibility: hidden
+	i
+		padding: 0 1px
+		color: #ff7070
+		font-size: 20px
+	.fa-star
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		visibility: hidden
+		transition: opacity 0.25s ease, visibility 0.25s ease
