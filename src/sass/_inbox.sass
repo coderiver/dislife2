@@ -44,22 +44,84 @@
 		line-height: 1
 
 .inbox-item
-	margin-bottom: 3px
+	margin-bottom: 32px
+	border-bottom: 1px solid #e6e6e6
+	&_active
+		border: none
+		.inbox-item
+			&__inner
+				background: #fff
+			&__footer,
+			&__close
+				display: block
+			&__content
+				padding-right: 30px
+			&__meta
+				margin-bottom: 13px
+	&_done
+		.inbox-item
+			&__footer
+				position: absolute
+				top: 26px
+				right: 6px
+				display: block
+				padding: 0
+				width: 173px
+				+r3
+					position: relative
+					top: auto
+					right: auto
+					margin: 10px 0 0
+			&__buttons,
+			&__button
+				display: none
+			&__content
+				padding-right: 200px
+				min-height: 123px
+				+r3
+					padding-right: 0
+			&__user
+				width: 100%
+			&__evaluation
+				display: block
+			&__meta
+				position: relative
+				padding-left: 30px
+				&_current
+					display: none
+				&_complete
+					display: block
+				i
+					position: absolute
+					top: 6px
+					left: 2px
+					color: #7ed321
+					font-size: 22px
+	&_disabled
+		.inbox-item
+			&__title,
+			&__text,
+			&__meta
+				color: #d8d8d8
+			&__button
+				display: none
 	&__inner
 		position: relative
 		padding: 6px 6px 11px
 		margin: 0 -6px
-		background: #fff
 		+reg
 	&__close
 		position: absolute
+		z-index: 10
 		top: 5px
 		right: 9px
+		display: none
 		color: #d9d9d9
 		background: none
 		font-size: 22px
 	&__content
-		padding-right: 30px
+		position: relative
+		+clr
 	&__title
 		margin-bottom: 10px
 		color: #282828
@@ -67,17 +129,37 @@
 		font-size: 18px
 		line-height: 22px
 	&__text
-		margin-bottom: 10px
+		margin-bottom: 1px
 		color: #000
 		font-size: 16px
 		line-height: 20px
 	&__meta
-		padding: 3px 0 2px
-		margin-bottom: 13px
+		position: relative
+		float: left
+		padding: 9px 0 2px
 		color: #8e8e8e
 		font-size: 13px
 		line-height: 1.3
+		+r3
+			float: none
+		&_complete
+			display: none
+			padding-left: 30px
+			margin-top: 21px
+			i
+				position: absolute
+				top: 6px
+				left: 2px
+				color: #7ed321
+				font-size: 22px
+	&__button
+		float: right
+		+r3
+			float: none
+			margin-top: 10px
 	&__footer
+		clear: both
+		display: none
 		padding: 16px 24px 18px 17px
 		margin: 0 auto
 		max-width: 607px
@@ -86,6 +168,8 @@
 			padding: 16px 0 18px
 	&__user
 		float: left
+	&__evaluation
+		display: none
 	&__buttons
 		overflow: hidden
 		padding: 11px 0 4px
@@ -152,7 +236,7 @@
 				width: 100%
 
 .inbox-simple
-	padding: 35px 0 10px
+	padding: 0 0 10px
 	border-bottom: 1px solid #e6e6e6
 	&_active
 		.inbox-simple

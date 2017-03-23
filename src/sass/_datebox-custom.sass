@@ -1,0 +1,26 @@
+.datebox-input
+	position: relative
+	display: block
+.datebox-input-icon
+	display: none
+
+.ui-button
+	cursor: pointer
+	background: #2196F3 !important
+
+.ui-icon-plus
+	position: relative
+	background: none !important
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate3d(-50%,-50%,0)
+	&:before
+		border-left: 2px solid #000
+		height: 14px
+	&:after
+		border-top: 2px solid #000
+		width: 14px

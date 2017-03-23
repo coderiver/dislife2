@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="theme-color" content="#fff">
 	<link href='https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400italic,500,700,500italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -142,7 +142,7 @@
 							</a>
 						</div>
 						<div class="inbox__content">
-							<div class="inbox-item">
+							<div class="inbox-item inbox-item_active">
 								<div class="inbox-item__inner">
 									<button class="inbox-item__close fa fa-close"></button>
 									<div class="inbox-item__content">
@@ -150,7 +150,8 @@
 										<div class="inbox-item__text">
 											<p>Отвезти девочку на процедуры в реабилитационный центр, помочь пройти процедуры и довести обратно.</p>
 										</div>
-										<div class="inbox-item__meta">РЕАЛИЗОВАТЬ ДО 17 ФЕВРАЛЯ, 16:30</div>
+										<div class="inbox-item__meta inbox-item__meta_current">РЕАЛИЗОВАТЬ ДО 17 ФЕВРАЛЯ, 16:30</div>
+										<div class="inbox-item__meta inbox-item__meta_complete"><i class="fa fa-check-circle-o" aria-hidden="true"></i> РЕАЛИЗОВАНА 17 ФЕВРАЛЯ, 17:10</div>
 									</div>
 									<div class="inbox-item__footer">
 										<div class="inbox-user inbox-item__user">
@@ -181,6 +182,9 @@
 													<a href="#" class="fa fa-instagram"></a>
 												</li>
 											</ul>
+											<div class="inbox-user__button inbox-item__evaluation">
+												<a href="#" class="btn-pretty btn-pretty_small btn-pretty_orange js-open-popup" data-link="service-feedback">Оценить</a>
+											</div>
 										</div>
 										<div class="inbox-item__buttons">
 											<a href="#" class="btn-pretty btn-pretty_orange">Показать телефон</a>
@@ -189,92 +193,263 @@
 									</div>
 								</div>
 							</div>
-							<div class="inbox-simple">
-								<div class="inbox-simple__content">
-									<div class="inbox-simple__title">Перевозка на личном автомобиле</div>
-									<div class="inbox-simple__text">
-										<p>Отвезти девочку на процедуры в реабилитационный центр, помочь пройти процедуры и довести обратно.</p>
+							<div class="inbox-item">
+								<div class="inbox-item__inner">
+									<button class="inbox-item__close fa fa-close"></button>
+									<div class="inbox-item__content">
+										<div class="inbox-item__title">Перевозка на личном автомобиле</div>
+										<div class="inbox-item__text">
+											<p>Отвезти девочку на процедуры в реабилитационный центр, помочь пройти процедуры и довести обратно.</p>
+										</div>
+										<div class="inbox-item__meta inbox-item__meta_current">РЕАЛИЗОВАТЬ ДО 17 ФЕВРАЛЯ, 16:30</div>
+										<div class="inbox-item__meta inbox-item__meta_complete"><i class="fa fa-check-circle-o" aria-hidden="true"></i> РЕАЛИЗОВАНА 17 ФЕВРАЛЯ, 17:10</div>
+										<a href="#" class="btn-pretty btn-pretty_small btn-pretty_darkgray inbox-item__button">Отменить заявку</a>
 									</div>
-									<div class="inbox-simple__footer">
-										<div class="inbox-simple__meta">РЕАЛИЗОВАТЬ ДО 17 ФЕВРАЛЯ, 16:30</div>
-										<a href="#" class="btn-pretty btn-pretty_small btn-pretty_darkgray inbox-simple__button">Отменить заявку</a>
-									</div>
-								</div>
-							</div>
-							<div class="inbox-simple">
-								<div class="inbox-simple__content">
-									<div class="inbox-simple__title">Перевозка на личном автомобиле</div>
-									<div class="inbox-simple__text">
-										<p>Отвезти девочку на процедуры в реабилитационный центр, помочь пройти процедуры и довести обратно.</p>
-									</div>
-									<div class="inbox-simple__footer">
-										<div class="inbox-simple__meta">РЕАЛИЗОВАТЬ ДО 17 ФЕВРАЛЯ, 16:30</div>
-										<a href="#" class="btn-pretty btn-pretty_small btn-pretty_darkgray inbox-simple__button">Отменить заявку</a>
-									</div>
-								</div>
-							</div>
-							<div class="inbox-simple inbox-simple_active">
-								<div class="inbox-simple__content">
-									<div class="inbox-simple__title">Перевозка на личном автомобиле</div>
-									<div class="inbox-simple__text">
-										<p>Отвезти девочку на процедуры в реабилитационный центр, помочь пройти процедуры и довести обратно.</p>
-									</div>
-									<div class="inbox-simple__footer">
-										<div class="inbox-simple__meta"><i class="fa fa-check-circle-o" aria-hidden="true"></i> РЕАЛИЗОВАНА 17 ФЕВРАЛЯ, 17:10</div>
-									</div>
-									<div class="inbox-user inbox-simple__user">
-										<div class="inbox-user__avatar" style="background-image: url(https://placehold.it/100/100);"></div>
-										<div class="inbox-user__name">ОЛЬГА И.В.</div>
-										<div class="star-rating inbox-user__rating">
-											<i class="fa fa-star-o"></i>
-											<i class="fa fa-star-o"></i>
-											<i class="fa fa-star-o"></i>
-											<i class="fa fa-star-o"></i>
-											<i class="fa fa-star-o"></i>
-											<div class="star-rating__inner" style="width: 70%;">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
+									<div class="inbox-item__footer">
+										<div class="inbox-user inbox-item__user">
+											<div class="inbox-user__avatar" style="background-image: url(https://placehold.it/100/100);"></div>
+											<div class="inbox-user__name">ОЛЬГА И.В.</div>
+											<div class="star-rating inbox-user__rating">
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<div class="star-rating__inner" style="width: 70%;">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+											</div>
+											<ul class="inbox-user__social">
+												<li>
+													<a href="#" class="fa fa-vk"></a>
+												</li>
+												<li>
+													<a href="#" class="fa fa-facebook-square"></a>
+												</li>
+												<li>
+													<a href="#" class="fa fa-instagram"></a>
+												</li>
+											</ul>
+											<div class="inbox-user__button inbox-item__evaluation">
+												<a href="#" class="btn-pretty btn-pretty_small btn-pretty_orange js-open-popup" data-link="service-feedback">Оценить</a>
 											</div>
 										</div>
-										<ul class="inbox-user__social">
-											<li>
-												<a href="#" class="fa fa-vk"></a>
-											</li>
-											<li>
-												<a href="#" class="fa fa-facebook-square"></a>
-											</li>
-											<li>
-												<a href="#" class="fa fa-instagram"></a>
-											</li>
-										</ul>
-										<div class="inbox-user__button">
-											<a href="#" class="btn-pretty btn-pretty_small btn-pretty_orange js-open-popup" data-link="service-feedback">Оценить</a>
+										<div class="inbox-item__buttons">
+											<a href="#" class="btn-pretty btn-pretty_orange">Показать телефон</a>
+											<a href="#" class="btn-pretty btn-pretty_gray">Отказаться</a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="inbox-simple inbox-simple_disabled">
-								<div class="inbox-simple__content">
-									<div class="inbox-simple__title">Перевозка на личном автомобиле</div>
-									<div class="inbox-simple__text">
-										<p>Отвезти девочку на процедуры в реабилитационный центр, помочь пройти процедуры и довести обратно.</p>
+							<div class="inbox-item">
+								<div class="inbox-item__inner">
+									<button class="inbox-item__close fa fa-close"></button>
+									<div class="inbox-item__content">
+										<div class="inbox-item__title">Перевозка на личном автомобиле</div>
+										<div class="inbox-item__text">
+											<p>Отвезти девочку на процедуры в реабилитационный центр, помочь пройти процедуры и довести обратно.</p>
+										</div>
+										<div class="inbox-item__meta inbox-item__meta_current">РЕАЛИЗОВАТЬ ДО 17 ФЕВРАЛЯ, 16:30</div>
+										<div class="inbox-item__meta inbox-item__meta_complete"><i class="fa fa-check-circle-o" aria-hidden="true"></i> РЕАЛИЗОВАНА 17 ФЕВРАЛЯ, 17:10</div>
+										<a href="#" class="btn-pretty btn-pretty_small btn-pretty_darkgray inbox-item__button">Отменить заявку</a>
 									</div>
-									<div class="inbox-simple__footer">
-										<div class="inbox-simple__meta">РЕАЛИЗОВАТЬ ДО 17 ФЕВРАЛЯ, 16:30</div>
+									<div class="inbox-item__footer">
+										<div class="inbox-user inbox-item__user">
+											<div class="inbox-user__avatar" style="background-image: url(https://placehold.it/100/100);"></div>
+											<div class="inbox-user__name">ОЛЬГА И.В.</div>
+											<div class="star-rating inbox-user__rating">
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<div class="star-rating__inner" style="width: 70%;">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+											</div>
+											<ul class="inbox-user__social">
+												<li>
+													<a href="#" class="fa fa-vk"></a>
+												</li>
+												<li>
+													<a href="#" class="fa fa-facebook-square"></a>
+												</li>
+												<li>
+													<a href="#" class="fa fa-instagram"></a>
+												</li>
+											</ul>
+											<div class="inbox-user__button inbox-item__evaluation">
+												<a href="#" class="btn-pretty btn-pretty_small btn-pretty_orange js-open-popup" data-link="service-feedback">Оценить</a>
+											</div>
+										</div>
+										<div class="inbox-item__buttons">
+											<a href="#" class="btn-pretty btn-pretty_orange">Показать телефон</a>
+											<a href="#" class="btn-pretty btn-pretty_gray">Отказаться</a>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="inbox-simple inbox-simple_disabled">
-								<div class="inbox-simple__content">
-									<div class="inbox-simple__title">Перевозка на личном автомобиле</div>
-									<div class="inbox-simple__text">
-										<p>Отвезти девочку на процедуры в реабилитационный центр, помочь пройти процедуры и довести обратно.</p>
+							<div class="inbox-item inbox-item_done">
+								<div class="inbox-item__inner">
+									<button class="inbox-item__close fa fa-close"></button>
+									<div class="inbox-item__content">
+										<div class="inbox-item__title">Перевозка на личном автомобиле</div>
+										<div class="inbox-item__text">
+											<p>Отвезти девочку на процедуры в реабилитационный центр, помочь пройти процедуры и довести обратно.</p>
+										</div>
+										<div class="inbox-item__meta inbox-item__meta_current">РЕАЛИЗОВАТЬ ДО 17 ФЕВРАЛЯ, 16:30</div>
+										<div class="inbox-item__meta inbox-item__meta_complete"><i class="fa fa-check-circle-o" aria-hidden="true"></i> РЕАЛИЗОВАНА 17 ФЕВРАЛЯ, 17:10</div>
+										<a href="#" class="btn-pretty btn-pretty_small btn-pretty_darkgray inbox-item__button">Отменить заявку</a>
 									</div>
-									<div class="inbox-simple__footer">
-										<div class="inbox-simple__meta">РЕАЛИЗОВАТЬ ДО 17 ФЕВРАЛЯ, 16:30</div>
+									<div class="inbox-item__footer">
+										<div class="inbox-user inbox-item__user">
+											<div class="inbox-user__avatar" style="background-image: url(https://placehold.it/100/100);"></div>
+											<div class="inbox-user__name">ОЛЬГА И.В.</div>
+											<div class="star-rating inbox-user__rating">
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<div class="star-rating__inner" style="width: 70%;">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+											</div>
+											<ul class="inbox-user__social">
+												<li>
+													<a href="#" class="fa fa-vk"></a>
+												</li>
+												<li>
+													<a href="#" class="fa fa-facebook-square"></a>
+												</li>
+												<li>
+													<a href="#" class="fa fa-instagram"></a>
+												</li>
+											</ul>
+											<div class="inbox-user__button inbox-item__evaluation">
+												<a href="#" class="btn-pretty btn-pretty_small btn-pretty_orange js-open-popup" data-link="service-feedback">Оценить</a>
+											</div>
+										</div>
+										<div class="inbox-item__buttons">
+											<a href="#" class="btn-pretty btn-pretty_orange">Показать телефон</a>
+											<a href="#" class="btn-pretty btn-pretty_gray">Отказаться</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="inbox-item inbox-item_disabled">
+								<div class="inbox-item__inner">
+									<button class="inbox-item__close fa fa-close"></button>
+									<div class="inbox-item__content">
+										<div class="inbox-item__title">Перевозка на личном автомобиле</div>
+										<div class="inbox-item__text">
+											<p>Отвезти девочку на процедуры в реабилитационный центр, помочь пройти процедуры и довести обратно.</p>
+										</div>
+										<div class="inbox-item__meta inbox-item__meta_current">РЕАЛИЗОВАТЬ ДО 17 ФЕВРАЛЯ, 16:30</div>
+										<div class="inbox-item__meta inbox-item__meta_complete"><i class="fa fa-check-circle-o" aria-hidden="true"></i> РЕАЛИЗОВАНА 17 ФЕВРАЛЯ, 17:10</div>
+										<a href="#" class="btn-pretty btn-pretty_small btn-pretty_darkgray inbox-item__button">Отменить заявку</a>
+									</div>
+									<div class="inbox-item__footer">
+										<div class="inbox-user inbox-item__user">
+											<div class="inbox-user__avatar" style="background-image: url(https://placehold.it/100/100);"></div>
+											<div class="inbox-user__name">ОЛЬГА И.В.</div>
+											<div class="star-rating inbox-user__rating">
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<div class="star-rating__inner" style="width: 70%;">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+											</div>
+											<ul class="inbox-user__social">
+												<li>
+													<a href="#" class="fa fa-vk"></a>
+												</li>
+												<li>
+													<a href="#" class="fa fa-facebook-square"></a>
+												</li>
+												<li>
+													<a href="#" class="fa fa-instagram"></a>
+												</li>
+											</ul>
+											<div class="inbox-user__button inbox-item__evaluation">
+												<a href="#" class="btn-pretty btn-pretty_small btn-pretty_orange js-open-popup" data-link="service-feedback">Оценить</a>
+											</div>
+										</div>
+										<div class="inbox-item__buttons">
+											<a href="#" class="btn-pretty btn-pretty_orange">Показать телефон</a>
+											<a href="#" class="btn-pretty btn-pretty_gray">Отказаться</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="inbox-item inbox-item_disabled">
+								<div class="inbox-item__inner">
+									<button class="inbox-item__close fa fa-close"></button>
+									<div class="inbox-item__content">
+										<div class="inbox-item__title">Перевозка на личном автомобиле</div>
+										<div class="inbox-item__text">
+											<p>Отвезти девочку на процедуры в реабилитационный центр, помочь пройти процедуры и довести обратно.</p>
+										</div>
+										<div class="inbox-item__meta inbox-item__meta_current">РЕАЛИЗОВАТЬ ДО 17 ФЕВРАЛЯ, 16:30</div>
+										<div class="inbox-item__meta inbox-item__meta_complete"><i class="fa fa-check-circle-o" aria-hidden="true"></i> РЕАЛИЗОВАНА 17 ФЕВРАЛЯ, 17:10</div>
+										<a href="#" class="btn-pretty btn-pretty_small btn-pretty_darkgray inbox-item__button">Отменить заявку</a>
+									</div>
+									<div class="inbox-item__footer">
+										<div class="inbox-user inbox-item__user">
+											<div class="inbox-user__avatar" style="background-image: url(https://placehold.it/100/100);"></div>
+											<div class="inbox-user__name">ОЛЬГА И.В.</div>
+											<div class="star-rating inbox-user__rating">
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+												<div class="star-rating__inner" style="width: 70%;">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+												</div>
+											</div>
+											<ul class="inbox-user__social">
+												<li>
+													<a href="#" class="fa fa-vk"></a>
+												</li>
+												<li>
+													<a href="#" class="fa fa-facebook-square"></a>
+												</li>
+												<li>
+													<a href="#" class="fa fa-instagram"></a>
+												</li>
+											</ul>
+											<div class="inbox-user__button inbox-item__evaluation">
+												<a href="#" class="btn-pretty btn-pretty_small btn-pretty_orange js-open-popup" data-link="service-feedback">Оценить</a>
+											</div>
+										</div>
+										<div class="inbox-item__buttons">
+											<a href="#" class="btn-pretty btn-pretty_orange">Показать телефон</a>
+											<a href="#" class="btn-pretty btn-pretty_gray">Отказаться</a>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -286,9 +461,9 @@
 				<div class="user-right__in">
 					<div class="profile-menu">
 						<ul class="service-menu">
-							<li class="service-menu__item">
-								<a href="#" class="service-menu__link"><span>Знакомства</span></a>
-								<ul class="service-menu__submenu">
+							<li class="service-menu__item js-toggle">
+								<a href="#" class="service-menu__link js-toggle-button"><span>Знакомства</span></a>
+								<ul class="service-menu__submenu js-toggle-container">
 									<li><a href="#" class="is-active"><span>Сообщения</span><small>15</small></a></li>
 									<li><a href="#"><span>Фотографии</span></a></li>
 									<li><a href="#"><span>Друзья</span></a></li>
@@ -633,5 +808,6 @@
 </div>
 <!-- end popup-download -->
 <script src="js/rating.js"></script>
+<script src="js/toggle.js"></script>
 </body>
 </html>

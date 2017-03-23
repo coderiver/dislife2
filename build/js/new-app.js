@@ -27,7 +27,6 @@ $(document).ready(function() {
 		setCurrentHeight();
 
 		function setCurrentHeight() {
-			console.log(desktopMD());
 			if (desktopMD()) {
 				requestScroll.removeAttr('style');
 				requestScroll.perfectScrollbar('destroy');
@@ -48,12 +47,11 @@ $(document).ready(function() {
 				var scrollEnd = container.find('[data-scrollend="' + target + '"]');
 				var parentHeight = container.height();
 				var positionTop = $this.position().top;
-
 				if (scrollEnd.length) {
 					var height = parentHeight - positionTop - scrollEnd.outerHeight();
 					$this.css('max-height', height);
 				} else {
-					if ($this.height() + positionTop <= parentHeight) return;
+					if ($this.outerHeight() + positionTop <= parentHeight) return;
 					var height = parentHeight - positionTop;
 					$this.css('max-height', height);
 				}
