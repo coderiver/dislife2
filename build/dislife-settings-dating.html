@@ -1,0 +1,552 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="theme-color" content="#fff">
+	<link href='https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400italic,500,700,500italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" media="all" href="css/font-awesome.min.css" >
+	<link rel="stylesheet" media="all" href="css/jquery.selectBox.css" >
+	<link rel="stylesheet" media="all" href="css/style.css" >
+	<script src="js/app.js"></script>
+	<link rel="stylesheet" href="css/new-style.css">
+	<title>Settings dating</title>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<a href="#" class="top-banner" style="background-image: url(img/top-banner.jpg);"></a>
+	<div class="overlay"></div>
+	<header class="header js-header">
+		<div class="header__fixed">
+			<a href="#" class="logo">
+				<i class="icon-logo"></i>
+			</a>
+			<button class="btn-nav js-nav-btn" data-id="main-nav">
+				<span></span>
+			</button>
+			<div class="header__inner">
+				<nav class="nav js-nav" data-nav="main-nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="#" class="nav__link is-brown">
+								<div class="nav__link-in">
+									<span>Здоровье</span>
+								</div>
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link is-purple">
+								<div class="nav__link-in">
+									<span>Образование</span>
+								</div>
+							</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link is-yellow">
+								<div class="nav__link-in">
+									<span>Маленькая политика</span>
+								</div>
+							</a>
+						</li>
+						<li class="nav__item nav-specials js-nav-specials">
+							<a href="#" class="nav-specials__link nav__link is-orange js-specials-link">
+								<div class="nav__link-in">
+									<span>Спецпроекты</span>
+									<i class="fa fa-chevron-down"></i>
+								</div>
+							</a>
+							<ul class="nav-specials__list js-specials-drop">
+								<li class="nav__item">
+									<a href="#" class="nav__link is-orange">
+										<div class="nav__link-in">
+											<span>Патронус</span>
+											<small>Детский правозащитный проект</small>
+										</div>
+									</a>
+								</li>
+								<li class="nav__item">
+									<a href="#" class="nav__link is-orange">
+										<div class="nav__link-in">
+											<span>Пазлы</span>
+											<small>Знакомства для инвалидов</small>
+										</div>
+									</a>
+								</li>
+								<li class="nav__item">
+									<a href="#" class="nav__link is-orange">
+										<div class="nav__link-in">
+											<span>Бюро справедливости</span>
+											<small>Обратиться к депутату</small>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<a href="#" class="btn-out">
+					<i class="fa fa-sign-out"></i>
+				</a>
+				<a href="#" class="btn-profile js-nav-btn is-profile"  data-id="user-nav">
+					<i></i>
+					<div class="btn-profile__img" style="background-image: url(https://placecage.com/50/50);"></div>
+					<span>Профайл</span>
+				</a>
+				<a href="#" class="btn-message">
+					<i class="fa fa-envelope"></i>
+					<span>12</span>
+				</a>
+				<a href="#" class="btn-add">
+					<i class="fa fa-user-plus"></i>
+					<span>2</span>
+				</a>
+			</div>
+			<div class="mini-search mini-search_mod">
+				<a href="#" class="fa fa-search"></a>
+			</div>
+		</div>
+	</header>
+	
+	<div class="user-container">
+		<div class="user-row">
+			<div class="user-left">
+				<div class="user-left__in">
+					<div class="more-settings">
+						<form action="/">
+							<div class="more-settings__header">
+								<div class="more-settings__title">Знакомства</div>
+								<div class="more-settings__agreement">
+									<label class="simple-checkbox simple-checkbox_small simple-checkbox_gray">
+										<input type="checkbox">
+										<i class="fa fa-check" aria-hidden="true"></i>
+										<span>Хочу участвовать в знакомствах</span>
+									</label>
+								</div>
+							</div>
+							<div class="user-avatar">
+								<div class="user-avatar__label">Фотография</div>
+								<div class="user-avatar__container">
+									<div class="user-avatar__frame" style="background-image: url(https://placehold.it/150/200);"></div>
+								</div>
+								<ul class="user-avatar__controls">
+									<li><button class="btn-link">Изменить</button></li>
+									<li><button class="btn-link">Удалить</button></li>
+								</ul>
+							</div>
+							<div class="more-settings__body">
+								<div class="more-settings__list">
+									<div class="more-settings__label">Цель знакомства:</div>
+									<ul class="more-settings__container more-settings__container_sm-full">
+										<li>
+											<label class="simple-checkbox">
+												<input type="text">
+												<i class="fa fa-check" aria-hidden="true"></i>
+												<span>Дружба и общение</span>
+											</label>
+										</li>
+										<li>
+											<label class="simple-checkbox">
+												<input type="text">
+												<i class="fa fa-check" aria-hidden="true"></i>
+												<span>Переписка</span>
+											</label>
+										</li>
+										<li>
+											<label class="simple-checkbox">
+												<input type="text">
+												<i class="fa fa-check" aria-hidden="true"></i>
+												<span>Любовь, отношения</span>
+											</label>
+										</li>
+										<li>
+											<label class="simple-checkbox">
+												<input type="text">
+												<i class="fa fa-check" aria-hidden="true"></i>
+												<span>Секс</span>
+											</label>
+										</li>
+										<li>
+											<label class="simple-checkbox">
+												<input type="text">
+												<i class="fa fa-check" aria-hidden="true"></i>
+												<span>Брак</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+								<div class="more-settings__field">
+									<div class="more-settings__label">Семейное положение:</div>
+									<div class="more-settings__container more-settings__container_sm-full">
+										<select class="js-select-box select-xs" style="width: 100%;">
+											<option value="value">value</option>
+											<option value="value 1">value 1</option>
+											<option value="value 2">value 2</option>
+										</select>
+									</div>
+								</div>
+								<div class="more-settings__field">
+									<div class="more-settings__label">Образование:</div>
+									<div class="more-settings__container more-settings__container_sm-full">
+										<select class="js-select-box select-xs" style="width: 100%;">
+											<option value="value">value</option>
+											<option value="value 1">value 1</option>
+											<option value="value 2">value 2</option>
+										</select>
+									</div>
+								</div>
+								<div class="more-settings__field">
+									<div class="more-settings__label">Сфера деятельности:</div>
+									<div class="more-settings__container more-settings__container_sm-full">
+										<select class="js-select-box select-xs" style="width: 100%;">
+											<option value="value">value</option>
+											<option value="value 1">value 1</option>
+											<option value="value 2">value 2</option>
+										</select>
+									</div>
+								</div>
+								<div class="more-settings__field">
+									<div class="more-settings__label">Интересы:</div>
+									<div class="more-settings__container more-settings__container_sm-full">
+										<textarea class="simple-textarea" placeholder="Placeholder color"></textarea>
+									</div>
+								</div>
+								<div class="more-settings__field">
+									<div class="more-settings__label">Вредные привычки:</div>
+									<div class="more-settings__container more-settings__container_sm-full">
+										<textarea class="simple-textarea"></textarea>
+									</div>
+								</div>
+								<div class="more-settings__field">
+									<div class="more-settings__label">О себе:</div>
+									<div class="more-settings__container more-settings__container_sm-full">
+										<textarea class="simple-textarea"></textarea>
+									</div>
+								</div>
+								<div class="more-settings__lists">
+									<div class="more-settings__list">
+										<div class="more-settings__label">Мои особенности:</div>
+										<ul class="more-settings__container more-settings__container_sm-full">
+											<li>
+												<label class="simple-checkbox">
+													<input type="text">
+													<i class="fa fa-check" aria-hidden="true"></i>
+													<span>Отсутствуют</span>
+												</label>
+											</li>
+											<li>
+												<label class="simple-checkbox">
+													<input type="text">
+													<i class="fa fa-check" aria-hidden="true"></i>
+													<span>ДЦП</span>
+												</label>
+											</li>
+											<li>
+												<label class="simple-checkbox">
+													<input type="text">
+													<i class="fa fa-check" aria-hidden="true"></i>
+													<span>Шейник</span>
+												</label>
+											</li>
+											<li>
+												<label class="simple-checkbox">
+													<input type="text">
+													<i class="fa fa-check" aria-hidden="true"></i>
+													<span>Спинальник</span>
+												</label>
+											</li>
+											<li>
+												<label class="simple-checkbox">
+													<input type="text">
+													<i class="fa fa-check" aria-hidden="true"></i>
+													<span>Нет конечности/конечностей</span>
+												</label>
+											</li>
+											<li>
+												<label class="simple-checkbox">
+													<input type="text">
+													<i class="fa fa-check" aria-hidden="true"></i>
+													<span>Рассеянный склероз</span>
+												</label>
+											</li>
+											<li>
+												<label class="simple-checkbox">
+													<input type="text">
+													<i class="fa fa-check" aria-hidden="true"></i>
+													<span>Глухой/слабослышащий(-ая)</span>
+												</label>
+											</li>
+											<li>
+												<label class="simple-checkbox">
+													<input type="text">
+													<i class="fa fa-check" aria-hidden="true"></i>
+													<span>Немой(-ая)</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+									<div class="more-settings__list">
+										<div class="more-settings__label">Прочие настройки:</div>
+										<ul class="more-settings__container more-settings__container_sm-full">
+											<li>
+												<label class="simple-checkbox">
+													<input type="text">
+													<i class="fa fa-check" aria-hidden="true"></i>
+													<span>Не показывать список друзей</span>
+												</label>
+											</li>
+											<li>
+												<label class="simple-checkbox">
+													<input type="text">
+													<i class="fa fa-check" aria-hidden="true"></i>
+													<span>Не показывать дату рождения</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="more-settings__footer">
+									<button class="btn-pretty btn-pretty_gray more-settings__submit">Сохранить</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="user-right js-nav" data-nav="user-nav">
+				<div class="user-right__in">
+					<div class="profile-menu">
+						<ul class="service-menu">
+							<li class="service-menu__item js-toggle">
+								<a href="#" class="service-menu__link js-toggle-button"><span>Знакомства</span></a>
+								<ul class="service-menu__submenu js-toggle-container">
+									<li><a href="#"><span>Сообщения</span><small>15</small></a></li>
+									<li><a href="#"><span>Фотографии</span></a></li>
+									<li><a href="#"><span>Друзья</span></a></li>
+									<li><a href="#"><span>Гости</span><small>12</small></a></li>
+								</ul>
+							</li>
+							<li class="service-menu__item js-toggle">
+								<a href="#" class="service-menu__link js-toggle-button"><span>Настройки</span></a>
+								<ul class="service-menu__submenu js-toggle-container">
+									<li><a href="#"><span>Профайл</span></a></li>
+									<li><a href="#" class="is-active"><span>Знакомства</span></a></li>
+									<li><a href="#"><span>Министерство нужных дел</span></a></li>
+									<li><a href="#"><span>Трудоустройство</span></a></li>
+								</ul>
+							</li>
+							<li class="service-menu__item">
+								<a href="#" class="service-menu__link"><span>Министерство нужных дел</span></a>
+							</li>
+							<li class="service-menu__item">
+								<a href="#" class="service-menu__link"><span>Трудоустройство</span></a>
+							</li>
+							<li class="is-hidden">
+								<a href="#" class="service-menu__link service-menu__out"><span>Выход</span><i class="fa fa-sign-out"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer__top">
+			<div class="container">
+				<div class="footer__text">
+					<a href="#" class="footer__logo">
+						<img src="img/footer-logo.svg" alt="">
+					</a>
+					<div class="footer__question">КАК ЖИТЬ В РОССИИ И НЕ УМЕРЕТЬ</div>
+				</div>
+				<div class="subscribe">
+					<div class="subscribe__label">Подпишитесь на еженедельную рассылку:</div>
+					<form action="" class="subscribe__form">
+						<input type="text" class="subscribe__input" placeholder="Ваш e-mail">
+						<i class="fa fa-envelope-o"></i>
+						<button class="subscribe__btn">Подписаться</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="container">
+				<ul class="footer__social">
+					<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+					<li><a href="#"><i class="fa fa-vk"></i></a></li>
+					<li><a href="#"><i class="fa fa-odnoklassniki-square"></i></a></li>
+				</ul>
+				<div class="footer__copy">
+					<p>© Dislife.ru 2015</p>
+					<div class="footer__age">18+</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+<!-- END out-->
+
+<!-- begin popup-login -->
+<div class="popup js-popup" data-popup="popup-login">
+    <div class="popup__in js-tabs">
+        <button class="fa fa-close popup__close js-close-popup"></button>
+        <div class="popup__tabs">
+            <a href="#" class="popup__tab js-tabs-link is-active">Вход</a>
+            <a href="#" class="popup__tab js-tabs-link">Регистрация</a>
+        </div>
+        <div class="popup__body">
+            <div class="tab-content js-tabs-content">
+                <div class="popup__title"><span>Через соцсети</span></div>
+                <ul class="social-big">
+                    <li><a href="#" class="is-vk"><i class="fa fa-vk"></i></a></li>
+                    <li><a href="#" class="is-fb"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#" class="is-odk"><i class="fa fa-odnoklassniki"></i></a></li>
+                    <li><a href="#" class="is-gp"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#" class="is-ya"><i class="social-ya">Я</i></a></li>
+                </ul>
+                <div class="popup__title"><span>Или логин Dislife.ru</span></div>
+
+                <div class="popup__form">
+                    <form action="#" class="js-validation">
+                        <div class="field">
+                            <label class="field__label">Логин</label>
+                            <div class="field__input input">
+                                <i class="fa fa-user input__icon"></i>
+                                <input type="text" class="input-text" name="email" data-validation="email" data-validation-error-msg=" ">
+                                <i class="input__valid fa fa-check"></i>
+                                <i class="input__invalid fa fa-close"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">Пароль</label>
+                            <div class="field__input input">
+                                <i class="fa fa-lock input__icon"></i>
+                                <input type="password" name="password" class="input-text input-text_pwd" data-validation="required" data-validation-error-msg=" ">
+                            </div>
+                        </div>
+                        <div class="field-login">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Запомнить меня</span>
+                                </label>
+                            </div>
+                            <div class="login">
+                                <input type="submit" value="Войти" class="input-btn">
+                                <a href="#" class="orange-link">Я забыл пароль</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="tab-content js-tabs-content">
+                <div class="popup__form">
+                    <form action="#" class="js-validation">
+                        <div class="field">
+                            <label class="field__label">Логин</label>
+                            <div class="field__input input">
+                                <i class="fa fa-user input__icon"></i>
+                                <input type="text" class="input-text" name="email" data-validation="required" data-validation-error-msg=" ">
+                                <i class="input__valid fa fa-check"></i>
+                                <i class="input__invalid fa fa-close"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">E-mail</label>
+                            <div class="field__input input">
+                                <i class="fa fa-user input__icon"></i>
+                                <input type="text" class="input-text" name="email" data-validation="email" data-validation-error-msg=" ">
+                                <i class="input__valid fa fa-check"></i>
+                                <i class="input__invalid fa fa-close"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">Повторите пароль</label>
+                            <div class="field__input input">
+                                <i class="fa fa-lock input__icon"></i>
+                                <input type="password" name="password" class="input-text input-text_pwd" data-validation="required" data-validation-error-msg=" ">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">Пароль</label>
+                            <div class="field__input input">
+                                <i class="fa fa-lock input__icon"></i>
+                                <input type="password" name="password" class="input-text input-text_pwd" data-validation="required" data-validation-error-msg=" ">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Я принимаю пользовательское соглашение</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="submit" value="Зарегистрироваться" class="input-btn input-btn_full">
+                        </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end popup-login -->
+<!-- begin popup-download  -->
+<div class="popup popup_download js-popup" data-popup="popup-download">
+    <div class="popup__in">
+        <button class="fa fa-close popup__close js-close-popup"></button>
+        <div class="popup__body">
+            <div class="popup__name">Загрузка фотографии</div>
+            <form action="" class="profile-form">
+                <div class="profile-form__field">
+                    <div class="profile-form__label">АЛЬБОМ</div>
+                    <!-- <div class="select select_mod js-select">
+                        <div class="select__text js-select-text">Мой альбом</div>
+                        <i class="fa fa-angle-down"></i>
+                        <ul class="select__list js-select-list">
+                            <li data-val="value">value</li>
+                            <li data-val="value1">value1</li>
+                            <li data-val="value2">value2</li>
+                        </ul>
+                        <select>
+                            <option value="value">value</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                        </select>
+                    </div> -->
+                    <select class="js-select-box is-gray" style="width: 100%;">
+                        <option value="Мой альбом">Мой альбом</option>
+                        <option value="value1">value1</option>
+                        <option value="value2">value2</option>
+                    </select>
+                </div>
+                <div class="profile-form__field">
+                    <div class="profile-form__label">ОПИСАНИЕ</div>
+                    <input type="text" class="input-full input-full_white">
+                </div>
+                <div class="profile-form__add">
+                    <label class="add-file">
+                        <input type="file">
+                        <i class="fa fa-camera"></i>
+                        <span>Выбрать файл</span>
+                    </label>
+                </div>
+                <div class="profile-form__btn">
+                    <button class="btn-full btn-full_mod">
+                        <span>Загрузить</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- end popup-download -->
+<script src="js/rating.js"></script>
+<script src="js/toggle.js"></script>
+</body>
+</html>

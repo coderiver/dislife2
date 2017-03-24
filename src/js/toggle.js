@@ -3,7 +3,6 @@ $(document).ready(function() {
 		var toggle = $('.js-toggle');
 
 		toggle.each(function() {
-			console.log('toggle');
 			var $this = $(this);
 			var button = $this.find('.js-toggle-button');
 			var container = $this.find('.js-toggle-container');
