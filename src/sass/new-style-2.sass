@@ -1,0 +1,100 @@
+@import lib/mixins
+
+// media
+=r1
+  @media only screen and (max-width: 1320px)
+    @content
+
+=r2
+  @media only screen and (max-width: 990px)
+    @content
+=r3
+  @media only screen and (max-width: 660px)
+    @content
+=r4
+  @media only screen and (max-width: 480px)
+    @content
+=r5
+  @media only screen and (max-width: 1150px)
+    @content
+
+// fonts
+=fa
+  font: normal normal normal 14px/1 FontAwesome
+  font-size: inherit
+  text-rendering: auto
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+
++font("Arial Rounded MT Bold", ArialRoundedMTBold)
+
+//Arial rounded
+=arb
+  font-family: "Arial Rounded MT Bold", Arial, sans-serif
+
+// lora-font
+=lora
+  font-family: 'Lora', serif
+  font-weight: 400
+=lorai
+  font-family: 'Lora', serif
+  font-weight: 400
+  font-style: italic
+=lorab
+  font-family: 'Lora', serif
+  font-weight: 700
+=lorabi
+  font-family: 'Lora', serif
+  font-weight: 700
+  font-style: italic
+
+// 'Fira Sans' font
+=fira
+  font-family: "FiraSans-Regular", Arial, sans-serif
+
+=reg
+  font-family: "FiraSans-Regular", Arial, sans-serif
+
+=regi
+  font-family: "FiraSans-Italic", Arial, sans-serif
+
+=light
+  font-family: "FiraSans-Light", Arial, sans-serif
+=lighti
+  font-family: "FiraSans-LightItalic", Arial, sans-serif
+
+=med
+  font-family: "FiraSans-Medium", Arial, sans-serif
+
+=medi
+  font-family: "FiraSans-MediumItalic", Arial, sans-serif
+
+=bold
+  font-family: "FiraSans-Bold", Arial, sans-serif
+
+=boldi
+  font-family: "FiraSans-BoldItalic", Arial, sans-serif
+
+// colors
+$violet: #c0a6cd
+$gold: #f2c05e
+$red: #d27857
+$orange: #ff8c61
+$mint: #9bc1bc
+
+=hover
+  .no-touch &
+    &:hover
+      @content
+
+//CONTENT
+
+
+// @import big-map
+// @import service-menu
+// @import inbox
+// @import service-feedback
+// @import evaluate
+// @import datebox-custom
+// @import more-settings
