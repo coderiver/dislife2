@@ -1,0 +1,178 @@
+.help
+  padding-top: 76px
+  padding-bottom: 90px
+  +cover
+  &__title
+    margin-bottom: 4px
+  &__subttl
+    font-size: 24px
+    color: $text
+    +light
+    margin-bottom: 63px
+  &__btn
+    max-width: 220px
+
+.filter-tags
+  border-bottom: 1px solid  #d8d8d8
+  padding-bottom: 10px
+
+.filter-tag
+  display: inline-block
+  text-align: center
+  font-size: 16px
+  +reg
+  color: #353535
+  border-radius: 3px
+  border: 1px solid #d8d8d8
+  min-width: 120px
+  padding: 9px 35px
+  margin-right: 20px
+  margin-bottom: 20px
+  background-color: transparent
+  position: relative
+  .close-icon
+    +icon-close(8, 2, #fff)
+    position: absolute
+    top: 6px
+    right: 7px
+  &:focus, &.is-active
+    background-image: linear-gradient(180deg, #ffa461 0%, #f67e25 100%)
+    color: #fff
+
+.helpers-section
+  background-color: #f5f7f7
+  padding-top: 80px
+  padding-bottom: 50px
+  &__title
+    text-align: center
+    margin-bottom: 84px
+  &__btn-block-title
+    font-size: 24px
+    color: $text
+    +med
+    margin-bottom: 26px
+  &__btn
+    max-width: 220px
+    margin: 0 auto
+  &__btn-block
+    text-align: center
+  &__helpers
+    margin-bottom: 47px
+      
+
+.helpers
+  font-size: 0
+  border-bottom: 1px solid  #d8d8d8
+  padding-bottom: 37px
+  &__btn
+    max-width: 220px
+    margin: 0 auto
+
+.helper
+  display: inline-block
+  text-align: center
+  width: 20%
+  padding-left: 10px
+  padding-right: 10px
+  margin-bottom: 63px
+  &__img
+    width: 190px
+    height: 190px
+    border-radius: 50%
+    +cover
+    border: 2px solid  #fff
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 32px
+    position: relative
+  &__name
+    font-size: 24px
+    +med
+    color: $text
+    margin-bottom: 17px
+  &__social
+    position: absolute
+    bottom: -17px
+    left: 0
+    width: 100%
+    text-align: center
+  &__social-icon
+    display: inline-block
+  &__info
+    font-size: 0
+  &__info-block
+    display: inline-block
+    width: 33.33333%
+    font-size: 15px
+    color: $text
+    +light
+    span
+      display: inline-block
+      position: relative
+      top: -0.3em
+
+.partners
+  padding-top: 78px
+  padding-bottom: 0
+  &__slider
+    border-bottom: 1px solid  #d8d8d8
+    margin-bottom: 36px
+    &.has-no-bd-bottom
+      border-bottom: none
+  &__title
+
+.partners-slider
+  font-size: 0
+  padding-top: 50px
+  padding-bottom: 50px
+  &__item
+    width: 16.66666%
+    display: inline-block
+    +vertical
+    img
+      display: inline-block
+      vertical-align: middle
+      max-width: 100%
+
+.join
+  text-align: center
+  position: relative
+  overflow: hidden
+  padding-top: 15%
+  padding-bottom: 15%
+  &__title
+    color: #fff
+    font-size: 46px
+    +med
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.34)
+    margin-bottom: 14px
+  &__subttl
+    color: #fff
+    font-size: 24px
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.34)
+    +light
+    margin-bottom: 70px
+  &__btn
+    max-width: 220px
+    margin: 0 auto
+
+.comp-bg
+  font-size: 0
+  position: absolute
+  width: 100%
+  height: 100%
+  z-index: -1
+  left: 0
+  top: 0
+  &::before
+    content: ''
+    background-color: rgba(#000, .5)
+    +coverdiv
+  &__item
+    +cover
+    display: inline-block
+    width: 11.11111%
+    height: 33.333333%
+
+
+

@@ -28,6 +28,7 @@
 
 
 +font("Arial Rounded MT Bold", ArialRoundedMTBold)
++font("opensans-light", opensans-light)
 
 //Arial rounded
 =arb
@@ -76,21 +77,87 @@
 =boldi
   font-family: "FiraSans-BoldItalic", Arial, sans-serif
 
+=opsans-light
+  font-family: "opensans-light", Arial, sans-serif
+
 // colors
 $violet: #c0a6cd
 $gold: #f2c05e
 $red: #d27857
 $orange: #ff8c61
 $mint: #9bc1bc
+$text: #282828
 
 =hover
   .no-touch &
     &:hover
       @content
 
+.h1
+  &_md
+    font-size: 50px
+    color: #657977
+    +med
+
+.h2
+  &_md
+    font-size: 36px
+    color: $text
+    +med
+
+.btn-full
+  display: inline-block
+  text-align: center
+  &_grad-green
+    box-shadow: 0 2px 0 #8da8a4
+    border-radius: 3px
+    background-image: linear-gradient(180deg, #9bc1bc 0%, #93b6b2 100%)
+    &:before
+      border-radius: 3px
+      background: darken(#93b6b2, 10%)
+  &_grad-orange
+    box-shadow: 0 2px 0 #e77448
+    border-radius: 3px
+    background-image: linear-gradient(180deg, #ffa461 0%, #f67e25 100%)
+    &:before
+      border-radius: 3px
+      background: darken(#ffa461, 10%)
+  &_transparent-orange
+    border: 1px solid $orange
+    border-radius: 3px
+    background-color: transparent
+    color: $orange
+    .no-touch &
+      &:hover
+        color: #fff
+    &:before
+      border-radius: 3px
+      background: darken($orange, 10%)   
+
+.footer
+  &__warning
+    color: $text
+    +light
+    font-size: 12px
+    text-transform: uppercase
+    padding-top: 38px
+    padding-bottom: 38px
+    text-align: center
+    line-height: 1.5
+
+
+
+
 //CONTENT
 
 
+
+
+@import new-styles-2/topbar
+@import new-styles-2/hero
+@import new-styles-2/main
+@import new-styles-2/how
+@import new-styles-2/request
 // @import big-map
 // @import service-menu
 // @import inbox
