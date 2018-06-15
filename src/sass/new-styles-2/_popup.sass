@@ -2,6 +2,27 @@
   &_lg
     &__in
       max-width: 850px
+    &__title
+      text-align: center
+      margin-bottom: 35px
+    .popup__body
+      padding-top: 55px
+      padding-left: 50px
+      padding-right: 50px
+      padding-bottom: 39px
+    &__text
+      text-align: center
+      font-size: 14px
+      color: $text
+      margin-bottom: 34px
+    &__btns
+      text-align: center
+      margin-bottom: 20px
+    &__btn
+      display: inline-block
+      min-width: 200px
+      margin-left: 10px
+      margin-right: 10px
 
 .popup-main
   .popup__body
@@ -47,4 +68,21 @@
     margin-bottom: 40px
   &__btn
     max-width: 220px
+    margin: 0 auto
+
+.popup_lg-form
+  &__textarea
+    margin-bottom: 40px
+    textarea
+      width: 100%
+      resize: none
+      min-height: 140px
+      border: 1px solid  $gray
+      border-radius: 3px
+      padding: 10px
+      font-size: 16px
+      color: $text
+      +reg
+  &__btn
+    max-width: 260px
     margin: 0 auto

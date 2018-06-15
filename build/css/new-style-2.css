@@ -214,6 +214,11 @@
 .request-item_big__btn span { position: relative; top: -7px; }
 
 .popup_lg__in { max-width: 850px; }
+.popup_lg__title { text-align: center; margin-bottom: 35px; }
+.popup_lg .popup__body { padding-top: 55px; padding-left: 50px; padding-right: 50px; padding-bottom: 39px; }
+.popup_lg__text { text-align: center; font-size: 14px; color: #282828; margin-bottom: 34px; }
+.popup_lg__btns { text-align: center; margin-bottom: 20px; }
+.popup_lg__btn { display: inline-block; min-width: 200px; margin-left: 10px; margin-right: 10px; }
 
 .popup-main .popup__body { padding-top: 55px; padding-bottom: 0; padding-left: 0; padding-right: 0; }
 .popup-main__title { text-align: center; margin-bottom: 41px; }
@@ -227,6 +232,10 @@
 .popup-catalog__title { border-bottom: 1px solid #d8d8d8; padding-bottom: 20px; }
 .popup-catalog__feedbacks { margin-bottom: 40px; }
 .popup-catalog__btn { max-width: 220px; margin: 0 auto; }
+
+.popup_lg-form__textarea { margin-bottom: 40px; }
+.popup_lg-form__textarea textarea { width: 100%; resize: none; min-height: 140px; border: 1px solid #d8d8d8; border-radius: 3px; padding: 10px; font-size: 16px; color: #282828; font-family: "FiraSans-Regular", Arial, sans-serif; }
+.popup_lg-form__btn { max-width: 260px; margin: 0 auto; }
 
 .catalog { padding-top: 39px; padding-bottom: 38px; }
 .catalog .container { *zoom: 1; }
