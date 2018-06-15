@@ -1,0 +1,187 @@
+.catalog
+  padding-top: 39px
+  padding-bottom: 38px
+  .container
+    +clr
+  &__title
+    float: left
+    margin-bottom: 27px
+  &__btn
+    float: right
+    min-width: 220px
+    padding-top: 10px
+    margin-bottom: 27px
+  &__filters-block,
+  &__list,
+  &__pagination
+    float: left
+    width: 100%
+  &__filters-block
+    margin-bottom: 40px
+  &__list
+    margin-bottom: 39px
+
+.filters-block
+  border: 1px solid $gray
+  border-radius: 3px  
+  padding-top: 21px
+  &__top, &__bottom
+    +clr
+    padding-left: 24px
+    padding-right: 24px
+  &__top
+    border-bottom: 1px solid $gray
+    padding-bottom: 6px
+  &__bottom
+    padding-top: 14px
+    padding-bottom: 15px
+  &__select, &__filter-tags, &__all, &__checkboxes
+    float: left
+  &__select, &__all
+    width: 310px
+  &__filter-tags, &__checkboxes
+    width: calc(100% - 310px)
+    padding-left: 85px
+  &__all
+    font-size: 20px
+    +med
+    color: #353535
+  &__checkboxes
+    padding-top: 4px
+    .checkbox
+      display: inline-block
+      margin-right: 100px
+
+.catalog-list
+  &__head
+    display: flex
+    justify-content: flex-start
+    font-size: 14px
+    color: #9b9b9b
+    +reg
+    border-bottom: 1px solid  $gray
+    padding-bottom: 23px
+    padding-top: 20px
+  &__head-col
+    &.is-name
+      width: 24.2%
+    &.is-city
+      width: 12.3%
+    &.is-social
+      width: 20.2%
+    &.is-rating
+      width: 14.7%
+    &.is-feedbacks
+      width: 10.1%
+    &.is-type
+      width: 19.5%
+
+.catalog-item
+  position: relative
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  font-size: 16px
+  padding-top: 30px
+  padding-bottom: 30px
+  +reg
+  color: $text
+  +tr(box-shadow .3s)
+  margin-left: -20px
+  margin-right: -20px
+  padding-left: 20px
+  padding-right: 20px
+  &::before, &::after
+    width: 100%
+    content: ''
+    position: absolute
+    height: 1px
+    background-color: $gray    
+    left: 0
+  &::before
+    top: -1px
+    background-color: #fff
+    display: none
+  &::after
+    bottom: 0
+  &:hover
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1)
+    &::before
+      display: block
+    &::after
+      display: none
+  &__img
+    +cover
+    width: 80px
+    height: 80px
+    border-radius: 50%
+    position: relative
+    &:hover
+      .catalog-item__tooltip
+        &.is-active
+          display: block
+  &__name
+    +med
+    width: calc(24.2% - 80px)
+    padding-left: 20px
+  &__img-icon
+    border-radius: 50%
+    background-color: #7ed321
+    width: 30px
+    height: 30px
+    +vertical
+    position: absolute
+    top: 0
+    right: -6px
+    display: none
+    .fa
+      font-size: 16px
+      color: #fff
+      display: inline-block
+      vertical-align: middle
+    &.is-active
+      display: block
+  &__city
+    width: 12.3%
+  &__social
+    width: 20.2%
+  &__rating
+    width: 14.7%
+  &__feedbacks
+    width: 10.1%
+  &__type
+    width: 19.5%
+  &__social-icon
+    display: inline-block
+    margin-right: 10px
+    vertical-align: top
+    svg
+      width: 30px
+      height: 30px
+  &__rating-block
+    display: inline-block
+    margin-right: 10px
+    vertical-align: top
+    svg
+      margin-right: 5px
+    span
+      position: relative
+      top: -3px
+  &__type
+    display: flex
+    align-items: center
+    img
+      margin-right: 10px
+  &__tooltip
+    position: absolute
+    top: -54px
+    left: -14px
+    padding: 10px 15px
+    background-color: #fff
+    min-width: 230px
+    color: #353535
+    font-size: 12px
+    border: 1px solid $gray
+    border-radius: 3px
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2)
+    display: none

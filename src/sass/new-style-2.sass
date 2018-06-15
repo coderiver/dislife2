@@ -151,7 +151,69 @@ $gray: #d8d8d8
     padding-bottom: 38px
     text-align: center
     line-height: 1.5
+    border-top: 1px solid  $gray
 
+.select
+  &_volonter
+    .select__icon
+      position: absolute
+      top: 50%
+      right: 16px
+      margin-top: -3px
+      +arr(12,6, #000, b)
+    .select__text
+      +reg
+      font-size: 14px
+      border: 1px solid  $gray
+      border-radius: 3px
+      min-height: 40px
+      padding-top: 7px
+      padding-bottom: 6px
+    .select__list
+      border: 1px solid  $gray
+
+.checkbox
+  &_volonter
+    padding-left: 39px
+    span
+      font-size: 16px
+      color: $text
+      +reg
+      &::before
+        top: -2px
+        width: 25px
+        height: 25px
+      &::after
+        top: 4px
+        left: 5px
+        color: #fff
+    input[type="checkbox"]:checked
+      + span
+        &::before
+          border-color: $gray
+          background-color: $orange
+
+.pagination
+  text-align: center
+  &__link
+    font-size: 14px
+    color: $text
+    border-radius: 3px
+    border: 1px solid  $gray
+    margin-left: 10px
+    margin-right: 10px
+    display: inline-block
+    padding: 5px 10px
+    &.is-disabled
+      pointer-events: none
+      border: none
+      padding-left: 0
+      padding-right: 0
+      margin-left: 0
+      margin-right: 0
+    &.is-active
+      color: $orange
+      border-color: $orange    
 
 
 
@@ -166,10 +228,4 @@ $gray: #d8d8d8
 @import new-styles-2/how
 @import new-styles-2/request
 @import new-styles-2/popup
-// @import big-map
-// @import service-menu
-// @import inbox
-// @import service-feedback
-// @import evaluate
-// @import datebox-custom
-// @import more-settings
+@import new-styles-2/catalog
