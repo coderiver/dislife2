@@ -111,6 +111,11 @@ $gray: #d8d8d8
     font-size: 24px
     +med
     color: $text
+.h4
+  &_md
+    font-size: 20px
+    +med
+    color: $text
 
 .btn-full
   display: inline-block
@@ -213,7 +218,39 @@ $gray: #d8d8d8
       margin-right: 0
     &.is-active
       color: $orange
-      border-color: $orange    
+      border-color: $orange
+
+.feedback
+  border-bottom: 1px solid  $gray
+  padding-top: 29px
+  padding-bottom: 39px
+  &__person
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    margin-bottom: 15px
+  &__person-img
+    +cover
+    width: 50px
+    height: 50px
+    border-radius: 50%
+  &__person-name
+    font-size: 14px
+    padding-left: 13px
+    +med
+    line-height: 1.3
+    color: $text
+    span
+      color: #b7b7b7
+      font-size: 11px
+      +reg
+      text-transform: uppercase
+      letter-spacing: .05em
+      display: block
+  &__text
+    font-size: 14px
+    color: $text
+    +reg
 
 
 
