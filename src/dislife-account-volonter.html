@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+  //=include partials/head.html
+  <link rel="stylesheet" href="css/new-style-2.css">
+  <title>Account Volonter</title>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+  //=include partials/header-user.html
+  <div class="user-container user-container_mod">
+    <div class="user-row">
+      <div class="user-left">
+        <div class="user-left__in">
+
+        <!-- begin applications-section -->
+        <section class="applications-section">
+
+          <div class="applications-section__top">
+            <div class="applications-section__title">
+              <h2 class="h2 h2_md">Заявки</h2>
+            </div>
+
+            <div class="applications-section__filter-tags">
+              <!-- begin filter-tags -->
+              <div class="filter-tags has-no-padding">
+                <button class="filter-tag">
+                  <span class="filter-tag__lable">Вы выбраны <span>(2)</span></span>
+                </button>
+                <button class="filter-tag">
+                  <span class="filter-tag__lable">Ожидают подтверждения <span>(2)</span></span>
+                </button>
+                <button class="filter-tag is-active">
+                  <span class="filter-tag__lable">Все <span>(4)</span></span>
+                </button>
+              </div>
+              <!-- end filter-tags -->
+            </div>
+          </div>
+          
+
+          <div class="application-section__applications">
+            //=include partials/applications.html
+          </div>
+
+        </section>
+        <!-- end applications-section -->
+          
+        </div>
+      </div>
+      <div class="user-right js-nav" data-nav="user-nav">
+        <div class="user-right__in">
+          <div class="profile-menu">
+            <ul class="service-menu service-menu_mod">
+              <li class="service-menu__item js-toggle">
+                <a href="#" class="service-menu__link js-toggle-button"><span>Волонтер</span></a>
+                <ul class="service-menu__submenu js-toggle-container">
+                  <li><a href="#"><span>Сообщения</span><small>15</small></a></li>
+                  <li><a href="#"><span>Фотографии</span></a></li>
+                  <li><a href="#"><span>Друзья</span></a></li>
+                  <li><a href="#"><span>Гости</span><small>12</small></a></li>
+                </ul>
+              </li>
+              <li class="service-menu__item">
+                <a href="#" class="service-menu__link is-active"><span>Заявки <span>(4)</span></span></a>
+              </li>
+              <li class="service-menu__item">
+                <a href="#" class="service-menu__link"><span>Сообщения <span>(33)</span></span></a>
+              </li>
+              <li class="service-menu__item js-toggle">
+                <a href="#" class="service-menu__link js-toggle-button"><span>Настройки</span></a>
+                <ul class="service-menu__submenu js-toggle-container">
+                  <li><a href="#"><span>Профайл</span></a></li>
+                  <li><a href="#" class="is-active"><span>Знакомства</span></a></li>
+                  <li><a href="#"><span>Министерство нужных дел</span></a></li>
+                  <li><a href="#"><span>Трудоустройство</span></a></li>
+                </ul>
+              </li>              
+              <li class="is-hidden">
+                <a href="#" class="service-menu__link service-menu__out"><span>Выход</span><i class="fa fa-sign-out"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  //=include partials/footer-warning.html
+</div>
+<!-- END out-->
+//=include partials/popups.html
+<script src="js/rating.js"></script>
+<script src="js/toggle.js"></script>
+</body>
+</html>

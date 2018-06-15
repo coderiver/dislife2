@@ -103,3 +103,118 @@
     color: $text
     +med
     font-size: 14px
+
+  &_big
+    width: 100%
+    padding-top: 24px
+    padding-left: 30px
+    padding-right: 18px
+    padding-bottom: 10px
+    .request-item__contacts
+      margin-bottom: 30px
+    .request-item__person
+      margin-bottom: 0
+    .request-item__date
+      margin-bottom: 19px
+    &__top
+      border-bottom: 1px solid  $gray
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding-bottom: 20px
+      width: 100%
+    &__block
+      display: flex
+      justify-content: flex-start
+    &__link
+      text-decoration: underline
+      font-size: 14px
+      +reg
+      color: $orange
+      a
+        color: inherit
+    &__left
+      padding-top: 19px      
+      position: relative
+      width: 54.3%
+      &::before
+        content: ''
+        position: absolute
+        width: 1px
+        height: calc(100% - 34px)
+        right: 0
+        top: 19px
+        background-color: $gray
+    &__right
+      width: 45.7%
+      padding-top: 25px
+      padding-left: 47px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      padding-bottom: 15px
+    &__descr
+      font-size: 14px
+      color: $text
+      +reg
+      margin-bottom: 40px
+      p
+        margin-bottom: 18px
+
+    &__approved-text,
+    &__wait-text,
+    &__canceled-user-text,
+    &__failed-text,
+    &__rejected-text
+      display: none
+
+    &__approved-text
+      color: #66bb51
+    &__wait-text
+      color: #4a90e2      
+      justify-content: space-between
+      flex-direction: column
+      height: 100%
+    &__canceled-user-text
+      color: #9bc1bc
+    &__failed-text
+      color: #d0021b
+    &__rejected-text
+      color: #ff5a1d
+    &__status
+      font-size: 14px
+      flex: 1
+      padding-bottom: 33px     
+      +med
+      &.is-approved
+        .request-item_big__approved-text
+          display: block
+      &.is-wait
+        .request-item_big__wait-text
+          display: flex
+      &.is-canceled-user
+        .request-item_big__canceled-user-text
+          display: block
+      &.is-failed
+        .request-item_big__failed-text
+          display: block
+      &.is-rejected
+        .request-item_big__rejected-text
+          display: block
+      strong
+        font-size: 20px
+        display: block
+      p
+        line-height: 2
+      .btn-full
+        max-width: 180px
+        font-size: 16px
+    &__btn
+      font-size: 14px
+      color: $text
+      svg
+        margin-right: 7px
+      span
+        position: relative
+        top: -7px
+
