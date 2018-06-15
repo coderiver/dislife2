@@ -4,6 +4,8 @@
 
 .h2_md { font-size: 36px; color: #282828; font-family: "FiraSans-Medium", Arial, sans-serif; }
 
+.h3_md { font-size: 24px; font-family: "FiraSans-Medium", Arial, sans-serif; color: #282828; }
+
 .btn-full { display: inline-block; text-align: center; }
 .btn-full_grad-green { box-shadow: 0 2px 0 #8da8a4; border-radius: 3px; background-image: -webkit-linear-gradient(270deg, #9bc1bc 0%, #93b6b2 100%); background-image: linear-gradient(180deg, #9bc1bc 0%, #93b6b2 100%); }
 .btn-full_grad-green:before { border-radius: 3px; background: #75a19c; }
@@ -66,7 +68,7 @@
 .helper__img { width: 190px; height: 190px; border-radius: 50%; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; border: 2px solid #fff; margin-left: auto; margin-right: auto; margin-bottom: 32px; position: relative; }
 .helper__name { font-size: 24px; font-family: "FiraSans-Medium", Arial, sans-serif; color: #282828; margin-bottom: 17px; }
 .helper__social { position: absolute; bottom: -17px; left: 0; width: 100%; text-align: center; }
-.helper__social-icon { display: inline-block; }
+.helper__social-icon { display: inline-block; margin: 0 4px; }
 .helper__info { font-size: 0; }
 .helper__info-block { display: inline-block; width: 33.33333%; font-size: 15px; color: #282828; font-family: "FiraSans-Light", Arial, sans-serif; }
 .helper__info-block span { display: inline-block; position: relative; top: -0.3em; }
@@ -139,6 +141,16 @@
 .request-item__contacts-field { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; margin-bottom: 12px; }
 .request-item__contacts { margin-bottom: 34px; }
 .request-item__date { color: #282828; font-family: "FiraSans-Medium", Arial, sans-serif; font-size: 14px; }
+
+.popup_lg__in { max-width: 850px; }
+
+.popup-main .popup__body { padding-top: 55px; padding-bottom: 0; padding-left: 0; padding-right: 0; }
+.popup-main__title { text-align: center; margin-bottom: 41px; }
+.popup-main__blocks { border-top: 1px solid #d8d8d8; font-size: 0; }
+.popup-main__block { display: inline-block; width: 50%; vertical-align: top; border-right: 1px solid #d8d8d8; font-size: 14px; text-align: center; padding-top: 35px; padding-left: 48px; padding-right: 40px; padding-bottom: 59px; }
+.popup-main__block p { margin-bottom: 25px; }
+.popup-main__block:last-child { border-right: none; }
+.popup-main__btn { max-width: 220px; margin: 0 auto; }
 
 
 

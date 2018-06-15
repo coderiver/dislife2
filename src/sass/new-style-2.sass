@@ -87,6 +87,7 @@ $red: #d27857
 $orange: #ff8c61
 $mint: #9bc1bc
 $text: #282828
+$gray: #d8d8d8
 
 =hover
   .no-touch &
@@ -104,6 +105,12 @@ $text: #282828
     font-size: 36px
     color: $text
     +med
+
+.h3
+  &_md
+    font-size: 24px
+    +med
+    color: $text
 
 .btn-full
   display: inline-block
@@ -158,6 +165,7 @@ $text: #282828
 @import new-styles-2/main
 @import new-styles-2/how
 @import new-styles-2/request
+@import new-styles-2/popup
 // @import big-map
 // @import service-menu
 // @import inbox
