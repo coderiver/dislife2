@@ -3,7 +3,7 @@
 <head>
   //=include partials/head.html
   <link rel="stylesheet" href="css/new-style-2.css">
-  <title>Account Volonter</title>
+  <title>Account Volonter User</title>
 </head>
 <body>
 <!-- BEGIN  out-->
@@ -19,17 +19,17 @@
 
           <div class="applications-section__top">
             <div class="applications-section__title">
-              <h2 class="h2 h2_md">Заявки</h2>
+              <h2 class="h2 h2_md">Мои зявки</h2>
             </div>
 
             <div class="applications-section__filter-tags">
               <!-- begin filter-tags -->
               <div class="filter-tags has-no-padding">
                 <button class="filter-tag is-fz-smaller">
-                  <span class="filter-tag__lable">Вы выбраны <span>(2)</span></span>
+                  <span class="filter-tag__lable">Опубликованные <span>(2)</span></span>
                 </button>
                 <button class="filter-tag is-fz-smaller">
-                  <span class="filter-tag__lable">Ожидают подтверждения <span>(2)</span></span>
+                  <span class="filter-tag__lable">Волонтер ожидает вашего подтверждения <span>(2)</span></span>
                 </button>
                 <button class="filter-tag is-fz-smaller is-active">
                   <span class="filter-tag__lable">Все <span>(4)</span></span>
@@ -41,7 +41,7 @@
           
 
           <div class="application-section__applications">
-            //=include partials/applications.html
+            //=include partials/applications-user.html
           </div>
 
         </section>
@@ -56,16 +56,20 @@
               <li class="service-menu__item js-toggle">
                 <a href="#" class="service-menu__link js-toggle-button"><span>Волонтер</span></a>
                 <ul class="service-menu__submenu js-toggle-container">
-                  <li><a href="#"><span>Мои заявки<small>(4)</small></span></a></li>
+                  <li><a href="#" class="is-active"><span>Мои заявки<small>(4)</small></span></a></li>
                   <li><a href="#"><span>Сообщения<small>(+1)</small></span></a></li>
                 </ul>
               </li>
-              <li class="service-menu__item">
-                <a href="#" class="service-menu__link is-active"><span>Заявки <span>(4)</span></span></a>
+              <li class="service-menu__item js-toggle">
+                <a href="#" class="service-menu__link js-toggle-button"><span>Знакомства</span></a>
+                <ul class="service-menu__submenu js-toggle-container">
+                  <li><a href="#"><span>Сообщения<small>(+2)</small></span></a></li>
+                  <li><a href="#"><span>Фотографии<small>(+1)</small></span></a></li>
+                  <li><a href="#"><span>Друзья</span></a></li>
+                  <li><a href="#"><span>Гости</span></a></li>
+                </ul>
               </li>
-              <li class="service-menu__item">
-                <a href="#" class="service-menu__link"><span>Сообщения <span>(33)</span></span></a>
-              </li>
+
               <li class="service-menu__item js-toggle">
                 <a href="#" class="service-menu__link js-toggle-button"><span>Настройки</span></a>
                 <ul class="service-menu__submenu js-toggle-container">

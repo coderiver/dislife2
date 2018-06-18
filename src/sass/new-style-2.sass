@@ -144,7 +144,9 @@ $gray: #d8d8d8
         color: #fff
     &:before
       border-radius: 3px
-      background: darken($orange, 10%)   
+      background: darken($orange, 10%)
+  &_sm
+    font-size: 16px
 
 .footer
   &__warning
@@ -220,6 +222,14 @@ $gray: #d8d8d8
       color: $orange
       border-color: $orange
 
+.add-time
+  color: #b7b7b7
+  font-size: 11px
+  +reg
+  text-transform: uppercase
+  letter-spacing: .05em
+  display: block
+
 .feedback
   border-bottom: 1px solid  $gray
   padding-top: 29px
@@ -255,12 +265,47 @@ $gray: #d8d8d8
 .user-container
   &_mod
   .user-left
-    // width: 61.7%
     &__in
       width: 990px
       padding-right: 30px
   .user-right
-    // width: 38.3%
+
+.label
+  font-size: 14px
+  +med
+  color: #fff
+  position: relative
+  display: inline-block  
+  background-color: #d0021b
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2)  
+  &::before,
+  &::after
+    position: absolute
+    content: ''
+    left: 0
+    +arr(20,10, #d0021b, t)
+  &::before
+    top: 0
+    transform: translate(-13px, -1px) rotate(45deg)
+  &::after
+    bottom: 0
+    transform: translate(-13px, 1px) rotate(135deg)
+  span
+    display: inline-block
+    position: relative
+    height: 30px
+    line-height: 30px
+    padding-right: 50px
+    padding-left: 20px
+    &::before
+      content: ''
+      position: absolute
+      +arr(8,5, #52010a, t)
+      right: 0
+      bottom: 0
+      transform: translate(0, 4px) rotate(-45deg) 
+
+
 
 
 

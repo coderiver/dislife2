@@ -185,3 +185,107 @@
     border-radius: 3px
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2)
     display: none
+
+  &_short-hover
+    margin-left: 0
+    margin-right: 0
+    border-radius: 3px
+    border: 1px solid  $gray
+    display: block
+    padding-top: 17px
+    padding-bottom: 20px
+    padding-left: 37px
+    margin-bottom: 10px
+    +tr(border-color .3s)
+    &:hover
+      border-color: transparent
+    &::after
+      display: none
+    &.has-button
+      padding-bottom: 25px
+      .catalog-item_short-hover__btn
+        display: block
+      .catalog-item_short-hover__top
+        margin-bottom: 18px
+        border-bottom: 1px solid  $gray
+        padding-bottom: 20px
+    &.is-active
+      padding-bottom: 25px
+      .catalog-item_short-hover__descr
+        display: block
+      .catalog-item_short-hover__options
+        display: flex
+      .catalog-item_short-hover__top
+        margin-bottom: 18px
+        border-bottom: 1px solid  $gray
+        padding-bottom: 20px
+    .catalog-item__img
+      width: 50px
+      height: 50px
+    .catalog-item__name
+      width: 25%
+    .catalog-item__social
+      width: 22%
+    .catalog-item__rating
+      width: 25%
+    .catalog-item__type
+      width: 28%
+    .catalog-item__img-icon
+      width: 20px
+      height: 20px
+      .fa
+        font-size: 10px
+    .catalog-item__rating
+      font-size: 14px
+      padding-right: 10px
+    &__top
+      display: flex
+      justify-content: space-between
+      align-items: center      
+    &__descr
+      border-radius: 3px
+      background-color: #f5f7f7
+      font-size: 14px
+      color: $text
+      +reg
+      padding: 15px 20px
+      margin-bottom: 27px
+      display: none
+    &__contacts
+      font-size: 14px
+      +reg
+      color: #9b9b9b
+      line-height: 1.8
+      span
+        color: $text
+        font-size: 16px
+        +med
+    &__options
+      display: none
+      justify-content: flex-start
+    &__options-text, &__controls
+      padding-top: 30px
+    &__options-text
+      font-size: 14px
+      color: #66bb51
+      +med
+      flex: 1
+      padding-left: 33px
+    &__controls
+      width: 300px
+    &__control
+      color: #9b9b9b
+      font-size: 14px
+      display: inline-block
+      +reg
+      span
+        text-decoration: underline
+      svg
+        margin-right: 10px
+      &:first-child
+        margin-right: 35px
+    &__btn
+      display: none
+      max-width: 180px
+      margin-left: auto
+      margin-right: auto      

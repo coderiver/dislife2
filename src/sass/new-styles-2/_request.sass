@@ -19,6 +19,7 @@
 
 .request-item
   display: inline-block
+  position: relative
   vertical-align: top
   margin-right: 30px
   width: calc(33.33333% - 20px)
@@ -103,6 +104,9 @@
     color: $text
     +med
     font-size: 14px
+  &__label
+    position: absolute
+    right: -6px
 
   &_big
     width: 100%
@@ -116,6 +120,8 @@
       margin-bottom: 0
     .request-item__date
       margin-bottom: 19px
+    &:hover
+      box-shadow: none
     &__top
       border-bottom: 1px solid  $gray
       display: flex
@@ -134,7 +140,7 @@
       a
         color: inherit
     &__left
-      padding-top: 19px      
+      padding-top: 19px        
       position: relative
       width: 54.3%
       &::before
@@ -160,7 +166,6 @@
       margin-bottom: 40px
       p
         margin-bottom: 18px
-
     &__approved-text,
     &__wait-text,
     &__canceled-user-text,
@@ -218,3 +223,34 @@
         position: relative
         top: -7px
 
+  &_has-label
+    .request-item_big__top
+      padding-right: 320px
+
+  &_big-equal-cols
+    .request-item_big__left
+      width: 50%
+      padding-right: 40px 
+    .request-item_big__right
+      width: 50%
+      padding-left: 20px
+    .request-item__date, .request-item_big__approved-text
+      width: 180px
+      margin-left: auto
+      margin-right: auto
+    .request-item_big__status
+      width: 180px
+      margin-left: auto
+      margin-right: auto
+      flex: auto
+      &.is-wait
+        .request-item_big__wait-text
+          display: block
+    &__btns
+      width: 180px
+      margin-left: auto
+      margin-right: auto
+      padding-top: 10px
+      .btn-full
+        &:first-child
+          margin-bottom: 20px
