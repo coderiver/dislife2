@@ -24,7 +24,7 @@
 .filters-block
   border: 1px solid $gray
   border-radius: 3px  
-  padding-top: 21px
+  padding-top: 21px  
   &__top, &__bottom
     +clr
     padding-left: 24px
@@ -32,14 +32,15 @@
   &__top
     border-bottom: 1px solid $gray
     padding-bottom: 6px
+    padding-right: 0
   &__bottom
     padding-top: 14px
     padding-bottom: 15px
-  &__select, &__filter-tags, &__all, &__checkboxes
+  &__select, &__filter-tags, &__all, &__checkboxes, &__links
     float: left
   &__select, &__all
     width: 310px
-  &__filter-tags, &__checkboxes
+  &__filter-tags, &__checkboxes, &__links
     width: calc(100% - 310px)
     padding-left: 85px
   &__all
@@ -51,6 +52,23 @@
     .checkbox
       display: inline-block
       margin-right: 100px
+  &__links
+    padding-top: 4px
+  &__link
+    display: inline-block
+    margin-right: 65px
+    font-size: 16px
+    color: #6c8784
+    &.is-active
+      text-decoration: underline
+      color: #ff8c61
+
+  &_all
+    .filter-tag
+      margin-bottom: 10px
+      padding-left: 25px
+      padding-right: 25px
+
 
 .catalog-list
   &__head

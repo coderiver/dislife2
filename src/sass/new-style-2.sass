@@ -105,6 +105,10 @@ $gray: #d8d8d8
     font-size: 36px
     color: $text
     +med
+  &_sm
+    font-size: 30px
+    color: $text
+    +med
 
 .h3
   &_md
@@ -344,8 +348,46 @@ $gray: #d8d8d8
       &:after
         display: block
 
+.section-filters-block
+  padding-top: 35px
+  padding-bottom: 45px
+  &__top
+    +clr
+    margin-bottom: 30px
+  &__title
+    float: left    
+  &__btn
+    float: right
+    min-width: 220px
 
+.text-block
+  font-size: 14px
+  color: $text
+  p
+    margin-bottom: 36px
+  h4
+    margin-bottom: 19px
+  li
+    margin-bottom: 21px
+    position: relative
+    span
+      display: inline-block
+      background-color: $orange
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      +vertical
+      position: relative
+      top: -5px
+      margin-right: 10px     
+      .fa
+        display: inline-block
+        vertical-align: middle
+        font-size: 10px
+        color: #fff
 
+.map
+  min-height: 500px
 
 
 //CONTENT

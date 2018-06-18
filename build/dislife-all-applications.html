@@ -1,0 +1,584 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#fff">
+  <link href='https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400italic,500,700,500italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" media="all" href="css/font-awesome.min.css" >
+  <link rel="stylesheet" media="all" href="css/jquery.selectBox.css" >
+  <link rel="stylesheet" media="all" href="css/style.css" >
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" href="css/new-style-2.css">
+  <title>All Applications Volonter</title>
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+  <a href="#" class="top-banner" style="background-image: url(img/top-banner.jpg);"></a>
+  <header class="header js-header">
+  	<div class="header__fixed">
+  		<a href="#" class="logo">
+  			<i class="icon-logo"></i>
+  		</a>
+  		<button class="btn-nav js-nav-btn" data-id="main-nav">
+  			<span></span>
+  		</button>
+  		<div class="header__inner">
+  			<nav class="nav js-nav" data-nav="main-nav">
+  				<ul class="nav__list">
+  					<li class="nav__item">
+  						<a href="#" class="nav__link is-brown">
+  							<div class="nav__link-in">
+  								<span>Здоровье</span>
+  							</div>
+  						</a>
+  					</li>
+  					<li class="nav__item">
+  						<a href="#" class="nav__link is-purple">
+  							<div class="nav__link-in">
+  								<span>Образование</span>
+  							</div>
+  						</a>
+  					</li>
+  					<li class="nav__item">
+  						<a href="#" class="nav__link is-yellow">
+  							<div class="nav__link-in">
+  								<span>Маленькая политика</span>
+  							</div>
+  						</a>
+  					</li>
+  					<li class="nav__item nav-specials js-nav-specials">
+  						<a href="#" class="nav-specials__link nav__link is-orange js-specials-link">
+  							<div class="nav__link-in">
+  								<span>Спецпроекты</span>
+  								<i class="fa fa-chevron-down"></i>
+  							</div>
+  						</a>
+  						<ul class="nav-specials__list js-specials-drop">
+  							<li class="nav__item">
+  								<a href="#" class="nav__link is-orange">
+  									<div class="nav__link-in">
+  										<span>Патронус</span>
+  										<small>Детский правозащитный проект</small>
+  									</div>
+  								</a>
+  							</li>
+  							<li class="nav__item">
+  								<a href="#" class="nav__link is-orange">
+  									<div class="nav__link-in">
+  										<span>Пазлы</span>
+  										<small>Знакомства для инвалидов</small>
+  									</div>
+  								</a>
+  							</li>
+  							<li class="nav__item">
+  								<a href="#" class="nav__link is-orange">
+  									<div class="nav__link-in">
+  										<span>Бюро справедливости</span>
+  										<small>Обратиться к депутату</small>
+  									</div>
+  								</a>
+  							</li>
+  						</ul>
+  					</li>
+  				</ul>
+  			</nav>
+  			<a href="#" class="btn-enter js-open-popup" data-link="popup-login">
+  				<i class="fa fa-sign-in"></i>
+  				<span>Вход</span>
+  			</a>
+  		</div>
+  		<div class="mini-search">
+  			<a href="#" class="fa fa-search"></a>
+  		</div>
+  	</div>
+  </header>
+  
+  <!-- begin topbar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar__inner">
+        <div class="topbar__nav">
+          <nav class="topbar-nav">
+            <ul class="topbar-nav__list">
+              <li class="topbar-nav__item"><a href="#" class="topbar-nav__link">О сервисе</a></li>
+              <li class="topbar-nav__item"><a href="#" class="topbar-nav__link">Все заявки <span>(148)</span></a></li>
+              <li class="topbar-nav__item"><a href="#" class="topbar-nav__link">Создать заявку</a></li>
+              <li class="topbar-nav__item"><a href="#" class="topbar-nav__link">Все помощники <span>(145)</span></a></li>
+              <li class="topbar-nav__item"><a href="#" class="topbar-nav__link">Хочу помогать</a></li>
+              <li class="topbar-nav__item"><a href="#" class="topbar-nav__link">Наши партнеры</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="topbar__contact">Горячая линия: 8 (800) 333-44-55</div>
+      </div>
+    </div>    
+  </div>
+    <!-- end topbar -->
+
+  <!-- begin section-filters-block -->
+  <section class="section-filters-block">
+    <div class="container">
+      <div class="section-filters-block__top">
+        <div class="section-filters-block__title">
+          <h2 class="h2 h2_md">Все заявки</h2>
+        </div>
+        <div class="section-filters-block__btn">
+          <a href="#" class="btn-full btn-full_grad-orange"><span>Добавить заявку</span></a>
+        </div>
+      </div>
+      <!-- begin filters-block -->
+      <div class="filters-block filters-block_all">
+      
+        <div class="filters-block__top">
+          <div class="filters-block__select">
+            <div class="select select_volonter js-select">
+            <div class="select__text js-select-text">Город</div>
+              <div class="select__icon"></div>
+              <ul class="select__list js-select-list">
+                <li data-val="value">value</li>
+                <li data-val="value1">value1</li>
+                <li data-val="value2">value2</li>
+              </ul>
+              <select>
+                <option value="value">value</option>
+                <option value="value1">value1</option>
+                <option value="value2">value2</option>
+              </select>
+            </div>
+          </div>
+          <div class="filters-block__filter-tags">
+            <!-- begin filter-tags -->
+            <div class="filter-tags">
+              <button class="filter-tag is-active">
+                <span class="filter-tag__lable">Все вместе</span>
+                <i class="close-icon"></i>
+              </button>
+              <button class="filter-tag">
+                <span class="filter-tag__lable">Помочь добраться на авто</span>
+                <i class="close-icon"></i>
+              </button>
+              <button class="filter-tag">
+                <span class="filter-tag__lable">Юридическая помощь</span>
+                <i class="close-icon"></i>
+              </button>
+              <button class="filter-tag">
+                <span class="filter-tag__lable">Сопроводить</span>
+                <i class="close-icon"></i>
+              </button>
+              <button class="filter-tag">
+                <span class="filter-tag__lable">Профессиональная помощь</span>
+                <i class="close-icon"></i>
+              </button>
+              <button class="filter-tag">
+                <span class="filter-tag__lable">Доставить из другой страны</span>
+                <i class="close-icon"></i>
+              </button>
+              <button class="filter-tag">
+                <span class="filter-tag__lable">Другое</span>
+                <i class="close-icon"></i>
+              </button>
+            </div>
+            <!-- end filter-tags -->
+          </div>
+        </div>
+      
+        <div class="filters-block__bottom">
+          <div class="filters-block__all">Всего найдено волонтеров: 145</div>
+          <div class="filters-block__links">
+            <a href="#" class="filters-block__link is-active">Ближайшие</a>
+            <a href="#" class="filters-block__link">Новые</a>
+            <a href="#" class="filters-block__link">Срочные</a>
+          </div>
+        </div>
+      
+      </div>
+      <!-- end filters-block -->
+    </div>
+  </section>
+  <!-- end section-filters-block -->
+
+  <!-- begin all-applications -->
+  <section class="all-applications">
+    <div class="container">
+      <div class="all-applications__inner">
+        <div class="all-applications__left">
+          <div class="all-applications__applications">
+
+            <!-- begin request-item -->
+            <div class="request-item request-item_big request-item_no-cols request-item_has-label">
+
+              <div class="request-item__label label"><span>Как можно раньше!</span></div>
+
+              <div class="request-item_big__top">
+                <div class="request-item_big__title">
+                  <h4 class="h4 h4_md">Подвезти на машине</h4>
+                </div>
+                <div class="request-item_big__link">
+                  <a href="#">Ссылка на конкретную заявку</a>
+                </div>
+              </div>
+
+              <div class="request-item_big__block">
+                <div class="request-item__contacts">
+                  <div class="request-item__contacts-field">
+                    <div class="request-item__icon is-green"><i>A</i></div>
+                    <div class="request-item__contact">г.Москва, ул. Сиреневая, д.21</div>
+                  </div>
+                  <div class="request-item__contacts-field">
+                    <div class="request-item__icon is-gray"><i>B</i></div>
+                    <div class="request-item__contact">г.Москва, ул. Алтуфьевское шоссе, д.34</div>
+                  </div>
+                </div>
+                <div class="request-item__person">
+                  <div class="request-item__person-img" style="background-image: url('img/volonter/user/user-1.jpg');"></div>
+                  <div class="request-item__person-name">
+                    Тамара Васильевна
+                    <span>Добавлено: 5 минут назад</span>
+                  </div>
+                </div>
+                <div class="request-item__btn">
+                  <a href="#" class="btn-full btn-full_grad-orange"><span>Могу помочь</span></a>
+                </div>
+              </div>
+
+            </div>
+            <!-- end request-item -->
+
+            <!-- begin request-item -->
+            <div class="request-item request-item_big request-item_no-cols">
+
+
+              <div class="request-item_big__top">
+                <div class="request-item_big__title">
+                  <h4 class="h4 h4_md">Подвезти на машине</h4>
+                </div>
+                <div class="request-item_big__top-right">
+                  <div class="request-item__date">
+                    <p>До 12 февраля, 12:00</p>
+                  </div>
+                  <div class="request-item_big__link">
+                    <a href="#">Ссылка на конкретную заявку</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="request-item_big__block">
+                <div class="request-item__contacts">
+                  <div class="request-item__contacts-field">
+                    <div class="request-item__icon is-green"><i>A</i></div>
+                    <div class="request-item__contact">г.Москва, ул. Сиреневая, д.21</div>
+                  </div>
+                  <div class="request-item__contacts-field">
+                    <div class="request-item__icon is-gray"><i>B</i></div>
+                    <div class="request-item__contact">г.Москва, ул. Алтуфьевское шоссе, д.34</div>
+                  </div>
+                </div>
+                <div class="request-item__person">
+                  <div class="request-item__person-img" style="background-image: url('img/volonter/user/user-1.jpg');"></div>
+                  <div class="request-item__person-name">
+                    Тамара Васильевна
+                    <span>Добавлено: 5 минут назад</span>
+                  </div>
+                </div>
+                <div class="request-item__btn">
+                  <a href="#" class="btn-full btn-full_grad-orange"><span>Могу помочь</span></a>
+                </div>
+              </div>
+
+            </div>
+            <!-- end request-item -->
+
+            <!-- begin request-item -->
+            <div class="request-item request-item_big request-item_no-cols">
+
+
+              <div class="request-item_big__top">
+                <div class="request-item_big__title">
+                  <h4 class="h4 h4_md">Подвезти на машине</h4>
+                </div>
+                <div class="request-item_big__top-right">
+                  <div class="request-item__date">
+                    <p>До 12 февраля, 12:00</p>
+                  </div>
+                  <div class="request-item_big__link">
+                    <a href="#">Ссылка на конкретную заявку</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="request-item_big__block">
+                <div class="request-item__contacts">
+                  <div class="request-item__contacts-field">
+                    <div class="request-item__icon is-green"><i>A</i></div>
+                    <div class="request-item__contact">г.Москва, ул. Сиреневая, д.21</div>
+                  </div>
+                  <div class="request-item__contacts-field">
+                    <div class="request-item__icon is-gray"><i>B</i></div>
+                    <div class="request-item__contact">г.Москва, ул. Алтуфьевское шоссе, д.34</div>
+                  </div>
+                </div>
+                <div class="request-item_big__descr">
+                  <p>Подопечная семья (Юлия и Маша) детской выездной паллиативной службы в Москве едет в Курган на операцию ребенку с инвалидностью (тяжелая форма ДЦП) ... </p>
+                  <a href="#" class="request-item_big__link">Читать Далее</a>
+                </div>
+                <div class="request-item__person">
+                  <div class="request-item__person-img" style="background-image: url('img/volonter/user/user-1.jpg');"></div>
+                  <div class="request-item__person-name">
+                    Тамара Васильевна
+                    <span>Добавлено: 5 минут назад</span>
+                  </div>
+                </div>
+                <div class="request-item__btn">
+                  <a href="#" class="btn-full btn-full_grad-orange"><span>Могу помочь</span></a>
+                </div>
+              </div>
+
+            </div>
+            <!-- end request-item -->
+
+            <div class="all-applications__btn">
+              <a href="#" class="btn-full btn-full_grad-green"><span>Показать больше заявок</span></a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="all-applications__right">
+          <div class="all-applications__map">
+            <!-- begin map -->
+            <div class="map" id="map"></div>            
+            <!-- end map -->           
+            
+          </div>
+          <div class="all-applications__title">
+            <h3 class="h2 h2_sm">О проекте "DISLIFE.<br> Люди помогают людям"</h3>
+          </div>
+          <div class="all-applications__text-block">
+            <!-- begin text-block -->
+            <div class="text-block">
+              <p>«DISLIFE. Люди помогают людям» – это онлайн-площадка, где люди с инвалидностью со всей России могут оставлять запросы о помощи, а желающие помочь – откликаться на них.</p>
+              <h4 class="h4 h4_md">Какой может быть помощь:</h4>
+              <ul>
+                <li><span><i class="fa fa-check"></i></span>Перевозка на автомобиле</li>
+                <li><span><i class="fa fa-check"></i></span>Профессиональная помощь</li>
+                <li><span><i class="fa fa-check"></i></span>Юридическая помощь</li>
+                <li><span><i class="fa fa-check"></i></span>Доставить необходимое из другой страны</li>
+                <li><span><i class="fa fa-check"></i></span>Сопроводить</li>
+                <li><span><i class="fa fa-check"></i></span>Другое</li>
+              </ul>
+              <p>Также запросы на поиск волонтеров оставляют благотворительные фонды и социальные проекты.</p>
+              <p>Внимание! "DISLIFE. Люди помогают людям" – открытая площадка, воспользоваться которой может каждый желающий. Мы не знаем всех пользователей лично и не несем ответственность за их действия. Пожалуйста, будьте внимательны и не идите на личный контакт, если у вас нет уверенности в человеке.</p>
+            </div>
+            <!-- end text-block -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end all-applications -->
+
+  <footer class="footer">
+
+    <div class="footer__warning">
+
+      <div class="container"><p>Внимание! "DISLIFE. Люди помогают людям" – открытая площадка, воспользоваться которой может каждый желающий. Мы не знаем пользователей лично и не несем ответственность за их действия. Будьте внимательны и не идите на личный контакт, если у вас нет уверенности в человеке.</p></div>
+
+    </div>
+
+    <div class="footer__bottom">
+
+      <div class="container">
+
+        <ul class="footer__social">
+
+          <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+
+          <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+
+          <li><a href="#"><i class="fa fa-vk"></i></a></li>
+
+          <li><a href="#"><i class="fa fa-odnoklassniki-square"></i></a></li>
+
+        </ul>
+
+        <div class="footer__copy">
+
+          <p>© Dislife.ru 2015</p>
+
+          <div class="footer__age">18+</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+</div>
+<!-- END out-->
+
+<!-- begin popup-login -->
+<div class="popup js-popup" data-popup="popup-login">
+    <div class="popup__in js-tabs">
+        <button class="fa fa-close popup__close js-close-popup"></button>
+        <div class="popup__tabs">
+            <a href="#" class="popup__tab js-tabs-link is-active">Вход</a>
+            <a href="#" class="popup__tab js-tabs-link">Регистрация</a>
+        </div>
+        <div class="popup__body">
+            <div class="tab-content js-tabs-content">
+                <div class="popup__title"><span>Через соцсети</span></div>
+                <ul class="social-big">
+                    <li><a href="#" class="is-vk"><i class="fa fa-vk"></i></a></li>
+                    <li><a href="#" class="is-fb"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#" class="is-odk"><i class="fa fa-odnoklassniki"></i></a></li>
+                    <li><a href="#" class="is-gp"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#" class="is-ya"><i class="social-ya">Я</i></a></li>
+                </ul>
+                <div class="popup__title"><span>Или логин Dislife.ru</span></div>
+
+                <div class="popup__form">
+                    <form action="#" class="js-validation">
+                        <div class="field">
+                            <label class="field__label">Логин</label>
+                            <div class="field__input input">
+                                <i class="fa fa-user input__icon"></i>
+                                <input type="text" class="input-text" name="email" data-validation="email" data-validation-error-msg=" ">
+                                <i class="input__valid fa fa-check"></i>
+                                <i class="input__invalid fa fa-close"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">Пароль</label>
+                            <div class="field__input input">
+                                <i class="fa fa-lock input__icon"></i>
+                                <input type="password" name="password" class="input-text input-text_pwd" data-validation="required" data-validation-error-msg=" ">
+                            </div>
+                        </div>
+                        <div class="field-login">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Запомнить меня</span>
+                                </label>
+                            </div>
+                            <div class="login">
+                                <input type="submit" value="Войти" class="input-btn">
+                                <a href="#" class="orange-link">Я забыл пароль</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="tab-content js-tabs-content">
+                <div class="popup__form">
+                    <form action="#" class="js-validation">
+                        <div class="field">
+                            <label class="field__label">Логин</label>
+                            <div class="field__input input">
+                                <i class="fa fa-user input__icon"></i>
+                                <input type="text" class="input-text" name="email" data-validation="required" data-validation-error-msg=" ">
+                                <i class="input__valid fa fa-check"></i>
+                                <i class="input__invalid fa fa-close"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">E-mail</label>
+                            <div class="field__input input">
+                                <i class="fa fa-user input__icon"></i>
+                                <input type="text" class="input-text" name="email" data-validation="email" data-validation-error-msg=" ">
+                                <i class="input__valid fa fa-check"></i>
+                                <i class="input__invalid fa fa-close"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">Повторите пароль</label>
+                            <div class="field__input input">
+                                <i class="fa fa-lock input__icon"></i>
+                                <input type="password" name="password" class="input-text input-text_pwd" data-validation="required" data-validation-error-msg=" ">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="field__label">Пароль</label>
+                            <div class="field__input input">
+                                <i class="fa fa-lock input__icon"></i>
+                                <input type="password" name="password" class="input-text input-text_pwd" data-validation="required" data-validation-error-msg=" ">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Я принимаю пользовательское соглашение</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="submit" value="Зарегистрироваться" class="input-btn input-btn_full">
+                        </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end popup-login -->
+<!-- begin popup-download  -->
+<div class="popup popup_download js-popup" data-popup="popup-download">
+    <div class="popup__in">
+        <button class="fa fa-close popup__close js-close-popup"></button>
+        <div class="popup__body">
+            <div class="popup__name">Загрузка фотографии</div>
+            <form action="" class="profile-form">
+                <div class="profile-form__field">
+                    <div class="profile-form__label">АЛЬБОМ</div>
+                    <!-- <div class="select select_mod js-select">
+                        <div class="select__text js-select-text">Мой альбом</div>
+                        <i class="fa fa-angle-down"></i>
+                        <ul class="select__list js-select-list">
+                            <li data-val="value">value</li>
+                            <li data-val="value1">value1</li>
+                            <li data-val="value2">value2</li>
+                        </ul>
+                        <select>
+                            <option value="value">value</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                        </select>
+                    </div> -->
+                    <select class="js-select-box is-gray" style="width: 100%;">
+                        <option value="Мой альбом">Мой альбом</option>
+                        <option value="value1">value1</option>
+                        <option value="value2">value2</option>
+                    </select>
+                </div>
+                <div class="profile-form__field">
+                    <div class="profile-form__label">ОПИСАНИЕ</div>
+                    <input type="text" class="input-full input-full_white">
+                </div>
+                <div class="profile-form__add">
+                    <label class="add-file">
+                        <input type="file">
+                        <i class="fa fa-camera"></i>
+                        <span>Выбрать файл</span>
+                    </label>
+                </div>
+                <div class="profile-form__btn">
+                    <button class="btn-full btn-full_mod">
+                        <span>Загрузить</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- end popup-download -->
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="js/new-app-2.js"></script>
+</body>
+</html>

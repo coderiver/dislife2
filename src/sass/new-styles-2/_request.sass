@@ -132,6 +132,7 @@
     &__block
       display: flex
       justify-content: flex-start
+      flex-wrap: wrap
     &__link
       text-decoration: underline
       font-size: 14px
@@ -222,6 +223,10 @@
       span
         position: relative
         top: -7px
+    &__top-right
+      text-align: right
+      .request-item__date
+        margin-bottom: 0
 
   &_has-label
     .request-item_big__top
@@ -254,3 +259,26 @@
       .btn-full
         &:first-child
           margin-bottom: 20px
+
+  &_no-cols
+    padding-right: 40px
+    margin-bottom: 20px
+    padding-bottom: 25px
+    &.request-item_has-label
+      .request-item_big__top
+        padding-right: 259px
+    .request-item__contacts
+      width: 100%
+      +clr
+      padding-top: 22px
+      margin-bottom: 15px
+    .request-item__contacts-field
+      float: left
+      &:first-child
+        margin-right: 74px
+    .request-item_big__block
+      justify-content: space-between
+      align-items: center
+    .request-item__btn
+      min-width: 220px
+
