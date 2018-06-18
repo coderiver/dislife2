@@ -1,25 +1,39 @@
 .how
   padding-top: 78px
+  +r2
+    padding-top: 46px
   &__title
     text-align: center
     margin-bottom: 48px
+    +r2
+      margin-bottom: 30px
 
 .how-tabs
   &__tabs
     max-width: 1140px
     margin: 0 auto
-    font-size: 0
+    display: flex
+    justify-content: space-between
+    +r1
+      max-width: 990px
+    +r2
+      max-width: 720px
   &__tab
-    display: inline-block
+    display: flex
+    align-items: center
+    justify-content: center
     width: 33.33333%
     +med
     font-size: 24px
     color: $text
-    background-image: linear-gradient(180deg, #f5f7f7 0%, #d7d9d9 100%)
+    background-image: linear-gradient(180deg, rgba(#f5f7f7, .5) 0%, rgba(#d7d9d9, .5) 100%)
     text-align: center
     padding: 24px 10px
     position: relative
     cursor: pointer
+    +r1
+      font-size: 18px
+      padding: 15px 10px
     &::after
       display: none
       content: ''
@@ -51,17 +65,28 @@
     background-color: #f5f7f7
     padding-top: 82px
     padding-bottom: 66px
+    +r2
+      padding-bottom: 30px
+      padding-top: 64px
   &__item
     max-width: 1140px
     margin: 0 auto
     padding-left: 35px
     padding-right: 35px
+    display: none
+    +r2
+      padding-left: 20px
+      padding-right: 20px
+    &.is-active
+      display: block
 
 .how-block
   display: flex
   justify-content: space-between
   align-items: center
   position: relative
+  +r2
+    margin-bottom: 46px
   &__img
     width: 35%
     font-size: 0
@@ -77,14 +102,24 @@
     color: $text
     line-height: .75
     margin-bottom: 30px
+    +r2
+      font-size: 24px
   &__descr
     color: $text
     font-size: 20px
     line-height: 1.5
     +reg
+    +r2
+      font-size: 18px
+      line-height: 1.7
   &__curve-line
     position: absolute
     left: 50%
     transform: translate(-50%, 0)
     bottom: -47px
+    +r2
+      width: 360px
+    img
+      max-width: 100%
+
 

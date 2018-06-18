@@ -2,6 +2,9 @@
   padding-top: 76px
   padding-bottom: 90px
   +cover
+  +r2
+    text-align: center
+    padding-top: 57px
   &__title
     margin-bottom: 4px
   &__subttl
@@ -11,6 +14,9 @@
     margin-bottom: 63px
   &__btn
     max-width: 220px
+    +r2
+      margin-left: auto
+      margin-right: auto
 
 .filter-tags  
   padding-bottom: 10px
@@ -34,6 +40,11 @@
   margin-right: 20px  
   background-color: transparent
   position: relative
+  +r2
+    padding-left: 30px
+    padding-right: 30px
+    &:nth-child(3n-3)
+      margin-right: 0
   .close-icon
     +icon-close(8, 2, #fff)
     position: absolute
@@ -55,6 +66,8 @@
   background-color: #f5f7f7
   padding-top: 80px
   padding-bottom: 50px
+  +r2
+    padding-top: 49px
   &__title
     text-align: center
     margin-bottom: 84px
@@ -220,6 +233,10 @@
     display: inline-block
     width: 11.11111%
     height: 33.333333%
+
+.mob-slider
+  &__wrap
+    position: relative
 
 
 
