@@ -24,21 +24,57 @@ $(document).ready(function() {
   //slider
   function setMobSlider() {
     const $slider = $('.js-mob-slider');
-    $slider.slick({
-      nextArrow: $('.js-mob-slider-next'),
-      prevArrow: $('.js-mob-slider-prev'),
-      slidesToScroll: 1,
-      slidesToShow: 1,
-      responsive: [
-      {
-       breakpoint: 660,
-       settings: {
-       }
-     },
-     ]
-   });
+
+    $slider.each(function(index, el) {
+      let $sliderWrap = $(el).parent();
+      let $sliderNext = $sliderWrap.find('.js-mob-slider-next');
+      let $sliderPrev = $sliderWrap.find('.js-mob-slider-prev');
+      let type = $(el).data('mob-slider');
+
+      const sliderOpt = {
+        helpersSlider: {
+          nextArrow: $sliderNext,
+          prevArrow: $sliderPrev,
+          slidesToScroll: 1,
+          slidesToShow: 2,
+          responsive: [
+          {
+           breakpoint: 660,
+           settings: {
+            slidesToShow: 1,
+          }
+        },
+        ]
+      },
+      partnersSlider: {
+        nextArrow: $sliderNext,
+        prevArrow: $sliderPrev,
+        slidesToScroll: 1,
+        slidesToShow: 3,
+        responsive: [
+        {
+         breakpoint: 660,
+         settings: {
+          slidesToShow: 1,
+        }
+      },
+      ]
+    },
+
+  }
+
+      if ($(window).outerWidth() <= 990 ) {
+        $(el).slick(sliderOpt[type]);
+      } else {
+        $(el).slick('unslick');
+      };
+    });    
   };
+
   setMobSlider();
+  $(window).on('resize', setMobSlider);
+  
+  
 
 
 });

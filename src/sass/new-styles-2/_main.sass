@@ -5,23 +5,35 @@
   +r2
     text-align: center
     padding-top: 57px
+  +r3
+    padding-top: 44px
+    padding-bottom: 81px
   &__title
     margin-bottom: 4px
+    +r3
+      margin-bottom: 20px
   &__subttl
     font-size: 24px
     color: $text
     +light
     margin-bottom: 63px
+    +r3
+      font-size: 18px
+      margin-bottom: 34px
   &__btn
     max-width: 220px
     +r2
       margin-left: auto
       margin-right: auto
+    +r3
+      max-width: none
 
 .filter-tags  
   padding-bottom: 10px
   &.has-bd-bottom
     border-bottom: 1px solid  $gray
+    +r3
+      border-bottom: none
     .filter-tag
       margin-bottom: 20px
   &.has-no-padding
@@ -45,6 +57,15 @@
     padding-right: 30px
     &:nth-child(3n-3)
       margin-right: 0
+  +r3
+    font-size: 12px
+    padding-top: 7px
+    padding-bottom: 7px
+    margin-right: 10px
+    padding-left: 10px
+    padding-right: 10px
+    &:nth-child(3n-3)
+      margin-right: 10px
   .close-icon
     +icon-close(8, 2, #fff)
     position: absolute
@@ -68,30 +89,75 @@
   padding-bottom: 50px
   +r2
     padding-top: 49px
+  +r3
+    padding-top: 24px
   &__title
     text-align: center
     margin-bottom: 84px
+    +r2
+      margin-bottom: 45px
+    +r3
+      margin-bottom: 23px
   &__btn-block-title
     font-size: 24px
     color: $text
     +med
     margin-bottom: 26px
+    +r3
+      font-size: 18px
+      margin-bottom: 47px
   &__btn
     max-width: 220px
     margin: 0 auto
+    +r3
+      max-width: none
   &__btn-block
     text-align: center
   &__helpers
     margin-bottom: 47px
+    +r3
+      margin-bottom: 29px
       
 
 .helpers
   font-size: 0
-  border-bottom: 1px solid  $gray
-  padding-bottom: 37px
+  &__wrap
+    border-bottom: 1px solid  $gray
+    padding-bottom: 37px
+    +r2
+      margin-left: -15px
+      margin-right: -15px
   &__btn
     max-width: 220px
     margin: 0 auto
+    +r3
+      max-width: none
+      width: calc(100% - 30px)
+      text-align: center
+
+.mob-slider
+  &__wrap
+    position: relative
+  &__prev,
+  &__next
+    display: none
+    position: absolute
+    top: 67px
+    background-color: transparent
+    .fa
+      font-size: 56px
+      color: $text
+    +r2
+      display: block
+  &__prev
+    left: 32px
+    +r3
+      left: 13px
+  &__next
+    right: 43px
+    +r3
+      right: 21px
+
 
 .helper
   display: inline-block
@@ -100,6 +166,8 @@
   padding-left: 10px
   padding-right: 10px
   margin-bottom: 63px
+  +r3
+    margin-bottom: 34px
   &__img
     width: 190px
     height: 190px
@@ -128,7 +196,7 @@
     font-size: 0
   &__info-block
     display: inline-block
-    width: 33.33333%
+    margin: 0 10px
     font-size: 15px
     color: $text
     +light
@@ -174,12 +242,18 @@
 .partners
   padding-top: 78px
   padding-bottom: 0
+  +r2
+    padding-top: 47px
+  +r3
+    padding-top: 33px
   &__slider
     border-bottom: 1px solid  $gray
     margin-bottom: 36px
     &.has-no-bd-bottom
       border-bottom: none
   &__title
+    +r3
+      text-align: center
 
 .partners-slider
   font-size: 0
@@ -200,21 +274,31 @@
   overflow: hidden
   padding-top: 15%
   padding-bottom: 15%
+  +r2
+    padding-top: 23%
+    padding-bottom: 37%
   &__title
     color: #fff
     font-size: 46px
     +med
     text-shadow: 0 1px 8px rgba(0, 0, 0, 0.34)
     margin-bottom: 14px
+    +r3
+      font-size: 30px
   &__subttl
     color: #fff
     font-size: 24px
     text-shadow: 0 1px 8px rgba(0, 0, 0, 0.34)
     +light
     margin-bottom: 70px
+    +r3
+      font-size: 18px
+      margin-bottom: 62px
   &__btn
     max-width: 220px
     margin: 0 auto
+    +r3
+      max-width: none
 
 .comp-bg
   font-size: 0
@@ -224,15 +308,17 @@
   z-index: -1
   left: 0
   top: 0
-  &::before
-    content: ''
-    background-color: rgba(#000, .5)
-    +coverdiv
+  // &::before
+  //   content: ''
+  //   background-color: rgba(#000, .5)
+  //   +coverdiv
   &__item
     +cover
     display: inline-block
     width: 11.11111%
     height: 33.333333%
+    +r2
+      width: 33.333333%
 
 .mob-slider
   &__wrap

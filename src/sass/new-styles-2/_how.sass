@@ -2,11 +2,15 @@
   padding-top: 78px
   +r2
     padding-top: 46px
+  +r3
+    padding-top: 12px
   &__title
     text-align: center
     margin-bottom: 48px
     +r2
       margin-bottom: 30px
+    +r3
+      margin-bottom: 49px
 
 .how-tabs
   &__tabs
@@ -18,6 +22,10 @@
       max-width: 990px
     +r2
       max-width: 720px
+    +r3
+      flex-direction: column
+      padding-left: 15px
+      padding-right: 15px
   &__tab
     display: flex
     align-items: center
@@ -34,6 +42,11 @@
     +r1
       font-size: 18px
       padding: 15px 10px
+    +r3
+      width: 100%
+      margin-bottom: 10px
+      border-radius: 3px
+      padding: 13px 10px
     &::after
       display: none
       content: ''
@@ -51,6 +64,8 @@
       top: 50%
       transform: translate(0, -50%)
       background-color: $gray
+      +r3
+        display: none
     &:last-child
       &::before
         display: none
@@ -61,6 +76,8 @@
         display: none
       &::after
         display: block
+        +r3
+          display: none
   &__content
     background-color: #f5f7f7
     padding-top: 82px
@@ -68,6 +85,8 @@
     +r2
       padding-bottom: 30px
       padding-top: 64px
+    +r3
+      padding-top: 36px
   &__item
     max-width: 1140px
     margin: 0 auto
@@ -87,15 +106,30 @@
   position: relative
   +r2
     margin-bottom: 46px
+  +r3
+    flex-direction: column
+    margin-bottom: 21px
   &__img
     width: 35%
     font-size: 0
+    +r3
+      width: 100%
+      text-align: center
+      margin-bottom: 22px
+      order: 1
+      img
+        max-width: 150px
+      &.is-right
+        text-align: center
     &.is-right
       text-align: right
     img
       max-width: 100%
   &__text
     width: 65%
+    +r3
+      width: 100%
+      order: 2
   &__title
     +med
     font-size: 30px
@@ -104,6 +138,9 @@
     margin-bottom: 30px
     +r2
       font-size: 24px
+    +r3
+      font-size: 20px
+      text-align: center
   &__descr
     color: $text
     font-size: 20px
@@ -112,6 +149,9 @@
     +r2
       font-size: 18px
       line-height: 1.7
+    +r3
+      font-size: 14px
+      line-height: 1.5
   &__curve-line
     position: absolute
     left: 50%
@@ -119,6 +159,8 @@
     bottom: -47px
     +r2
       width: 360px
+    +r3
+      display: none
     img
       max-width: 100%
 
