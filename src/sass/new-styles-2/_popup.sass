@@ -47,6 +47,19 @@
     padding-left: 48px
     padding-right: 40px
     padding-bottom: 59px
+    +r2
+      width: 100%
+      border-right: none
+      padding-bottom: 39px
+      &:first-child
+        border-bottom: 1px solid $gray
+      p
+        max-width: 337px
+        margin-left: auto
+        margin-right: auto
+    +r3
+      padding-left: 30px
+      padding-right: 30px
     p
       margin-bottom: 25px
     &:last-child
@@ -54,6 +67,9 @@
   &__btn
     max-width: 220px
     margin: 0 auto
+    +r3
+      max-width: none
+      text-align: center
 
 .popup-catalog
   .popup__body
