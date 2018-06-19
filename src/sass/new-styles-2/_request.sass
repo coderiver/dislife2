@@ -160,12 +160,18 @@
     padding-left: 30px
     padding-right: 18px
     padding-bottom: 10px
+    +r2
+      width: 100%
+    +r3
+      padding-bottom: 11px
     .request-item__contacts
       margin-bottom: 30px
     .request-item__person
       margin-bottom: 0
     .request-item__date
       margin-bottom: 19px
+      +r3
+        text-align: left
     &:hover
       box-shadow: none
     &__top
@@ -175,6 +181,10 @@
       justify-content: space-between
       padding-bottom: 20px
       width: 100%
+      +r3
+        flex-direction: column
+        align-items: flex-start
+        padding-bottom: 13px
     &__block
       display: flex
       justify-content: flex-start
@@ -198,6 +208,10 @@
         right: 0
         top: 19px
         background-color: $gray
+      +r3
+        width: 100%
+        &::before
+          display: none
     &__right
       width: 45.7%
       padding-top: 25px
@@ -206,11 +220,16 @@
       flex-direction: column
       justify-content: space-between
       padding-bottom: 15px
+      +r3
+        width: 100%
+        padding-left: 0
     &__descr
       font-size: 14px
       color: $text
       +reg
       margin-bottom: 40px
+      +r3
+        font-size: 12px
       p
         margin-bottom: 18px
     &__approved-text,
@@ -258,14 +277,22 @@
         display: block
       p
         line-height: 2
+        +r3
+          line-height: 1.5
       .btn-full
         max-width: 180px
         font-size: 16px
+        +r3
+          max-width: none
+          margin-top: 31px
     &__btn
       font-size: 14px
       color: $text
       svg
         margin-right: 7px
+        +r3
+          use
+            fill: #9b9b9b
       span
         position: relative
         top: -7px

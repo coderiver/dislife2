@@ -178,6 +178,8 @@ $gray: #d8d8d8
       font-size: 9px
       padding-top: 5px
       padding-bottom: 14px
+    +r3
+      display: none
 
 .select
   &_volonter
@@ -187,6 +189,7 @@ $gray: #d8d8d8
       right: 16px
       margin-top: -3px
       +arr(12,6, #000, b)
+      z-index: 1
     .select__text
       +reg
       font-size: 14px
@@ -286,11 +289,23 @@ $gray: #d8d8d8
 
 .user-container
   &_mod
-  .user-left
-    &__in
-      width: 990px
-      padding-right: 30px
-  .user-right
+    .user-left
+      +r1
+        width: 100%
+        display: block
+      &__in
+        width: 990px
+        padding-right: 30px  
+        +r1
+          margin-left: auto
+          margin-right: auto 
+          padding-right: 15px
+          float: none
+          width: 100%
+          max-width: 758px  
+    .user-right
+      +r1
+        display: none
 
 .label
   font-size: 14px
@@ -407,9 +422,20 @@ $gray: #d8d8d8
 .map
   min-height: 500px
 
-
-//CONTENT
-
+.profile-menu-mob
+  display: none
+  margin-bottom: 22px
+  .select__text
+    font-size: 18px
+    +med
+    background-color: #fff
+    min-height: 50px
+    padding-top: 14px
+    // padding-bottom: 6px
+  +r1
+    display: block
+  +r3
+    margin-bottom: 15px
 
 
 

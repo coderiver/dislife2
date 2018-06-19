@@ -1,13 +1,44 @@
 .applications-section
   padding-top: 30px
+  +r2
+    padding-top: 19px
+    padding-bottom: 10px
   &__top
     +clr
     margin-bottom: 14px
+    +r2
+      margin-bottom: 45px
+    +r3
+      margin-bottom: 21px
   &__title
     float: left
+    +r2
+      float: none
+    +r3
+      text-align: center
   &__filter-tags
     padding-top: 20px
     float: right
+    +r2
+      float: none
+      .filter-tags
+        text-align: left
+      .filter-tag
+        margin-right: 20px
+        margin-left: 0
+    +r3
+      padding-top: 49px
+      .filter-tags
+        display: flex
+        justify-content: flex-start
+        flex-direction: column
+      .filter-tag
+        &:nth-child(3)
+          order: 1
+        &:nth-child(1)
+          order: 2
+        &:nth-child(2)
+          order: 3
     .filter-tags
       text-align: right
     .filter-tag
