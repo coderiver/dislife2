@@ -112,7 +112,9 @@
 .hero__support img { float: left; }
 .hero__support p { float: left; width: -webkit-calc(100% - 40px); width: calc(100% - 40px); padding-left: 19px; padding-top: 9px; }
 
-.help { padding-top: 76px; padding-bottom: 90px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.help { padding-top: 76px; padding-bottom: 90px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; position: relative; }
+.help::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #f8efd6; opacity: 0.6; z-index: 0; display: none; }
+.help .container { z-index: 1; position: relative; }
 .help__title { margin-bottom: 4px; }
 .help__subttl { font-size: 24px; color: #282828; font-family: "FiraSans-Light", Arial, sans-serif; margin-bottom: 63px; }
 .help__btn { max-width: 220px; }
@@ -603,6 +605,7 @@
  .section-filters-block__btn { float: none; text-align: center; }
  .text-block li { display: block; width: auto; }
  .profile-menu-mob { margin-bottom: 15px; }
+ .map-tag { font-size: 12px; min-width: 140px; }
  .hero { background-color: #f0ecec; background-image: none !important; text-align: center; padding-top: 48px; padding-bottom: 31px; }
  .hero__title { margin-left: auto; margin-right: auto; margin-bottom: 20px; }
  .hero__subttl { font-size: 18px; margin-bottom: 38px; }
@@ -611,7 +614,8 @@
  .hero__btn:first-child { margin-right: 0; }
  .hero__link { margin-bottom: 53px; }
  .hero__support { margin-left: auto; margin-right: auto; font-size: 10px; max-width: 260px; }
- .help { padding-top: 44px; padding-bottom: 81px; }
+ .help { padding-top: 44px; padding-bottom: 81px; background-position: 65% 50%; }
+ .help::before { display: block; }
  .help__title { margin-bottom: 20px; }
  .help__subttl { font-size: 18px; margin-bottom: 34px; }
  .help__btn { max-width: none; }
@@ -642,6 +646,7 @@
  .join__title { font-size: 30px; }
  .join__subttl { font-size: 18px; margin-bottom: 62px; }
  .join__btn { max-width: none; }
+ .comp-bg__item { width: 50%; }
  .how { padding-top: 12px; }
  .how__title { margin-bottom: 49px; }
  .how-tabs__tabs { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; padding-left: 15px; padding-right: 15px; }

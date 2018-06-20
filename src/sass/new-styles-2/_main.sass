@@ -2,12 +2,26 @@
   padding-top: 76px
   padding-bottom: 90px
   +cover
+  position: relative
   +r2
     text-align: center
     padding-top: 57px
   +r3
     padding-top: 44px
     padding-bottom: 81px
+    background-position: 65% 50%
+    &::before
+      display: block
+  &::before
+    content: ''
+    +coverdiv
+    background-color: #f8efd6
+    opacity: .6
+    z-index: 0
+    display: none
+  .container
+    z-index: 1
+    position: relative
   &__title
     margin-bottom: 4px
     +r3
@@ -367,6 +381,8 @@
     height: 33.333333%
     +r2
       width: 33.333333%
+    +r3
+      width: 50%
 
 .mob-slider
   &__wrap
