@@ -153,6 +153,10 @@
   &__label
     position: absolute
     right: -6px
+    +r3
+      left: -6px
+      right: auto
+      top: 80px
 
   &_big
     width: 100%
@@ -306,32 +310,69 @@
       padding-right: 320px
 
   &_big-equal-cols
+    +r3
+      padding-left: 20px
+      padding-right: 20px
     .request-item_big__left
       width: 50%
-      padding-right: 40px 
+      padding-right: 40px
+      +r2
+        width: 59.7%
+      +r3
+        width: 100%
     .request-item_big__right
       width: 50%
       padding-left: 20px
+      +r2
+        width: 40.3%
+        padding-left: 0
+      +r3
+        width: 100%
     .request-item__date, .request-item_big__approved-text
       width: 180px
       margin-left: auto
       margin-right: auto
+    .request-item__date
+      +r3
+        width: 100%
+        text-align: left
+    .request-item_big__approved-text
+      +r3
+        width: 100%
     .request-item_big__status
       width: 180px
       margin-left: auto
       margin-right: auto
       flex: auto
+      +r3
+        width: 100%
+        text-align: left
       &.is-wait
         .request-item_big__wait-text
           display: block
+    &.request-item_has-label
+      .request-item_big__top
+        +r3
+          padding-bottom: 50px
+          padding-right: 0
     &__btns
       width: 180px
       margin-left: auto
       margin-right: auto
       padding-top: 10px
+      +r3
+        width: auto
+        text-align: center
       .btn-full
         &:first-child
           margin-bottom: 20px
+      .catalog-item_short-hover__control
+        display: none
+        +r2
+          display: inline-block
+      .btn-full_grad-green
+        +r2
+          display: none
 
   &_no-cols
     padding-right: 40px

@@ -126,6 +126,8 @@ $gray: #d8d8d8
     font-size: 20px
     +med
     color: $text
+    +r3
+      font-size: 18px
 
 .btn-full
   display: inline-block
@@ -314,33 +316,49 @@ $gray: #d8d8d8
   position: relative
   display: inline-block  
   background-color: #d0021b
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2)  
-  &::before,
-  &::after
-    position: absolute
-    content: ''
-    left: 0
-    +arr(20,10, #d0021b, t)
+  // box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2)  
+  // &::before,
+  // &::after
+  //   position: absolute
+  //   content: ''
+  //   left: 0
+  //   +arr(20,10, #d0021b, t)
+  // &::before
+  //   top: 0
+  //   transform: translate(-13px, -1px) rotate(45deg)
+  // &::after
+  //   bottom: 0
+  //   transform: translate(-13px, 1px) rotate(135deg)
   &::before
+    content: ''
+    position: absolute
+    left: 0
     top: 0
-    transform: translate(-13px, -1px) rotate(45deg)
-  &::after
-    bottom: 0
-    transform: translate(-13px, 1px) rotate(135deg)
+    +arr(10,30, #fff, r)
+    +r3
+      +arr(10,30, #fff, l)
+      left: auto
+      right: 0
   span
     display: inline-block
     position: relative
     height: 30px
     line-height: 30px
     padding-right: 50px
-    padding-left: 20px
+    padding-left: 32px
     &::before
       content: ''
       position: absolute
       +arr(8,5, #52010a, t)
       right: 0
       bottom: 0
-      transform: translate(0, 4px) rotate(-45deg) 
+      transform: translate(0, 4px) rotate(-45deg)
+      +r3
+        transform: translate(0, 4px) rotate(45deg)
+        right: auto
+        left: 1px
+
+
 
 .radio
   position: relative

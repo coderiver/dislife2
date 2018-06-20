@@ -290,6 +290,8 @@
       position: relative
   &__rating
     width: 14.7%
+    strong
+      font-weight: normal
     +r2
       width: 100%
       border-bottom: 1px solid  $gray
@@ -297,6 +299,8 @@
       padding-top: 19px
       padding-left: 96px
       position: relative
+      strong
+        display: none
   &__feedbacks
     width: 10.1%
     +r2
@@ -375,6 +379,12 @@
     padding-left: 37px
     margin-bottom: 10px
     +tr(border-color .3s)
+    +r2
+      flex-direction: row
+      width: auto
+      margin-left: 0
+      margin-right: 0
+
     &:hover
       border-color: transparent
     &::after
@@ -389,6 +399,17 @@
         padding-bottom: 20px
     &.is-active
       padding-bottom: 25px
+      +r2
+        border-radius: 0
+        border: 0
+        margin-left: -30px
+        margin-right: -18px
+      +r3
+        margin-left: -20px
+        margin-right: -20px
+        width: auto
+        &.is-last
+          margin-bottom: -11px
       .catalog-item_short-hover__descr
         display: block
       .catalog-item_short-hover__options
@@ -401,13 +422,53 @@
       width: 50px
       height: 50px
     .catalog-item__name
-      width: 25%
+      width: auto
     .catalog-item__social
       width: 22%
+      +r2
+        border-bottom: none
+        padding-bottom: 0
+        padding-top: 0
+        padding-left: 0
+      +r3
+        width: 100%
+        margin-bottom: 15px
+    .catalog-item__social-icon
+      +r2
+        svg
+          width: 30px
+          height: 30px
+      +r3
+        svg
+          width: 20px
+          height: 20px
+    .catalog-item__person
+      +r2
+        width: 24.2%
+        border-bottom: none
+        padding-bottom: 0
+        padding-top: 0
+      +r3
+        width: 100%
+        margin-bottom: 15px
     .catalog-item__rating
       width: 25%
+      +r2
+        border-bottom: none
+        padding-bottom: 0
+        padding-top: 0
+        padding-left: 0
+      +r3
+        width: 100%
+        margin-bottom: 15px
     .catalog-item__type
       width: 28%
+      +r2
+        padding-left: 0
+        padding-top: 0
+      +r3
+        width: 100%
+        margin-bottom: 15px
     .catalog-item__img-icon
       width: 20px
       height: 20px
@@ -419,7 +480,9 @@
     &__top
       display: flex
       justify-content: space-between
-      align-items: center      
+      align-items: center
+      +r3
+        flex-direction: column    
     &__descr
       border-radius: 3px
       background-color: #f5f7f7
@@ -441,25 +504,41 @@
     &__options
       display: none
       justify-content: flex-start
+      +r3
+        flex-direction: column
     &__options-text, &__controls
       padding-top: 30px
+      +r3
+        padding-top: 10px
     &__options-text
       font-size: 14px
       color: #66bb51
       +med
       flex: 1
       padding-left: 33px
+      +r3
+        padding-left: 0
     &__controls
       width: 300px
+      +r2
+        padding-left: 100px
+      +r3
+        padding-left: 0
+        width: auto
     &__control
       color: #9b9b9b
       font-size: 14px
       display: inline-block
       +reg
+      &.has-no-underline
+        span
+          text-decoration: none
       span
         text-decoration: underline
       svg
         margin-right: 10px
+        position: relative
+        top: 4px
       &:first-child
         margin-right: 35px
     &__btn
