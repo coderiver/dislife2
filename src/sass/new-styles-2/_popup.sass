@@ -46,6 +46,19 @@
         justify-content: center
       +rh(420)
         height: auto
+    .popup_lg-form
+      +r3
+        height: 100%
+        form
+          height: 100%
+      &__textarea
+        +r3
+          height: calc(100% - 80px)
+        textarea
+          +r3
+            min-height: auto
+            height: 100%
+
 
 .popup-main
   .popup__body
@@ -120,14 +133,8 @@
     margin: 0 auto
 
 .popup_lg-form
-  +r3
-    height: 100%
-    form
-      height: 100%
   &__textarea
-    margin-bottom: 40px
-    +r3
-      height: calc(100% - 80px)
+    margin-bottom: 40px    
     textarea
       width: 100%
       resize: none
@@ -145,14 +152,16 @@
       +r2
         min-height: 240px
       +r3
-        min-height: auto
-        height: 100%
+        min-height: 170px
+      
 
   &__btn
     max-width: 260px
     margin: 0 auto
   &__btn-short
     max-width: 200px
+    +r3
+      max-width: none
   &__radio
     text-align: center
     margin-bottom: 45px

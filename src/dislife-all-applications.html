@@ -13,7 +13,7 @@
 
   <!-- begin section-filters-block -->
   <section class="section-filters-block">
-    <div class="container">
+    <div class="container container_whider">
       <div class="section-filters-block__top">
         <div class="section-filters-block__title">
           <h2 class="h2 h2_md">Все заявки</h2>
@@ -29,10 +29,24 @@
 
   <!-- begin all-applications -->
   <section class="all-applications">
-    <div class="container">
+    <div class="container container_whider">
       <div class="all-applications__inner">
-        <div class="all-applications__left">
+        <div class="all-applications__map-tags">
+          <!-- begin map-tabs -->
+          <div class="map-tags">
+            <button class="map-tag js-tab-btn is-active" data-tab-target="applications">
+              <span class="map-tag__lable">Список заявок</span>
+            </button>
+            <button class="map-tag js-tab-btn" data-tab-target="map">
+              <span class="map-tag__lable">Карта</span>
+            </button>
+          </div>
+          <!-- end map-tabs -->
+        </div>
+
+        <div class="all-applications__left is-active js-tabs-content-item" data-tab="applications">
           <div class="all-applications__applications">
+            
 
             <!-- begin request-item -->
             <div class="request-item request-item_big request-item_no-cols request-item_has-label">
@@ -65,6 +79,11 @@
                     Тамара Васильевна
                     <span>Добавлено: 5 минут назад</span>
                   </div>
+                </div>
+                <div class="request-item__map-btn">
+                  <img src="img/volonter/map-btn-icon.png" alt="">
+                  <a class="map-btn__show is-active" href="#">Смотреть на карте</a>
+                  <a class="map-btn__hide" href="#">Скрыть карту</a>
                 </div>
                 <div class="request-item__btn">
                   <a href="#" class="btn-full btn-full_grad-orange"><span>Могу помочь</span></a>
@@ -109,6 +128,11 @@
                     Тамара Васильевна
                     <span>Добавлено: 5 минут назад</span>
                   </div>
+                </div>
+                <div class="request-item__map-btn">
+                  <img src="img/volonter/map-btn-icon.png" alt="">
+                  <a class="map-btn__show is-active" href="#">Смотреть на карте</a>
+                  <a class="map-btn__hide" href="#">Скрыть карту</a>
                 </div>
                 <div class="request-item__btn">
                   <a href="#" class="btn-full btn-full_grad-orange"><span>Могу помочь</span></a>
@@ -158,6 +182,20 @@
                     <span>Добавлено: 5 минут назад</span>
                   </div>
                 </div>
+                <div class="request-item__map">
+                  <div class="request-item__map-icon">
+                    <div class="request-item__icon is-red">
+                      <i><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="17" viewBox="0 0 12 17"><defs><path id="ld9la" d="M853 3052c-3.3 0-6 2.8-6 6.26 0 .9.18 1.76.52 2.55 1.5 3.43 4.38 7.04 5.23 8.07.06.08.15.12.25.12s.19-.04.25-.12c.85-1.03 3.72-4.64 5.23-8.07.34-.8.52-1.65.52-2.55 0-3.45-2.7-6.26-6-6.26m0 9.51a3.2 3.2 0 0 1-3.12-3.25A3.2 3.2 0 0 1 853 3055a3.2 3.2 0 0 1 3.13 3.25 3.2 3.2 0 0 1-3.13 3.25"/></defs><g><g clip-path="url(#clip-FA960603-0DB5-4652-B56E-A380729D08D6)" transform="translate(-847 -3052)"><use fill="#fff" xlink:href="#ld9la"/></g></g></svg></i>
+                    </div>
+                    <div>Доставить из другой страны</div>
+                  </div>                  
+                  <div class="map map_in-item js-map" data-latitude="55.7555282" data-longitude="37.6144813"></div>
+                </div>
+                <div class="request-item__map-btn">
+                  <img src="img/volonter/map-btn-icon.png" alt="">
+                  <a class="map-btn__show is-active" href="#">Смотреть на карте</a>
+                  <a class="map-btn__hide" href="#">Скрыть карту</a>
+                </div>
                 <div class="request-item__btn">
                   <a href="#" class="btn-full btn-full_grad-orange"><span>Могу помочь</span></a>
                 </div>
@@ -173,10 +211,65 @@
           </div>
         </div>
 
+        <div class="all-applications__left js-tabs-content-item" data-tab="map">
+          <div class="all-applications__mob-map">
+            <div class="all-applications__modal-item is-open js-popup">
+              <button class="all-applications__modal-item-close js-close-popup">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20"><defs><path id="3uroa" d="M1157.18 593.93l3.32 3.33c.09.09.13.22.13.31s-.04.22-.13.31l-.62.62a.48.48 0 0 1-.31.13.4.4 0 0 1-.31-.13l-3.33-3.32a.21.21 0 0 0-.3 0l-3.33 3.32a.48.48 0 0 1-.31.13.4.4 0 0 1-.31-.13l-.62-.62a.48.48 0 0 1-.14-.31c0-.09.05-.22.14-.31l3.32-3.33a.21.21 0 0 0 0-.3l-3.32-3.33a.48.48 0 0 1-.14-.31c0-.1.05-.23.14-.31l.62-.62a.48.48 0 0 1 .3-.14c.1 0 .23.05.32.14l3.32 3.32c.1.09.22.09.31 0l3.33-3.32a.48.48 0 0 1 .31-.14.4.4 0 0 1 .31.14l.62.62c.09.08.13.22.13.3 0 .1-.04.23-.13.32l-3.32 3.32c-.1.05-.1.22 0 .31zm-1.42-9.93a9.73 9.73 0 0 0-9.76 9.76 9.73 9.73 0 0 0 9.76 9.75 9.73 9.73 0 0 0 9.75-9.75 9.73 9.73 0 0 0-9.75-9.76z"/></defs><g><g transform="translate(-1146 -584)"><use fill="#9b9b9b" xlink:href="#3uroa"/></g></g></svg>
+              </button>
+              <!-- begin request-item -->
+              <div class="request-item request-item_big request-item_no-cols request-item_has-label">
+
+                <div class="request-item__label label"><span>Как можно раньше!</span></div>
+
+                <div class="request-item_big__top">
+                  <div class="request-item_big__title">
+                    <h4 class="h4 h4_md">Подвезти на машине</h4>
+                  </div>
+                  <div class="request-item_big__link">
+                    <a href="#">Ссылка на конкретную заявку</a>
+                  </div>
+                </div>
+
+                <div class="request-item_big__block">
+                  <div class="request-item__contacts">
+                    <div class="request-item__contacts-field">
+                      <div class="request-item__icon is-green"><i>A</i></div>
+                      <div class="request-item__contact">г.Москва, ул. Сиреневая, д.21</div>
+                    </div>
+                    <div class="request-item__contacts-field">
+                      <div class="request-item__icon is-gray"><i>B</i></div>
+                      <div class="request-item__contact">г.Москва, ул. Алтуфьевское шоссе, д.34</div>
+                    </div>
+                  </div>
+                  <div class="request-item__person">
+                    <div class="request-item__person-img" style="background-image: url('img/volonter/user/user-1.jpg');"></div>
+                    <div class="request-item__person-name">
+                      Тамара Васильевна
+                      <span>Добавлено: 5 минут назад</span>
+                    </div>
+                  </div>
+                  <div class="request-item__map-btn">
+                    <img src="img/volonter/map-btn-icon.png" alt="">
+                    <a class="map-btn__show is-active" href="#">Смотреть на карте</a>
+                    <a class="map-btn__hide" href="#">Скрыть карту</a>
+                  </div>
+                  <div class="request-item__btn">
+                    <a href="#" class="btn-full btn-full_grad-orange"><span>Могу помочь</span></a>
+                  </div>
+                </div>
+
+              </div>
+              <!-- end request-item -->
+            </div>
+            <div class="map js-map" data-latitude="55.7555282" data-longitude="37.6144813"></div>
+          </div>
+        </div>
+
         <div class="all-applications__right">
-          <div class="all-applications__map">
+          <div class="all-applications__map">            
             <!-- begin map -->
-            <div class="map" id="map"></div>            
+            <div class="map js-map" data-latitude="55.7555282" data-longitude="37.6144813"></div>            
             <!-- end map -->           
             
           </div>

@@ -1,20 +1,26 @@
 $(document).ready(function() {
   //map
   function setMap() {
-    const map = document.getElementById('map');
-    if (map) {
-      ymaps.ready(function () {
-        var myMap = new ymaps.Map('map', {
-          center: [55.7555282, 37.6144813],
-          zoom: 14,
-          scrollZoom: false,
-          controls: []
-        }, {
-          searchControlProvider: 'yandex#search'
+    const maps = document.querySelectorAll('.js-map');
+    if (maps.length) {
+      for (let i = 0; i < maps.length; i++) {
+        let latitude = maps[i].dataset.latitude;
+        let longitude = maps[i].dataset.longitude;
+
+        ymaps.ready(function () {
+          var myMap = new ymaps.Map(maps[i], {
+            center: [latitude, longitude],
+            zoom: 14,
+            scrollZoom: false,
+            controls: []
+          }, {
+            searchControlProvider: 'yandex#search'
+          });
+          myMap.behaviors.disable('scrollZoom');
+          myMap.behaviors.disable('drag');
         });
-        myMap.behaviors.disable('scrollZoom');
-        myMap.behaviors.disable('drag');
-      });
+      }
+      
     };
 
   };

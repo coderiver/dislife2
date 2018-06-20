@@ -53,16 +53,28 @@
   background-color: #f5f7f7
   padding-top: 40px
   padding-bottom: 39px
+  +r2
+    padding-top: 20px
+    padding-bottom: 0
   &__inner
     +clr
   &__left,
   &__right
     float: left
+    +r2
+      width: 100%
   &__left
     width: 57.4%
+    display: none
+    +r2
+      margin-bottom: 45px
+    &.is-active
+      display: block
   &__right
     width: 42.6%
     padding-left: 30px
+    +r2
+      padding-left: 0
   &__btn
     max-width: 260px
     margin-left: auto
@@ -70,4 +82,40 @@
     padding-top: 38px
   &__title
     margin-bottom: 25px
+  &__map-tags
+    text-align: center
+    margin-bottom: 20px
+    display: none
+    +r2
+      display: block
+  &__map
+    +r2
+      display: none
+  &__mob-map
+    margin-left: -15px
+    margin-right: -15px
+    position: relative
+  &__modal-item
+    +vcenter
+    z-index: 1
+    width: calc(100% - 40px)
+    visibility: hidden
+    opacity: 0
+    +tr(all .3s)
+    .request-item__map-btn
+      display: none
+    &.is-open
+      visibility: visible
+      opacity: 1
+  &__modal-item-close
+    position: absolute
+    top: 3px
+    right: 10px
+    z-index: 1
+    background-color: transparent
+    +r3
+      top: 10px
+    svg
+      use
+        fill: $orange
 

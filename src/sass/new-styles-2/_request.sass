@@ -157,6 +157,39 @@
       left: -6px
       right: auto
       top: 80px
+  &__map-btn
+    color: $orange
+    font-size: 12px
+    display: none
+    +r2
+      display: block
+    a
+      color: inherit
+      text-decoration: underline
+    a, img
+      vertical-align: middle
+    img
+      display: inline-block
+      margin-right: 10px
+  &__map
+    display: none
+    width: 100%
+    margin-bottom: 20px
+    position: relative
+  &__map-icon
+    font-size: 14px
+    max-width: 116px
+    text-align: center
+    color: #353535
+    +med
+    +vcenter
+    z-index: 1
+    .request-item__icon
+      width: 40px
+      height: 40px      
+      svg
+        width: 18px
+        height: 25px
 
   &_big
     width: 100%
@@ -378,9 +411,22 @@
     padding-right: 40px
     margin-bottom: 20px
     padding-bottom: 25px
+    +r3
+      padding-bottom: 30px
+      padding-left: 20px
+      padding-right: 20px
     &.request-item_has-label
       .request-item_big__top
         padding-right: 259px
+        +r3
+          padding-bottom: 50px
+          padding-right: 0
+    .request-item__person
+      +r3
+        margin-bottom: 15px
+    .request-item__map-btn
+      +r3
+        margin-bottom: 15px
     .request-item__contacts
       width: 100%
       +clr
@@ -390,9 +436,16 @@
       float: left
       &:first-child
         margin-right: 74px
+        +r4
+          margin-right: 0
     .request-item_big__block
       justify-content: space-between
       align-items: center
+      +r3
+        flex-direction: column
+        align-items: flex-start
     .request-item__btn
       min-width: 220px
+      +r3
+        width: 100%
 
