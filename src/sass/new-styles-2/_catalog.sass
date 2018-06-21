@@ -220,12 +220,18 @@
     bottom: 0
     +r2
       display: none
-  &:hover
+  +hover
     box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1)
     &::before
       display: block
     &::after
       display: none
+    &.is-ie
+      box-shadow: none      
+      &::before
+        display: none
+      &::after
+        display: block
   +r2
     flex-direction: column
     font-size: 14px
@@ -249,7 +255,7 @@
     +r2
       width: 50px
       height: 50px
-    &:hover
+    +hover
       .catalog-item__tooltip
         &.is-active
           display: block
@@ -405,8 +411,10 @@
       margin-left: 0
       margin-right: 0
 
-    &:hover
+    +hover
       border-color: transparent
+      &.is-ie
+        border-color: $gray
     &::after
       display: none
     &.has-button

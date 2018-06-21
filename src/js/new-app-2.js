@@ -104,8 +104,8 @@ $(document).ready(function() {
       e.preventDefault();
       let tabData = $(this).data('target-tab');
 
-      let $tabTargetItem = $(`[data-tab="${tabData}"]`);
-      let $tabTargetItemElse = $(`.js-tabs-item:not([data-tab="${tabData}"])`);
+      let $tabTargetItem = $('[data-tab="'+tabData+'"]');
+      let $tabTargetItemElse = $('.js-tabs-item:not([data-tab="'+tabData+'"])');
       let $tabElse = $('.js-tabs-btn').not($(this));
 
       $(this).addClass('is-active');
@@ -123,26 +123,31 @@ $(document).ready(function() {
     const $filterTagParent = $filterTag.closest('.filter-tags');    
 
     $filterTag.each(function(index, el) {
-      let $tag = $(el);    
+      let $tag = $(el);
+      let $close = $tag.closest('.filter-tag__wrap').find('.js-filter-tag-close');  
 
       $tag.on('click', function(e){
         e.preventDefault();
         e.stopPropagation();
-        let $close = $(this).find('.js-filter-tag-close');
         let $wrap = $(this).closest('.js-filter-tags');
         let $tags = $wrap.find('.js-filter-tag');
 
-        if ($(e.target).hasClass('js-filter-tag-close')) {
-          $(this).removeClass('is-active');
-        } else {          
+
+          
           if ($(this).hasClass('js-filter-tag-single')) {
             $tags.removeClass('is-active');
             $(this).addClass('is-active');
           } else {
             $(this).addClass('is-active');
           }
-        }
         
+      });
+
+      $close.on('click', function(e){
+        e.preventDefault();
+        let $tag = $(this).closest('.filter-tag__wrap').find('.js-filter-tag');
+        console.log($tag);
+        $tag.removeClass('is-active');
       });
 
     });
@@ -233,7 +238,7 @@ $(document).ready(function() {
 
 
       function hideText() {
-        $descr.html(`<p>${shortText}...</p>`);
+        $descr.html('<p>'+shortText+'...</p>');
         $showLink.addClass('is-active');
         $hideLink.removeClass('is-active');
       };
@@ -263,6 +268,13 @@ $(document).ready(function() {
   };
 
   hidetext();
+
+  //detect ie
+
+  if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1))
+  {
+    $('.catalog-item').addClass('is-ie');
+  }
   
   
 
