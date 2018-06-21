@@ -1,8 +1,18 @@
+.applications
+  &__item
+    height: 0
+    overflow: hidden
+    opacity: 0
+    +tr(opacity .3s)
+    &.is-active
+      height: auto
+      opacity: 1
+
 .applications-section
   padding-top: 30px
   +r2
     padding-top: 19px
-    padding-bottom: 10px
+    padding-bottom: 10px  
   &__top
     +clr
     margin-bottom: 14px
@@ -66,6 +76,7 @@
   &__left
     width: 57.4%
     display: none
+    +tr(opacity .3s)
     +r2
       margin-bottom: 45px
     &.is-active

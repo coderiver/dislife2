@@ -94,6 +94,14 @@ $gray: #d8d8d8
     &:hover
       @content
 
+=icon-arrow($width, $height, $bd-width, $color, $angle)
+  width: $width + px
+  height: $height + px
+  border-left: $bd-width + px solid $color
+  border-bottom: $bd-width + px solid $color
+  transform: rotate($angle + deg)
+//example +icon-arrow(20, 20, 2, #000, 45)
+
 .h1
   &_md
     font-size: 50px

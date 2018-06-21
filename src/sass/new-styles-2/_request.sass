@@ -176,6 +176,8 @@
     width: 100%
     margin-bottom: 20px
     position: relative
+    &.is-active
+      display: block
   &__map-icon
     font-size: 14px
     max-width: 116px
@@ -231,12 +233,17 @@
       font-size: 14px
       +reg
       color: $orange
+      margin-bottom: 40px
+      display: none
+      &.is-active
+        display: block
       a
         color: inherit
     &__left
       padding-top: 19px        
       position: relative
       width: 54.3%
+      padding-right: 10px
       &::before
         content: ''
         position: absolute
@@ -264,7 +271,6 @@
       font-size: 14px
       color: $text
       +reg
-      margin-bottom: 40px
       +r3
         font-size: 12px
       p
