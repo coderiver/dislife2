@@ -97,8 +97,6 @@ $(document).ready(function() {
     const $tab = $('.js-tabs-btn');
     const $item = $('.js-tabs-item');
 
-    // $tab.first().addClass('is-active');
-    // $item.first().addClass('is-active');
 
     $tab.on('click', function(e) {
       e.preventDefault();
@@ -146,7 +144,6 @@ $(document).ready(function() {
       $close.on('click', function(e){
         e.preventDefault();
         let $tag = $(this).closest('.filter-tag__wrap').find('.js-filter-tag');
-        console.log($tag);
         $tag.removeClass('is-active');
       });
 
