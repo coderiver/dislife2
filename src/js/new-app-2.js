@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   //map
   function setMap() {
     const maps = document.querySelectorAll('.js-map');
@@ -7,31 +8,100 @@ $(document).ready(function() {
         let latitude = maps[i].dataset.latitude;
         let longitude = maps[i].dataset.longitude;
 
+
         if (typeof ymaps === 'undefined') {
           return;
         } else {
           ymaps.ready(function () {
-            var myMap = new ymaps.Map(maps[i], {
+            const myMap = new ymaps.Map(maps[i], {
               center: [latitude, longitude],
               zoom: 14,
               scrollZoom: false,
-              controls: []
             }, {
               searchControlProvider: 'yandex#search'
             });
             myMap.behaviors.disable('scrollZoom');
-            myMap.behaviors.disable('drag');
-          });
-        }
 
-        
+            let $applModals = $('.js-appl-modal');
+
+            $applModals.each(function(index, el) {
+              let $modalItem = $(el);
+              let applLatitude = $modalItem.data('latitude');
+              let applLongitude = $modalItem.data('longitude');
+              let dataLink = $modalItem.data('popup');
+              let dataTitle = $modalItem.data('title');
+
+              let markerElHTML = '<div class="map-icon js-open-popup" data-link="'+dataLink+'"><img src="img/volonter/location.png" alt="" /><div class="map-icon__title">'+dataTitle+'</div></div>';
+
+              let markerLayout = ymaps.templateLayoutFactory.createClass(markerElHTML, {
+
+                build: function () {
+                  markerLayout.superclass.build.call(this);
+
+                  this._events = ymaps.domEvent.manager.group(this.getElement());
+                  let el = this._events;
+                  el.add('click', function () {
+                    let icon = el.events.htmlElement.firstChild;
+                    let link = $(icon).data('link');
+                    let popup = $('[data-popup="' + link + '"]');
+                    popup.addClass('is-open');              
+                    return false;
+
+                  });
+                },
+
+                clear: function () {
+                  this._events.removeAll();
+                  markerLayout.superclass.clear.call(this);
+                }
+              });
+
+              let myPlacemark = new ymaps.Placemark(
+                [applLatitude, applLongitude], {}, {
+                  iconLayout: markerLayout,
+                  iconPane: 'overlaps'
+                }
+                );
+
+
+              if (!$(myMap.container._parentElement).hasClass('map_in-item')) {
+                myMap.geoObjects.add(myPlacemark);
+              };
+
+            });
+
+            if ($(myMap.container._parentElement).hasClass('map_in-item')){
+              let dataIconTitle = $(myMap.container._parentElement).data('icon-title');              
+              let markerElHTML = '<div class="map-icon js-open-popup"><img src="img/volonter/location.png" alt="" /><div class="map-icon__title">'+dataIconTitle+'</div></div>';
+              let markerLayout = ymaps.templateLayoutFactory.createClass(markerElHTML, {
+
+                build: function () {
+                  markerLayout.superclass.build.call(this);
+                },
+                clear: function () {
+                  markerLayout.superclass.clear.call(this);
+                }
+              });
+              let myPlacemark = new ymaps.Placemark(
+                [latitude, longitude], {}, {
+                  iconLayout: markerLayout,
+                  iconPane: 'overlaps'
+                }
+                );
+              myMap.geoObjects.add(myPlacemark);
+            };                     
+
+            
+          });
+          
+        }        
       }
       
     };
 
   };
   setMap();
-  
+
 
   //slider
   function setMobSlider() {
@@ -97,7 +167,6 @@ $(document).ready(function() {
     const $tab = $('.js-tabs-btn');
     const $item = $('.js-tabs-item');
 
-
     $tab.on('click', function(e) {
       e.preventDefault();
       let tabData = $(this).data('target-tab');
@@ -109,11 +178,17 @@ $(document).ready(function() {
       $(this).addClass('is-active');
       $tabTargetItem.addClass('is-active');
       $tabElse.removeClass('is-active');
-      $tabTargetItemElse.removeClass('is-active');    
+      $tabTargetItemElse.removeClass('is-active');
+      if ($tabTargetItem.hasClass('is-active')) {
+        let tabTargetItemData = $tabTargetItem.data('tab');
+        let $tabBtn = $('[data-target-tab="'+tabTargetItemData+'"');
+        $tabBtn.addClass('is-active');
+     }   
     });
 
   };
   tabs();
+
 
   //filter-tags
   function filterTags() {
@@ -164,7 +239,7 @@ $(document).ready(function() {
             if (i>=4) {
               tagsHidden.push($tags[i]);
             }          
-          }
+          };
           $(tagsHidden).addClass('is-hidden');
           $moreBtn.on('click', function(e) {
             e.preventDefault();
@@ -174,7 +249,7 @@ $(document).ready(function() {
         } else {
           $moreBtn.removeClass('is-active');
           $filterTag.removeClass('is-hidden');
-        }
+        };
       };       
 
 
@@ -188,34 +263,34 @@ $(document).ready(function() {
 
   //items-map
 
-  function toggleItemsMap() {
-    const $toggleMapShow = $('.js-item-map-show');
-    const $toggleMapHide = $('.js-item-map-hide');
+  // function toggleItemsMap() {
+  //   const $toggleMapShow = $('.js-item-map-show');
+  //   const $toggleMapHide = $('.js-item-map-hide');
 
 
-    $toggleMapShow.on('click', function(event) {
-      event.preventDefault();
-      let $item = $(this).closest('.request-item');
-      let $map = $item.find('.js-item-map');
-      let $hideBtn = $item.find('.js-item-map-hide');
+  //   $toggleMapShow.on('click', function(event) {
+  //     event.preventDefault();
+  //     let $item = $(this).closest('.request-item');
+  //     let $map = $item.find('.js-item-map');
+  //     let $hideBtn = $item.find('.js-item-map-hide');
 
-      $(this).removeClass('is-active');
-      $hideBtn.addClass('is-active');
-      $map.addClass('is-active');
-    });
-    $toggleMapHide.on('click', function(event) {
-      event.preventDefault();
-      let $item = $(this).closest('.request-item');
-      let $map = $item.find('.js-item-map');
-      let $showBtn = $item.find('.js-item-map-show');
+  //     $(this).removeClass('is-active');
+  //     $hideBtn.addClass('is-active');
+  //     $map.addClass('is-active');
+  //   });
+  //   $toggleMapHide.on('click', function(event) {
+  //     event.preventDefault();
+  //     let $item = $(this).closest('.request-item');
+  //     let $map = $item.find('.js-item-map');
+  //     let $showBtn = $item.find('.js-item-map-show');
 
-      $(this).removeClass('is-active');
-      $showBtn.addClass('is-active');
-      $map.removeClass('is-active');
-    });
-  };
+  //     $(this).removeClass('is-active');
+  //     $showBtn.addClass('is-active');
+  //     $map.removeClass('is-active');
+  //   });
+  // };
 
-  toggleItemsMap();
+  // toggleItemsMap();
 
   //toggle text
 

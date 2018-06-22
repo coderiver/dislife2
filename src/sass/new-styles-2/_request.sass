@@ -156,7 +156,7 @@
     +r3
       left: -6px
       right: auto
-      top: 60px
+      top: 80px
   &__map-btn
     color: $orange
     font-size: 12px
@@ -176,8 +176,10 @@
     width: 100%
     margin-bottom: 20px
     position: relative
-    &.is-active
+    +r2
       display: block
+    +r3
+      display: none
   &__map-icon
     font-size: 14px
     max-width: 116px
@@ -348,7 +350,8 @@
 
   &_has-label
     .request-item_big__top
-      padding-right: 320px
+      // padding-right: 320px
+      padding-right: 32%
 
   &_big-equal-cols
     +r3
@@ -425,7 +428,8 @@
       padding-right: 20px
     &.request-item_has-label
       .request-item_big__top
-        padding-right: 259px
+        // padding-right: 259px
+        padding-right: 32%
         +r3
           padding-bottom: 50px
           padding-right: 0

@@ -170,9 +170,6 @@ $gray: #d8d8d8
 
 .container
   &_whider
-    +r(1590)
-      max-width: 1050px
-
     +r2
       max-width: 758px
 
@@ -181,6 +178,8 @@ $gray: #d8d8d8
     .container
       +clr
       padding-top: 0
+      +r(1590)
+        max-width: 1050px
     .header__inner
       max-width: none
     .header__fixed
@@ -361,13 +360,13 @@ $gray: #d8d8d8
   &::before
     content: ''
     position: absolute
-    left: 0
+    left: -1px
     top: 0
     +arr(10,30, #fff, r)
     +r3
       +arr(10,30, #fff, l)
       left: auto
-      right: 0
+      right: -1px
   span
     display: inline-block
     position: relative
@@ -533,12 +532,22 @@ $gray: #d8d8d8
     color: #fff
     background-image: linear-gradient(180deg, #ffa461 0%, #f67e25 100%)
 
-.map-btn
-  &__hide,
-  &__show
-    display: none
-    &.is-active
-      display: inline-block
+// .map-btn
+//   &__hide,
+//   &__show
+//     display: none
+//     &.is-active
+//       display: inline-block
+
+.map-icon
+  width: 116px
+  color: #353535
+  +med
+  font-size: 14px
+  text-align: center
+  display: block
+  pointer-events: all
+
 
 
 
