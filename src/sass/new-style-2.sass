@@ -170,8 +170,28 @@ $gray: #d8d8d8
 
 .container
   &_whider
+    +r(1590)
+      max-width: 1050px
+
     +r2
       max-width: 758px
+
+.header
+  &_container
+    .container
+      +clr
+      padding-top: 0
+    .header__inner
+      max-width: none
+    .header__fixed
+      padding-left: 0
+      padding-right: 0
+      // +r(1590)
+      //   padding: 0 70px 0 200px
+      +r1
+        padding: 0 60px 0 150px
+      +r2
+        padding: 0 45px 0 0
 
 .footer
   &__warning
