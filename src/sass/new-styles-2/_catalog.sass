@@ -318,15 +318,16 @@
     width: 14.7%
     strong
       font-weight: normal
+    +r1
+      strong
+        display: none
     +r2
       width: 100%
       border-bottom: 1px solid  $gray
       padding-bottom: 10px
       padding-top: 19px
       padding-left: 96px
-      position: relative
-      strong
-        display: none
+      position: relative    
   &__feedbacks
     width: 10.1%
     +r2
@@ -369,10 +370,12 @@
       position: relative
       top: -3px
   &__type
-    display: flex
-    align-items: center
-    img
-      margin-right: 10px
+    span
+      display: flex
+      align-items: center
+    strong
+      width: calc(100% - 30px)
+      padding-left: 10px
   &__tooltip
     position: absolute
     top: -54px
@@ -387,13 +390,13 @@
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2)
     display: none
   &__head-mob-item
-    display: none
+    display: none !important
     color: #9b9b9b
     font-size: 12px
     position: absolute
     left: 0
     +r2
-      display: inline-block
+      display: inline-block !important
 
   &_short-hover
     margin-left: 0
@@ -406,12 +409,19 @@
     padding-left: 37px
     margin-bottom: 10px
     +tr(border-color .3s)
+    +r1
+      width: auto
+      padding-left: 25px
+      padding-right: 10px
+      padding-top: 10px
+      font-size: 14px
     +r2
       flex-direction: row
       width: auto
       margin-left: 0
       margin-right: 0
-
+      padding-left: 25px
+      padding-right: 10px
     +hover
       border-color: transparent
       &.is-ie
@@ -451,16 +461,19 @@
       width: 50px
       height: 50px
     .catalog-item__name
-      width: auto
+      width: calc(100% - 50px)
     .catalog-item__social
       width: 22%
-      +r2
+      +r1
+        width: 25%
+        text-align: center
         border-bottom: none
         padding-bottom: 0
         padding-top: 0
         padding-left: 0
       +r3
         width: 100%
+        text-align: left
         margin-bottom: 15px
     .catalog-item__social-icon
       +r2
@@ -472,8 +485,8 @@
           width: 20px
           height: 20px
     .catalog-item__person
-      +r2
-        width: 24.2%
+      +r1
+        width: 25%
         border-bottom: none
         padding-bottom: 0
         padding-top: 0
@@ -482,7 +495,7 @@
         margin-bottom: 15px
     .catalog-item__rating
       width: 25%
-      +r2
+      +r1
         border-bottom: none
         padding-bottom: 0
         padding-top: 0
@@ -490,11 +503,12 @@
       +r3
         width: 100%
         margin-bottom: 15px
-    .catalog-item__type
+    .catalog-item__type      
       width: 28%
-      +r2
+      +r1
         padding-left: 0
         padding-top: 0
+        width: 25%
       +r3
         width: 100%
         margin-bottom: 15px
