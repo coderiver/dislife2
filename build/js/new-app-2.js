@@ -263,34 +263,34 @@ $(document).ready(function() {
 
   //items-map
 
-  // function toggleItemsMap() {
-  //   const $toggleMapShow = $('.js-item-map-show');
-  //   const $toggleMapHide = $('.js-item-map-hide');
+  function toggleItemsMap() {
+    const $toggleMapShow = $('.js-item-map-show');
+    const $toggleMapHide = $('.js-item-map-hide');
 
 
-  //   $toggleMapShow.on('click', function(event) {
-  //     event.preventDefault();
-  //     let $item = $(this).closest('.request-item');
-  //     let $map = $item.find('.js-item-map');
-  //     let $hideBtn = $item.find('.js-item-map-hide');
+    $toggleMapShow.on('click', function(event) {
+      event.preventDefault();
+      let $item = $(this).closest('.request-item');
+      let $map = $item.find('.js-item-map');
+      let $hideBtn = $item.find('.js-item-map-hide');
 
-  //     $(this).removeClass('is-active');
-  //     $hideBtn.addClass('is-active');
-  //     $map.addClass('is-active');
-  //   });
-  //   $toggleMapHide.on('click', function(event) {
-  //     event.preventDefault();
-  //     let $item = $(this).closest('.request-item');
-  //     let $map = $item.find('.js-item-map');
-  //     let $showBtn = $item.find('.js-item-map-show');
+      // $(this).removeClass('is-active');
+      // $hideBtn.addClass('is-active');
+      $map.toggleClass('is-active');
+    });
+    // $toggleMapHide.on('click', function(event) {
+    //   event.preventDefault();
+    //   let $item = $(this).closest('.request-item');
+    //   let $map = $item.find('.js-item-map');
+    //   let $showBtn = $item.find('.js-item-map-show');
 
-  //     $(this).removeClass('is-active');
-  //     $showBtn.addClass('is-active');
-  //     $map.removeClass('is-active');
-  //   });
-  // };
+    //   $(this).removeClass('is-active');
+    //   $showBtn.addClass('is-active');
+    //   $map.removeClass('is-active');
+    // });
+  };
 
-  // toggleItemsMap();
+  toggleItemsMap();
 
   //toggle text
 

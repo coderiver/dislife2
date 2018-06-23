@@ -176,10 +176,12 @@
     width: 100%
     margin-bottom: 20px
     position: relative
-    +r2
+    &.is-active
       display: block
-    +r3
-      display: none
+    // +r2
+    //   display: block
+    // +r3
+    //   display: none
   &__map-icon
     font-size: 14px
     max-width: 116px
@@ -271,6 +273,11 @@
       +r3
         width: 100%
         padding-left: 0
+      .btn-full_grad-orange
+        &.is-wait-btn
+          font-size: 16px
+          max-width: 200px
+          display: none
     &__descr
       font-size: 14px
       color: $text
@@ -290,9 +297,6 @@
       color: #66bb51
     &__wait-text
       color: #4a90e2      
-      justify-content: space-between
-      flex-direction: column
-      height: 100%
     &__canceled-user-text
       color: #9bc1bc
     &__failed-text
@@ -308,8 +312,14 @@
         .request-item_big__approved-text
           display: block
       &.is-wait
+        display: flex
+        flex-direction: column
+        justify-content: space-between
         .request-item_big__wait-text
-          display: flex
+          display: block
+        .btn-full_grad-orange
+          &.is-wait-btn
+            display: inline-block
       &.is-canceled-user
         .request-item_big__canceled-user-text
           display: block
