@@ -51,7 +51,7 @@
 .feedback__text { font-size: 14px; color: #282828; font-family: "FiraSans-Regular", Arial, sans-serif; }
 .user-container_mod .user-left__in { width: 990px; padding-right: 30px; }
 
-.label { font-size: 14px; font-family: "FiraSans-Medium", Arial, sans-serif; color: #fff; position: relative; display: inline-block; background-color: #d0021b; box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2); }
+.label { font-size: 14px; font-family: "FiraSans-Medium", Arial, sans-serif; color: #fff; position: relative; display: inline-block; background-color: #d0021b; box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.2); }
 .label::after { content: ""; position: absolute; left: 3px; top: -4px; z-index: 1; background-color: transparent; -webkit-transform: rotate(-35deg); -ms-transform: rotate(-35deg); transform: rotate(-35deg); width: 2px; height: 15px; box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.2); }
 .label::before { content: ""; position: absolute; left: -1px; top: 0; width: 0px; height: 0px; border-style: solid; border-width: 15px 0 15px 10px; border-color: transparent transparent transparent #fff; }
 .label span { display: inline-block; position: relative; height: 30px; line-height: 30px; padding-right: 50px; padding-left: 32px; }
@@ -631,7 +631,7 @@
  .h2_md { font-size: 24px; }
  .h4_md { font-size: 18px; }
  .footer__warning { display: none; }
- .label { box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.2); }
+ .label { box-shadow: -3px 4px 4px rgba(0, 0, 0, 0.2); }
  .label::after { right: -3px; left: auto; top: 1px; -webkit-transform: rotate(35deg); -ms-transform: rotate(35deg); transform: rotate(35deg); }
  .label::before { width: 0px; height: 0px; border-style: solid; border-width: 15px 10px 15px 0; border-color: transparent #fff transparent transparent; left: auto; right: -1px; }
  .label span::before { -webkit-transform: translate(0, 4px) rotate(45deg); -ms-transform: translate(0, 4px) rotate(45deg); transform: translate(0, 4px) rotate(45deg); right: auto; left: 1px; }
