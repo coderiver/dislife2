@@ -344,25 +344,31 @@ $gray: #d8d8d8
   position: relative
   display: inline-block  
   background-color: #d0021b
-  // box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2)  
-  // &::before,
-  // &::after
-  //   position: absolute
-  //   content: ''
-  //   left: 0
-  //   +arr(20,10, #d0021b, t)
-  // &::before
-  //   top: 0
-  //   transform: translate(-13px, -1px) rotate(45deg)
-  // &::after
-  //   bottom: 0
-  //   transform: translate(-13px, 1px) rotate(135deg)
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2)  
+  +r3
+    box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.2)
+  &::after
+    content: ''
+    position: absolute
+    left: 3px
+    top: -4px
+    z-index: 1
+    background-color: transparent
+    +rotate(-35)
+    width: 2px
+    height: 15px
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.2)
+    +r3
+      right: -3px
+      left: auto
+      top: 1px
+      +rotate(35)
   &::before
     content: ''
     position: absolute
     left: -1px
     top: 0
-    +arr(10,30, #fff, r)
+    +arr(10,30, #fff, r)    
     +r3
       +arr(10,30, #fff, l)
       left: auto
