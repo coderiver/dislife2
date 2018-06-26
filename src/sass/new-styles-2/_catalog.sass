@@ -252,23 +252,28 @@
     height: 80px
     border-radius: 50%
     position: relative
+    .tooltip
+      +tooltip
+      left: -14px
+      transform: translate(0, 0)
     +r2
       width: 50px
       height: 50px
     +hover
-      .catalog-item__tooltip
+      .tooltip
         &.is-active
           display: block
   &__name
     +med
     // width: calc(24.2% - 80px)
-    padding-left: 20px
+    padding-left: 20px    
   &__person
     width: 24.2%
     display: flex
     justify-content: flex-start
     align-items: center
     cursor: pointer
+
     +r2
       width: 100%
       border-bottom: 1px solid  $gray
@@ -383,20 +388,23 @@
     strong
       width: calc(100% - 30px)
       padding-left: 10px
-  &__tooltip
-    position: absolute
-    bottom: calc(100% + 12px)
-    left: -14px
-    padding: 10px 15px
-    background-color: #fff
-    min-width: 230px
-    color: #353535
-    font-size: 12px
-    border: 1px solid $gray
-    border-radius: 3px
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2)
-    display: none
-    z-index: 1
+  // &__tooltip
+  //   position: absolute
+  //   bottom: calc(100% + 12px)
+  //   left: -14px
+  //   padding: 10px 15px
+  //   background-color: #fff
+  //   min-width: 230px
+  //   color: #353535
+  //   font-size: 12px
+  //   border: 1px solid $gray
+  //   border-radius: 3px
+  //   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2)
+  //   display: none
+  //   z-index: 1
+  //   &.is-bottom
+  //     bottom: auto
+  //     top: calc(100% + 12px)
   &__head-mob-item
     display: none !important
     color: #9b9b9b

@@ -118,7 +118,10 @@ $gray: #d8d8d8
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2)
   display: none
   text-align: left
-  z-index: 1
+  z-index: 301
+  &.is-bottom
+    bottom: auto
+    top: calc(100% + 12px)
 
 .h1
   &_md

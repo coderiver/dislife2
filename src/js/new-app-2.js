@@ -1,6 +1,27 @@
 
 $(document).ready(function() {
 
+
+  //tooltip
+  function setTooltip() {
+    var $tooltipBtn = $('.js-tooltip-btn');
+    $tooltipBtn.each(function(index, el) {
+      var $tooltip = $(el).find('.js-tooltip');
+
+      var tooltipTop = $(el).offset().top - $tooltip.outerHeight() - 15;
+      if ($(window).scrollTop() > tooltipTop ) {
+        $tooltip.addClass('is-bottom');
+      } else {
+        $tooltip.removeClass('is-bottom');
+      };
+
+    });
+  };
+  setTooltip();
+  $(window).on('scroll', setTooltip);
+
+
+
   //map
   function setMap() {
     var $maps = $('.js-map');
