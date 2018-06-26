@@ -172,7 +172,7 @@
 .no-touch .helper__info-block:hover .tooltip { display: block; }
 .helper__info-block span { display: inline-block; position: relative; top: -0.3em; }
 .helper__info-block img { display: inline-block; }
-.helper__info-block .tooltip { position: absolute; top: -50px; left: 50%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); transform: translate(-50%, 0); padding: 10px 15px; background-color: #fff; min-width: 230px; color: #353535; font-size: 12px; border: 1px solid #d8d8d8; border-radius: 3px; box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2); display: none; text-align: left; }
+.helper__info-block .tooltip { position: absolute; top: auto; bottom: -webkit-calc(100% + 12px); bottom: calc(100% + 12px); left: 50%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); transform: translate(-50%, 0); padding: 10px 15px; background-color: #fff; min-width: 230px; color: #353535; font-size: 12px; border: 1px solid #d8d8d8; border-radius: 3px; box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2); display: none; text-align: left; z-index: 1; }
 .helper_width { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; width: 100%; cursor: default; }
 .helper_width .helper__social { position: static; text-align: left; margin-bottom: 20px; }
 .helper_width .helper__social-icon { margin-left: 0; margin-right: 10px; }
@@ -422,10 +422,10 @@
 .no-touch .catalog-item__rating-block:hover .tooltip { display: block; }
 .catalog-item__rating-block svg, .catalog-item__rating-block img { display: inline-block; margin-right: 5px; }
 .catalog-item__rating-block span { position: relative; top: -3px; }
-.catalog-item__rating-block .tooltip { position: absolute; top: -50px; left: 50%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); transform: translate(-50%, 0); padding: 10px 15px; background-color: #fff; min-width: 230px; color: #353535; font-size: 12px; border: 1px solid #d8d8d8; border-radius: 3px; box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2); display: none; text-align: left; }
+.catalog-item__rating-block .tooltip { position: absolute; top: auto; bottom: -webkit-calc(100% + 12px); bottom: calc(100% + 12px); left: 50%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); transform: translate(-50%, 0); padding: 10px 15px; background-color: #fff; min-width: 230px; color: #353535; font-size: 12px; border: 1px solid #d8d8d8; border-radius: 3px; box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2); display: none; text-align: left; z-index: 1; }
 .catalog-item__type span { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 .catalog-item__type strong { width: -webkit-calc(100% - 30px); width: calc(100% - 30px); padding-left: 10px; }
-.catalog-item__tooltip { position: absolute; top: -54px; left: -14px; padding: 10px 15px; background-color: #fff; min-width: 230px; color: #353535; font-size: 12px; border: 1px solid #d8d8d8; border-radius: 3px; box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2); display: none; }
+.catalog-item__tooltip { position: absolute; bottom: -webkit-calc(100% + 12px); bottom: calc(100% + 12px); left: -14px; padding: 10px 15px; background-color: #fff; min-width: 230px; color: #353535; font-size: 12px; border: 1px solid #d8d8d8; border-radius: 3px; box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2); display: none; z-index: 1; }
 .catalog-item__head-mob-item { display: none !important; color: #9b9b9b; font-size: 12px; position: absolute; left: 0; }
 .catalog-item_short-hover { margin-left: 0; margin-right: 0; border-radius: 3px; border: 1px solid #d8d8d8; display: block; padding-top: 17px; padding-bottom: 20px; padding-left: 37px; margin-bottom: 10px; -webkit-transition: border-color 0.3s; transition: border-color 0.3s; }
 .no-touch .catalog-item_short-hover:hover { border-color: transparent; }
