@@ -162,7 +162,7 @@
 .mob-slider__next { right: 30px; }
 .mob-slider__next::before { width: 20px; height: 20px; border-left: 2px solid #000; border-bottom: 2px solid #000; -webkit-transform: rotate(-135deg); -ms-transform: rotate(-135deg); transform: rotate(-135deg); left: 5px; }
 
-.helper { display: inline-block; text-align: center; width: 20%; padding-left: 10px; padding-right: 10px; margin-bottom: 63px; }
+.helper { display: inline-block; text-align: center; width: 20%; padding-left: 10px; padding-right: 10px; margin-bottom: 63px; cursor: pointer; }
 .helper__img { width: 190px; height: 190px; border-radius: 50%; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; border: 2px solid #fff; margin-left: auto; margin-right: auto; margin-bottom: 32px; position: relative; }
 .helper__name { font-size: 24px; font-family: "FiraSans-Medium", Arial, sans-serif; color: #282828; margin-bottom: 17px; }
 .helper__social { position: absolute; bottom: -17px; left: 0; width: 100%; text-align: center; }
@@ -173,7 +173,7 @@
 .helper__info-block span { display: inline-block; position: relative; top: -0.3em; }
 .helper__info-block img { display: inline-block; }
 .helper__info-block .tooltip { position: absolute; top: -50px; left: 50%; -webkit-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); transform: translate(-50%, 0); padding: 10px 15px; background-color: #fff; min-width: 230px; color: #353535; font-size: 12px; border: 1px solid #d8d8d8; border-radius: 3px; box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2); display: none; }
-.helper_width { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; width: 100%; }
+.helper_width { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; width: 100%; cursor: default; }
 .helper_width .helper__social { position: static; text-align: left; margin-bottom: 20px; }
 .helper_width .helper__social-icon { margin-left: 0; margin-right: 10px; }
 .helper_width .helper__social-icon svg { width: 30px; height: 30px; }
