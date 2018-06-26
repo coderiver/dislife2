@@ -1,19 +1,22 @@
+
 $(document).ready(function() {
 
   //map
   function setMap() {
-    const maps = document.querySelectorAll('.js-map');
-    if (maps.length) {
-      for (let i = 0; i < maps.length; i++) {
-        let latitude = maps[i].dataset.latitude;
-        let longitude = maps[i].dataset.longitude;
+    var $maps = $('.js-map');
+
+
+    if ($maps.length) {
+      $maps.each(function(index, elem) {
+        var latitude = $(elem).data('latitude');
+        var longitude = $(elem).data('longitude');
 
 
         if (typeof ymaps === 'undefined') {
           return;
         } else {
           ymaps.ready(function () {
-            const myMap = new ymaps.Map(maps[i], {
+            var myMap = new ymaps.Map(elem, {
               center: [latitude, longitude],
               zoom: 14,
               scrollZoom: false,
@@ -22,28 +25,28 @@ $(document).ready(function() {
             });
             myMap.behaviors.disable('scrollZoom');
 
-            let $applModals = $('.js-appl-modal');
+            var $applModals = $('.js-appl-modal');
 
             $applModals.each(function(index, el) {
-              let $modalItem = $(el);
-              let applLatitude = $modalItem.data('latitude');
-              let applLongitude = $modalItem.data('longitude');
-              let dataLink = $modalItem.data('popup');
-              let dataTitle = $modalItem.data('title');
+              var $modalItem = $(el);
+              var applLatitude = $modalItem.data('latitude');
+              var applLongitude = $modalItem.data('longitude');
+              var dataLink = $modalItem.data('popup');
+              var dataTitle = $modalItem.data('title');
 
-              let markerElHTML = '<div class="map-icon js-open-popup" data-link="'+dataLink+'"><img src="img/volonter/location.png" alt="" /><div class="map-icon__title">'+dataTitle+'</div></div>';
+              var markerElHTML = '<div class="map-icon js-open-popup" data-link="'+dataLink+'"><img src="img/volonter/location.png" alt="" /><div class="map-icon__title">'+dataTitle+'</div></div>';
 
-              let markerLayout = ymaps.templateLayoutFactory.createClass(markerElHTML, {
+              var markerLayout = ymaps.templateLayoutFactory.createClass(markerElHTML, {
 
                 build: function () {
                   markerLayout.superclass.build.call(this);
 
                   this._events = ymaps.domEvent.manager.group(this.getElement());
-                  let el = this._events;
+                  var el = this._events;
                   el.add('click', function () {
-                    let icon = el.events.htmlElement.firstChild;
-                    let link = $(icon).data('link');
-                    let popup = $('[data-popup="' + link + '"]');
+                    var icon = el.events.htmlElement.firstChild;
+                    var link = $(icon).data('link');
+                    var popup = $('[data-popup="' + link + '"]');
                     popup.addClass('is-open');              
                     return false;
 
@@ -56,7 +59,7 @@ $(document).ready(function() {
                 }
               });
 
-              let myPlacemark = new ymaps.Placemark(
+              var myPlacemark = new ymaps.Placemark(
                 [applLatitude, applLongitude], {}, {
                   iconLayout: markerLayout,
                   iconPane: 'overlaps'
@@ -71,9 +74,9 @@ $(document).ready(function() {
             });
 
             if ($(myMap.container._parentElement).hasClass('map_in-item')){
-              let dataIconTitle = $(myMap.container._parentElement).data('icon-title');              
-              let markerElHTML = '<div class="map-icon js-open-popup"><img src="img/volonter/location.png" alt="" /><div class="map-icon__title">'+dataIconTitle+'</div></div>';
-              let markerLayout = ymaps.templateLayoutFactory.createClass(markerElHTML, {
+              var dataIconTitle = $(myMap.container._parentElement).data('icon-title');              
+              var markerElHTML = '<div class="map-icon js-open-popup"><img src="img/volonter/location.png" alt="" /><div class="map-icon__title">'+dataIconTitle+'</div></div>';
+              var markerLayout = ymaps.templateLayoutFactory.createClass(markerElHTML, {
 
                 build: function () {
                   markerLayout.superclass.build.call(this);
@@ -82,20 +85,20 @@ $(document).ready(function() {
                   markerLayout.superclass.clear.call(this);
                 }
               });
-              let myPlacemark = new ymaps.Placemark(
+              var myPlacemark2 = new ymaps.Placemark(
                 [latitude, longitude], {}, {
                   iconLayout: markerLayout,
                   iconPane: 'overlaps'
                 }
                 );
-              myMap.geoObjects.add(myPlacemark);
+              myMap.geoObjects.add(myPlacemark2);
             };                     
 
             
           });
           
         }        
-      }
+      });
       
     };
 
@@ -105,17 +108,17 @@ $(document).ready(function() {
 
   //slider
   function setMobSlider() {
-    const $slider = $('.js-mob-slider');
+    var $slider = $('.js-mob-slider');
 
     if ($slider.length) {   
 
       $slider.each(function(index, el) {
-        let $sliderWrap = $(el).parent();
-        let $sliderNext = $sliderWrap.find('.js-mob-slider-next');
-        let $sliderPrev = $sliderWrap.find('.js-mob-slider-prev');
-        let type = $(el).data('mob-slider');
+        var $sliderWrap = $(el).parent();
+        var $sliderNext = $sliderWrap.find('.js-mob-slider-next');
+        var $sliderPrev = $sliderWrap.find('.js-mob-slider-prev');
+        var type = $(el).data('mob-slider');
 
-        const sliderOpt = {
+        var sliderOpt = {
           helpersSlider: {
             nextArrow: $sliderNext,
             prevArrow: $sliderPrev,
@@ -164,24 +167,24 @@ $(document).ready(function() {
   //tabs
   function tabs() {
 
-    const $tab = $('.js-tabs-btn');
-    const $item = $('.js-tabs-item');
+    var $tab = $('.js-tabs-btn');
+    var $item = $('.js-tabs-item');
 
     $tab.on('click', function(e) {
       e.preventDefault();
-      let tabData = $(this).data('target-tab');
+      var tabData = $(this).data('target-tab');
 
-      let $tabTargetItem = $('[data-tab="'+tabData+'"]');
-      let $tabTargetItemElse = $('.js-tabs-item:not([data-tab="'+tabData+'"])');
-      let $tabElse = $('.js-tabs-btn').not($(this));
+      var $tabTargetItem = $('[data-tab="'+tabData+'"]');
+      var $tabTargetItemElse = $('.js-tabs-item:not([data-tab="'+tabData+'"])');
+      var $tabElse = $('.js-tabs-btn').not($(this));
 
       $(this).addClass('is-active');
       $tabTargetItem.addClass('is-active');
       $tabElse.removeClass('is-active');
       $tabTargetItemElse.removeClass('is-active');
       if ($tabTargetItem.hasClass('is-active')) {
-        let tabTargetItemData = $tabTargetItem.data('tab');
-        let $tabBtn = $('[data-target-tab="'+tabTargetItemData+'"');
+        var tabTargetItemData = $tabTargetItem.data('tab');
+        var $tabBtn = $('[data-target-tab="'+tabTargetItemData+'"');
         $tabBtn.addClass('is-active');
      }   
     });
@@ -192,18 +195,18 @@ $(document).ready(function() {
 
   //filter-tags
   function filterTags() {
-    const $filterTag = $('.js-filter-tag');
-    const $filterTagParent = $filterTag.closest('.filter-tags');    
+    var $filterTag = $('.js-filter-tag');
+    var $filterTagParent = $filterTag.closest('.filter-tags');    
 
     $filterTag.each(function(index, el) {
-      let $tag = $(el);
-      let $close = $tag.closest('.filter-tag__wrap').find('.js-filter-tag-close');  
+      var $tag = $(el);
+      var $close = $tag.closest('.filter-tag__wrap').find('.js-filter-tag-close');  
 
       $tag.on('click', function(e){
         e.preventDefault();
         e.stopPropagation();
-        let $wrap = $(this).closest('.js-filter-tags');
-        let $tags = $wrap.find('.js-filter-tag');
+        var $wrap = $(this).closest('.js-filter-tags');
+        var $tags = $wrap.find('.js-filter-tag');
 
 
           
@@ -218,24 +221,24 @@ $(document).ready(function() {
 
       $close.on('click', function(e){
         e.preventDefault();
-        let $tag = $(this).closest('.filter-tag__wrap').find('.js-filter-tag');
+        var $tag = $(this).closest('.filter-tag__wrap').find('.js-filter-tag');
         $tag.removeClass('is-active');
       });
 
     });
 
     $filterTagParent.each(function(index, el) {
-      let $wrap = $(el);
-      let $moreBtn = $wrap.find('.js-filter-tag-more');
+      var $wrap = $(el);
+      var $moreBtn = $wrap.find('.js-filter-tag-more');
 
       
 
       function setMobFilterTags() {
         if ($moreBtn.length && $(window).outerWidth() <= 660) {
-          let $tags = $wrap.find('.js-filter-tag');
-          let tagsHidden = [];
+          var $tags = $wrap.find('.js-filter-tag');
+          var tagsHidden = [];
           $moreBtn.addClass('is-active');
-          for (let i = 0; i < $tags.length; i++) {
+          for (var i = 0; i < $tags.length; i++) {
             if (i>=4) {
               tagsHidden.push($tags[i]);
             }          
@@ -264,15 +267,15 @@ $(document).ready(function() {
   //items-map
 
   function toggleItemsMap() {
-    const $toggleMapShow = $('.js-item-map-show');
-    const $toggleMapHide = $('.js-item-map-hide');
+    var $toggleMapShow = $('.js-item-map-show');
+    var $toggleMapHide = $('.js-item-map-hide');
 
 
     $toggleMapShow.on('click', function(event) {
       event.preventDefault();
-      let $item = $(this).closest('.request-item');
-      let $map = $item.find('.js-item-map');
-      let $hideBtn = $item.find('.js-item-map-hide');
+      var $item = $(this).closest('.request-item');
+      var $map = $item.find('.js-item-map');
+      var $hideBtn = $item.find('.js-item-map-hide');
 
       // $(this).removeClass('is-active');
       // $hideBtn.addClass('is-active');
@@ -295,18 +298,18 @@ $(document).ready(function() {
   //toggle text
 
   function hidetext() {
-    const $hiddenDescr = $('.js-descr');
+    var $hiddenDescr = $('.js-descr');
 
     $hiddenDescr.each(function(index, el) {
-      let $descr = $(el);
-      let $descrHtml = $descr.html();
-      let $descrEls = $descr.find('p');
-      let descrText = $descrEls.text();
-      let charactersNmb = 100;
-      let shortText = descrText.slice(0, charactersNmb);
-      let $item = $descr.closest('.request-item');
-      let $showLink = $item.find('.js-show-link');
-      let $hideLink = $item.find('.js-hide-link');
+      var $descr = $(el);
+      var $descrHtml = $descr.html();
+      var $descrEls = $descr.find('p');
+      var descrText = $descrEls.text();
+      var charactersNmb = 100;
+      var shortText = descrText.slice(0, charactersNmb);
+      var $item = $descr.closest('.request-item');
+      var $showLink = $item.find('.js-show-link');
+      var $hideLink = $item.find('.js-hide-link');
 
 
       function hideText() {

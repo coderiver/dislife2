@@ -85,6 +85,7 @@
     justify-content: flex-start
     align-items: center
     margin-bottom: 35px
+    cursor: pointer
     +r3
       margin-bottom: 35px
   &__person-img
@@ -92,6 +93,41 @@
     width: 50px
     height: 50px
     border-radius: 50%
+    position: relative
+    +hover
+      .request-item__tooltip
+        &.is-active
+          display: block
+  &__img-icon
+    border-radius: 50%
+    background-color: #7ed321
+    width: 20px
+    height: 20px
+    +vertical
+    position: absolute
+    top: 0
+    right: -6px
+    display: none
+    .fa
+      font-size: 10px
+      color: #fff
+      display: inline-block
+      vertical-align: middle
+    &.is-active
+      display: block
+  &__tooltip
+    position: absolute
+    top: -54px
+    left: -14px
+    padding: 10px 15px
+    background-color: #fff
+    min-width: 230px
+    color: #353535
+    font-size: 12px
+    border: 1px solid $gray
+    border-radius: 3px
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2)
+    display: none
   &__person-name
     font-size: 14px
     padding-left: 13px

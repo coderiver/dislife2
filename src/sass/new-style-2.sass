@@ -102,6 +102,21 @@ $gray: #d8d8d8
   transform: rotate($angle + deg)
 //example +icon-arrow(20, 20, 2, #000, 45)
 
+=tooltip
+  position: absolute
+  top: -50px
+  left: 50%
+  transform: translate(-50%, 0)
+  padding: 10px 15px
+  background-color: #fff
+  min-width: 230px
+  color: #353535
+  font-size: 12px
+  border: 1px solid $gray
+  border-radius: 3px
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2)
+  display: none
+
 .h1
   &_md
     font-size: 50px
@@ -294,6 +309,7 @@ $gray: #d8d8d8
     justify-content: flex-start
     align-items: center
     margin-bottom: 15px
+    cursor: pointer
   &__person-img
     +cover
     width: 50px

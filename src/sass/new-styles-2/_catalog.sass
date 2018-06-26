@@ -363,12 +363,18 @@
     display: inline-block
     margin-right: 10px
     vertical-align: top
+    position: relative
+    +hover
+      .tooltip
+        display: block
     svg, img
       display: inline-block
       margin-right: 5px
     span
       position: relative
       top: -3px
+    .tooltip
+      +tooltip
   &__type
     span
       display: flex

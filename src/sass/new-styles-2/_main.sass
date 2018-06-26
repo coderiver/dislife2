@@ -289,10 +289,18 @@
     font-size: 15px
     color: $text
     +light
+    position: relative
+    +hover
+      .tooltip
+        display: block
     span
       display: inline-block
       position: relative
       top: -0.3em
+    img
+      display: inline-block
+    .tooltip
+      +tooltip
 
   &_width
     display: flex
