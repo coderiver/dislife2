@@ -59,6 +59,26 @@
             min-height: auto
             height: 100%
 
+  &_mob-height-fixed
+    .popup__body
+      +r3
+        height: 506px
+        display: flex
+        flex-direction: column
+        justify-content: center
+    .popup_lg-form
+      +r3
+        height: 100%
+        form
+          height: 100%
+      &__textarea
+        +r3
+          height: calc(100% - 80px)
+        textarea
+          +r3
+            min-height: auto
+            height: 100%
+
 
 .popup-main
   .popup__body

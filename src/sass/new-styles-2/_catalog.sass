@@ -2,7 +2,9 @@
   padding-top: 39px
   padding-bottom: 38px
   +r2
-    padding-top: 0
+    padding-top: 0px
+  +r3
+    padding-top: 10px
   .container
     +clr
   &__title
@@ -13,7 +15,7 @@
     +r3
       float: none
       text-align: center
-      margin-bottom: 41px
+      margin-bottom: 20px
   &__btn
     float: right
     min-width: 220px
@@ -141,6 +143,8 @@
     color: #6c8784
     &:nth-child(3)
       margin-right: 0
+    +r2
+      margin-right: 104px
     +r3
       font-size: 12px
       margin-right: 30px
@@ -378,7 +382,7 @@
       margin-right: 5px
     span
       position: relative
-      top: -3px
+      top: -4px
     .tooltip
       +tooltip
   &__type
@@ -454,6 +458,8 @@
         padding-bottom: 20px
     &.is-active
       padding-bottom: 25px
+      +r1
+        padding-right: 25px
       +r2
         border-radius: 0
         border: 0
@@ -473,16 +479,33 @@
         margin-bottom: 18px
         border-bottom: 1px solid  $gray
         padding-bottom: 20px
+        +r1
+          padding-bottom: 14px
+      .catalog-item__social
+        +r1
+          width: 22.4%
+        +r3
+          width: 100%
+      .catalog-item__person
+        +r1
+          width: 32.2%
+        +r3
+          width: 100%
+      .catalog-item__rating
+        +r1
+          width: 23.9%
+        +r3
+          width: 100%
+      .catalog-item__type
     .catalog-item__img
       width: 50px
       height: 50px
     .catalog-item__name
       width: calc(100% - 50px)
     .catalog-item__social
-      width: 22%
+      width: 19.3%
       +r1
-        width: 25%
-        text-align: center
+        width: 29.3%
         border-bottom: none
         padding-bottom: 0
         padding-top: 0
@@ -501,8 +524,9 @@
           width: 20px
           height: 20px
     .catalog-item__person
+      width: 29.2%
       +r1
-        width: 25%
+        width: 35.4%
         border-bottom: none
         padding-bottom: 0
         padding-top: 0
@@ -510,21 +534,25 @@
         width: 100%
         margin-bottom: 15px
     .catalog-item__rating
-      width: 25%
+      width: 24.4%
+      text-align: center
       +r1
         border-bottom: none
         padding-bottom: 0
         padding-top: 0
         padding-left: 0
+        text-align: left
+      +r2
+        
       +r3
         width: 100%
         margin-bottom: 15px
     .catalog-item__type      
-      width: 28%
+      width: 26%      
       +r1
         padding-left: 0
         padding-top: 0
-        width: 25%
+        width: auto      
       +r3
         width: 100%
         margin-bottom: 15px
@@ -538,7 +566,7 @@
       padding-right: 10px
     &__top
       display: flex
-      justify-content: space-between
+      justify-content: flex-start
       align-items: center
       +r3
         flex-direction: column    
@@ -567,6 +595,8 @@
         flex-direction: column
     &__options-text, &__controls
       padding-top: 30px
+      +r1
+        padding-top: 0
       +r3
         padding-top: 10px
     &__options-text
@@ -594,7 +624,8 @@
           text-decoration: none
       span
         text-decoration: underline
-      svg
+      svg, img
+        display: inline-block
         margin-right: 10px
         position: relative
         top: 4px

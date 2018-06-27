@@ -286,7 +286,7 @@
     font-size: 0
   &__info-block
     display: inline-block
-    margin: 0 10px
+    margin: 0 15px
     font-size: 15px
     color: $text
     +light
@@ -294,12 +294,23 @@
     +hover
       .tooltip
         display: block
+    +r1
+      margin: 0 6px
+    +r2
+      margin: 0 15px
+    &.is-margin-smaller
+      margin: 0
+      margin-right: 12px
+      +r3
+        margin-left: 6px
+        margin-right: 6px
     span
       display: inline-block
       position: relative
       top: -0.3em
     img
       display: inline-block
+      margin-right: 8px
     .tooltip
       +tooltip
 
