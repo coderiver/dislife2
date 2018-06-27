@@ -154,6 +154,8 @@
       letter-spacing: .08em
       line-height: 2
       display: block
+      +r3
+        letter-spacing: .05em
   &__contact
     font-size: 14px
     color: $text
@@ -281,6 +283,9 @@
       display: flex
       justify-content: flex-start
       flex-wrap: wrap
+      +r3
+        &.has-mob-mb
+          margin-bottom: 20px
     &__link
       text-decoration: underline
       font-size: 14px
@@ -361,7 +366,8 @@
       padding-bottom: 33px     
       +med
       +r3
-        padding-bottom: 0
+        &:last-child
+          padding-bottom: 0
       &.is-approved
         .request-item_big__approved-text
           display: block
@@ -411,6 +417,15 @@
       text-align: right
       .request-item__date
         margin-bottom: 0
+      +r3
+        display: flex
+        flex-direction: column
+        .request-item__date
+          order: 2
+          border-top: 0
+          padding-top: 10px
+        .request-item_big__link
+          order: 1
 
   &_has-label
     .request-item_big__top
@@ -472,6 +487,8 @@
       +r3
         width: auto
         text-align: center
+        &.has-mob-mb
+          margin-bottom: 20px
       .btn-full
         &:first-child
           margin-bottom: 20px

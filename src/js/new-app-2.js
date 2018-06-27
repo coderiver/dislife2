@@ -256,7 +256,7 @@ $(document).ready(function() {
 
       function setMobFilterTags() {
         if ($moreBtn.length && $(window).outerWidth() <= 660) {
-          var $tags = $wrap.find('.js-filter-tag');
+          var $tags = $wrap.find('.js-filter-tag').closest('.filter-tag__wrap');
           var tagsHidden = [];
           $moreBtn.addClass('is-active');
           for (var i = 0; i < $tags.length; i++) {

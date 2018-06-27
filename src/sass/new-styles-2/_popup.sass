@@ -7,6 +7,10 @@
     &__title
       text-align: center
       margin-bottom: 35px
+      br
+        display: none
+        +r3
+          display: block
     .popup__body
       padding-top: 55px
       padding-left: 50px
@@ -24,6 +28,8 @@
         max-width: 211px
         margin-left: auto
         margin-right: auto
+        &.is-mob-longer
+          max-width: 285px
     &__btns
       text-align: center
       margin-bottom: 20px
