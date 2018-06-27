@@ -456,6 +456,8 @@
         margin-bottom: 18px
         border-bottom: 1px solid  $gray
         padding-bottom: 20px
+        +r3
+          border-bottom: none
     &.is-active
       padding-bottom: 25px
       +r1
@@ -481,6 +483,8 @@
         padding-bottom: 20px
         +r1
           padding-bottom: 14px
+        +r3
+          padding-bottom: 0
       .catalog-item__social
         +r1
           width: 22.4%
@@ -533,6 +537,9 @@
       +r3
         width: 100%
         margin-bottom: 15px
+    .catalog-item__rating-block
+      +r3
+        margin-right: 22px
     .catalog-item__rating
       width: 24.4%
       text-align: center
@@ -633,6 +640,8 @@
         top: 4px
       &:first-child
         margin-right: 35px
+        +r3
+          margin-bottom: 15px
     &__btn
       display: none
       max-width: 180px
